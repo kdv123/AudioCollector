@@ -6,6 +6,7 @@
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.util.Scanner;
 import javax.sound.sampled.*;
 
@@ -22,7 +23,7 @@ import javax.sound.sampled.*;
  * 
  * -----------------------------------------
  */
-public class SimpleAudioRecorder {
+public class SimpleAudioRecorder2 {
 	float samplingRate;
 	File audioFile;
 	static AudioFormat myAF;
@@ -30,47 +31,42 @@ public class SimpleAudioRecorder {
 	static Clip testClip ;
 	static Scanner scan;
 	
-	public SimpleAudioRecorder() {
+	/**
+	 * Setter needed for audio file to be able to run through multiple files using some 
+	 * standard file format for each person recorded.
+	 * @param filename
+	 */
+	public void setAudioFile(String filename) {
+		audioFile = new File(filename + ".wav");
+	}
+
+	public SimpleAudioRecorder2() {
 		samplingRate = 44100;
 		audioFile = new File("test.wav");
 		myAF = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, samplingRate, 16, 1, 2, samplingRate, false);
 	}
-	
-	public SimpleAudioRecorder(float samplingRate, String fileName) {
+
+	public SimpleAudioRecorder2(float samplingRate, String fileName) {
 		if (samplingRate < 16000 || samplingRate > 44100)
 			samplingRate = 44100;
 		audioFile = new File(fileName + ".wav");
 		myAF = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, samplingRate, 16, 1, 2, samplingRate, false);
 	}
-	
-	public static void main (String[] args) {
-		SimpleAudioRecorder sar = new SimpleAudioRecorder();
-		
-		sar.record();
-		sar.playback();
-		
-		sar = new SimpleAudioRecorder(16000, "test2");
-		sar.record();
-		sar.playback();
-		
-		scan.close();
-		System.out.println("terminated");
-	} 
 
-	private void record() {
+	DataLine.Info info = new DataLine.Info(TargetDataLine.class, myAF);
+	TargetDataLine targetLine = null;
+
+	public void startRecording () {
 		scan = new Scanner(System.in);
-		DataLine.Info info = new DataLine.Info(TargetDataLine.class, myAF);
-		
-		try {
-			final TargetDataLine targetLine = (TargetDataLine) AudioSystem.getLine(info);
 
-			System.out.println("Press <Enter> to begin recording");
-			scan.nextLine();
+
+		try {
+			targetLine = (TargetDataLine) AudioSystem.getLine(info);
 
 			targetLine.open();
 			System.out.println("Recording...");
 			targetLine.start();
-			
+
 			/*
 			 * Creates a separate thread for recording. So after this anonymous inner class there exist two threads of execution.
 			 * One handling the sleeps and the other recording data. Mostly to make sure there isn't any interference.
@@ -87,39 +83,49 @@ public class SimpleAudioRecorder {
 					}
 				}
 			};
-			
+
 			thread.start();
-			
-			System.out.println("Press <Enter> to stop");
-			scan.nextLine();
+		} catch (LineUnavailableException lue) {
+			lue.printStackTrace();
+		}
+
+		
+	}
+
+	/**
+	 * Stops the current recording.  We should probably keep a check 
+	 * to see if the targetLine is null in case there was a problem with the audio file.
+	 */
+	public void stopRecording() {
+		if (targetLine == null) {
+			throw new NullPointerException("no process is recording");
+		}
+		try {
 			/* Added timer section to keep it from chopping off the end of the recording
 			 * Previously, it stopped immediately when it should have kept recording to the 
 			 * end of the speech.  May not need Thread.sleep anymore.
 			 */
 			long timer = System.currentTimeMillis();
 			while (System.currentTimeMillis() - timer < 400) {
-				
+
 			}
-			
-			Thread.sleep(50);
+
+			//Thread.sleep(50);// runs fine without Thread.sleep here.
 			targetLine.stop();
 			targetLine.close();			
-		} catch (InterruptedException ie) {
+		} catch (Exception ie) {
 			ie.printStackTrace();
-		} catch (LineUnavailableException lue) {
-			lue.printStackTrace();
 		}
-		
 		System.out.println("Recording has finished");
 	}
-	
-	private void playback() {
+
+	public void playback() {
 		Mixer.Info[] mixInfos = AudioSystem.getMixerInfo();
 		mix = AudioSystem.getMixer(mixInfos[0]);	//Default system mixer
 		DataLine.Info playbackInfo = new DataLine.Info(Clip.class, myAF);
-		
+
 		System.out.println("Beginning playback...");
-		
+
 		try {
 			AudioInputStream playbackAudioStream = AudioSystem.getAudioInputStream(audioFile);
 			testClip = (Clip) mix.getLine(playbackInfo);
@@ -132,7 +138,7 @@ public class SimpleAudioRecorder {
 			uafe.printStackTrace();
 		}
 		testClip.start();
-		
+
 		/*
 		 * Once testClip.start() is called, the audio will play but then the program will terminate before much of the audio is played.
 		 * Here is one way to "hack" the program into playing the whole clip.
