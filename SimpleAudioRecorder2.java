@@ -4,9 +4,13 @@
  * Currently saving files in WAV format as buffering in audio input as raw binary is a "bit" unclear, but probably possible.
  */
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.util.Scanner;
 import javax.sound.sampled.*;
 
@@ -149,5 +153,50 @@ public class SimpleAudioRecorder2 {
 				ie.printStackTrace();
 			}
 		} while (testClip.isActive());
+	}
+	
+	public void convertFile(String inputWAVFile) {
+		DataInputStream instream = null;
+		DataOutputStream fout = null;
+		
+		//Open data streams
+		try {
+			instream = new DataInputStream(new FileInputStream(inputWAVFile + ".wav"));
+			fout = new DataOutputStream(new FileOutputStream(inputWAVFile + ".RAW"));
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		
+		//Skip the first 44 bytes of the WAV file
+		try {
+			instream.skipBytes(44);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//Read the remaining bytes of the WAV file
+		int bytesRemaining = 0;
+		try {
+			bytesRemaining = instream.available();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		for (int i = bytesRemaining; i >= 0; i--) {
+			try {
+				fout.write(instream.read());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		//Close the data streams
+		try {
+			instream.close();
+			fout.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
