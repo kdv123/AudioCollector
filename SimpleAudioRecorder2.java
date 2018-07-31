@@ -110,7 +110,6 @@ public class SimpleAudioRecorder2 {
 
 			}
 
-			//Thread.sleep(50);// runs fine without Thread.sleep here.
 			targetLine.stop();
 			targetLine.close();			
 		} catch (Exception ie) {

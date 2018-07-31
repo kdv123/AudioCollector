@@ -231,7 +231,5 @@ public class ViewForRecorder extends Application {
 		});
 		directions.add(playback, 5, 2, 1, 1);
 	}
-
-
-
+	
 }
