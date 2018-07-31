@@ -23,8 +23,6 @@ import javafx.stage.Stage;
 
 public class ViewForRecorder extends Application {
 
-
-
 	Dimension screenSize;
 	Scene scene;
 	BorderPane screen;

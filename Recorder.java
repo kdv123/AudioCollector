@@ -7,6 +7,7 @@ import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.TargetDataLine;
 
 public class Recorder {
@@ -14,7 +15,8 @@ public class Recorder {
 	private FileOutputStream fileOutput = null;
 	private ByteArrayOutputStream byteOutput = null;
 	private TargetDataLine target = null;
-	private boolean isActive;
+	private SourceDataLine source = null;
+	private boolean targetActive, sourceActive;
 	
 	public Recorder() {
 		openFileOutputStream("test.raw");
@@ -40,10 +42,10 @@ public class Recorder {
 		byte[] data = new byte[target.getBufferSize()/5];
 		
 		target.start();
-		isActive = true;
+		targetActive = true;
 		
 		try {
-			while(getStatus()) {
+			while(getTargetStatus()) {
 				numBytesRead = target.read(data, 0, data.length);
 				byteOutput.write(data, 0, numBytesRead);
 				byteOutput.writeTo(fileOutput);
@@ -52,7 +54,21 @@ public class Recorder {
 			ioe.printStackTrace();
 		}
 		
-		closeEverything();
+		closeTargetAndFileOutput();
+	}
+	
+	public void playback() {
+		DataLine.Info info = new DataLine.Info(SourceDataLine.class, af);
+		openSourceLine(info);
+		
+		
+		source.start();
+		
+		while(getSourceStatus()) {
+			source.write(byteOutput.toByteArray(), 0, byteOutput.size());
+		}
+		
+		closeByteStreamAndSource();
 	}
 	
 	/*
@@ -77,24 +93,48 @@ public class Recorder {
 		}
 	}
 	
-	private void closeEverything() {
+	private void openSourceLine(DataLine.Info info) {
+		try {
+			target = (TargetDataLine) AudioSystem.getLine(info);
+		} catch (LineUnavailableException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void closeTargetAndFileOutput() {
 		try {
 			target.close();
-			byteOutput.close();
 			fileOutput.close();
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
 	}
 	
-	public boolean getStatus() {
-		return isActive;
+	private void closeByteStreamAndSource() {
+		try {
+			byteOutput.close();
+			source.close();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
+	
+	public boolean getTargetStatus() {
+		return targetActive;
 	}
 	
 	/*
 	 * This method was created so that when the subject begins recording this is set to true
 	 */
-	public void setStatus(boolean active) {
-		isActive = active;
+	public void setTargetStatus(boolean active) {
+		targetActive = active;
+	}
+	
+	public boolean getSourceStatus() {
+		return sourceActive;
+	}
+	
+	public void setSourceStatus(boolean active) {
+		sourceActive = active;
 	}
 }
