@@ -40,7 +40,9 @@ public class ViewForRecorder extends Application {
 	/*
 	 * Planning:  need a file to parse.  Then have a series of questions starting with
 	 * entering info, then test phrase to get comfortable, then all the problems.
-	 * Should probably organize the screen to have 
+	 * Should probably organize the screen to have a count of problem number and add
+	 * in the options for a previous button.  Also need to add the spacing and file support
+	 * for multiple mics.
 	 */
 	
 	/**
@@ -170,17 +172,46 @@ public class ViewForRecorder extends Application {
 		btnPanel.add(start, 1, 0);
 		btnPanel.add(stop, 3, 0);
 		btnPanel.add(next, 5, 0);
+		
+		next.setDisable(true);
+		stop.setDisable(true);
+		playback.setDefaultButton(false);
+		start.setDefaultButton(true);
+		start.requestFocus();
+		
+		// Default buttons not currently working for typing ENTER to move to the next one
+		next.setOnMouseClicked(event -> {
+			start.setDisable(false);
+			next.setDisable(true);
+			stop.setDisable(true);
+			start.setDefaultButton(true);
+			stop.setDefaultButton(false);
+			next.setDefaultButton(false);
+		});
 
 		/* Listeners attached to buttons here.  Nothing currently attached to "next" */
 		start.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.GREEN, 0, 0));
 			status.setText(status.getText() + "Recording ...");
 			sar.startRecording();
+			start.setDisable(true);
+			next.setDisable(true);
+			stop.setDisable(false);
+			stop.setDefaultButton(true);
+			start.setDefaultButton(false);
+			next.setDefaultButton(false);
 		});
 		stop.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.RED, 0, 0));
 			status.setText("Status:\t\t" + "Stopped Recording!");
 			sar.stopRecording();
+			start.setDisable(true);
+			next.setDisable(false);
+			stop.setDisable(true);
+			next.setDefaultButton(true);
+			stop.setDefaultButton(false);
+			start.setDefaultButton(false);
+			
 		});
 
 
@@ -204,6 +235,7 @@ public class ViewForRecorder extends Application {
 		prompt.setFont(Font.font("Consolas", 30));
 		prompt.setMaxSize(800, 300);
 		prompt.setBackground(backgrounds(Color.YELLOW, 0, 0));
+		prompt.setStyle("-fx-font: 22 arial; -fx-base: #ff0000; -fx-background-color: #FFFF00;");//#b6e7c9
 		//prompt.setStyle("background-color:yellow");
 		//prompt.getStylesheets().add("/AudioCollector/style21.css.textArea1");
 		prompt.getStyleClass().add("textArea1");
