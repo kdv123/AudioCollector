@@ -49,10 +49,6 @@ public class SimpleAudioRecorder {
 		sar.record();
 		sar.playback();
 		
-		sar = new SimpleAudioRecorder(16000, "test2");
-		sar.record();
-		sar.playback();
-		
 		scan.close();
 		System.out.println("terminated");
 	} 
