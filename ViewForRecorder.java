@@ -37,12 +37,21 @@ public class ViewForRecorder extends Application {
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
 	
+	/*
+	 * Planning:  need a file to parse.  Then have a series of questions starting with
+	 * entering info, then test phrase to get comfortable, then all the problems.
+	 * Should probably organize the screen to have 
+	 */
+	
+	/**
+	 * Parses the given session control file into its constituent parts and 
+	 * returns them as an array list of String arrays
+	 * @param filename
+	 * @return
+	 */
 	private ArrayList<String []> scanMe(String filename) {
 		ArrayList<String []> list = new ArrayList<>();
 		String id = "";
-//		String input1 = "";
-//		String speak = "";
-//		String input2 = "";
 		String context = "";
 		
 		try (Scanner scan = new Scanner(new File(filename))) {
@@ -62,29 +71,6 @@ public class ViewForRecorder extends Application {
 					}
 				}
 				parseTask(context, tasks);
-//				Scanner info = new Scanner(context);
-//				int part = 0;
-//				while(info.hasNext()) {
-//					String s = info.next();
-//					//String output = "";
-//					if (s.equals("<br>")) {
-//						switch (part) {
-//						case 0: input1 += "\n";
-//						case 1: speak += "\n";
-//						case 2: input2 += "\n";
-//						}
-//					} else if (s.equals("<h>")) {
-//						part = 1;
-//					} else if (s.equals("</h>")) {
-//						part = 2;
-//					} else {
-//						switch (part) {
-//						case 0: input1 += s;
-//						case 1: speak += s;
-//						case 2: input2 += s;
-//						}
-//					}
-//				}
 				list.add(tasks);
 			}
 		} catch (FileNotFoundException e) {
@@ -93,6 +79,12 @@ public class ViewForRecorder extends Application {
 		return list;
 	}
 	
+	/**
+	 * Helper method parses the context string and desired speech string into a
+	 * given String array
+	 * @param context
+	 * @param parts
+	 */
 	private void parseTask(String context, String [] parts) {
 		Scanner info = new Scanner(context);
 		for (int i = 1; i < parts.length; i++) {
@@ -101,7 +93,6 @@ public class ViewForRecorder extends Application {
 		int part = 1;
 		while(info.hasNext()) {
 			String s = info.next();
-			//String output = "";
 			if (s.equals("<br>")) {
 				parts[part] += "\n";
 				

@@ -1,4 +1,4 @@
-/*
+/** 
  * Simple audio recorder with playback.
  * The program utilizes multi-threading.
  * Currently saving files in WAV format as buffering in audio input as raw binary is a "bit" unclear, but probably possible.
