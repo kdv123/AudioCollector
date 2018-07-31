@@ -40,22 +40,25 @@ public class ViewForRecorder extends Application {
 	private ArrayList<String []> scanMe(String filename) {
 		ArrayList<String []> list = new ArrayList<>();
 		String id = "";
-		String input1 = "";
-		String speak = "";
-		String input2 = "";
+//		String input1 = "";
+//		String speak = "";
+//		String input2 = "";
 		String context = "";
-		String [] tasks = new String[4];
+		
 		try (Scanner scan = new Scanner(new File(filename))) {
 			while (scan.hasNext()) {
+				String [] tasks = new String[4];
 				String task = scan.nextLine();
 				Scanner cols = new Scanner(task);
-				cols.useDelimiter(",");
+				cols.useDelimiter("\t");
 				id = null;
 				while(cols.hasNext()) {
 					if (id == null) {
 						id = cols.next();
+						tasks[0] = id;
 					} else {
 						context = cols.nextLine();
+						System.err.println("context: " + context);
 					}
 				}
 				parseTask(context, tasks);
@@ -82,6 +85,7 @@ public class ViewForRecorder extends Application {
 //						}
 //					}
 //				}
+				list.add(tasks);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -91,6 +95,9 @@ public class ViewForRecorder extends Application {
 	
 	private void parseTask(String context, String [] parts) {
 		Scanner info = new Scanner(context);
+		for (int i = 1; i < parts.length; i++) {
+			parts[i] = "";
+		}
 		int part = 1;
 		while(info.hasNext()) {
 			String s = info.next();
@@ -124,6 +131,16 @@ public class ViewForRecorder extends Application {
 //		scene.getStylesheets().add("style21.css");
 		stage.setScene(scene);
 		stage.show();
+		
+		ArrayList<String []> tasks = scanMe("test.txt");
+		for (int i = 0; i < tasks.size(); i++) {
+			
+//			System.out.println(java.util.Arrays.toString(tasks.get(i)) + "\n\n");
+			for (int j = 0; j < tasks.get(i).length; j++) {
+				System.out.print(tasks.get(i)[j] + "\t");
+			}
+			System.out.println();
+		}
 
 	}
 
