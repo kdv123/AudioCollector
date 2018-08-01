@@ -2,7 +2,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
@@ -17,11 +16,14 @@ public class Recorder {
 	private TargetDataLine target = null;
 	private SourceDataLine source = null;
 	private boolean targetActive, sourceActive;
+	String fileName = "test.raw";
+	float sampleRate = 44100;
+	int channels;
 	
 	public Recorder() {
 		openFileOutputStream("test.raw");
 		byteOutput = new ByteArrayOutputStream();
-		af = new AudioFormat(16000, 16, 1, true, false);
+		af = new AudioFormat(sampleRate, 16, 1, true, false);
 	}
 	
 	public Recorder(String fileName, float sampleRate, int sampleSizeBits, int channels) {
@@ -36,25 +38,39 @@ public class Recorder {
 	 */
 	public void record() {
 		DataLine.Info info = new DataLine.Info(TargetDataLine.class, af);
-		openTargetLine(info);
+		
+		try {
+			target = (TargetDataLine) AudioSystem.getLine(info);
+			target.open();
+		} catch (LineUnavailableException e) {
+			e.printStackTrace();
+		}
 		
 		int numBytesRead = 0;
 		byte[] data = new byte[target.getBufferSize()/5];
 		
 		target.start();
-		targetActive = true;
+		
+		long timer = System.currentTimeMillis();
+		while(System.currentTimeMillis() - timer < 5000) {
+			numBytesRead = target.read(data, 0, data.length);
+			byteOutput.write(data, 0, numBytesRead);
+		}
 		
 		try {
-			while(getTargetStatus()) {
-				numBytesRead = target.read(data, 0, data.length);
-				byteOutput.write(data, 0, numBytesRead);
-				byteOutput.writeTo(fileOutput);
-			}
+			byteOutput.writeTo(fileOutput);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		try {
+			target.close();
+			fileOutput.close();
+			byteOutput.close();
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
-		
-		closeTargetAndFileOutput();
 	}
 	
 	public void playback() {
@@ -71,24 +87,10 @@ public class Recorder {
 		closeByteStreamAndSource();
 	}
 	
-	/*
-	 * Private utility
-	 */
 	private void openFileOutputStream(String fileName) {
 		try {
 			fileOutput = new FileOutputStream(fileName);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	/*
-	 * Private utility
-	 */
-	private void openTargetLine(DataLine.Info info) {
-		try {
-			target = (TargetDataLine) AudioSystem.getLine(info);
-		} catch (LineUnavailableException e) {
 			e.printStackTrace();
 		}
 	}
@@ -98,15 +100,6 @@ public class Recorder {
 			target = (TargetDataLine) AudioSystem.getLine(info);
 		} catch (LineUnavailableException e) {
 			e.printStackTrace();
-		}
-	}
-	
-	private void closeTargetAndFileOutput() {
-		try {
-			target.close();
-			fileOutput.close();
-		} catch (IOException ioe) {
-			ioe.printStackTrace();
 		}
 	}
 	
@@ -136,5 +129,14 @@ public class Recorder {
 	
 	public void setSourceStatus(boolean active) {
 		sourceActive = active;
+	}
+	
+	public static void main (String[] args) {
+		Recorder myRecorder = new Recorder();
+		
+		System.out.println("Recording...");
+		myRecorder.record();
+		
+		System.out.println("Terminated");
 	}
 }

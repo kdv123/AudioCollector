@@ -61,9 +61,7 @@ public class SimpleAudioRecorder2 {
 	TargetDataLine targetLine = null;
 
 	public void startRecording () {
-		scan = new Scanner(System.in);
-
-
+		
 		try {
 			targetLine = (TargetDataLine) AudioSystem.getLine(info);
 
@@ -92,8 +90,6 @@ public class SimpleAudioRecorder2 {
 		} catch (LineUnavailableException lue) {
 			lue.printStackTrace();
 		}
-
-		
 	}
 
 	/**
