@@ -10,8 +10,10 @@ import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
@@ -21,7 +23,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class ViewForRecorder extends Application {
+public class ViewForRecorder2 extends Application {
 
 	Dimension screenSize;
 	Scene scene;
@@ -36,6 +38,7 @@ public class ViewForRecorder extends Application {
 	SimpleAudioRecorder2 sar = new SimpleAudioRecorder2();
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
+	int state = 0;
 	
 	/*
 	 * Planning:  need a file to parse.  Then have a series of questions starting with
@@ -118,8 +121,9 @@ public class ViewForRecorder extends Application {
 		screen = new BorderPane();
 		screen.setCenter(directions);
 		screen.setBottom(btnPanel);
-		scene = new Scene(screen);
+		scene = new Scene(startScreen());
 		scene.setFill(Color.ANTIQUEWHITE);
+		//scene.setRoot(screen);
 //		scene.getStylesheets().add("style21.css");
 		stage.setScene(scene);
 		stage.show();
@@ -134,6 +138,53 @@ public class ViewForRecorder extends Application {
 			System.out.println();
 		}
 
+	}
+	
+	/**
+	 * Creates a display for the opening setup of a session 
+	 * and allows for transition to the next part.
+	 * @return
+	 */
+	public Group startScreen() {
+		Group g = new Group();
+		GridPane grid = new GridPane();
+		Label participantID = new Label("Participant ID");
+		TextField partID = new TextField();
+		partID.setPromptText("participant ID");
+		Label session = new Label("Session #");
+		TextField sNum = new TextField();
+		sNum.setPromptText("Session #");
+		Label file = new Label("file");
+		TextField files = new TextField();
+		Button choose = new Button("File");
+		Label condition = new Label("Condition");
+		ComboBox cond = new ComboBox();
+		cond.getItems().addAll("one", "two", "outside", "inside");
+		Label numMics = new Label("# of microphones");
+		ComboBox mics = new ComboBox();
+		mics.getItems().addAll("1", "2", "3", "4");
+		Label sampRate = new Label("Sampling Rate");
+		ComboBox sampl = new ComboBox();
+		sampl.getItems().addAll("1kh", "2kh", "3kh", "4kh");
+		
+		grid.addRow(0, participantID, partID);
+		grid.addRow(1, session, sNum);
+		grid.addRow(2, file, choose);
+		grid.addRow(3, condition, cond);
+		grid.addRow(4, numMics, mics);
+		grid.addRow(5, sampRate, sampl);
+		
+		Label lab = new Label();
+		lab.setMinSize(100, 100);
+		Button next = new Button("NEXT");
+		next.setOnAction(event -> {
+			state = 1;
+			scene.setRoot(screen);
+		});
+		grid.addRow(6, lab,  next);
+		g.getChildren().add(grid);
+		
+		return g;
 	}
 
 	public static void main(String [] args) {

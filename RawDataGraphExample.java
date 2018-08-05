@@ -39,7 +39,7 @@ public class RawDataGraphExample extends Application{
 		/* Using a file input stream to read byte by byte */
 		FileInputStream input = null;
 		try {
-			input = new FileInputStream("r_test.RAW");
+			input = new FileInputStream("test.RAW");
 			int i = 0;
 			// read each byte
 			do {
