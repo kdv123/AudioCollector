@@ -1,15 +1,21 @@
-
 import java.awt.Dimension;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map.Entry;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Line;
+import javax.sound.sampled.Mixer;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -38,6 +44,7 @@ public class ViewForRecorder2 extends Application {
 	Recorder recorder = new Recorder();
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
+	HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
 	int state = 0;
 	
 	/*
@@ -161,19 +168,36 @@ public class ViewForRecorder2 extends Application {
 		Label condition = new Label("Condition");
 		ComboBox cond = new ComboBox();
 		cond.getItems().addAll("one", "two", "outside", "inside");
-		Label numMics = new Label("# of microphones");
-		ComboBox mics = new ComboBox();
-		mics.getItems().addAll("1", "2", "3", "4");
+		//Label numMics = new Label("# of microphones");
+		//ComboBox mics = new ComboBox();
+		//mics.getItems().addAll("1", "2", "3", "4");
+		
+		ArrayList<CheckBox> allMics = new ArrayList<CheckBox>();
+		Label selectMics = new Label("Select microphones");
+		getMicrophoneInfo();
+		for(Entry<Mixer.Info, Line.Info> ourEntry : mixerToTarget.entrySet()) {
+			allMics.add(new CheckBox(ourEntry.getKey().getName()));
+		}
+		
+		
+		
 		Label sampRate = new Label("Sampling Rate");
 		ComboBox sampl = new ComboBox();
-		sampl.getItems().addAll("1kh", "2kh", "3kh", "4kh");
+		sampl.getItems().addAll("16000 Hz", "22050 Hz", "37800 Hz","44100 Hz");
 		
 		grid.addRow(0, participantID, partID);
 		grid.addRow(1, session, sNum);
 		grid.addRow(2, file, choose);
 		grid.addRow(3, condition, cond);
-		grid.addRow(4, numMics, mics);
-		grid.addRow(5, sampRate, sampl);
+		grid.addRow(4, selectMics);
+		
+		int row = 5;
+		for(CheckBox cb : allMics) {
+			grid.addRow(row, cb);
+			row++;
+		}
+		
+		grid.addRow(++row, sampRate, sampl);
 		
 		Label lab = new Label();
 		lab.setMinSize(100, 100);
@@ -182,7 +206,7 @@ public class ViewForRecorder2 extends Application {
 			state = 1;
 			scene.setRoot(screen);
 		});
-		grid.addRow(6, lab,  next);
+		grid.addRow(++row, lab,  next);
 		g.getChildren().add(grid);
 		
 		return g;
@@ -303,6 +327,20 @@ public class ViewForRecorder2 extends Application {
 			recorder.startPlayback();
 		});
 		directions.add(playback, 5, 2, 1, 1);
+	}
+	
+	public void getMicrophoneInfo() {
+		Mixer.Info[] mixers = AudioSystem.getMixerInfo();
+		for (Mixer.Info mixInfo : mixers) {
+			Mixer m = AudioSystem.getMixer(mixInfo);
+			Line.Info[] lines = m.getTargetLineInfo();
+			
+			for (Line.Info li : lines) {
+				if(li.toString().equals("interface TargetDataLine supporting 8 audio formats, and buffers of at least 32 bytes")) {
+					mixerToTarget.put(mixInfo, li);
+				}
+			}			
+		}
 	}
 	
 }

@@ -7,6 +7,7 @@ import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
+import javax.sound.sampled.Line;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.TargetDataLine;
@@ -62,6 +63,53 @@ public class Recorder {
 		}
 		
 		DataLine.Info info = new DataLine.Info(TargetDataLine.class, audioFormat);
+		setTargetStatus(true);
+		
+		try {
+			target = (TargetDataLine) AudioSystem.getLine(info);
+			target.open();
+		} catch (LineUnavailableException e) {
+			e.printStackTrace();
+		}		
+		
+		byteOutput.reset();	//Eliminates the information in the buffer. Reset is necessary in case the user wished to re-record an utterance
+		target.start();
+		
+		Thread targetThread = new Thread() {
+			@Override
+			public void run() {
+				int numBytesRead = 0;
+				byte[] data = new byte[target.getBufferSize()/5];
+				
+				while(getTargetStatus()) {
+					numBytesRead = target.read(data, 0, data.length);
+					byteOutput.write(data, 0, numBytesRead);
+				}
+				
+				try {
+					byteOutput.writeTo(fileOutput);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+		
+		targetThread.start();
+	}
+	
+	/*
+	 * This method records raw data from a single line and writes it to the specified file
+	 * 
+	 * NEEDS TO BE TESTED!!!
+	 */
+	public void startRecording(Line.Info lineInfo) {
+		try {
+			fileOutput = new FileOutputStream(fileName);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		DataLine.Info info = new DataLine.Info(lineInfo.getLineClass(), audioFormat);
 		setTargetStatus(true);
 		
 		try {
