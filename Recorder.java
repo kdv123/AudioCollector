@@ -2,7 +2,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Scanner;
 
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
@@ -26,7 +25,7 @@ public class Recorder {
 	int channels;
 	
 	/*
-	 * Contructors
+	 * Constructors
 	 */
 	public Recorder() {
 		byteOutput = new ByteArrayOutputStream();
@@ -75,8 +74,6 @@ public class Recorder {
 		byteOutput.reset();	//Eliminates the information in the buffer. Reset is necessary in case the user wished to re-record an utterance
 		target.start();
 		
-		System.out.println("Recording...");
-		
 		Thread targetThread = new Thread() {
 			@Override
 			public void run() {
@@ -108,7 +105,6 @@ public class Recorder {
 			
 		}
 		
-		System.out.println("Stopped");
 		setTargetStatus(false);	//Exits loop in thread
 		target.close();
 	}
@@ -137,7 +133,6 @@ public class Recorder {
 		}
 		
 		testClip.start();
-		System.out.println("Playing back");
 		
 		/*
 		 * Once testClip.start() is called, the audio will play but then the program will terminate before much of the audio is played.
@@ -152,8 +147,7 @@ public class Recorder {
 		
 	}
 	
-	public void stopPlayback() {
-		System.out.println("Reset");
+	public void resetPlayback() {
 		testClip.stop();
 		testClip.setFramePosition(0);
 	}
@@ -163,7 +157,7 @@ public class Recorder {
 	 * 
 	 * This should be closed once the user is finished with an utterance.
 	 */
-	private void finish() {
+	public void finish() {
 		try {
 			byteOutput.close();
 			fileOutput.close();

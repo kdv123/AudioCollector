@@ -35,7 +35,7 @@ public class ViewForRecorder2 extends Application {
 	Button stop;
 	Button next;
 	Button playback;
-	SimpleAudioRecorder2 sar = new SimpleAudioRecorder2();
+	Recorder recorder = new Recorder();
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
 	int state = 0;
@@ -108,6 +108,7 @@ public class ViewForRecorder2 extends Application {
 				parts[part] += " " + s + " ";
 			}
 		}
+		info.close();
 	}
 
 
@@ -243,7 +244,7 @@ public class ViewForRecorder2 extends Application {
 		start.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.GREEN, 0, 0));
 			status.setText(status.getText() + "Recording ...");
-			sar.startRecording();
+			recorder.startRecording();
 			start.setDisable(true);
 			next.setDisable(true);
 			stop.setDisable(false);
@@ -254,15 +255,13 @@ public class ViewForRecorder2 extends Application {
 		stop.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.RED, 0, 0));
 			status.setText("Status:\t\t" + "Stopped Recording!");
-			sar.stopRecording();
+			recorder.stopRecording();
 			start.setDisable(true);
 			next.setDisable(false);
 			stop.setDisable(true);
 			next.setDefaultButton(true);
 			stop.setDefaultButton(false);
-			start.setDefaultButton(false);
-			//sar.convertFile("test.wav");
-			
+			start.setDefaultButton(false);			
 		});
 
 
@@ -301,8 +300,7 @@ public class ViewForRecorder2 extends Application {
 		status.setMaxHeight(100);
 		playback = new Button("Playback");
 		playback.setOnAction(event -> {
-			sar.convertFile("test");
-			sar.playback();
+			recorder.startPlayback();
 		});
 		directions.add(playback, 5, 2, 1, 1);
 	}
