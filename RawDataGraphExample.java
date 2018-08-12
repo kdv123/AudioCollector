@@ -42,11 +42,24 @@ public class RawDataGraphExample extends Application{
 			input = new FileInputStream("test.RAW");
 			int i = 0;
 			// read each byte
+//			do {
+//				
+//				i = input.read();
+//				list.add(i);
+//				System.out.println(i);
+//
+//			} while (i != -1);
 			do {
-				i = input.read();
-				list.add(i);
-				System.out.println(i);
-
+				int j =  input.read();
+				int k =  input.read();
+				if (j == -1 || k == -1) {
+					break;
+				}
+				int n = ((k << 8) + j);
+				list.add(n);
+				System.out.println(n);
+				i = k;
+				
 			} while (i != -1);
 
 		} catch(IOException e) {
@@ -62,6 +75,47 @@ public class RawDataGraphExample extends Application{
 
 
 	}
+	
+	ArrayList<Double> pick = new ArrayList<>();
+	
+	public int biggest() {
+		int n = 0;
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i) > n) {
+				n = list.get(i);
+			}
+		}
+		return n;
+	}
+	
+	public void parseList(double width, double height) {
+		int group = (int) (Math.ceil(list.size() / width));
+		double hp = height / 2300;
+		double sum = 0;
+		for (int i = 0, j = 0; i < list.size() && j < group; i++, j++) {
+			sum += list.get(j);
+			if (j == group - 1) {
+				System.out.println(sum/group);
+				pick.add(sum/group);
+				j = 0;
+			}
+		}
+	}
+	
+	public Group drawPick(double width, double height) {
+		Group g = new Group();
+		double hp = height / 2300;
+		System.out.println("pick: " + pick.size());
+		for (int i = 0; i < pick.size(); i++) {
+			double h = 2300 - pick.get(i);
+			h = h/2;
+			double num = pick.get(i)/2;
+			Rectangle rec = new Rectangle(i, h, 1, num);
+			g.getChildren().add(rec);
+			System.out.println("aha");
+		}
+		return g;
+	}
 
 	public static void main(String [] args) {
 		launch(args);
@@ -71,49 +125,59 @@ public class RawDataGraphExample extends Application{
 	public void start(Stage arg0) throws Exception {
 		readFile();
 		Group g = new Group();
+		System.err.println("biggest: " + biggest());
 
-		rect = new Rectangle(0, 0, 800, 295);
-		rect.setFill(Color.LIGHTBLUE);
-		g.getChildren().add(rect);
+//		rect = new Rectangle(0, 0, 800, 295);
+//		rect.setFill(Color.LIGHTBLUE);
+//		g.getChildren().add(rect);
 
-		Rectangle r1 = new Rectangle(0, 300, 800, 100);
-		r1.setFill(Color.ANTIQUEWHITE);
-		g.getChildren().add(r1);
+//		Rectangle r1 = new Rectangle(0, 300, 800, 100);
+//		r1.setFill(Color.ANTIQUEWHITE);
+//		g.getChildren().add(r1);
+//
+//		Rectangle r2 = new Rectangle(0, 400, 800, 100);
+//		r2.setFill(Color.LAVENDER);
+//		g.getChildren().add(r2);
+//
+//		Rectangle r3 = new Rectangle(0, 500, 800, 100);
+//		r3.setFill(Color.PEACHPUFF);
+//		g.getChildren().add(r3);
 
-		Rectangle r2 = new Rectangle(0, 400, 800, 100);
-		r2.setFill(Color.LAVENDER);
-		g.getChildren().add(r2);
-
-		Rectangle r3 = new Rectangle(0, 500, 800, 100);
-		r3.setFill(Color.PEACHPUFF);
-		g.getChildren().add(r3);
-
-		Group show = new Group();
-		displayWave3(show);
-		g.getChildren().add(show);
+//		Group show = new Group();
+		//displayWave3(show);
+		//g.getChildren().add(show);
+		//readFile("")
+		//parseList(800, 200);
+//		show = drawPick(800, 200);
 
 
 
 		/* This appears to give the best display, with displayFullHeight a runner-up */
-		Group g1 = new Group();
-		displayProportional(g1);
-		g1.setTranslateY(300);
-		g.getChildren().add(g1);
+//		Group g1 = new Group();
+//		displayProportional(g1);
+//		g1.setTranslateY(300);
+//		g.getChildren().add(g1);
+//
+//		Group g2 = new Group();
+//		shrinkToFitWave3(g2);
+//		g2.setTranslateY(300);
+//		g.getChildren().add(g2);
+//
+//		Group g3 = new Group();
+//		displaySparseWave3(g3);
+//		g3.setTranslateY(500);
+//		g.getChildren().add(g3);
 
-		Group g2 = new Group();
-		shrinkToFitWave3(g2);
-		g2.setTranslateY(300);
-		g.getChildren().add(g2);
-
-		Group g3 = new Group();
-		displaySparseWave3(g3);
-		g3.setTranslateY(500);
-		g.getChildren().add(g3);
-
-		active = show;
+//		active = show;
+		
+		for (int i = 0; i < list.size(); i++) {
+//			double d = 5:50 - 6:43; 12:50 - 2:05;  8/9/18  got things working 
+//			with text wrapping and layout for 4 mics.  Explored bit masking for waveforms.
+		}
 
 
 		Scene s = new Scene(g);
+		
 		
 		
 		s.setOnMouseClicked(event -> {
@@ -141,16 +205,16 @@ public class RawDataGraphExample extends Application{
 //				}
 //				show.toFront();
 //			} else {
-				if (event.getY() > 500) {
-					active = g3;
-				} else if (event.getY() > 400) {
-					active = g2;
-				} else if (event.getY() > 295) {
-					active = g1;
-					System.err.println(event.getSource());
-				} else if (event.getY() < 295) {
-					active = show;
-				} 
+//				if (event.getY() > 500) {
+//					active = g3;
+//				} else if (event.getY() > 400) {
+//					active = g2;
+//				} else if (event.getY() > 295) {
+//					active = g1;
+//					System.err.println(event.getSource());
+//				} else if (event.getY() < 295) {
+//					active = show;
+//				} 
 //			}
 		});
 

@@ -251,6 +251,7 @@ public class ViewForRecorder2 extends Application {
 			stop.setDefaultButton(true);
 			start.setDefaultButton(false);
 			next.setDefaultButton(false);
+			
 		});
 		stop.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.RED, 0, 0));
