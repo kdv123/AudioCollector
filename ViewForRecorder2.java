@@ -41,7 +41,10 @@ public class ViewForRecorder2 extends Application {
 	Button stop;
 	Button next;
 	Button playback;
-	Recorder recorder = new Recorder();
+	Recorder recorder1 = new Recorder();
+	Recorder recorder2 = null;
+	Recorder recorder3 = null;
+	Recorder recorder4 = null;
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
 	HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
@@ -179,7 +182,14 @@ public class ViewForRecorder2 extends Application {
 			allMics.add(new CheckBox(ourEntry.getKey().getName()));
 		}
 		
-		
+		int micCount = 0;
+		for(CheckBox mic : allMics) {
+			if(mic.isSelected() && micCount <= 4) {
+				micCount++;
+			} else if (micCount > 4) {
+				System.err.println("YOU MAY ONLY SELECT UP TO 4 MICROPHONES");
+			}
+		}
 		
 		Label sampRate = new Label("Sampling Rate");
 		ComboBox sampl = new ComboBox();
@@ -268,7 +278,11 @@ public class ViewForRecorder2 extends Application {
 		start.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.GREEN, 0, 0));
 			status.setText(status.getText() + "Recording ...");
-			recorder.startRecording();
+			try {
+				recorder1.startRecording();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			start.setDisable(true);
 			next.setDisable(true);
 			stop.setDisable(false);
@@ -279,7 +293,7 @@ public class ViewForRecorder2 extends Application {
 		stop.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.RED, 0, 0));
 			status.setText("Status:\t\t" + "Stopped Recording!");
-			recorder.stopRecording();
+			recorder1.stopRecording();
 			start.setDisable(true);
 			next.setDisable(false);
 			stop.setDisable(true);
@@ -324,7 +338,7 @@ public class ViewForRecorder2 extends Application {
 		status.setMaxHeight(100);
 		playback = new Button("Playback");
 		playback.setOnAction(event -> {
-			recorder.startPlayback();
+			recorder1.startPlayback();
 		});
 		directions.add(playback, 5, 2, 1, 1);
 	}
