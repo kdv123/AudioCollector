@@ -32,7 +32,7 @@ public class SimpleAudioRecorder {
 	
 	public SimpleAudioRecorder() {
 		samplingRate = 44100;
-		audioFile = new File("test.wav");
+		audioFile = new File("test1.wav");
 		myAF = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, samplingRate, 16, 1, 2, samplingRate, false);
 	}
 	

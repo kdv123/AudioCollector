@@ -19,27 +19,43 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/* August 12, 2018 */
 public class TextDisplayTrial2 extends Application {
 
 
 	public static void main (String [] args) {
 		launch(args);
 	}
-
+	
+	int taskNum = 0;
+	int totalTasks = 4;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		GridPane main = new GridPane();
-		main.add(prompt(), 0, 0);
-		main.add(mics(), 0, 1);
-		Label label = new Label();
-		label.setPrefSize(800, 50);
-		main.add(label, 0, 2);
-		makeBtnPanel();
-		main.add(btnPanel, 0, 3);
-		Group g = new Group();
-		
-		//Group g = prompt();
-		g.getChildren().add(main);
+//		GridPane main = new GridPane();
+//		GridPane taskBar = new GridPane();
+//		Label spacer = new Label();
+//		spacer.setPrefSize(600, 30);
+//		Label count = new Label("Task " + taskNum + " of " + totalTasks);
+//		count.setTextFill(Color.CRIMSON);
+//		count.setBackground(background(Color.FLORALWHITE));
+//		count.setFont(Font.font(27));
+////		count.setPrefSize(300, 30);
+//		taskBar.add(spacer, 0, 0);
+//		taskBar.add(count, 1, 0);
+//		main.add(taskBar, 0, 0);
+//		main.add(prompt(), 0, 1);
+//		main.add(mics(), 0, 2);
+//		Label label = new Label();
+//		label.setPrefSize(800, 50);
+//		main.add(label, 0, 3);
+//		makeBtnPanel();
+//		main.add(btnPanel, 0, 3);
+//		Group g = new Group();
+//		
+//		//Group g = prompt();
+//		g.getChildren().add(main);
+		Group g = viewer();
 		Scene s = new Scene(g);
 		primaryStage.setScene(s);
 		primaryStage.setTitle("Text Display");
@@ -47,6 +63,33 @@ public class TextDisplayTrial2 extends Application {
 		primaryStage.setWidth(WIDTH);
 		primaryStage.setHeight(HEIGHT);
 
+	}
+	
+	public Group viewer() {
+		GridPane main = new GridPane();
+		GridPane taskBar = new GridPane();
+		Label spacer = new Label();
+		spacer.setPrefSize(600, 30);
+		Label count = new Label("Task " + taskNum + " of " + totalTasks);
+		count.setTextFill(Color.CRIMSON);
+		count.setBackground(background(Color.FLORALWHITE));
+		count.setFont(Font.font(27));
+//		count.setPrefSize(300, 30);
+		taskBar.add(spacer, 0, 0);
+		taskBar.add(count, 1, 0);
+		main.add(taskBar, 0, 0);
+		main.add(prompt(), 0, 1);
+		main.add(mics(), 0, 2);
+		Label label = new Label();
+		label.setPrefSize(800, 50);
+		main.add(label, 0, 3);
+		makeBtnPanel();
+		main.add(btnPanel, 0, 3);
+		Group g = new Group();
+		
+		//Group g = prompt();
+		g.getChildren().add(main);
+		return g;
 	}
 	
 	
@@ -207,6 +250,10 @@ public class TextDisplayTrial2 extends Application {
 	
 	private Background stoppedFill() {
 		return new Background(new BackgroundFill(Color.RED, new CornerRadii(2), new Insets(0)));
+	}
+	
+	private Background background(Color c) {
+		return new Background(new BackgroundFill(c, new CornerRadii(2), new Insets(0)));
 	}
 
 	public Group mics() {
