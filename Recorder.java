@@ -34,34 +34,11 @@ public class Recorder {
 		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
 	}
 	
-	public Recorder(String filename) {
-		fileName = filename;
+	public Recorder(Line.Info line) {
 		byteOutput = new ByteArrayOutputStream();
 		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
-	}
-	
-	public Recorder(String filename, Line.Info line) {
-		fileName = filename;
 		lineInfo = line;
 		specifiedLine = true;
-		byteOutput = new ByteArrayOutputStream();
-		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
-	}
-	
-	public Recorder (String filename, float samplerate) {
-		fileName = filename;
-		sampleRate = samplerate;
-		byteOutput = new ByteArrayOutputStream();
-		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
-	}
-	
-	public Recorder (String filename, float samplerate, Line.Info line) {
-		fileName = filename;
-		sampleRate = samplerate;
-		lineInfo = line;
-		specifiedLine = true;
-		byteOutput = new ByteArrayOutputStream();
-		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
 	}
 	
 	/*
@@ -119,10 +96,8 @@ public class Recorder {
 	 * 
 	 * May or may not use this method. Thinking of adding yet another overloaded constructor.
 	 */
-	public void startRecordingSingleInput() throws Exception {
-		if(!specifiedLine) {
-			throw new Exception("A line must be specified");
-		}
+	public void startRecordingSingleInput() {
+		System.out.println(lineInfo.getLineClass());
 		
 		try {
 			fileOutput = new FileOutputStream(fileName);
@@ -130,11 +105,12 @@ public class Recorder {
 			e.printStackTrace();
 		}
 		
-		DataLine.Info info = new DataLine.Info(lineInfo.getLineClass(), audioFormat);
+		//DataLine.Info info = new DataLine.Info(lineInfo.getLineClass(), audioFormat);
+		System.out.println(lineInfo.getLineClass());
 		setTargetStatus(true);
 		
 		try {
-			target = (TargetDataLine) AudioSystem.getLine(info);
+			target = (TargetDataLine) AudioSystem.getLine(lineInfo);
 			target.open();
 		} catch (LineUnavailableException e) {
 			e.printStackTrace();
@@ -245,6 +221,14 @@ public class Recorder {
 	
 	public void setCurrentFile(String newFile) {
 		fileName = newFile;
+	}
+	
+	public void setSampleRate(float rate) {
+		sampleRate = rate;
+	}
+	
+	public void setBitsPerSample(int bits) {
+		bitsPerSample = bits;
 	}
 	
 	/*
