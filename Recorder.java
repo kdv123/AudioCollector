@@ -243,6 +243,17 @@ public class Recorder {
 		targetActive = active;
 	}
 	
+	/**
+	 * Accessor for the byte array representation of data before it is stored
+	 * @return the array
+	 */
+	public byte [] getBytes() {
+		if (byteOutput != null) {
+			return byteOutput.toByteArray();
+		}
+		return null;
+	}
+	
 	public void setCurrentFile(String newFile) {
 		fileName = newFile;
 	}

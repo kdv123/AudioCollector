@@ -1,6 +1,7 @@
 import java.awt.Dimension;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.HashMap;
@@ -20,12 +21,16 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -289,6 +294,7 @@ public class ViewForRecorder2 extends Application {
 			stop.setDefaultButton(true);
 			start.setDefaultButton(false);
 			next.setDefaultButton(false);
+			
 		});
 		stop.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.RED, 0, 0));
@@ -337,11 +343,245 @@ public class ViewForRecorder2 extends Application {
 		status.setMinWidth(600);
 		status.setMaxHeight(100);
 		playback = new Button("Playback");
-		playback.setOnAction(event -> {
-			recorder1.startPlayback();
+		playback.setOnMouseClicked(event -> {
+			if (event.getButton() == MouseButton.PRIMARY) {
+				recorder.startPlayback();
+			} else {
+				System.out.println("aha");
+				System.out.println("prompt");
+				// Get the byte Array and graph it directly in a new window. */
+				byte [] bites = recorder.getBytes();
+				showGraph(bites);
+				/* Attempt to show python chart failed - it didn't display when run */
+//				String command = "python /c start python C:/Users/sel49/workspace/AudioCollector/myScript.py";
+//				try {
+//					
+////					Process p = Runtime.getRuntime().exec(command);
+////					System.out.println("run!");
+//				} catch (IOException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+			}
 		});
+		System.out.println("script finished");
+//		playback.setOnAction(event -> {
+//			
+//			recorder.startPlayback();
+//		});
 		directions.add(playback, 5, 2, 1, 1);
 	}
+	
+	/**
+	 * This function creates a graph of the sound produced.
+	 * @param bites
+	 */
+	public void showGraph(byte [] bites) {
+		Stage sec = new Stage();
+		sec.setTitle("Graph");
+		Group g = new Group();
+		ArrayList<Double> pts = new ArrayList<>();
+		System.out.println("bites: " + bites.length);
+		for (int i = 0; i < bites.length - 1; i++) {
+			byte b1 = bites[i];
+			byte b2 = bites[i+1];
+			 pts.add((double) (b2 << 8 | b1 & 0xFF) / 32767.0);
+		}
+		System.out.println("bites formed");
+		ArrayList<Double> bit = new ArrayList<>();
+		ArrayList<Double> biti = new ArrayList<>();
+		for (int i = 0; i < pts.size(); i++) {
+			if (i % 2 != 0) {
+				bit.add(pts.get(i));
+//			Ellipse e = new Ellipse(i, pts.get(i) * 100, 1, 1);
+//			g.getChildren().add(e);
+			} else {
+				biti.add(pts.get(i));
+			}
+		}
+		double sum = 0;
+//		int count = (bites.length / 2) / 44100;
+//		System.out.println(count);
+		for (int i = 0, j = 500; i < bit.size(); i++) {
+			Rectangle r = new Rectangle(i * 800.0/bit.size(), 0, 1, bit.get(i) * 100);
+			g.getChildren().add(r);
+		}
+		for (int i = 0; i < pts.size(); i++) {
+			Rectangle r = new Rectangle(i * 800.0/pts.size(), 300, 1, pts.get(i) * 100);
+			Rectangle s = new Rectangle(i * 800.0/pts.size(), 200 + (100 - pts.get(i) * 100), 1, pts.get(i) * 100);
+			//s.setRotate(180);
+			g.getChildren().add(r);
+			g.getChildren().add(s);
+		}
+		
+		double [] a = new double[biti.size()];
+		double [] b = new double[bit.size()];
+		for (int i = 0; i < biti.size(); i++) {
+			a[i] = biti.get(i);
+		}
+		for (int i = 0; i < bit.size(); i++) {
+			b[i] = bit.get(i);
+		}
+//		double [] de = fft(a, b, false);
+//		for (int i = 0; i < de.length; i++) {
+//			Rectangle r = new Rectangle(i * 800.0/pts.size(), 400, 1, pts.get(i));
+//			g.getChildren().add(r);
+//		}
+		Scene sc = new Scene(g);
+		sc.setOnMouseClicked(event -> {
+			System.out.println("cli");
+			if (event.getButton() == MouseButton.PRIMARY) {
+				g.setTranslateX(g.getTranslateX() - 30);
+			} else {
+				g.setTranslateX(g.getTranslateX() + 30);
+			}
+		});
+		sc.setOnKeyPressed(event -> {
+			System.out.println("moo");
+			if (event.getCode() == KeyCode.RIGHT) {
+				g.setTranslateX(g.getTranslateX() - 30);
+			}
+			if (event.getCode() == KeyCode.LEFT) {
+				g.setTranslateX(g.getTranslateX() + 30);
+			}
+		});
+		System.out.println("bites shown");
+		
+		sec.setScene(sc);
+		sec.setWidth(800);
+		sec.setHeight(600);
+		sec.show();
+		
+	}
+	
+	/** Code from Stack Overflow:  
+	 * https://stackoverflow.com/questions/3287518/reliable-and-fast-fft-in-java/3287544
+	 */
+//	public class FFTbase {
+	/**
+	 * The Fast Fourier Transform (generic version, with NO optimizations).
+	 *
+	 * @param inputReal
+	 *            an array of length n, the real part
+	 * @param inputImag
+	 *            an array of length n, the imaginary part
+	 * @param DIRECT
+	 *            TRUE = direct transform, FALSE = inverse transform
+	 * @return a new array of length 2n
+	 */
+	public double[] fft(final double[] inputReal, double[] inputImag,
+	                           boolean DIRECT) {
+	    // - n is the dimension of the problem
+	    // - nu is its logarithm in base e
+	    int n = inputReal.length;
+
+	    // If n is a power of 2, then ld is an integer (_without_ decimals)
+	    double ld = Math.log(n) / Math.log(2.0);
+
+	    // Here I check if n is a power of 2. If exist decimals in ld, I quit
+	    // from the function returning null.
+	    if (((int) ld) - ld != 0) {
+	        System.out.println("The number of elements is not a power of 2.");
+	        return null;
+	    }
+
+	    // Declaration and initialization of the variables
+	    // ld should be an integer, actually, so I don't lose any information in
+	    // the cast
+	    int nu = (int) ld;
+	    int n2 = n / 2;
+	    int nu1 = nu - 1;
+	    double[] xReal = new double[n];
+	    double[] xImag = new double[n];
+	    double tReal, tImag, p, arg, c, s;
+
+	    // Here I check if I'm going to do the direct transform or the inverse
+	    // transform.
+	    double constant;
+	    if (DIRECT)
+	        constant = -2 * Math.PI;
+	    else
+	        constant = 2 * Math.PI;
+
+	    // I don't want to overwrite the input arrays, so here I copy them. This
+	    // choice adds \Theta(2n) to the complexity.
+	    for (int i = 0; i < n; i++) {
+	        xReal[i] = inputReal[i];
+	        xImag[i] = inputImag[i];
+	    }
+
+	    // First phase - calculation
+	    int k = 0;
+	    for (int l = 1; l <= nu; l++) {
+	        while (k < n) {
+	            for (int i = 1; i <= n2; i++) {
+	                p = bitreverseReference(k >> nu1, nu);
+	                // direct FFT or inverse FFT
+	                arg = constant * p / n;
+	                c = Math.cos(arg);
+	                s = Math.sin(arg);
+	                tReal = xReal[k + n2] * c + xImag[k + n2] * s;
+	                tImag = xImag[k + n2] * c - xReal[k + n2] * s;
+	                xReal[k + n2] = xReal[k] - tReal;
+	                xImag[k + n2] = xImag[k] - tImag;
+	                xReal[k] += tReal;
+	                xImag[k] += tImag;
+	                k++;
+	            }
+	            k += n2;
+	        }
+	        k = 0;
+	        nu1--;
+	        n2 /= 2;
+	    }
+
+	    // Second phase - recombination
+	    k = 0;
+	    int r;
+	    while (k < n) {
+	        r = bitreverseReference(k, nu);
+	        if (r > k) {
+	            tReal = xReal[k];
+	            tImag = xImag[k];
+	            xReal[k] = xReal[r];
+	            xImag[k] = xImag[r];
+	            xReal[r] = tReal;
+	            xImag[r] = tImag;
+	        }
+	        k++;
+	    }
+
+	    // Here I have to mix xReal and xImag to have an array (yes, it should
+	    // be possible to do this stuff in the earlier parts of the code, but
+	    // it's here to readibility).
+	    double[] newArray = new double[xReal.length * 2];
+	    double radice = 1 / Math.sqrt(n);
+	    for (int i = 0; i < newArray.length; i += 2) {
+	        int i2 = i / 2;
+	        // I used Stephen Wolfram's Mathematica as a reference so I'm going
+	        // to normalize the output while I'm copying the elements.
+	        newArray[i] = xReal[i2] * radice;
+	        newArray[i + 1] = xImag[i2] * radice;
+	    }
+	    return newArray;
+	}
+
+	/**
+	 * The reference bitreverse function.
+	 */
+	private int bitreverseReference(int j, int nu) {
+	    int j2;
+	    int j1 = j;
+	    int k = 0;
+	    for (int i = 1; i <= nu; i++) {
+	        j2 = j1 / 2;
+	        k = 2 * k + j1 - 2 * j2;
+	        j1 = j2;
+	    }
+	    return k;
+	  }
+//	}
+	// end Stack overflow;
 	
 	public void getMicrophoneInfo() {
 		Mixer.Info[] mixers = AudioSystem.getMixerInfo();
