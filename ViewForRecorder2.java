@@ -397,12 +397,12 @@ public class ViewForRecorder2 extends Application {
 		playback = new Button("Playback");
 		playback.setOnMouseClicked(event -> {
 			if (event.getButton() == MouseButton.PRIMARY) {
-				recorder.startPlayback();
+				recorder1.startPlayback();
 			} else {
 				System.out.println("aha");
 				System.out.println("prompt");
 				// Get the byte Array and graph it directly in a new window. */
-				byte [] bites = recorder.getBytes();
+				byte [] bites = recorder1.getBytes();
 				showGraph(bites);
 				/* Attempt to show python chart failed - it didn't display when run */
 //				String command = "python /c start python C:/Users/sel49/workspace/AudioCollector/myScript.py";
