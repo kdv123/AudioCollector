@@ -203,29 +203,11 @@ public class ViewForRecorder2 extends Application {
 		
 		EventHandler<ActionEvent> micCheckHandle = e-> {
 			int i = 0;
-			int micCheckCount = 0;
 			for(Entry<Mixer.Info, Line.Info> info: mixerToTarget.entrySet()) {
-				if(allMics.get(i).isSelected()) {
-					micCheckCount++;
+				if(allMics.get(i).isSelected() & i < 4) {
+					i++;
 					selectedMics.add(info.getKey());
-					if (micCheckCount == 1) {
-						recorder1 = new Recorder(mixerToTarget.get(info.getKey()));
-					} else if (micCheckCount == 2) {
-						recorder2 = new Recorder(mixerToTarget.get(info.getKey()));
-					} else if (micCheckCount == 3) {
-						recorder3 = new Recorder(mixerToTarget.get(info.getKey()));
-					} else if (micCheckCount == 4) {
-						recorder4 = new Recorder(mixerToTarget.get(info.getKey()));
-					} else {
-						try {
-							throw new Exception("More than four mic have been selected");
-						} catch (Exception ex) {
-							ex.printStackTrace();
-						}
-					}
-				}
-				
-				i++;
+				}			
 			}
 		};
 					
@@ -257,9 +239,25 @@ public class ViewForRecorder2 extends Application {
 		lab.setMinSize(100, 100);
 		Button next = new Button("NEXT");
 		next.setOnAction(event -> {
-			for (int i = 0; i < listOfRecorders.length; i++) {
-				if (listOfRecorders[i] != null) {
-					listOfRecorders[i].setCurrentFile("part" + partID.getText()+ "_"+ sNum.getText()+"_"+selectedMics.get(i).getName()+cond.getValue());
+//			for (int i = 0; i < listOfRecorders.length; i++) {
+//				if (listOfRecorders[i] != null) {
+//					listOfRecorders[i].setCurrentFile("part" + partID.getText()+ "_"+ sNum.getText()+"_"+selectedMics.get(i).getName()+cond.getValue());
+//				}
+//			}
+			System.out.println(selectedMics);
+			for(int i = 0; i < selectedMics.size(); i++) {
+				if (i == 0) {
+					recorder1 = new Recorder(mixerToTarget.get(selectedMics.get(0)));
+					listOfRecorders[0] = recorder1;
+				} else if (i == 1) {
+					recorder2 = new Recorder(mixerToTarget.get(selectedMics.get(1)));
+					listOfRecorders[1] = recorder2;
+				} else if (i == 2) {
+					recorder3 = new Recorder(mixerToTarget.get(selectedMics.get(2)));
+					listOfRecorders[2] = recorder3;
+				} else if (i == 3) {
+					recorder4 = new Recorder(mixerToTarget.get(selectedMics.get(3)));
+					listOfRecorders[3] = recorder4;
 				}
 			}
 			state = 1;
