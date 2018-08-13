@@ -340,10 +340,25 @@ public class RawDataGraphExample extends Application{
 		metrics();
 //		g = goal();
 		readFile();
+		double sum = 0;
+		int run = 25;
+		int done = 0;
+		double pix = 800.0/list.size();
+		double fouri = Math.pow(2,  15) * 50;
+		System.out.println(list.size());
 		for (int i = 0; i < list.size(); i++) {
-			Ellipse e = new Ellipse(i, list.get(i)/Math.pow(2, 15) * 100, 1, 1);
+			
+//			sum += list.get(i);
+//			if (i != 0 && i % run == 0) {
+			Ellipse e = new Ellipse(i *pix, list.get(i)/fouri, 1, 1);
+//			Rectangle r = new Rectangle(i * 800.0/list.size(), 200, 1, list.get(i)/Math.pow(2,  15) * 50);
+//			done++;
 			g.getChildren().add(e);
+			System.out.println(i);
+//			g.getChildren().add(r);
+			//}
 		}
+		
 //		Group g =  new Group();
 //		int size = list.size();
 //		double width = 800;
