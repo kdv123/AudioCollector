@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -32,7 +33,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 
 public class ViewForRecorder2 extends Application {
 
@@ -46,14 +50,19 @@ public class ViewForRecorder2 extends Application {
 	Button stop;
 	Button next;
 	Button playback;
-	Recorder recorder1 = new Recorder();
-	Recorder recorder2 = null;
-	Recorder recorder3 = null;
-	Recorder recorder4 = null;
+	Recorder recorder1;
+	Recorder recorder2;
+	Recorder recorder3;
+	Recorder recorder4;
+	Recorder[] listOfRecorders = new Recorder[4];
+	File promptFile;
+	String outputFileName = "test.raw";
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
-	HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
 	int state = 0;
+	HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
+	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(4);
+	float[] sampleRates = {16000, 22050, 37800, 44100};
 	
 	/*
 	 * Planning:  need a file to parse.  Then have a series of questions starting with
@@ -69,12 +78,12 @@ public class ViewForRecorder2 extends Application {
 	 * @param filename
 	 * @return
 	 */
-	private ArrayList<String []> scanMe(String filename) {
+	private ArrayList<String []> scanMe() {
 		ArrayList<String []> list = new ArrayList<>();
 		String id = "";
 		String context = "";
 		
-		try (Scanner scan = new Scanner(new File(filename))) {
+		try (Scanner scan = new Scanner(promptFile)) {
 			while (scan.hasNext()) {
 				String [] tasks = new String[4];
 				String task = scan.nextLine();
@@ -137,22 +146,22 @@ public class ViewForRecorder2 extends Application {
 		screen = new BorderPane();
 		screen.setCenter(directions);
 		screen.setBottom(btnPanel);
-		scene = new Scene(startScreen());
+		scene = new Scene(startScreen(stage));
 		scene.setFill(Color.ANTIQUEWHITE);
 		//scene.setRoot(screen);
 //		scene.getStylesheets().add("style21.css");
 		stage.setScene(scene);
 		stage.show();
 		
-		ArrayList<String []> tasks = scanMe("test.txt");
-		for (int i = 0; i < tasks.size(); i++) {
-			
+//		ArrayList<String []> tasks = scanMe();
+//		for (int i = 0; i < tasks.size(); i++) {
+//			
 //			System.out.println(java.util.Arrays.toString(tasks.get(i)) + "\n\n");
-			for (int j = 0; j < tasks.get(i).length; j++) {
-				System.out.print(tasks.get(i)[j] + "\t");
-			}
-			System.out.println();
-		}
+//			for (int j = 0; j < tasks.get(i).length; j++) {
+//				System.out.print(tasks.get(i)[j] + "\t");
+//			}
+//			System.out.println();
+//		}
 
 	}
 	
@@ -161,48 +170,78 @@ public class ViewForRecorder2 extends Application {
 	 * and allows for transition to the next part.
 	 * @return
 	 */
-	public Group startScreen() {
+	public Group startScreen(Stage stage) {
 		Group g = new Group();
 		GridPane grid = new GridPane();
+		
 		Label participantID = new Label("Participant ID");
 		TextField partID = new TextField();
 		partID.setPromptText("participant ID");
+		
 		Label session = new Label("Session #");
 		TextField sNum = new TextField();
 		sNum.setPromptText("Session #");
-		Label file = new Label("file");
+		
+		Label fileLabel = new Label("file");
 		TextField files = new TextField();
 		Button choose = new Button("File");
+
+		choose.setOnAction(event -> {
+			FileChooser chooser = new FileChooser();
+			chooser.setInitialDirectory(new File("D:\\eclipse-workspace\\AudioCollector"));	//Set initial directory to something else
+			promptFile = chooser.showOpenDialog(stage);
+		});
+		
+		
 		Label condition = new Label("Condition");
-		ComboBox cond = new ComboBox();
+		ComboBox<String> cond = new ComboBox<String>();
 		cond.getItems().addAll("one", "two", "outside", "inside");
-		//Label numMics = new Label("# of microphones");
-		//ComboBox mics = new ComboBox();
-		//mics.getItems().addAll("1", "2", "3", "4");
 		
 		ArrayList<CheckBox> allMics = new ArrayList<CheckBox>();
 		Label selectMics = new Label("Select microphones");
 		getMicrophoneInfo();
+		
+		EventHandler<ActionEvent> micCheckHandle = e-> {
+			int i = 0;
+			int micCheckCount = 0;
+			for(Entry<Mixer.Info, Line.Info> info: mixerToTarget.entrySet()) {
+				if(allMics.get(i).isSelected()) {
+					micCheckCount++;
+					selectedMics.add(info.getKey());
+					if (micCheckCount == 1) {
+						recorder1 = new Recorder(mixerToTarget.get(info.getKey()));
+					} else if (micCheckCount == 2) {
+						recorder2 = new Recorder(mixerToTarget.get(info.getKey()));
+					} else if (micCheckCount == 3) {
+						recorder3 = new Recorder(mixerToTarget.get(info.getKey()));
+					} else if (micCheckCount == 4) {
+						recorder4 = new Recorder(mixerToTarget.get(info.getKey()));
+					} else {
+						try {
+							throw new Exception("More than four mic have been selected");
+						} catch (Exception ex) {
+							ex.printStackTrace();
+						}
+					}
+				}
+				
+				i++;
+			}
+		};
+					
 		for(Entry<Mixer.Info, Line.Info> ourEntry : mixerToTarget.entrySet()) {
 			allMics.add(new CheckBox(ourEntry.getKey().getName()));
+			allMics.get(allMics.size()-1).setOnAction(micCheckHandle);	//Most recent addition
 		}
 		
-		int micCount = 0;
-		for(CheckBox mic : allMics) {
-			if(mic.isSelected() && micCount <= 4) {
-				micCount++;
-			} else if (micCount > 4) {
-				System.err.println("YOU MAY ONLY SELECT UP TO 4 MICROPHONES");
-			}
-		}
 		
 		Label sampRate = new Label("Sampling Rate");
-		ComboBox sampl = new ComboBox();
+		ComboBox<String> sampl = new ComboBox<String>();
 		sampl.getItems().addAll("16000 Hz", "22050 Hz", "37800 Hz","44100 Hz");
 		
 		grid.addRow(0, participantID, partID);
 		grid.addRow(1, session, sNum);
-		grid.addRow(2, file, choose);
+		grid.addRow(2, fileLabel, choose);
 		grid.addRow(3, condition, cond);
 		grid.addRow(4, selectMics);
 		
@@ -218,6 +257,11 @@ public class ViewForRecorder2 extends Application {
 		lab.setMinSize(100, 100);
 		Button next = new Button("NEXT");
 		next.setOnAction(event -> {
+			for (int i = 0; i < listOfRecorders.length; i++) {
+				if (listOfRecorders[i] != null) {
+					listOfRecorders[i].setCurrentFile("part" + partID.getText()+ "_"+ sNum.getText()+"_"+selectedMics.get(i).getName()+cond.getValue());
+				}
+			}
 			state = 1;
 			scene.setRoot(screen);
 		});
@@ -271,6 +315,7 @@ public class ViewForRecorder2 extends Application {
 		
 		// Default buttons not currently working for typing ENTER to move to the next one
 		next.setOnMouseClicked(event -> {
+			System.out.println("next");
 			start.setDisable(false);
 			next.setDisable(true);
 			stop.setDisable(true);
@@ -281,13 +326,15 @@ public class ViewForRecorder2 extends Application {
 
 		/* Listeners attached to buttons here.  Nothing currently attached to "next" */
 		start.setOnAction(event -> {
+			System.out.println("start");
 			status.setBackground(backgrounds(Color.GREEN, 0, 0));
 			status.setText(status.getText() + "Recording ...");
-			try {
-				recorder1.startRecording();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+				for(int i = 0; i < listOfRecorders.length; i++) {
+					System.out.println(Arrays.toString(listOfRecorders));	//All recorders all null!
+					if (listOfRecorders[i] != null) {
+						listOfRecorders[i].startRecordingSingleInput();
+					}
+				}
 			start.setDisable(true);
 			next.setDisable(true);
 			stop.setDisable(false);
@@ -297,9 +344,14 @@ public class ViewForRecorder2 extends Application {
 			
 		});
 		stop.setOnAction(event -> {
+			System.out.println("stop");
 			status.setBackground(backgrounds(Color.RED, 0, 0));
 			status.setText("Status:\t\t" + "Stopped Recording!");
-			recorder1.stopRecording();
+			for (int i = 0; i < listOfRecorders.length; i++) {
+				if (listOfRecorders[i] != null) {
+					listOfRecorders[i].stopRecording();
+				}
+			}
 			start.setDisable(true);
 			next.setDisable(false);
 			stop.setDisable(true);
