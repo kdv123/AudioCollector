@@ -16,12 +16,13 @@ public class Recorder {
 	private AudioFormat audioFormat = null;	
 	private ByteArrayOutputStream byteOutput = null;
 	private TargetDataLine target = null;
-	private Line.Info lineInfo = null;
+	//private Line.Info lineInfo = null;
 	private Clip testClip;
 	static Mixer mix;
+	Mixer.Info mixInfo;
 	private FileOutputStream fileOutput = null;
 	
-	private boolean targetActive = false, signed = true, bigEndian = false, specifiedLine = false;
+	private boolean targetActive = false, signed = true, bigEndian = false;
 	private String fileName = "test.raw";
 	private float sampleRate = 44100;
 	private int bitsPerSample = 16;
@@ -34,23 +35,18 @@ public class Recorder {
 		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
 	}
 	
-	public Recorder(Line.Info line) {
+	public Recorder(Mixer.Info mixer) {
 		byteOutput = new ByteArrayOutputStream();
 		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
-		lineInfo = line;
-		specifiedLine = true;
+		mixInfo = mixer;
 	}
 	
 	/*
-	 * This method records raw data from a single line and writes it to the specified file
+	 * This method records raw data from a single line from the first available target line and writes it to the specified file
 	 */
-	public void startRecording() throws Exception {
-		if (specifiedLine) {
-			throw new Exception("A line has been specified!");
-		}
-		
+	public void startRecording() {
 		try {
-			fileOutput = new FileOutputStream(fileName);
+			fileOutput = new FileOutputStream(getFileName());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -90,14 +86,13 @@ public class Recorder {
 		
 		targetThread.start();
 	}
-	
+
 	/*
 	 * This method records raw data from a single line and writes it to the specified file
 	 * 
 	 * May or may not use this method. Thinking of adding yet another overloaded constructor.
 	 */
 	public void startRecordingSingleInput() {
-		System.out.println(lineInfo.getLineClass());
 		
 		try {
 			fileOutput = new FileOutputStream(fileName);
@@ -105,12 +100,10 @@ public class Recorder {
 			e.printStackTrace();
 		}
 		
-		//DataLine.Info info = new DataLine.Info(lineInfo.getLineClass(), audioFormat);
-		System.out.println(lineInfo.getLineClass());
 		setTargetStatus(true);
 		
 		try {
-			target = (TargetDataLine) AudioSystem.getLine(lineInfo);
+			target = (TargetDataLine) AudioSystem.getTargetDataLine(audioFormat, mixInfo);
 			target.open();
 		} catch (LineUnavailableException e) {
 			e.printStackTrace();
@@ -230,10 +223,15 @@ public class Recorder {
 		return null;
 	}
 	
-	public void setCurrentFile(String newFile) {
+	public void setFileName(String newFile) {
 		fileName = newFile;
 	}
 	
+	
+	private String getFileName() {
+		// TODO Auto-generated method stub
+		return fileName;
+	}
 	public void setSampleRate(float rate) {
 		sampleRate = rate;
 	}
@@ -242,6 +240,9 @@ public class Recorder {
 		bitsPerSample = bits;
 	}
 	
+	public Mixer.Info getMixer() {
+		return mixInfo;
+	}
 	/*
 	 * Main method for testing purposes
 	 */

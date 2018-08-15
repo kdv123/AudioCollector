@@ -1,13 +1,9 @@
 import java.awt.Dimension;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.HashMap;
-import java.util.Map.Entry;
-
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Line;
 import javax.sound.sampled.Mixer;
@@ -60,7 +56,8 @@ public class ViewForRecorder2 extends Application {
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
 	int state = 0;
-	HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
+	//HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
+	ArrayList<Mixer.Info> allMixerInfos = new ArrayList<Mixer.Info>(4);
 	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(4);
 	float[] sampleRates = {16000, 22050, 37800, 44100};
 	
@@ -203,16 +200,16 @@ public class ViewForRecorder2 extends Application {
 		
 		EventHandler<ActionEvent> micCheckHandle = e-> {
 			int i = 0;
-			for(Entry<Mixer.Info, Line.Info> info: mixerToTarget.entrySet()) {
-				if(allMics.get(i).isSelected() & i < 4) {
-					i++;
-					selectedMics.add(info.getKey());
-				}			
+			for(Mixer.Info info: allMixerInfos) {
+				if(allMics.get(i).isSelected() && i < 4) {
+					selectedMics.add(info);
+				}
+				i++;
 			}
 		};
 					
-		for(Entry<Mixer.Info, Line.Info> ourEntry : mixerToTarget.entrySet()) {
-			allMics.add(new CheckBox(ourEntry.getKey().getName()));
+		for(Mixer.Info info : allMixerInfos) {
+			allMics.add(new CheckBox(info.getName()));
 			allMics.get(allMics.size()-1).setOnAction(micCheckHandle);	//Most recent addition
 		}
 		
@@ -239,27 +236,31 @@ public class ViewForRecorder2 extends Application {
 		lab.setMinSize(100, 100);
 		Button next = new Button("NEXT");
 		next.setOnAction(event -> {
-//			for (int i = 0; i < listOfRecorders.length; i++) {
-//				if (listOfRecorders[i] != null) {
-//					listOfRecorders[i].setCurrentFile("part" + partID.getText()+ "_"+ sNum.getText()+"_"+selectedMics.get(i).getName()+cond.getValue());
-//				}
-//			}
-			System.out.println(selectedMics);
 			for(int i = 0; i < selectedMics.size(); i++) {
 				if (i == 0) {
-					recorder1 = new Recorder(mixerToTarget.get(selectedMics.get(0)));
+					recorder1 = new Recorder(allMixerInfos.get(0));
 					listOfRecorders[0] = recorder1;
 				} else if (i == 1) {
-					recorder2 = new Recorder(mixerToTarget.get(selectedMics.get(1)));
+					recorder2 = new Recorder(allMixerInfos.get(1));
 					listOfRecorders[1] = recorder2;
 				} else if (i == 2) {
-					recorder3 = new Recorder(mixerToTarget.get(selectedMics.get(2)));
+					recorder3 = new Recorder(allMixerInfos.get(2));
 					listOfRecorders[2] = recorder3;
 				} else if (i == 3) {
-					recorder4 = new Recorder(mixerToTarget.get(selectedMics.get(3)));
+					recorder4 = new Recorder(allMixerInfos.get(3));
 					listOfRecorders[3] = recorder4;
 				}
 			}
+			
+			for (int i = 0; i < listOfRecorders.length; i++) {
+				if (listOfRecorders[i] != null) {
+					if (partID.getText().isEmpty()) {
+						listOfRecorders[i].setFileName("Test"+selectedMics.get(i).getName().replaceAll(" ", "")+".raw");
+					}
+					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+selectedMics.get(i).getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".raw");
+				}
+			}
+			
 			state = 1;
 			scene.setRoot(screen);
 		});
@@ -330,9 +331,11 @@ public class ViewForRecorder2 extends Application {
 				for(int i = 0; i < listOfRecorders.length; i++) {
 					System.out.println(Arrays.toString(listOfRecorders));	//All recorders all null!
 					if (listOfRecorders[i] != null) {
+						listOfRecorders[i].getMixer().getName();
 						listOfRecorders[i].startRecordingSingleInput();
 					}
 				}
+			//recorder1.startRecording();
 			start.setDisable(true);
 			next.setDisable(true);
 			stop.setDisable(false);
@@ -641,7 +644,7 @@ public class ViewForRecorder2 extends Application {
 			
 			for (Line.Info li : lines) {
 				if(li.toString().equals("interface TargetDataLine supporting 8 audio formats, and buffers of at least 32 bytes")) {
-					mixerToTarget.put(mixInfo, li);
+					allMixerInfos.add(mixInfo);
 				}
 			}			
 		}
