@@ -21,10 +21,15 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
@@ -34,7 +39,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class ViewForRecorder2 extends Application {
+public class ViewForRecorder3 extends Application {
 
 	Dimension screenSize;
 	Scene scene;
@@ -51,6 +56,8 @@ public class ViewForRecorder2 extends Application {
 	ArrayList<String []> sessionInfo;
 	HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
 	int state = 0;
+	SimpleAudioRecorder2 sar = new SimpleAudioRecorder2();
+	String dataFile = "";
 	
 	/*
 	 * Planning:  need a file to parse.  Then have a series of questions starting with
@@ -208,6 +215,7 @@ public class ViewForRecorder2 extends Application {
 		lab.setMinSize(100, 100);
 		Button next = new Button("NEXT");
 		next.setOnAction(event -> {
+			dataFile += partID.getText();
 			state = 1;
 			scene.setRoot(screen);
 		});
@@ -273,7 +281,8 @@ public class ViewForRecorder2 extends Application {
 		start.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.GREEN, 0, 0));
 			status.setText(status.getText() + "Recording ...");
-			recorder.startRecording();
+//			recorder.startRecording();
+			sar.startRecording();
 			start.setDisable(true);
 			next.setDisable(true);
 			stop.setDisable(false);
@@ -285,7 +294,8 @@ public class ViewForRecorder2 extends Application {
 		stop.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.RED, 0, 0));
 			status.setText("Status:\t\t" + "Stopped Recording!");
-			recorder.stopRecording();
+//			recorder.stopRecording();
+			sar.stopRecording();
 			start.setDisable(true);
 			next.setDisable(false);
 			stop.setDisable(true);
@@ -331,7 +341,8 @@ public class ViewForRecorder2 extends Application {
 		playback = new Button("Playback");
 		playback.setOnMouseClicked(event -> {
 			if (event.getButton() == MouseButton.PRIMARY) {
-				recorder.startPlayback();
+//				recorder.startPlayback();
+				sar.playback();
 			} else {
 				System.out.println("aha");
 				System.out.println("prompt");
@@ -340,12 +351,25 @@ public class ViewForRecorder2 extends Application {
 //				showGraph(bites);
 				/* Attempt to show python chart failed - it didn't display when run */
 				long time = System.currentTimeMillis();
-				String command = "python /c start python C:/Users/sel49/workspace/AudioCollector/myScript.py";
-//				
+				String command = "python /c start python C:\\Users\\sel49\\workspace\\AudioCollector\\myScript.py";
+				int micNum = 0;
+//				command += " " + dataFile + " two three";
 				try {
-//					String [] args = {command, "one", "two.txt", "three"}
+//					int micNum = 0;
+//					String [] args = {command, dataFile + "_" + micNum, "two", "three"};
 					Process p = Runtime.getRuntime().exec(command);
+//					status.setBackground(new BackgroundImage(new Image(dataFile + "_" + micNum + ".png"), 1, 1 null, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT));
 					System.out.println("run!");
+					Stage wave = new Stage();
+					Group display = new Group();
+					String t = "C:/Users/sel49/Desktop/" + dataFile + ".png";
+					Image img = new Image("myTone.png");
+					Button pic = new Button("", new ImageView(img));
+					display.getChildren().add(pic);
+					Scene sc= new Scene(display);
+					wave.setScene(sc);
+					wave.show();
+					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -356,8 +380,8 @@ public class ViewForRecorder2 extends Application {
 		});
 		System.out.println("script finished");
 //		playback.setOnAction(event -> {
-//			
-//			recorder.startPlayback();
+//			sar.playback();
+////			recorder.startPlayback();
 //		});
 		directions.add(playback, 5, 2, 1, 1);
 	}

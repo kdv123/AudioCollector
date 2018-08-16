@@ -344,6 +344,9 @@ public class RawDataGraphExample extends Application{
 		int run = 25;
 		int done = 0;
 		double pix = 800.0/list.size();
+//		for (int i = 0; i < list.size(); i++) {
+//			//g.getChildren().add(new Rectangle(i*pix, ))
+//		}
 		double fouri = Math.pow(2,  15) * 50;
 		System.out.println(list.size());
 		for (int i = 0; i < list.size(); i++) {
