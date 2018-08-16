@@ -16,52 +16,42 @@ public class Recorder {
 	private AudioFormat audioFormat = null;	
 	private ByteArrayOutputStream byteOutput = null;
 	private TargetDataLine target = null;
-	Clip testClip;
+	//private Line.Info lineInfo = null;
+	private Clip testClip;
 	static Mixer mix;
-	FileOutputStream fileOutput = null;
+	Mixer.Info mixInfo;
+	private FileOutputStream fileOutput = null;
 	
-	private boolean targetActive;
-	String fileName = "test.raw";
-	float sampleRate = 44100;
-	int channels;
+	private boolean targetActive = false, signed = true, bigEndian = false;
+	private String fileName = "test.raw";
+	private float sampleRate = 44100;
+	private int bitsPerSample = 16;
 	
 	/*
 	 * Constructors
 	 */
 	public Recorder() {
 		byteOutput = new ByteArrayOutputStream();
-		audioFormat = new AudioFormat(sampleRate, 16, 1, true, false);
+		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
 	}
 	
-	public Recorder(String filename) {
-		fileName = filename;
+	public Recorder(Mixer.Info mixer) {
 		byteOutput = new ByteArrayOutputStream();
-		audioFormat = new AudioFormat(sampleRate, 16, 1, true, false);
-	}
-	
-	public Recorder (String filename, float samplerate) {
-		fileName = filename;
-		sampleRate = samplerate;
-	}
-	
-	public Recorder(String filename, float samplerate, int sampleSizeBits, int channels) {
-		fileName = filename;
-		sampleRate = samplerate;
-		byteOutput = new ByteArrayOutputStream();
-		//Booleans in af constructor: Signed, bigEndian
-		audioFormat = new AudioFormat(samplerate, sampleSizeBits, channels, true, false);
+		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
+		mixInfo = mixer;
 	}
 	
 	/*
-	 * This method records raw data from a single line and writes it to the specified file
+	 * This method records raw data from a single line from the first available target line and writes it to the specified file
 	 */
 	public void startRecording() {
 		try {
-			fileOutput = new FileOutputStream(fileName);
+			fileOutput = new FileOutputStream(getFileName());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		
+		//DataLine.Info info = new DataLine.Info(lineInfo.getLineClass(), audioFormat);
 		DataLine.Info info = new DataLine.Info(TargetDataLine.class, audioFormat);
 		setTargetStatus(true);
 		
@@ -96,24 +86,24 @@ public class Recorder {
 		
 		targetThread.start();
 	}
-	
+
 	/*
 	 * This method records raw data from a single line and writes it to the specified file
 	 * 
-	 * NEEDS TO BE TESTED!!!
+	 * May or may not use this method. Thinking of adding yet another overloaded constructor.
 	 */
-	public void startRecording(Line.Info lineInfo) {
+	public void startRecordingSingleInput() {
+		
 		try {
 			fileOutput = new FileOutputStream(fileName);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		
-		DataLine.Info info = new DataLine.Info(lineInfo.getLineClass(), audioFormat);
 		setTargetStatus(true);
 		
 		try {
-			target = (TargetDataLine) AudioSystem.getLine(info);
+			target = (TargetDataLine) AudioSystem.getTargetDataLine(audioFormat, mixInfo);
 			target.open();
 		} catch (LineUnavailableException e) {
 			e.printStackTrace();
@@ -233,6 +223,26 @@ public class Recorder {
 		return null;
 	}
 	
+	public void setFileName(String newFile) {
+		fileName = newFile;
+	}
+	
+	
+	private String getFileName() {
+		// TODO Auto-generated method stub
+		return fileName;
+	}
+	public void setSampleRate(float rate) {
+		sampleRate = rate;
+	}
+	
+	public void setBitsPerSample(int bits) {
+		bitsPerSample = bits;
+	}
+	
+	public Mixer.Info getMixer() {
+		return mixInfo;
+	}
 	/*
 	 * Main method for testing purposes
 	 */
