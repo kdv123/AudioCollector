@@ -48,15 +48,15 @@ public class ViewForRecorder2 extends Application {
 	Recorder recorder2;
 	Recorder recorder3;
 	Recorder recorder4;
-	Recorder[] listOfRecorders = new Recorder[4];
+	Recorder[] listOfRecorders = new Recorder[5];
 	File promptFile;
 	String outputFileName = "test.WAV";
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
 	int state = 0;
 	//HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
-	ArrayList<Mixer.Info> allMixerInfos = new ArrayList<Mixer.Info>(4);
-	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(4);
+	ArrayList<Mixer.Info> allMixerInfos = new ArrayList<Mixer.Info>(5);
+	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(5);
 	float[] sampleRates = {16000, 22050, 37800, 44100};
 	
 	/*
@@ -199,7 +199,7 @@ public class ViewForRecorder2 extends Application {
 		EventHandler<ActionEvent> micCheckHandle = e-> {
 			int i = 0;
 			for(Mixer.Info info: allMixerInfos) {
-				if(allMics.get(i).isSelected() && i < 4) {
+				if(allMics.get(i).isSelected() && i < 5) {
 					selectedMics.add(info);
 				}
 				i++;
@@ -236,26 +236,29 @@ public class ViewForRecorder2 extends Application {
 		next.setOnAction(event -> {
 			for(int i = 0; i < selectedMics.size(); i++) {
 				if (i == 0) {
-					recorder1 = new Recorder(selectedMics.get(0));
+					recorder1 = new Recorder(allMixerInfos.get(0));
 					listOfRecorders[0] = recorder1;
+					System.out.println("1 mic");
 				} else if (i == 1) {
-					recorder2 = new Recorder(selectedMics.get(1));
+					recorder2 = new Recorder(allMixerInfos.get(1));
 					listOfRecorders[1] = recorder2;
+					System.out.println("2 mics");
 				} else if (i == 2) {
-					recorder3 = new Recorder(selectedMics.get(2));
+					recorder3 = new Recorder(allMixerInfos.get(2));
 					listOfRecorders[2] = recorder3;
 				} else if (i == 3) {
-					recorder4 = new Recorder(selectedMics.get(3));
+					recorder4 = new Recorder(allMixerInfos.get(3));
 					listOfRecorders[3] = recorder4;
 				}
 			}
 			
 			for (int i = 0; i < listOfRecorders.length; i++) {
+				System.out.println(listOfRecorders[i]);
 				if (listOfRecorders[i] != null) {
 					if (partID.getText().length() < 1) {
 						listOfRecorders[i].setFileName("Test"+selectedMics.get(i).getName().replaceAll(" ", "")+".WAV");
 					}
-					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+selectedMics.get(i).getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".WAV");
+					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".WAV");
 				}
 			}
 			
