@@ -2,7 +2,6 @@ import java.awt.Dimension;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Line;
@@ -26,7 +25,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
@@ -52,7 +50,7 @@ public class ViewForRecorder2 extends Application {
 	Recorder recorder4;
 	Recorder[] listOfRecorders = new Recorder[4];
 	File promptFile;
-	String outputFileName = "test.raw";
+	String outputFileName = "test.WAV";
 	Scanner userPrompt;
 	ArrayList<String []> sessionInfo;
 	int state = 0;
@@ -214,9 +212,9 @@ public class ViewForRecorder2 extends Application {
 		}
 		
 		
-		Label sampRate = new Label("Sampling Rate");
-		ComboBox<String> sampl = new ComboBox<String>();
-		sampl.getItems().addAll("16000 Hz", "22050 Hz", "37800 Hz","44100 Hz");
+//		Label sampRate = new Label("Sampling Rate");
+//		ComboBox<String> sampl = new ComboBox<String>();
+//		sampl.getItems().addAll("16000 Hz", "22050 Hz", "37800 Hz","44100 Hz");
 		
 		grid.addRow(0, participantID, partID);
 		grid.addRow(1, session, sNum);
@@ -230,7 +228,7 @@ public class ViewForRecorder2 extends Application {
 			row++;
 		}
 		
-		grid.addRow(++row, sampRate, sampl);
+//		grid.addRow(++row, sampRate, sampl);
 		
 		Label lab = new Label();
 		lab.setMinSize(100, 100);
@@ -238,26 +236,26 @@ public class ViewForRecorder2 extends Application {
 		next.setOnAction(event -> {
 			for(int i = 0; i < selectedMics.size(); i++) {
 				if (i == 0) {
-					recorder1 = new Recorder(allMixerInfos.get(0));
+					recorder1 = new Recorder(selectedMics.get(0));
 					listOfRecorders[0] = recorder1;
 				} else if (i == 1) {
-					recorder2 = new Recorder(allMixerInfos.get(1));
+					recorder2 = new Recorder(selectedMics.get(1));
 					listOfRecorders[1] = recorder2;
 				} else if (i == 2) {
-					recorder3 = new Recorder(allMixerInfos.get(2));
+					recorder3 = new Recorder(selectedMics.get(2));
 					listOfRecorders[2] = recorder3;
 				} else if (i == 3) {
-					recorder4 = new Recorder(allMixerInfos.get(3));
+					recorder4 = new Recorder(selectedMics.get(3));
 					listOfRecorders[3] = recorder4;
 				}
 			}
 			
 			for (int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null) {
-					if (partID.getText().isEmpty()) {
-						listOfRecorders[i].setFileName("Test"+selectedMics.get(i).getName().replaceAll(" ", "")+".raw");
+					if (partID.getText().length() < 1) {
+						listOfRecorders[i].setFileName("Test"+selectedMics.get(i).getName().replaceAll(" ", "")+".WAV");
 					}
-					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+selectedMics.get(i).getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".raw");
+					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+selectedMics.get(i).getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".WAV");
 				}
 			}
 			
@@ -325,17 +323,20 @@ public class ViewForRecorder2 extends Application {
 
 		/* Listeners attached to buttons here.  Nothing currently attached to "next" */
 		start.setOnAction(event -> {
-			System.out.println("start");
 			status.setBackground(backgrounds(Color.GREEN, 0, 0));
 			status.setText(status.getText() + "Recording ...");
+				int lastMicIndex = 0;
 				for(int i = 0; i < listOfRecorders.length; i++) {
-					System.out.println(Arrays.toString(listOfRecorders));	//All recorders all null!
+					//System.out.println(Arrays.toString(listOfRecorders));
 					if (listOfRecorders[i] != null) {
 						listOfRecorders[i].getMixer().getName();
-						listOfRecorders[i].startRecordingSingleInput();
+						listOfRecorders[i].startRecordingSingleInputWAV();
+						lastMicIndex = i;
 					}
 				}
-			//recorder1.startRecording();
+				
+			listOfRecorders[lastMicIndex].setTargetStatus(true);
+			
 			start.setDisable(true);
 			next.setDisable(true);
 			stop.setDisable(false);
@@ -398,13 +399,13 @@ public class ViewForRecorder2 extends Application {
 		playback = new Button("Playback");
 		playback.setOnMouseClicked(event -> {
 			if (event.getButton() == MouseButton.PRIMARY) {
-				recorder1.startPlayback();
+				recorder1.startPlaybackWAV();
 			} else {
 				System.out.println("aha");
 				System.out.println("prompt");
 				// Get the byte Array and graph it directly in a new window. */
-				byte [] bites = recorder1.getBytes();
-				showGraph(bites);
+				//byte [] bites = recorder1.getBytes();
+				//showGraph(bites);
 				/* Attempt to show python chart failed - it didn't display when run */
 //				String command = "python /c start python C:/Users/sel49/workspace/AudioCollector/myScript.py";
 //				try {
@@ -417,7 +418,7 @@ public class ViewForRecorder2 extends Application {
 //				}
 			}
 		});
-		System.out.println("script finished");
+//		System.out.println("script finished");
 //		playback.setOnAction(event -> {
 //			
 //			recorder.startPlayback();
