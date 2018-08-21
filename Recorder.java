@@ -1,29 +1,32 @@
-import java.io.ByteArrayOutputStream;
+//import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+//import java.io.FileOutputStream;
 import java.io.IOException;
 
+import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
-import javax.sound.sampled.Line;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.TargetDataLine;
 
 public class Recorder {
 	private AudioFormat audioFormat = null;	
-	private ByteArrayOutputStream byteOutput = null;
+//	private ByteArrayOutputStream byteOutput = null;
 	private TargetDataLine target = null;
-	//private Line.Info lineInfo = null;
 	private Clip testClip;
 	static Mixer mix;
 	Mixer.Info mixInfo;
-	private FileOutputStream fileOutput = null;
+	//private FileOutputStream fileOutput = null;
 	
-	private boolean targetActive = false, signed = true, bigEndian = false;
-	private String fileName = "test.raw";
+	private volatile static boolean targetActive = false;
+	private boolean signed = true, bigEndian = false;
+	private String fileName = "test.WAV";
 	private float sampleRate = 44100;
 	private int bitsPerSample = 16;
 	
@@ -31,76 +34,22 @@ public class Recorder {
 	 * Constructors
 	 */
 	public Recorder() {
-		byteOutput = new ByteArrayOutputStream();
+		//byteOutput = new ByteArrayOutputStream();
 		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
 	}
 	
 	public Recorder(Mixer.Info mixer) {
-		byteOutput = new ByteArrayOutputStream();
+		//byteOutput = new ByteArrayOutputStream();
 		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
 		mixInfo = mixer;
 	}
 	
 	/*
-	 * This method records raw data from a single line from the first available target line and writes it to the specified file
-	 */
-	public void startRecording() {
-		try {
-			fileOutput = new FileOutputStream(getFileName());
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		//DataLine.Info info = new DataLine.Info(lineInfo.getLineClass(), audioFormat);
-		DataLine.Info info = new DataLine.Info(TargetDataLine.class, audioFormat);
-		setTargetStatus(true);
-		
-		try {
-			target = (TargetDataLine) AudioSystem.getLine(info);
-			target.open();
-		} catch (LineUnavailableException e) {
-			e.printStackTrace();
-		}		
-		
-		byteOutput.reset();	//Eliminates the information in the buffer. Reset is necessary in case the user wished to re-record an utterance
-		target.start();
-		
-		Thread targetThread = new Thread() {
-			@Override
-			public void run() {
-				int numBytesRead = 0;
-				byte[] data = new byte[target.getBufferSize()/5];
-				
-				while(getTargetStatus()) {
-					numBytesRead = target.read(data, 0, data.length);
-					byteOutput.write(data, 0, numBytesRead);
-				}
-				
-				try {
-					byteOutput.writeTo(fileOutput);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		};
-		
-		targetThread.start();
-	}
-
-	/*
 	 * This method records raw data from a single line and writes it to the specified file
 	 * 
 	 * May or may not use this method. Thinking of adding yet another overloaded constructor.
 	 */
-	public void startRecordingSingleInput() {
-		
-		try {
-			fileOutput = new FileOutputStream(fileName);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		setTargetStatus(true);
+	public void startRecordingSingleInputWAV() {
 		
 		try {
 			target = (TargetDataLine) AudioSystem.getTargetDataLine(audioFormat, mixInfo);
@@ -109,30 +58,118 @@ public class Recorder {
 			e.printStackTrace();
 		}		
 		
-		byteOutput.reset();	//Eliminates the information in the buffer. Reset is necessary in case the user wished to re-record an utterance
 		target.start();
 		
 		Thread targetThread = new Thread() {
 			@Override
 			public void run() {
-				int numBytesRead = 0;
-				byte[] data = new byte[target.getBufferSize()/5];
+				AudioInputStream audioStream = new AudioInputStream(target);
+				File fout = new File(fileName);
 				
-				while(getTargetStatus()) {
-					numBytesRead = target.read(data, 0, data.length);
-					byteOutput.write(data, 0, numBytesRead);
-				}
-				
-				try {
-					byteOutput.writeTo(fileOutput);
-				} catch (IOException e) {
-					e.printStackTrace();
+				if(targetActive) {
+					try {
+						AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, fout);		//writes continuously
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		};
 		
 		targetThread.start();
 	}
+	
+	/*
+	 * This method records raw data from a single line from the first available target line and writes it to the specified file
+	 */
+//	public void startRecordingRaw() {
+//		try {
+//			fileOutput = new FileOutputStream(fileName);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		DataLine.Info info = new DataLine.Info(TargetDataLine.class, audioFormat);
+//		setTargetStatus(true);
+//		
+//		try {
+//			target = (TargetDataLine) AudioSystem.getLine(info);
+//			target.open();
+//		} catch (LineUnavailableException e) {
+//			e.printStackTrace();
+//		}		
+//		
+//		byteOutput.reset();	//Eliminates the information in the buffer. Reset is necessary in case the user wished to re-record an utterance
+//		target.start();
+//		
+//		Thread targetThread = new Thread() {
+//			@Override
+//			public void run() {
+//				int numBytesRead = 0;
+//				byte[] data = new byte[target.getBufferSize()/5];
+//				
+//				while(getTargetStatus()) {
+//					numBytesRead = target.read(data, 0, data.length);
+//					byteOutput.write(data, 0, numBytesRead);
+//				}
+//				
+//				try {
+//					byteOutput.writeTo(fileOutput);
+//				} catch (IOException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		};
+//		
+//		targetThread.start();
+//	}
+
+	/*
+	 * This method records raw data from a single line and writes it to the specified file
+	 * 
+	 * May or may not use this method. Thinking of adding yet another overloaded constructor.
+	 */
+//	public void startRecordingSingleInputRaw() {
+//		
+//		try {
+//			fileOutput = new FileOutputStream(fileName);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		setTargetStatus(true);
+//		
+//		try {
+//			target = (TargetDataLine) AudioSystem.getTargetDataLine(audioFormat, mixInfo);
+//			target.open();
+//		} catch (LineUnavailableException e) {
+//			e.printStackTrace();
+//		}		
+//		
+//		byteOutput.reset();	//Eliminates the information in the buffer. Reset is necessary in case the user wished to re-record an utterance
+//		target.start();
+//		
+//		Thread targetThread = new Thread() {
+//			@Override
+//			public void run() {
+//				int numBytesRead = 0;
+//				byte[] data = new byte[target.getBufferSize()/5];
+//				
+//				while(getTargetStatus()) {
+//					numBytesRead = target.read(data, 0, data.length);
+//					byteOutput.write(data, 0, numBytesRead);
+//				}
+//				
+//				try {
+//					byteOutput.writeTo(fileOutput);
+//				} catch (IOException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		};
+//		
+//		targetThread.start();
+//	}
 	
 	/*
 	 * Waits 200 ms then stops recording, closes fileOutput
@@ -143,31 +180,66 @@ public class Recorder {
 			
 		}
 		
-		setTargetStatus(false);	//Exits loop in thread
+		target.stop();
 		target.close();
+		setTargetStatus(false);	//resets shared boolean
 	}
 	
 	/*
 	 * Plays through the information previously recorded
 	 */
-	public void startPlayback() {
-		/*
-		 * Edit buttons so that playback is not allowed if nothing has been recorded?
-		 */
-		if (byteOutput.size() == 0) {
-			System.out.println("No data has been recorded");
-			return;
+//	public void startPlaybackRaw() {
+//		if (byteOutput.size() == 0) {
+//			System.out.println("No data has been recorded");
+//			return;
+//		}
+//		
+//		Mixer.Info[] mixInfos = AudioSystem.getMixerInfo();
+//		mix = AudioSystem.getMixer(mixInfos[0]);	//Default system mixer
+//		DataLine.Info playbackInfo = new DataLine.Info(Clip.class, audioFormat);
+//
+//		try {
+//			testClip = (Clip) mix.getLine(playbackInfo);
+//			testClip.open(audioFormat, byteOutput.toByteArray(), 0, byteOutput.size());
+//		} catch (LineUnavailableException lue) {
+//			lue.printStackTrace();
+//		}
+//		
+//		testClip.start();
+//		
+//		/*
+//		 * Once testClip.start() is called, the audio will play but then the program will terminate before much of the audio is played.
+//		 */
+//		do {
+//			try {
+//				Thread.sleep(50);
+//			} catch (InterruptedException ie) {
+//				ie.printStackTrace();
+//			}
+//		} while (testClip.isActive());
+//		
+//	}
+	
+	public void startPlaybackWAV() {
+		FileInputStream clipFileStream = null;
+		try {
+			clipFileStream = new FileInputStream(fileName);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
 		
 		Mixer.Info[] mixInfos = AudioSystem.getMixerInfo();
-		mix = AudioSystem.getMixer(mixInfos[0]);	//Default system mixer
+		mix = AudioSystem.getMixer(mixInfos[0]);	//default audio output
 		DataLine.Info playbackInfo = new DataLine.Info(Clip.class, audioFormat);
-
+		
 		try {
 			testClip = (Clip) mix.getLine(playbackInfo);
-			testClip.open(audioFormat, byteOutput.toByteArray(), 0, byteOutput.size());
+			AudioInputStream clipStream = new AudioInputStream(clipFileStream, audioFormat,(long) clipFileStream.available());
+			testClip.open(clipStream);
 		} catch (LineUnavailableException lue) {
 			lue.printStackTrace();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
 		}
 		
 		testClip.start();
@@ -182,7 +254,6 @@ public class Recorder {
 				ie.printStackTrace();
 			}
 		} while (testClip.isActive());
-		
 	}
 	
 	public void resetPlayback() {
@@ -195,14 +266,14 @@ public class Recorder {
 	 * 
 	 * This should be closed once the user is finished with an utterance.
 	 */
-	public void finish() {
-		try {
-			byteOutput.close();
-			fileOutput.close();
-		} catch (IOException ioe) {
-			ioe.printStackTrace();
-		}
-	}
+//	public void finish() {
+//		try {
+//			byteOutput.close();
+//			fileOutput.close();
+//		} catch (IOException ioe) {
+//			ioe.printStackTrace();
+//		}
+//	}
 	
 	public boolean getTargetStatus() {
 		return targetActive;
@@ -216,88 +287,18 @@ public class Recorder {
 	 * Accessor for the byte array representation of data before it is stored
 	 * @return the array
 	 */
-	public byte [] getBytes() {
-		if (byteOutput != null) {
-			return byteOutput.toByteArray();
-		}
-		return null;
-	}
+//	public byte [] getBytes() {
+//		if (byteOutput != null) {
+//			return byteOutput.toByteArray();
+//		}
+//		return null;
+//	}
 	
 	public void setFileName(String newFile) {
 		fileName = newFile;
 	}
 	
-	
-	private String getFileName() {
-		// TODO Auto-generated method stub
-		return fileName;
-	}
-	public void setSampleRate(float rate) {
-		sampleRate = rate;
-	}
-	
-	public void setBitsPerSample(int bits) {
-		bitsPerSample = bits;
-	}
-	
 	public Mixer.Info getMixer() {
 		return mixInfo;
 	}
-	/*
-	 * Main method for testing purposes
-	 */
-//	public static void main (String[] args) {
-//		Recorder myRecorder1 = new Recorder("test1");
-//		Recorder myRecorder2 = new Recorder("test2");
-//		Scanner scan = new Scanner(System.in);
-//		
-//		System.out.println("Press enter to record test1");
-//		scan.nextLine();
-//		myRecorder1.startRecording();
-//		
-//		System.out.println("Press enter to stop recording test1");
-//		scan.nextLine();
-//		myRecorder1.stopRecording();
-//		
-//		System.out.println("Press enter to start test1 playback");
-//		scan.nextLine();
-//		myRecorder1.startPlayback();
-//		
-//		System.out.println("Press enter to reset test1 playback");
-//		scan.nextLine();
-//		myRecorder1.stopPlayback();
-//		
-//		System.out.println("Press enter to begin test1 playback");
-//		scan.nextLine();
-//		myRecorder1.startPlayback();
-//		
-//		myRecorder1.finish();
-//		System.out.println("test1 complete");
-//		
-//		System.out.println("Press enter to record test2");
-//		scan.nextLine();
-//		myRecorder2.startRecording();
-//		
-//		System.out.println("Press enter to stop recording test2");
-//		scan.nextLine();
-//		myRecorder2.stopRecording();
-//		
-//		System.out.println("Press enter to start test2 playback");
-//		scan.nextLine();
-//		myRecorder2.startPlayback();
-//		
-//		System.out.println("Press enter to reset test2 playback");
-//		scan.nextLine();
-//		myRecorder2.stopPlayback();
-//		
-//		System.out.println("Press enter to begin test2 playback");
-//		scan.nextLine();
-//		myRecorder2.startPlayback();
-//		
-//		myRecorder2.finish();
-//		System.out.println("test2 complete");
-//		
-//		scan.close();
-//		System.out.println("Terminated");
-//	}
 }
