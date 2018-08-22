@@ -1,11 +1,13 @@
 import java.awt.Dimension;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Line;
 import javax.sound.sampled.Mixer;
+import javax.sound.sampled.Mixer.Info;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -48,6 +50,11 @@ public class ViewForRecorder2 extends Application {
 	Recorder recorder2;
 	Recorder recorder3;
 	Recorder recorder4;
+	CheckBox cb1;
+	CheckBox cb2;
+	CheckBox cb3;
+	CheckBox cb4;
+	CheckBox cb5;
 	Recorder[] listOfRecorders = new Recorder[5];
 	File promptFile;
 	String outputFileName = "test.WAV";
@@ -197,24 +204,40 @@ public class ViewForRecorder2 extends Application {
 		getMicrophoneInfo();
 		
 		EventHandler<ActionEvent> micCheckHandle = e-> {
-			int i = 0;
+			CheckBox temp = (CheckBox) e.getSource();
+			String name = temp.getText();
 			for(Mixer.Info info: allMixerInfos) {
-				if(allMics.get(i).isSelected() && i < 5) {
+				if (info.getName().equals(name)) {
 					selectedMics.add(info);
 				}
-				i++;
 			}
 		};
 					
-		for(Mixer.Info info : allMixerInfos) {
-			allMics.add(new CheckBox(info.getName()));
-			allMics.get(allMics.size()-1).setOnAction(micCheckHandle);	//Most recent addition
+		for(int i = 0; i < allMixerInfos.size(); i++) {
+			if(!allMixerInfos.get(i).getName().contains("Primary Sound")) {
+				if (i == 0) {
+					cb1 = new CheckBox(allMixerInfos.get(i).getName());
+					cb1.setOnAction(micCheckHandle);
+					allMics.add(cb1);
+				} else if ( i == 1) {
+					cb2 = new CheckBox(allMixerInfos.get(i).getName());
+					cb2.setOnAction(micCheckHandle);
+					allMics.add(cb2);
+				} else if (i == 2) {
+					cb3 = new CheckBox(allMixerInfos.get(i).getName());
+					cb3.setOnAction(micCheckHandle);
+					allMics.add(cb3);
+				} else if (i == 3) {
+					cb3 = new CheckBox(allMixerInfos.get(i).getName());
+					cb3.setOnAction(micCheckHandle);
+					allMics.add(cb4);
+				} else if (i == 4) {
+					cb3 = new CheckBox(allMixerInfos.get(i).getName());
+					cb3.setOnAction(micCheckHandle);
+					allMics.add(cb5);
+				}
+			}
 		}
-		
-		
-//		Label sampRate = new Label("Sampling Rate");
-//		ComboBox<String> sampl = new ComboBox<String>();
-//		sampl.getItems().addAll("16000 Hz", "22050 Hz", "37800 Hz","44100 Hz");
 		
 		grid.addRow(0, participantID, partID);
 		grid.addRow(1, session, sNum);
@@ -236,29 +259,26 @@ public class ViewForRecorder2 extends Application {
 		next.setOnAction(event -> {
 			for(int i = 0; i < selectedMics.size(); i++) {
 				if (i == 0) {
-					recorder1 = new Recorder(allMixerInfos.get(0));
+					recorder1 = new Recorder(selectedMics.get(0));
 					listOfRecorders[0] = recorder1;
-					System.out.println("1 mic");
 				} else if (i == 1) {
-					recorder2 = new Recorder(allMixerInfos.get(1));
+					recorder2 = new Recorder(selectedMics.get(1));
 					listOfRecorders[1] = recorder2;
-					System.out.println("2 mics");
 				} else if (i == 2) {
-					recorder3 = new Recorder(allMixerInfos.get(2));
+					recorder3 = new Recorder(selectedMics.get(2));
 					listOfRecorders[2] = recorder3;
 				} else if (i == 3) {
-					recorder4 = new Recorder(allMixerInfos.get(3));
+					recorder4 = new Recorder(selectedMics.get(3));
 					listOfRecorders[3] = recorder4;
 				}
 			}
 			
 			for (int i = 0; i < listOfRecorders.length; i++) {
-				System.out.println(listOfRecorders[i]);
 				if (listOfRecorders[i] != null) {
 					if (partID.getText().length() < 1) {
 						listOfRecorders[i].setFileName("Test"+selectedMics.get(i).getName().replaceAll(" ", "")+".WAV");
 					}
-					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".WAV");
+					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".wav");
 				}
 			}
 			
@@ -273,9 +293,7 @@ public class ViewForRecorder2 extends Application {
 
 	public static void main(String [] args) {
 		launch(args);
-	}
-	
-	
+	}	
 
 	/**
 	 * Makes the button panel at the bottom of the screen.  
@@ -328,17 +346,6 @@ public class ViewForRecorder2 extends Application {
 		start.setOnAction(event -> {
 			status.setBackground(backgrounds(Color.GREEN, 0, 0));
 			status.setText(status.getText() + "Recording ...");
-				int lastMicIndex = 0;
-				for(int i = 0; i < listOfRecorders.length; i++) {
-					//System.out.println(Arrays.toString(listOfRecorders));
-					if (listOfRecorders[i] != null) {
-						listOfRecorders[i].getMixer().getName();
-						listOfRecorders[i].startRecordingSingleInputWAV();
-						lastMicIndex = i;
-					}
-				}
-				
-			listOfRecorders[lastMicIndex].setTargetStatus(true);
 			
 			start.setDisable(true);
 			next.setDisable(true);
@@ -347,16 +354,29 @@ public class ViewForRecorder2 extends Application {
 			start.setDefaultButton(false);
 			next.setDefaultButton(false);
 			
+			
+			int lastMicIndex = 0;
+			for(int i = 0; i < listOfRecorders.length; i++) {
+				if (listOfRecorders[i] != null && !listOfRecorders[i].getMixer().getName().equals("Primary Sound Capture Driver")) {
+					listOfRecorders[i].startRecordingSingleInputWAV();
+					lastMicIndex = i;
+				}
+			}
+				
+			listOfRecorders[lastMicIndex].setTargetStatus(true);	//Syncs mics
+			
 		});
+		
 		stop.setOnAction(event -> {
-			System.out.println("stop");
-			status.setBackground(backgrounds(Color.RED, 0, 0));
-			status.setText("Status:\t\t" + "Stopped Recording!");
 			for (int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null) {
 					listOfRecorders[i].stopRecording();
 				}
 			}
+			
+			status.setBackground(backgrounds(Color.RED, 0, 0));
+			status.setText("Status:\t\t" + "Stopped Recording!");
+			
 			start.setDisable(true);
 			next.setDisable(false);
 			stop.setDisable(true);

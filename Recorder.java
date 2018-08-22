@@ -1,7 +1,8 @@
-//import java.io.ByteArrayOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 //import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -17,16 +18,16 @@ import javax.sound.sampled.TargetDataLine;
 
 public class Recorder {
 	private AudioFormat audioFormat = null;	
-//	private ByteArrayOutputStream byteOutput = null;
+	private ByteArrayOutputStream byteOutput = null;
 	private TargetDataLine target = null;
 	private Clip testClip;
 	static Mixer mix;
-	Mixer.Info mixInfo;
-	//private FileOutputStream fileOutput = null;
+	private Mixer.Info mixInfo;
+	private FileOutputStream fileOutput = null;
 	
 	private volatile static boolean targetActive = false;
 	private boolean signed = true, bigEndian = false;
-	private String fileName = "test.WAV";
+	private String fileName = "test.wav";
 	private float sampleRate = 44100;
 	private int bitsPerSample = 16;
 	
@@ -66,13 +67,13 @@ public class Recorder {
 				AudioInputStream audioStream = new AudioInputStream(target);
 				File fout = new File(fileName);
 				
-				if(targetActive) {
+				//if(targetActive) {
 					try {
 						AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, fout);		//writes continuously
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
-				}
+				//}
 			}
 		};
 		
@@ -170,7 +171,7 @@ public class Recorder {
 //		
 //		targetThread.start();
 //	}
-	
+//	
 	/*
 	 * Waits 200 ms then stops recording, closes fileOutput
 	 */
@@ -182,7 +183,6 @@ public class Recorder {
 		
 		target.stop();
 		target.close();
-		setTargetStatus(false);	//resets shared boolean
 	}
 	
 	/*
@@ -221,9 +221,11 @@ public class Recorder {
 //	}
 	
 	public void startPlaybackWAV() {
+		if (mixInfo.getName().equals("Primary Sound Capture"));
 		FileInputStream clipFileStream = null;
+		File temp = new File(getFileName());
 		try {
-			clipFileStream = new FileInputStream(fileName);
+			clipFileStream = new FileInputStream(temp);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -266,14 +268,14 @@ public class Recorder {
 	 * 
 	 * This should be closed once the user is finished with an utterance.
 	 */
-//	public void finish() {
-//		try {
-//			byteOutput.close();
-//			fileOutput.close();
-//		} catch (IOException ioe) {
-//			ioe.printStackTrace();
-//		}
-//	}
+	public void finish() {
+		try {
+			byteOutput.close();
+			fileOutput.close();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
 	
 	public boolean getTargetStatus() {
 		return targetActive;
@@ -287,15 +289,19 @@ public class Recorder {
 	 * Accessor for the byte array representation of data before it is stored
 	 * @return the array
 	 */
-//	public byte [] getBytes() {
-//		if (byteOutput != null) {
-//			return byteOutput.toByteArray();
-//		}
-//		return null;
-//	}
+	public byte [] getBytes() {
+		if (byteOutput != null) {
+			return byteOutput.toByteArray();
+		}
+		return null;
+	}
 	
 	public void setFileName(String newFile) {
 		fileName = newFile;
+	}
+	
+	public String getFileName() {
+		return fileName;
 	}
 	
 	public Mixer.Info getMixer() {
