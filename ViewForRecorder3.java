@@ -347,7 +347,7 @@ public class ViewForRecorder3 extends Application {
 				System.out.println("aha");
 				System.out.println("prompt");
 				// Get the byte Array and graph it directly in a new window. */
-				byte [] bites = recorder.getBytes();
+//				byte [] bites = recorder.getBytes();
 //				showGraph(bites);
 				/* Attempt to show python chart failed - it didn't display when run */
 				long time = System.currentTimeMillis();

@@ -190,7 +190,9 @@ public class ViewForRecorder2 extends Application {
 
 		choose.setOnAction(event -> {
 			FileChooser chooser = new FileChooser();
-			chooser.setInitialDirectory(new File("D:\\eclipse-workspace\\AudioCollector"));	//Set initial directory to something else
+//			chooser.setInitialDirectory(new File("D:\\eclipse-workspace\\AudioCollector"));	//Set initial directory to something else
+//			String filePath = getAbsolutePath().substring(0,absolutePath.lastIndexOf(File.separator));
+			chooser.setInitialDirectory(new File("AudioCollector"));
 			promptFile = chooser.showOpenDialog(stage);
 		});
 		
