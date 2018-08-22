@@ -13,7 +13,10 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -284,7 +287,9 @@ public class ViewForRecorder2 extends Application {
 				}
 			}
 			
+			
 			state = 1;
+			
 			scene.setRoot(screen);
 		});
 		grid.addRow(++row, lab,  next);
@@ -358,13 +363,14 @@ public class ViewForRecorder2 extends Application {
 			
 			
 			int lastMicIndex = 0;
+			
 			for(int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null && !listOfRecorders[i].getMixer().getName().equals("Primary Sound Capture Driver")) {
 					listOfRecorders[i].startRecordingSingleInputWAV();
 					lastMicIndex = i;
 				}
 			}
-				
+			System.out.println(listOfRecorders.length + " " + lastMicIndex);	
 			listOfRecorders[lastMicIndex].setTargetStatus(true);	//Syncs mics
 			
 		});

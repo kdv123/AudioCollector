@@ -18,11 +18,14 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -84,15 +87,35 @@ public class TextDisplayTrial3 extends Application {
 		primaryStage.setWidth(WIDTH);
 		primaryStage.setHeight(HEIGHT);
 		stageOne = primaryStage;
+		
 	}
 
 
 
 
-	public void drawData() {
+	public void drawData(int num) {
 		Stage stage = new Stage();
 		Group g = new Group();
-		double [] pts = read("test.wav");
+		String name = "test.wav";
+		switch (num) {
+		case 1: if (recorder1 != null) {
+			name = recorder1.getFileName();
+		}
+ 		break;
+		case 2:if (recorder2 != null) {
+			name = recorder2.getFileName();
+		}
+ 		break;
+		case 3: if (recorder3 != null) {
+					name = recorder3.getFileName();
+				}
+		 		break;
+		case 4:if (recorder4 != null) {
+			name = recorder4.getFileName();
+		}
+ 		break;
+		}
+		double [] pts = read(name);
 		int width = pts.length / 1000;
 		double pix = 1000.0/pts.length;
 		double sum = 0;
@@ -173,122 +196,7 @@ public class TextDisplayTrial3 extends Application {
 		return data;
 	}
 
-	/**
-	 * Creates a display for the opening setup of a session 
-	 * and allows for transition to the next part.
-	 * @return
-	 */
-	/*public Group startScreen(Stage stage) {
-		Group g = new Group();
-		GridPane grid = new GridPane();
-		Label participantID = new Label("Participant ID");
-		partID = new TextField();
-		partID.setPromptText("participant ID");
-		Label session = new Label("Session #");
-		sessionNum = new TextField();
-		sessionNum.setPromptText("Session #");
-		Label fileLabel = new Label("file");
-		TextField files = new TextField();
-		Button choose = new Button("File");
-		choose.setOnAction(event -> {
-			FileChooser chooser = new FileChooser();
-			chooser.setInitialDirectory(new File("AudioCollector"));
-			promptFile = chooser.showOpenDialog(stage);
-		});
-		//choose.setOnAction);
-		Label condition = new Label("Condition");
-		ComboBox cond = new ComboBox();
-		cond.getItems().addAll("one", "two", "outside", "inside");		
-
-		ArrayList<CheckBox> allMics = new ArrayList<CheckBox>();
-		Label selectMics = new Label("Select microphones");
-		getMicrophoneInfo();
-
-		EventHandler<ActionEvent> micCheckHandle = e-> {
-			CheckBox temp = (CheckBox) e.getSource();
-			String name = temp.getText();
-			for(Mixer.Info info: allMixerInfos) {
-				if (info.getName().equals(name)) {
-					selectedMics.add(info);
-				}
-			}
-		};
-
-		for(int i = 0; i < allMixerInfos.size(); i++) {
-			if(!allMixerInfos.get(i).getName().contains("Primary Sound")) {
-				if (i == 0) {
-					cb1 = new CheckBox(allMixerInfos.get(i).getName());
-					cb1.setOnAction(micCheckHandle);
-					allMics.add(cb1);
-				} else if ( i == 1) {
-					cb2 = new CheckBox(allMixerInfos.get(i).getName());
-					cb2.setOnAction(micCheckHandle);
-					allMics.add(cb2);
-				} else if (i == 2) {
-					cb3 = new CheckBox(allMixerInfos.get(i).getName());
-					cb3.setOnAction(micCheckHandle);
-					allMics.add(cb3);
-				} else if (i == 3) {
-					cb3 = new CheckBox(allMixerInfos.get(i).getName());
-					cb3.setOnAction(micCheckHandle);
-					allMics.add(cb4);
-				} else if (i == 4) {
-					cb3 = new CheckBox(allMixerInfos.get(i).getName());
-					cb3.setOnAction(micCheckHandle);
-					allMics.add(cb5);
-				}
-			}
-		}
-
-		grid.addRow(0, participantID, partID);
-		grid.addRow(1, session, sessionNum);
-		grid.addRow(2, fileLabel, choose);
-		grid.addRow(3, condition, cond);
-		grid.addRow(4, selectMics);
-
-		int row = 5;
-		for(CheckBox cb : allMics) {
-			grid.addRow(row, cb);
-			row++;
-		}
-
-		Label lab = new Label();
-		lab.setMinSize(100, 100);
-		Button next = new Button("NEXT");
-		next.setOnAction(event -> {
-			for(int i = 0; i < selectedMics.size(); i++) {
-				if (i == 0) {
-					recorder1 = new Recorder(selectedMics.get(0));
-					listOfRecorders[0] = recorder1;
-				} else if (i == 1) {
-					recorder2 = new Recorder(selectedMics.get(1));
-					listOfRecorders[1] = recorder2;
-				} else if (i == 2) {
-					recorder3 = new Recorder(selectedMics.get(2));
-					listOfRecorders[2] = recorder3;
-				} else if (i == 3) {
-					recorder4 = new Recorder(selectedMics.get(3));
-					listOfRecorders[3] = recorder4;
-				}
-			}
-
-			for (int i = 0; i < listOfRecorders.length; i++) {
-				if (listOfRecorders[i] != null) {
-					if (partID.getText().length() < 1) {
-						listOfRecorders[i].setFileName("Test"+selectedMics.get(i).getName().replaceAll(" ", "")+".WAV");
-					}
-					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sessionNum.getText()+"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".wav");
-				}
-			}
-
-			state = 1;
-			scene.setRoot(screen);
-		});
-		grid.addRow(++row, lab,  next);
-		g.getChildren().add(grid);
-
-		return g;
-	}*/
+	
 
 	/**
 	 * Creates a display for the opening setup of a session 
@@ -344,6 +252,7 @@ public class TextDisplayTrial3 extends Application {
 			}
 		};
 
+		System.out.println("all mixer: " + allMixerInfos.size());
 		for(int i = 0; i < allMixerInfos.size(); i++) {
 			if(!allMixerInfos.get(i).getName().contains("Primary Sound")) {
 				if (i == 0) {
@@ -377,7 +286,9 @@ public class TextDisplayTrial3 extends Application {
 		grid.addRow(4, selectMics);
 
 		int row = 5;
+		System.out.println("allmics: " + allMics.size());
 		for(CheckBox cb : allMics) {
+			System.out.println("cb");
 			grid.addRow(row, cb);
 			row++;
 		}
@@ -413,6 +324,16 @@ public class TextDisplayTrial3 extends Application {
 				}
 			}
 
+			if (selectedMics.size() == 0) {
+				Alert alert = new Alert(AlertType.ERROR, "No microphone is selected\nPlease select a mic to continue", ButtonType.OK);
+				alert.showAndWait().ifPresent(response -> {
+				     if (response == ButtonType.OK) {
+				        alert.close();
+				     }
+				 });
+				return;
+			}
+			
 			state = 1;
 			taskNum = 0;
 			scanMe(promptFile);
@@ -599,9 +520,12 @@ public class TextDisplayTrial3 extends Application {
 		return new Background(new BackgroundFill(c, new CornerRadii(2), new Insets(0)));
 	}
 
+	private int micNumRec = 0; // used for generation of pic during playback
+	ArrayList<Label> micLabels = new ArrayList<>();
 	public Group mics() {
 		Group group = new Group();
 		GridPane grid = new GridPane();
+		
 		for (int i = 0; i < 4; i++) {
 			Label label = new Label("Mic " + (i + 1) + ": ");
 			label.setPrefSize(100,  MIC_H);
@@ -619,8 +543,18 @@ public class TextDisplayTrial3 extends Application {
 			grid.add(label, 0, i, 1, 1);
 			grid.add(status, 1, i, 1, 1);
 			grid.add(playback, 2, i, 1, 1);
+			micNumRec = i;
+			micLabels.add(status);
 			playback.setOnAction(event -> {
-				drawData();
+//				if (event.getButton() == MouseButton.PRIMARY) {
+				for (Label lab: micLabels) {
+					lab.setBackground(backgrounds(Color.CORNFLOWERBLUE, 0, 0));
+					lab.setText("Status:  Playing back ...");
+				}
+					recorder1.startPlaybackWAV();
+//				}
+				drawData(micNumRec);
+				
 
 			});
 		}
@@ -672,6 +606,10 @@ public class TextDisplayTrial3 extends Application {
 			start.setDefaultButton(true);
 			stop.setDefaultButton(false);
 			next.setDefaultButton(false);
+			for (Label lab: micLabels) {
+				lab.setBackground(backgrounds(Color.PEACHPUFF, 0, 0));
+				lab.setText("Status:  ");
+			}
 			System.err.println("next");
 			System.out.println("next!");
 			taskNum++;
@@ -722,6 +660,10 @@ public class TextDisplayTrial3 extends Application {
 			//			status.setBackground(backgrounds(Color.GREEN, 0, 0));
 			//			status.setText(status.getText() + "Recording ...");
 			//			recorder.startRecording();
+			for (Label lab: micLabels) {
+				lab.setBackground(backgrounds(Color.GREEN, 0, 0));
+				lab.setText("Status:  Recording...");
+			}
 			System.err.println("started");
 			start.setDisable(true);
 			next.setDisable(true);
@@ -730,11 +672,30 @@ public class TextDisplayTrial3 extends Application {
 			start.setDefaultButton(false);
 			next.setDefaultButton(false);
 			System.out.println(event.getSource());
+			int lastMicIndex = 0;
+			for(int i = 0; i < listOfRecorders.length; i++) {
+				if (listOfRecorders[i] != null && !listOfRecorders[i].getMixer().getName().equals("Primary Sound Capture Driver")) {
+					listOfRecorders[i].startRecordingSingleInputWAV();
+					lastMicIndex = i;
+				}
+			}
+				
+			listOfRecorders[lastMicIndex].setTargetStatus(true);	//Syncs mics
 		});
 		stop.setOnAction(event -> {
 			//			status.setBackground(backgrounds(Color.RED, 0, 0));
 			//			status.setText("Status:\t\t" + "Stopped Recording!");
 			//			recorder.stopRecording();
+			
+			for (int i = 0; i < listOfRecorders.length; i++) {
+				if (listOfRecorders[i] != null) {
+					listOfRecorders[i].stopRecording();
+				}
+			}
+			for (Label lab: micLabels) {
+				lab.setBackground(backgrounds(Color.RED, 0, 0));
+				lab.setText("Status:  Stopped ...");
+			}
 			System.err.println("Stopped!");
 			start.setDisable(true);
 			next.setDisable(false);
@@ -755,15 +716,28 @@ public class TextDisplayTrial3 extends Application {
 	}
 
 	HashMap<Mixer.Info, Line.Info> mixerToTarget = new HashMap<Mixer.Info, Line.Info>();
+//	public void getMicrophoneInfo() {
+//		Mixer.Info[] mixers = AudioSystem.getMixerInfo();
+//		for (Mixer.Info mixInfo : mixers) {
+//			Mixer m = AudioSystem.getMixer(mixInfo);
+//			Line.Info[] lines = m.getTargetLineInfo();
+//
+//			for (Line.Info li : lines) {
+//				if(li.toString().equals("interface TargetDataLine supporting 8 audio formats, and buffers of at least 32 bytes")) {
+//					mixerToTarget.put(mixInfo, li);
+//				}
+//			}			
+//		}
+//	}
 	public void getMicrophoneInfo() {
 		Mixer.Info[] mixers = AudioSystem.getMixerInfo();
 		for (Mixer.Info mixInfo : mixers) {
 			Mixer m = AudioSystem.getMixer(mixInfo);
 			Line.Info[] lines = m.getTargetLineInfo();
-
+			
 			for (Line.Info li : lines) {
 				if(li.toString().equals("interface TargetDataLine supporting 8 audio formats, and buffers of at least 32 bytes")) {
-					mixerToTarget.put(mixInfo, li);
+					allMixerInfos.add(mixInfo);
 				}
 			}			
 		}

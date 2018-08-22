@@ -66,10 +66,11 @@ public class Recorder {
 			public void run() {
 				AudioInputStream audioStream = new AudioInputStream(target);
 				File fout = new File(fileName);
-				
+				System.out.println("fill: " + fileName);
 				//if(targetActive) {
 					try {
 						AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, fout);		//writes continuously
+						System.out.println("foo: " + fileName);
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
