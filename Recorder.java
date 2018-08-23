@@ -222,7 +222,6 @@ public class Recorder {
 //	}
 	
 	public void startPlaybackWAV() {
-		if (mixInfo.getName().equals("Primary Sound Capture"));
 		FileInputStream clipFileStream = null;
 		File temp = new File(getFileName());
 		try {

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Map.Entry;
-
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Line;
@@ -51,6 +49,7 @@ public class TextDisplayTrial3 extends Application {
 
 	int taskNum = 0;
 	int totalTasks = 4;
+	int promptNum = 2;
 	File session = null; // to be used as part of the filenaming convention
 	Scene scene;
 	TextField partID; 
@@ -71,6 +70,11 @@ public class TextDisplayTrial3 extends Application {
 	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(5);
 	float[] sampleRates = {16000, 22050, 37800, 44100};
 	Stage stageOne;
+	
+	//For recorded file name
+	String sesNum;
+	String condVal;
+	String participantName;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -286,14 +290,10 @@ public class TextDisplayTrial3 extends Application {
 		grid.addRow(4, selectMics);
 
 		int row = 5;
-		System.out.println("allmics: " + allMics.size());
 		for(CheckBox cb : allMics) {
-			System.out.println("cb");
 			grid.addRow(row, cb);
 			row++;
 		}
-
-		//		grid.addRow(++row, sampRate, sampl);
 
 		Label lab = new Label();
 		lab.setMinSize(100, 100);
@@ -320,7 +320,10 @@ public class TextDisplayTrial3 extends Application {
 					if (partID.getText().length() < 1) {
 						listOfRecorders[i].setFileName("Test"+selectedMics.get(i).getName().replaceAll(" ", "")+".WAV");
 					}
-					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".wav");
+					sesNum = sNum.getText();
+					condVal = cond.getValue();
+					participantName = partID.getText();
+					listOfRecorders[i].setFileName("participant" + participantName + "_Session"+ sesNum+"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ condVal+"Prompt1.wav");
 				}
 			}
 
@@ -600,6 +603,13 @@ public class TextDisplayTrial3 extends Application {
 
 		// Default buttons not currently working for typing ENTER to move to the next one
 		next.setOnAction(event -> {
+			//Set new file name
+			for(int i = 0; i < listOfRecorders.length; i++) {
+				if (listOfRecorders[i] != null)
+					listOfRecorders[i].setFileName("participant" + participantName + "_Session"+ sesNum +"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ condVal +"Prompt"+ promptNum + ".wav");
+			}
+			promptNum++;
+			
 			start.setDisable(false);
 			next.setDisable(true);
 			stop.setDisable(true);

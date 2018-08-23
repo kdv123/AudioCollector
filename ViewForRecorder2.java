@@ -1,11 +1,18 @@
 import java.awt.Dimension;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
 import javax.sound.sampled.Line;
+import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.Mixer.Info;
 
@@ -68,6 +75,7 @@ public class ViewForRecorder2 extends Application {
 	ArrayList<Mixer.Info> allMixerInfos = new ArrayList<Mixer.Info>(5);
 	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(5);
 	float[] sampleRates = {16000, 22050, 37800, 44100};
+	Clip beep;
 	
 	/*
 	 * Planning:  need a file to parse.  Then have a series of questions starting with
@@ -283,7 +291,7 @@ public class ViewForRecorder2 extends Application {
 					if (partID.getText().length() < 1) {
 						listOfRecorders[i].setFileName("Test"+selectedMics.get(i).getName().replaceAll(" ", "")+".WAV");
 					}
-					listOfRecorders[i].setFileName("participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ cond.getValue()+".wav");
+					listOfRecorders[i].setFileName("Participant" + partID.getText()+ "_Session"+ sNum.getText()+"_"+listOfRecorders[i].getMixer().getName().replaceAll(" ", "")+ "_"+ cond.getValue() + "Prompt1"+".wav");
 				}
 			}
 			
@@ -340,7 +348,7 @@ public class ViewForRecorder2 extends Application {
 		
 		// Default buttons not currently working for typing ENTER to move to the next one
 		next.setOnMouseClicked(event -> {
-			System.out.println("next");
+			
 			start.setDisable(false);
 			next.setDisable(true);
 			stop.setDisable(true);
@@ -370,9 +378,10 @@ public class ViewForRecorder2 extends Application {
 					lastMicIndex = i;
 				}
 			}
-			System.out.println(listOfRecorders.length + " " + lastMicIndex);	
+			
 			listOfRecorders[lastMicIndex].setTargetStatus(true);	//Syncs mics
 			
+			//playBeep();
 		});
 		
 		stop.setOnAction(event -> {
@@ -390,7 +399,9 @@ public class ViewForRecorder2 extends Application {
 			stop.setDisable(true);
 			next.setDefaultButton(true);
 			stop.setDefaultButton(false);
-			start.setDefaultButton(false);			
+			start.setDefaultButton(false);
+			
+			//playBeep();
 		});
 
 
@@ -671,6 +682,44 @@ public class ViewForRecorder2 extends Application {
 	  }
 //	}
 	// end Stack overflow;
+	
+	public void playBeep() {
+		AudioFormat audioFormat = new AudioFormat(44100, 24, 1, true, false);
+		FileInputStream clipFileStream = null;
+		File temp = new File("BeepForButton.wav");
+		try {
+			clipFileStream = new FileInputStream(temp);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		Mixer.Info[] mixInfos = AudioSystem.getMixerInfo();
+		Mixer mix = AudioSystem.getMixer(mixInfos[0]);	//default audio output
+		DataLine.Info playbackInfo = new DataLine.Info(Clip.class, null);
+		
+		try {
+			beep = (Clip) mix.getLine(playbackInfo);
+			AudioInputStream clipStream = new AudioInputStream(clipFileStream, audioFormat,(long) clipFileStream.available());
+			beep.open(clipStream);
+		} catch (LineUnavailableException lue) {
+			lue.printStackTrace();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+		
+		beep.start();
+		
+		/*
+		 * Once testClip.start() is called, the audio will play but then the program will terminate before much of the audio is played.
+		 */
+		do {
+			try {
+				Thread.sleep(50);
+			} catch (InterruptedException ie) {
+				ie.printStackTrace();
+			}
+		} while (beep.isActive());
+	}
 	
 	public void getMicrophoneInfo() {
 		Mixer.Info[] mixers = AudioSystem.getMixerInfo();
