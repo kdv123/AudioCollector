@@ -224,11 +224,9 @@ public class Recorder {
 	
 	public void startPlaybackWAV() {
 		FileInputStream clipFileStream = null;
-		File temp = new File(getFileInfo());
-		System.out.println(temp.toString());
 		
 		try {
-			clipFileStream = new FileInputStream(temp);
+			clipFileStream = new FileInputStream(recFile);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -300,7 +298,7 @@ public class Recorder {
 		System.gc();
 	}
 	
-	public String getFileInfo() {
+	public String getFullPath() {
 		return pathName + File.separator + fileName;
 	}
 	
@@ -311,5 +309,9 @@ public class Recorder {
 	
 	public Mixer.Info getMixer() {
 		return mixInfo;
+	}
+	
+	public File getFile() {
+		return recFile;
 	}
 }

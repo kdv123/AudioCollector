@@ -96,29 +96,29 @@ public class TextDisplayTrial3 extends Application {
 	/*
 	 * Have not updated since creating directory system 9/3/2018
 	 */
-	public void drawData(int num) {
+	public void drawData(File temp) {
 		Stage stage = new Stage();
 		Group g = new Group();
-		String name = "test.wav";
-		switch (num) {
-		case 1: if (recorder1 != null) {
-//			name = recorder1.getFileName();
-		}
- 		break;
-		case 2:if (recorder2 != null) {
-//			name = recorder2.getFileName();
-		}
- 		break;
-		case 3: if (recorder3 != null) {
-//					name = recorder3.getFileName();
-				}
-		 		break;
-		case 4:if (recorder4 != null) {
-//			name = recorder4.getFileName();
-		}
- 		break;
-		}
-		double [] pts = read(name);
+//		String name = "test.wav";
+//		switch (num) {
+//		case 1: if (recorder1 != null) {
+//			name = recorder1.getFile().getAbsolutePath();
+//		}
+// 		break;
+//		case 2:if (recorder2 != null) {
+//			name = recorder2.getFile().getAbsolutePath();
+//		}
+// 		break;
+//		case 3: if (recorder3 != null) {
+//					name = recorder3.getFile().getAbsolutePath();
+//				}
+//		 		break;
+//		case 4:if (recorder4 != null) {
+//			name = recorder4.getFile().getAbsolutePath();
+//		}
+// 		break;
+//		}
+		double [] pts = read(temp);
 		int width = pts.length / 1000;
 		double pix = 1000.0/pts.length;
 		double sum = 0;
@@ -155,8 +155,8 @@ public class TextDisplayTrial3 extends Application {
 	 * @return the array of samples
 	 */
 
-	public static double[] read(String filename) {
-		byte[] data = readByte(filename);
+	public static double[] read(File temp) {
+		byte[] data = readByte(temp);
 		int n = data.length;
 		double[] d = new double[n/2];
 		for (int i = 0; i < n/2; i++) {
@@ -171,15 +171,15 @@ public class TextDisplayTrial3 extends Application {
 	 * @param filename
 	 * @return
 	 */
-	private static byte[] readByte(String filename) {
+	private static byte[] readByte(File temp) {
 		byte[] data = null;
 		AudioInputStream ais = null;
 		try {
 
 			// try to read from file
-			File file = new File(filename);
-			if (file.exists()) {
-				ais = AudioSystem.getAudioInputStream(file);
+			//File file = new File(filename);
+			if (temp.exists()) {
+				ais = AudioSystem.getAudioInputStream(temp);
 				int bytesToRead = ais.available();
 				data = new byte[bytesToRead];
 				int bytesRead = ais.read(data);
@@ -189,11 +189,11 @@ public class TextDisplayTrial3 extends Application {
 
 		}
 		catch (IOException e) {
-			throw new IllegalArgumentException("could not read '" + filename + "'", e);
+			throw new IllegalArgumentException();
 		}
 
 		catch (UnsupportedAudioFileException e) {
-			throw new IllegalArgumentException("unsupported audio format: '" + filename + "'", e);
+			throw new IllegalArgumentException();
 		}
 
 		return data;
@@ -550,7 +550,6 @@ public class TextDisplayTrial3 extends Application {
 		return new Background(new BackgroundFill(c, new CornerRadii(2), new Insets(0)));
 	}
 
-	private int micNumRec = 0; // used for generation of pic during playback
 	ArrayList<Label> micLabels = new ArrayList<>();
 	public Group mics() {
 		Group group = new Group();
@@ -575,18 +574,21 @@ public class TextDisplayTrial3 extends Application {
 			grid.add(label, 0, i, 1, 1);
 			grid.add(status, 1, i, 1, 1);
 			grid.add(playback, 2, i, 1, 1);
-			micNumRec = i;
 			micLabels.add(status);
 			
 			playback.setOnAction(event -> {
 				if(((Button) event.getSource()).getText().contains("1") && listOfRecorders[0] != null){
 					listOfRecorders[0].startPlaybackWAV();
+					drawData(listOfRecorders[0].getFile());
 				} else if (((Button) event.getSource()).getText().contains("2") && listOfRecorders[1] != null) {
 					listOfRecorders[1].startPlaybackWAV();
+					drawData(listOfRecorders[1].getFile());
 				} else if (((Button) event.getSource()).getText().contains("3") && listOfRecorders[2] != null) {
 					listOfRecorders[2].startPlaybackWAV();
+					drawData(listOfRecorders[1].getFile());
 				} else if (((Button) event.getSource()).getText().contains("4") && listOfRecorders[3] != null) {
 					listOfRecorders[3].startPlaybackWAV();
+					drawData(listOfRecorders[1].getFile());
 				}
 			});
 		}
