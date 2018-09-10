@@ -40,6 +40,7 @@ import javafx.stage.Stage;
 public class TextDisplayTrial3 extends Application {
 
 	public static void main (String [] args) {
+		command = args;
 		launch(args);
 	}
 
@@ -58,11 +59,14 @@ public class TextDisplayTrial3 extends Application {
 	CheckBox cb4;
 	CheckBox cb5;
 	File promptFile;
+	TextField sNum;
 	BorderPane screen;
 	Recorder[] listOfRecorders = new Recorder[4];
 	ArrayList<Mixer.Info> allMixerInfos = new ArrayList<Mixer.Info>(4);
 	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(4);
 	Stage stageOne;
+	Label fileName;
+	ComboBox<String> cond;
 	
 	//For recorded file name
 	String sesNum;
@@ -74,16 +78,18 @@ public class TextDisplayTrial3 extends Application {
 	Label label2 = new Label();
 	Label label3 = new Label();
 	ArrayList<String []> tasks;
+	static String [] command = {};
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		tasks = scanMe(new File("test.txt"));
 		totalTasks = tasks.size();
-		Group g = viewer();
+//		Group g = viewer();
 		screen = new BorderPane();
 		//screen.setCenter(directions);
-		screen.setBottom(g);
+//		screen.setBottom(g);
 		scene = new Scene(startScreen(primaryStage));
+		parseCommandLine(command);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Text Display");
 		primaryStage.show();
@@ -92,6 +98,34 @@ public class TextDisplayTrial3 extends Application {
 		stageOne = primaryStage;
 		
 	}
+	
+	public void parseCommandLine(String [] args) {
+		if (args.length == 1) {
+			promptFile = new File(args[0]);
+			fileName.setText(promptFile.getName());
+		} else if (args.length == 2) {
+			participantName = args[0];
+			partID.setText(participantName);
+			promptFile = new File(args[1]);
+			fileName.setText(promptFile.getName());
+		} else if (args.length == 3) {
+			participantName = args[0];
+			partID.setText(participantName);
+			sesNum = args[1];
+			sNum.setText(sesNum);
+			promptFile = new File(args[2]);
+			fileName.setText(promptFile.getName());
+		} else if (args.length == 4) {
+			participantName = args[0];
+			partID.setText(participantName);
+			sesNum = args[1];
+			sNum.setText(sesNum);
+			promptFile = new File(args[2]);
+			fileName.setText(promptFile.getName());
+			condVal = args[3];
+			cond.setValue(condVal);
+		}
+	}
 
 	/*
 	 * Have not updated since creating directory system 9/3/2018
@@ -99,43 +133,22 @@ public class TextDisplayTrial3 extends Application {
 	public void drawData(File temp) {
 		Stage stage = new Stage();
 		Group g = new Group();
-//		String name = "test.wav";
-//		switch (num) {
-//		case 1: if (recorder1 != null) {
-//			name = recorder1.getFile().getAbsolutePath();
-//		}
-// 		break;
-//		case 2:if (recorder2 != null) {
-//			name = recorder2.getFile().getAbsolutePath();
-//		}
-// 		break;
-//		case 3: if (recorder3 != null) {
-//					name = recorder3.getFile().getAbsolutePath();
-//				}
-//		 		break;
-//		case 4:if (recorder4 != null) {
-//			name = recorder4.getFile().getAbsolutePath();
-//		}
-// 		break;
-//		}
 		double [] pts = read(temp);
 		int width = pts.length / 1000;
 		double pix = 1000.0/pts.length;
 		double sum = 0;
-		/*for (int i = 0, j = 0; i < pts.length; i++) {
-			sum += pts[i];
-			if (i % width == 0) {
-				double avg = sum / width;
-				double y = 1 - avg;
-				Rectangle rect = new Rectangle(j, y, 1, avg * 2);
-				g.getChildren().add(rect);
-				sum = 0;
-				j++;
-			}
-		}*/
+		Rectangle back = new Rectangle(0, 0, 1000, 500);
+		back.setFill(Color.ALICEBLUE);
+		g.getChildren().add(back);
+		Rectangle r = new Rectangle(0, 50, 1000, 400);
+		r.setFill(Color.LIGHTGOLDENRODYELLOW);
+		g.getChildren().add(r);
 		long start = System.currentTimeMillis();
 		for (int i = 0; i < pts.length; i += width) {
-			Rectangle rect = new Rectangle(i * pix, (1 - pts[i]) * 500 - 400, 1, pts[i] * 1000);
+			System.out.println("pts: " + pts[i]);
+			// formula for height:  y = (1-pts[i]) * half-of-desired-height; h = pts[i] * desired-height
+			// 50 gives a buffer for those cases that produce an overflowing decimal greater than 1.0 for pts[i]
+			Rectangle rect = new Rectangle(i * pix, (1 - pts[i]) * 200 + 50, 1, pts[i] * 400);
 			g.getChildren().add(rect);
 		}
 		long end = System.currentTimeMillis();
@@ -176,8 +189,7 @@ public class TextDisplayTrial3 extends Application {
 		AudioInputStream ais = null;
 		try {
 
-			// try to read from file
-			//File file = new File(filename);
+			
 			if (temp.exists()) {
 				ais = AudioSystem.getAudioInputStream(temp);
 				int bytesToRead = ais.available();
@@ -212,18 +224,20 @@ public class TextDisplayTrial3 extends Application {
 		GridPane grid = new GridPane();
 
 		Label participantID = new Label("Participant ID");
-		TextField partID = new TextField();
+		partID = new TextField();
 		partID.setPromptText("participant ID");
 
 		Label session = new Label("Session #");
-		TextField sNum = new TextField();
+		sNum = new TextField();
 		sNum.setPromptText("Session #");
 
 		Label fileLabel = new Label("file");
 		TextField files = new TextField();
 		Button choose = new Button("File");
 		promptFile = new File("test.txt");	//default to test.txt if no file is chosen
-
+		fileName = new Label("");
+		fileName.setBackground(background(Color.ALICEBLUE));
+		
 		choose.setOnAction(event -> {
 			FileChooser chooser = new FileChooser();
 			File f = new File("TextDisplayTrial3.java");
@@ -233,6 +247,7 @@ public class TextDisplayTrial3 extends Application {
 			
 			chooser.setInitialDirectory(new File(absPath));
 			promptFile = chooser.showOpenDialog(stage);
+			fileName.setText(promptFile.getName());
 		});
 
 
@@ -282,7 +297,7 @@ public class TextDisplayTrial3 extends Application {
 
 		grid.addRow(0, participantID, partID);
 		grid.addRow(1, session, sNum);
-		grid.addRow(2, fileLabel, choose);
+		grid.addRow(2, fileLabel, choose, fileName);
 		grid.addRow(3, condition, cond);
 		grid.addRow(4, selectMics);
 
@@ -326,14 +341,17 @@ public class TextDisplayTrial3 extends Application {
 			
 			state = 1;
 			taskNum = 0;
-			scanMe(promptFile);
+			System.out.println("PROMPT FILE: " + promptFile.getName());
+			tasks = scanMe(promptFile);
 			totalTasks = tasks.size();
+			screen.setBottom(viewer());
 			scene.setRoot(screen);
 		});
 		
 		grid.addRow(++row, lab,  next);
 		g.getChildren().add(grid);
 
+		
 		return g;
 	}
 	
@@ -451,6 +469,7 @@ public class TextDisplayTrial3 extends Application {
 						tasks[0] = id;
 					} else {
 						context = cols.nextLine();
+						System.out.println(context);
 					}
 				}
 				parseTask(context, tasks);
@@ -667,26 +686,26 @@ public class TextDisplayTrial3 extends Application {
 				}
 				count.setText("Task " + (taskNum + 1) + " of " + totalTasks);
 			} else {
-				Group en = new Group();
-				GridPane grid = new GridPane();
-				Button restart = new Button("New Session");
-				restart.setOnAction(e -> {
-					scene.setRoot(startScreen(stageOne));
-					taskNum = 0;					
-				});
-				Button exit = new Button("Exit");
-				exit.setOnAction(e -> {
-					stageOne.close();
-				});
-				exit.setBackground(background(Color.RED));
-				restart.setBackground(background(Color.GREEN));
-				grid.setBackground(background(Color.AZURE));
-				grid.add(restart, 2, 1);
-				grid.add(exit, 2, 4);
-				en.getChildren().add(grid);
-				//en.getChildren().add(new Rectangle(0, 0, 1000, 400));
+//				Group en = new Group();
+//				GridPane grid = new GridPane();
+//				Button restart = new Button("New Session");
+//				restart.setOnAction(e -> {
+//					scene.setRoot(startScreen(stageOne));
+//					taskNum = 0;					
+//				});
+//				Button exit = new Button("Exit");
+//				exit.setOnAction(e -> {
+//					stageOne.close();
+//				});
+//				exit.setBackground(background(Color.RED));
+//				restart.setBackground(background(Color.GREEN));
+//				grid.setBackground(background(Color.AZURE));
+//				grid.add(restart, 2, 1);
+//				grid.add(exit, 2, 4);
+//				en.getChildren().add(grid);
+//				//en.getChildren().add(new Rectangle(0, 0, 1000, 400));
 				
-				scene.setRoot(en);
+				scene.setRoot(endScreen());
 			}
 			
 			//Set new file name
@@ -747,6 +766,26 @@ public class TextDisplayTrial3 extends Application {
 		});
 
 
+	}
+	
+	public Group endScreen() {
+		Group group = new Group();
+		GridPane grid = new GridPane();
+		Label lab = new Label("Thank you for participating\nin our study");
+		lab.setPrefWidth(1000);
+		lab.setPrefHeight(400);
+		lab.setBackground(background(Color.PEACHPUFF));
+		grid.addRow(0, lab);
+		Button exit = new Button("Exit");
+		exit.setOnAction(e -> {
+			stageOne.close();
+		});
+		exit.setPrefWidth(1000);
+		exit.setBackground(background(Color.RED));
+		exit.setFont(Font.font(60));
+		grid.addRow(1, exit);
+		group.getChildren().add(grid);
+		return group;
 	}
 
 	private Background backgrounds(Color c, int rad, int inset) {
