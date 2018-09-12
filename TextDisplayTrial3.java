@@ -36,7 +36,15 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-/* August 12, 2018 */
+/*
+ * GUI for recording audio. Recorder class is used to record and playback audio in WAV format.
+ * 
+ * Useful information: 
+ * -default text file on start screen is "test.txt"
+ * -directory system is created when the user enters text into the text boxeson the start screen
+ * -user may use the enter key to navigate through the experiment's recording functions and next prompt functions
+ * 
+ */
 public class TextDisplayTrial3 extends Application {
 
 	public static void main (String [] args) {
@@ -74,6 +82,22 @@ public class TextDisplayTrial3 extends Application {
 	Label label2 = new Label();
 	Label label3 = new Label();
 	ArrayList<String []> tasks;
+	
+	//For main stage of GUI
+	double WIDTH = 1000;
+	double HEIGHT = 800;
+	double MIC_H = 65;
+	double MIC_W = 800;
+	ArrayList<String []> sessionInfo;
+	int state = 0;
+	GridPane btnPanel;
+	Label status;
+	Button start;
+	Button stop;
+	Button next;
+	Label count;
+	GridPane main;
+	ArrayList<Label> micLabels = new ArrayList<>();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -93,35 +117,14 @@ public class TextDisplayTrial3 extends Application {
 		
 	}
 
-	/*
-	 * Have not updated since creating directory system 9/3/2018
-	 */
 	public void drawData(File temp) {
 		Stage stage = new Stage();
 		Group g = new Group();
-//		String name = "test.wav";
-//		switch (num) {
-//		case 1: if (recorder1 != null) {
-//			name = recorder1.getFile().getAbsolutePath();
-//		}
-// 		break;
-//		case 2:if (recorder2 != null) {
-//			name = recorder2.getFile().getAbsolutePath();
-//		}
-// 		break;
-//		case 3: if (recorder3 != null) {
-//					name = recorder3.getFile().getAbsolutePath();
-//				}
-//		 		break;
-//		case 4:if (recorder4 != null) {
-//			name = recorder4.getFile().getAbsolutePath();
-//		}
-// 		break;
-//		}
+		
 		double [] pts = read(temp);
 		int width = pts.length / 1000;
 		double pix = 1000.0/pts.length;
-		double sum = 0;
+		//double sum = 0;
 		/*for (int i = 0, j = 0; i < pts.length; i++) {
 			sum += pts[i];
 			if (i % width == 0) {
@@ -175,9 +178,7 @@ public class TextDisplayTrial3 extends Application {
 		byte[] data = null;
 		AudioInputStream ais = null;
 		try {
-
-			// try to read from file
-			//File file = new File(filename);
+			
 			if (temp.exists()) {
 				ais = AudioSystem.getAudioInputStream(temp);
 				int bytesToRead = ais.available();
@@ -199,15 +200,12 @@ public class TextDisplayTrial3 extends Application {
 		return data;
 	}
 
-	
-
 	/**
 	 * Creates a display for the opening setup of a session 
 	 * and allows for transition to the next part.
 	 * @return
 	 */
 	public Group startScreen(Stage stage) {
-		
 		Group g = new Group();
 		GridPane grid = new GridPane();
 
@@ -220,14 +218,12 @@ public class TextDisplayTrial3 extends Application {
 		sNum.setPromptText("Session #");
 
 		Label fileLabel = new Label("file");
-		TextField files = new TextField();
 		Button choose = new Button("File");
 		promptFile = new File("test.txt");	//default to test.txt if no file is chosen
 
 		choose.setOnAction(event -> {
 			FileChooser chooser = new FileChooser();
 			File f = new File("TextDisplayTrial3.java");
-			//f = f.getParentFile().getParentFile();
 			String absPath = f.getAbsolutePath();
 			absPath = absPath.substring(0, absPath.lastIndexOf(File.separator));
 			
@@ -295,6 +291,7 @@ public class TextDisplayTrial3 extends Application {
 		Label lab = new Label();
 		lab.setMinSize(100, 100);
 		Button next = new Button("NEXT");
+		
 		next.setOnAction(event -> {
 			for(int i = 0; i < selectedMics.size(); i++) {
 				if (i == 0) {
@@ -384,9 +381,6 @@ public class TextDisplayTrial3 extends Application {
 		}
 	}
 
-	Label count;
-	GridPane main;
-
 	public Group viewer() {
 		main = new GridPane();
 		GridPane taskBar = new GridPane();
@@ -412,20 +406,6 @@ public class TextDisplayTrial3 extends Application {
 		g.getChildren().add(main);
 		return g;
 	}
-
-
-
-	double WIDTH = 1000;
-	double HEIGHT = 800;
-	double MIC_H = 65;
-	double MIC_W = 800;
-	ArrayList<String []> sessionInfo;
-	int state = 0;
-	GridPane btnPanel;
-	Label status;
-	Button start;
-	Button stop;
-	Button next;
 
 	/**
 	 * Parses the given session control file into its constituent parts and 
@@ -455,6 +435,7 @@ public class TextDisplayTrial3 extends Application {
 				}
 				parseTask(context, tasks);
 				list.add(tasks);
+				cols.close();
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -513,10 +494,10 @@ public class TextDisplayTrial3 extends Application {
 			label.setWrapText(true);
 			label.setPrefWidth(800);
 			if (i == 2) {
-				label.setTextFill(Color.DARKBLUE);
+				label.setTextFill(Color.BLACK);
 				label.setBackground(promptFill());
 			} else {
-				label.setTextFill(Color.CHOCOLATE);
+				label.setTextFill(Color.GRAY);
 				label.setBackground(contextFill());
 			}	
 			grid.add(label, 0, i - 1);
@@ -527,7 +508,7 @@ public class TextDisplayTrial3 extends Application {
 	}
 
 	private Background promptFill() {
-		return new Background(new BackgroundFill(Color.ANTIQUEWHITE, new CornerRadii(2), new Insets(0)));
+		return new Background(new BackgroundFill(Color.YELLOW, new CornerRadii(2), new Insets(0)));
 	}
 
 	private Background contextFill() {
@@ -550,7 +531,6 @@ public class TextDisplayTrial3 extends Application {
 		return new Background(new BackgroundFill(c, new CornerRadii(2), new Insets(0)));
 	}
 
-	ArrayList<Label> micLabels = new ArrayList<>();
 	public Group mics() {
 		Group group = new Group();
 		GridPane grid = new GridPane();
@@ -614,7 +594,7 @@ public class TextDisplayTrial3 extends Application {
 		stop.setBackground(new Background(new BackgroundFill(Color.RED, new CornerRadii(2), new Insets(0))));
 		next.setBackground(new Background(new BackgroundFill(Color.YELLOW, new CornerRadii(2), new Insets(0))));
 
-		/*Dummie buttons for spacing purposes */
+		/*Dummy buttons for spacing purposes */
 		for (int i = 0; i < 8; i += 2) {
 			Button d1 = new Button();
 			d1.setPrefSize(100,  60);

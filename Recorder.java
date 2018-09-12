@@ -2,9 +2,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-//import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
@@ -16,6 +15,8 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.TargetDataLine;
 
+import javafx.scene.control.Label;
+
 public class Recorder {
 	private AudioFormat audioFormat = null;	
 	private ByteArrayOutputStream byteOutput = null;
@@ -23,7 +24,7 @@ public class Recorder {
 	private Clip testClip;
 	static Mixer mix;
 	private Mixer.Info mixInfo;
-	private FileOutputStream fileOutput = null;
+	//private FileOutputStream fileOutput = null;
 	
 	private volatile static boolean targetActive = false;
 	private boolean signed = true, bigEndian = false;
@@ -67,16 +68,21 @@ public class Recorder {
 			@Override
 			public void run() {
 				AudioInputStream audioStream = new AudioInputStream(target);
-				//fout = new File(path + fileName);
-				//System.out.println("fill: " + fileName);
-				//if(targetActive) {
+				
+				//syncs mics
+				if(!targetActive) {
 					try {
-						AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, recFile);		//writes continuously
-						//System.out.println("foo: " + fileName);
-					} catch (IOException e) {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-				//}
+				}
+				
+				try {
+					AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, recFile);		//writes continuously
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		};
 		
