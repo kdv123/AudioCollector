@@ -98,6 +98,7 @@ public class TextDisplayTrial3 extends Application {
 	int state = 0;
 	GridPane btnPanel;
 	Label status;
+	Button prev;
 	Button start;
 	Button stop;
 	Button next;
@@ -621,6 +622,8 @@ public class TextDisplayTrial3 extends Application {
 	 */
 	public void makeBtnPanel() {
 		btnPanel = new GridPane();
+		prev = new Button("Previous Prompt");
+		prev.setPrefSize(100, 60);
 		start = new Button("Start Recording");
 		start.setPrefSize(100, 60);
 		stop = new Button("Stop Recording");
@@ -628,6 +631,7 @@ public class TextDisplayTrial3 extends Application {
 		next = new Button("Next Prompt");
 		next.setPrefSize(100, 60);
 
+		prev.setBackground(new Background(new BackgroundFill(Color.YELLOW, new CornerRadii(2), new Insets(0))));
 		start.setBackground(new Background(new BackgroundFill(Color.GREEN, new CornerRadii(2), new Insets(0))));
 		stop.setBackground(new Background(new BackgroundFill(Color.RED, new CornerRadii(2), new Insets(0))));
 		next.setBackground(new Background(new BackgroundFill(Color.YELLOW, new CornerRadii(2), new Insets(0))));
@@ -641,9 +645,10 @@ public class TextDisplayTrial3 extends Application {
 		}
 
 
-		btnPanel.add(start, 1, 0);
-		btnPanel.add(stop, 3, 0);
-		btnPanel.add(next, 5, 0);
+		btnPanel.add(prev, 1, 0);
+		btnPanel.add(start, 3, 0);
+		btnPanel.add(stop, 5, 0);
+		btnPanel.add(next, 7, 0);
 
 		next.setDisable(true);
 		stop.setDisable(true);
@@ -807,6 +812,7 @@ public class TextDisplayTrial3 extends Application {
 			e.printStackTrace();
 		}
 		
+		clip.start();
 		//To play the entire clip and not close
 		do {
 			try {
