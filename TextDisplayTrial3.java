@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.sound.sampled.Line;
+import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
@@ -40,7 +42,7 @@ import javafx.stage.Stage;
  * 
  * Useful information: 
  * -default text file on start screen is "test.txt"
- * -directory system is created when the user enters text into the text boxeson the start screen
+ * -directory system is created when the user enters text into the text boxes on the start screen
  * -user may use the enter key to navigate through the experiment's recording functions and next prompt functions
  * 
  */
@@ -737,14 +739,13 @@ public class TextDisplayTrial3 extends Application {
 			}
 				
 			listOfRecorders[lastMicIndex].setTargetStatus(true);	//Syncs mics start
+			playRecordingBeep();
 		});
 		
 		stop.setOnAction(event -> {
-			int lastMicIndex = 0;
 			for (int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null) {
 					listOfRecorders[i].stopRecording();
-					lastMicIndex = i;
 				}
 			}
 			
@@ -788,6 +789,35 @@ public class TextDisplayTrial3 extends Application {
 	private Background backgrounds(Color c, int rad, int inset) {
 		return new Background(new BackgroundFill(c, new CornerRadii(rad), new Insets(inset)));
 	}
+	
+	public void playRecordingBeep() {
+		Clip clip = null;
+		AudioInputStream audioStream;
+		
+		try {
+			audioStream = AudioSystem.getAudioInputStream(new File("buttonBeep.wav"));
+			clip = AudioSystem.getClip();
+			clip.open(audioStream);
+		} catch (UnsupportedAudioFileException e) {
+			e.printStackTrace();
+		} catch (LineUnavailableException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//To play the entire clip and not close
+		do {
+			try {
+				Thread.sleep(50);
+			} catch (InterruptedException ie) {
+				ie.printStackTrace();
+			}
+		} while (clip.isActive());
+		
+		clip.close();
+	}
 
 	public void getMicrophoneInfo() {
 		Mixer.Info[] mixers = AudioSystem.getMixerInfo();
@@ -802,5 +832,4 @@ public class TextDisplayTrial3 extends Application {
 			}			
 		}
 	}
-
 }

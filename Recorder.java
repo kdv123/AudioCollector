@@ -49,12 +49,10 @@ public class Recorder {
 	}
 	
 	/*
-	 * This method records raw data from a single line and writes it to the specified file
+	 * This method records data from a single line and writes it to the specified file in WAV Format
 	 * 
-	 * May or may not use this method. Thinking of adding yet another overloaded constructor.
 	 */
 	public void startRecordingSingleInputWAV() {
-		
 		try {
 			target = (TargetDataLine) AudioSystem.getTargetDataLine(audioFormat, mixInfo);
 			target.open();
@@ -193,7 +191,7 @@ public class Recorder {
 			while (System.currentTimeMillis() - timer < 200) {
 				
 			}
-			targetActive = false;	//Added an if statement into record so they both should stop recording once this is false
+			targetActive = false;	//Added an if statement into record
 		}
 		
 		target.stop();
