@@ -25,7 +25,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
@@ -166,14 +165,14 @@ public class TextDisplayTrial3 extends Application {
 		g.getChildren().add(r);
 		long start = System.currentTimeMillis();
 		for (int i = 0; i < pts.length; i += width) {
-			System.out.println("pts: " + pts[i]);
+			//System.out.println("pts: " + pts[i]);
 			// formula for height:  y = (1-pts[i]) * half-of-desired-height; h = pts[i] * desired-height
 			// 50 gives a buffer for those cases that produce an overflowing decimal greater than 1.0 for pts[i]
 			Rectangle rect = new Rectangle(i * pix, (1 - pts[i]) * 200 + 50, 1, pts[i] * 400);
 			g.getChildren().add(rect);
 		}
 		long end = System.currentTimeMillis();
-		System.out.println(end - start);
+		//System.out.println(end - start);
 
 		Scene s = new Scene(g);
 		stage.setScene(s);
@@ -357,7 +356,6 @@ public class TextDisplayTrial3 extends Application {
 			
 			state = 1;
 			taskNum = 0;
-			System.out.println("PROMPT FILE: " + promptFile.getName());
 			tasks = scanMe(promptFile);
 			totalTasks = tasks.size();
 			screen.setBottom(viewer());
@@ -468,7 +466,7 @@ public class TextDisplayTrial3 extends Application {
 						tasks[0] = id;
 					} else {
 						context = cols.nextLine();
-						System.out.println(context);
+						//System.out.println(context);
 					}
 				}
 				parseTask(context, tasks);
@@ -714,7 +712,6 @@ public class TextDisplayTrial3 extends Application {
 					listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] + ".wav");
 				}
 			}
-			//main.add(prompt(), 0, 1);
 		});
 
 		/* Listeners attached to buttons here.  Nothing currently attached to "next" */
@@ -739,15 +736,18 @@ public class TextDisplayTrial3 extends Application {
 				}
 			}
 				
-			listOfRecorders[lastMicIndex].setTargetStatus(true);	//Syncs mics
+			listOfRecorders[lastMicIndex].setTargetStatus(true);	//Syncs mics start
 		});
 		
 		stop.setOnAction(event -> {
+			int lastMicIndex = 0;
 			for (int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null) {
 					listOfRecorders[i].stopRecording();
+					lastMicIndex = i;
 				}
 			}
+			
 			for (Label lab: micLabels) {
 				lab.setBackground(backgrounds(Color.RED, 0, 0));
 				lab.setText("Status:  Stopped ...");
@@ -758,9 +758,7 @@ public class TextDisplayTrial3 extends Application {
 			stop.setDisable(true);
 			next.setDefaultButton(true);
 			stop.setDefaultButton(false);
-			start.setDefaultButton(false);	
-
-			//updateText();
+			start.setDefaultButton(false);
 
 		});
 

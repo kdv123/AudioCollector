@@ -14,6 +14,7 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.TargetDataLine;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 import javafx.scene.control.Label;
 
@@ -21,7 +22,6 @@ public class Recorder {
 	private AudioFormat audioFormat = null;	
 	private ByteArrayOutputStream byteOutput = null;
 	private TargetDataLine target = null;
-	private Clip testClip;
 	static Mixer mix;
 	private Mixer.Info mixInfo;
 	//private FileOutputStream fileOutput = null;
@@ -70,7 +70,7 @@ public class Recorder {
 				AudioInputStream audioStream = new AudioInputStream(target);
 				
 				//syncs mics
-				if(!targetActive) {
+				while(!targetActive) {
 					try {
 						Thread.sleep(100);
 					} catch (InterruptedException e) {
@@ -78,14 +78,17 @@ public class Recorder {
 					}
 				}
 				
+				if(targetActive) {
 				try {
 					AudioSystem.write(audioStream, AudioFileFormat.Type.WAVE, recFile);		//writes continuously
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+				}
 			}
 		};
 		
+
 		targetThread.start();
 	}
 	
@@ -184,14 +187,18 @@ public class Recorder {
 	/*
 	 * Waits 200 ms then stops recording, closes fileOutput
 	 */
-	public void stopRecording() {
-		long timer = System.currentTimeMillis();
-		while (System.currentTimeMillis() - timer < 200) {
-			
+	public void stopRecording() {		
+		if (targetActive) {
+			long timer = System.currentTimeMillis();
+			while (System.currentTimeMillis() - timer < 200) {
+				
+			}
+			targetActive = false;	//Added an if statement into record so they both should stop recording once this is false
 		}
 		
 		target.stop();
 		target.close();
+		setTargetStatus(false);
 	}
 	
 	/*
@@ -229,33 +236,26 @@ public class Recorder {
 	}*/
 	
 	public void startPlaybackWAV() {
-		FileInputStream clipFileStream = null;
+		System.out.println(targetActive);
+		Clip testClip = null;
+		AudioInputStream audioStream;
 		
 		try {
-			clipFileStream = new FileInputStream(recFile);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		Mixer.Info[] mixInfos = AudioSystem.getMixerInfo();
-		mix = AudioSystem.getMixer(mixInfos[0]);	//default audio output
-		DataLine.Info playbackInfo = new DataLine.Info(Clip.class, audioFormat);
-		
-		try {
-			testClip = (Clip) mix.getLine(playbackInfo);
-			AudioInputStream clipStream = new AudioInputStream(clipFileStream, audioFormat,(long) clipFileStream.available());
-			testClip.open(clipStream);
-		} catch (LineUnavailableException lue) {
-			lue.printStackTrace();
+			audioStream = AudioSystem.getAudioInputStream(getFile());
+			testClip = AudioSystem.getClip();
+			testClip.open(audioStream);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
+		} catch (UnsupportedAudioFileException e) {
+			e.printStackTrace();
+		} catch (LineUnavailableException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		testClip.start();
 		
-		/*
-		 * Once testClip.start() is called, the audio will play but then the program will terminate before much of the audio is played.
-		 */
+		//To play the entire clip and not close
 		do {
 			try {
 				Thread.sleep(50);
@@ -263,7 +263,40 @@ public class Recorder {
 				ie.printStackTrace();
 			}
 		} while (testClip.isActive());
+		
+		testClip.close();
 	}
+	
+	public void startRecordingBeep() {
+		Clip testClip = null;
+		AudioInputStream audioStream;
+		
+		try {
+			audioStream = AudioSystem.getAudioInputStream(new File("buttonBeep.wav"));
+			testClip = AudioSystem.getClip();
+			testClip.open(audioStream);
+		} catch (UnsupportedAudioFileException e) {
+			e.printStackTrace();
+		} catch (LineUnavailableException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//To play the entire clip and not close
+		do {
+			try {
+				Thread.sleep(50);
+			} catch (InterruptedException ie) {
+				ie.printStackTrace();
+			}
+		} while (testClip.isActive());
+		
+		testClip.close();
+	}
+	
+	
 	
 	/* 
 	 * This method closes the ByteOutputArrayOutputStream which is used for both capture and playback.
@@ -278,10 +311,6 @@ public class Recorder {
 			ioe.printStackTrace();
 		}
 	}*/
-	
-	public boolean getTargetStatus() {
-		return targetActive;
-	}
 	
 	public void setTargetStatus(boolean active) {
 		targetActive = active;
