@@ -1,22 +1,15 @@
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer;
 import javax.sound.sampled.TargetDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
-
-import javafx.scene.control.Label;
 
 public class Recorder {
 	private AudioFormat audioFormat = null;	
@@ -32,16 +25,17 @@ public class Recorder {
 	private float sampleRate = 44100;
 	private int bitsPerSample = 16;
 	private File recFile;
-	private String pathName = System.getProperty("user.dir");
+	private String pathName = System.getProperty("user.dir");	//Default directory
+	int recNum = 0; // Recording number if a user decides to rerecord. Save all utterances.
 	
 	/*
-	 * Constructors
+	 * Constructor
 	 */
-	public Recorder() {
-		//byteOutput = new ByteArrayOutputStream();
-		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
-	}
-	
+//	public Recorder() {
+//		//byteOutput = new ByteArrayOutputStream();
+//		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
+//	}
+//	
 	public Recorder(Mixer.Info mixer) {
 		//byteOutput = new ByteArrayOutputStream();
 		audioFormat = new AudioFormat(sampleRate, bitsPerSample, 1, signed, bigEndian);
@@ -58,7 +52,20 @@ public class Recorder {
 			target.open();
 		} catch (LineUnavailableException e) {
 			e.printStackTrace();
-		}		
+		}
+		
+		while (recFile.exists()) {
+			if (recNum < 10) {
+				String temp = recFile.toString();
+				temp = temp.substring(0, temp.length()-6);
+				temp +=  "_" + recNum + ".wav";
+				recFile = new File(temp);
+				recNum++;
+			} else {
+				System.err.println("Attempted to rerecord more than 10 times! Please delete previous files.");
+				break;
+			}
+		}
 		
 		target.start();
 		
@@ -234,7 +241,6 @@ public class Recorder {
 	}*/
 	
 	public void startPlaybackWAV() {
-		System.out.println(targetActive);
 		Clip testClip = null;
 		AudioInputStream audioStream;
 		
@@ -327,12 +333,12 @@ public class Recorder {
 	
 	public void setFileName(String newFile) {
 		fileName = newFile;
-		recFile = new File(pathName + File.separator + fileName);
+		recFile = new File(pathName + File.separator + fileName + "_" + recNum + ".wav");
 		System.gc();
 	}
 	
-	public String getFullPath() {
-		return pathName + File.separator + fileName;
+	public String getFileName() {
+		return recFile.toString();
 	}
 	
 	public boolean setFilePath(String pathname) {

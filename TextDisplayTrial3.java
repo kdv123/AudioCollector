@@ -656,7 +656,7 @@ public class TextDisplayTrial3 extends Application {
 		next.setOnAction(event -> {
 			
 			start.setDisable(false);
-			next.setDisable(true);
+			next.setDisable(false);
 			stop.setDisable(true);
 			start.setDefaultButton(true);
 			stop.setDefaultButton(false);
@@ -671,8 +671,10 @@ public class TextDisplayTrial3 extends Application {
 			if (taskNum < totalTasks) {
 				String [] str = tasks.get(taskNum);
 
-				for (int i = 1; i < 4; i++) {
+				for (int i = 1; i < str.length; i++) {
 					String s = str[i];
+					System.out.println(str[i]);
+					System.out.println("_____________________");
 					if (s.charAt(0) == ' ') {
 						s = s.substring(1);
 					}
@@ -708,11 +710,54 @@ public class TextDisplayTrial3 extends Application {
 				scene.setRoot(endScreen());
 			}
 			
+			
 			//Set new file name
 			String[] current = tasks.get(taskNum);
 			for(int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null) {
 					listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] + ".wav");
+				}
+			}
+		});
+		
+		prev.setOnAction(event -> {
+			start.setDisable(false);
+			next.setDisable(false);
+			stop.setDisable(true);
+			start.setDefaultButton(true);
+			stop.setDefaultButton(false);
+			next.setDefaultButton(false);
+			
+			for (Label lab: micLabels) {
+				lab.setBackground(backgrounds(Color.PEACHPUFF, 0, 0));
+				lab.setText("Status:  ");
+			}
+			
+			taskNum--;
+			if (taskNum < totalTasks && taskNum >= 0) {
+				String [] str = tasks.get(taskNum);
+
+				for (int i = 1; i < str.length; i++) {
+					String s = str[i];
+					if (s.charAt(0) == ' ') {
+						s = s.substring(1);
+					}
+					Label label = new Label();
+					switch(i) {
+					case 1:  label = label1; break;
+					case 2:  label = label2; break;
+					case 3:  label = label3; break;
+					}
+					label.setText(s);
+				}
+				count.setText("Task " + (taskNum + 1) + " of " + totalTasks);
+			}			
+			
+			//Set new file name
+			String[] current = tasks.get(taskNum);
+			for(int i = 0; i < listOfRecorders.length; i++) {
+				if (listOfRecorders[i] != null) {
+					listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] );
 				}
 			}
 		});
@@ -755,7 +800,7 @@ public class TextDisplayTrial3 extends Application {
 				lab.setText("Status:  Stopped ...");
 			}
 			
-			start.setDisable(true);
+			start.setDisable(false);
 			next.setDisable(false);
 			stop.setDisable(true);
 			next.setDefaultButton(true);
