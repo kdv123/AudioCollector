@@ -1,5 +1,5 @@
 a1b0	Good Morning! <h> Good Morning!  How are you? </h>  I'm fine.
 a1b1	Good Morning! <h> Hi! <br> How're things going? </h>  Good.
 a1b2	Bonjour! <h> Bonjour! <br> Comment ca va? </h> Je suis bien.
-a1b3	How's it going, eh? <h>  Going fine </h> 
+a1b3	How's it going, eh? <h>  Going fine </h> *
 a1b4	Bonjour! <br> Bonjour! Comment ca va? <h> Ca va. <br> Et vous? </h> Tres bien

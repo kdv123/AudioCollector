@@ -62,24 +62,6 @@ public class TextDisplayTrial3 extends Application {
 	Recorder recorder2;
 	Recorder recorder3;
 	Recorder recorder4;
-	CheckBox cb1;
-	CheckBox cb2;
-	CheckBox cb3;
-	CheckBox cb4;
-	File promptFile;
-	TextField sNum;
-	BorderPane screen;
-	Recorder[] listOfRecorders = new Recorder[4];
-	ArrayList<Mixer.Info> allMixerInfos = new ArrayList<Mixer.Info>(4);
-	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(4);
-	Stage stageOne;
-	Label fileName;
-	ComboBox<String> cond;
-	
-	//For recorded file name
-	String sesNum;
-	String condVal;
-	String participantName;
 	
 	//For task generation
 	Label label1 = new Label();
@@ -94,16 +76,6 @@ public class TextDisplayTrial3 extends Application {
 	double MIC_H = 65;
 	double MIC_W = 800;
 	ArrayList<String []> sessionInfo;
-	int state = 0;
-	GridPane btnPanel;
-	Label status;
-	Button prev;
-	Button start;
-	Button stop;
-	Button next;
-	Label count;
-	GridPane main;
-	ArrayList<Label> micLabels = new ArrayList<>();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -124,6 +96,10 @@ public class TextDisplayTrial3 extends Application {
 		
 	}
 	
+	//For recorded file name
+	String sesNum;
+	String condVal;
+	String participantName;
 	public void parseCommandLine(String [] args) {
 		if (args.length == 1) {
 			promptFile = new File(args[0]);
@@ -232,6 +208,20 @@ public class TextDisplayTrial3 extends Application {
 		return data;
 	}
 
+	int state = 0;
+	CheckBox cb1;
+	CheckBox cb2;
+	CheckBox cb3;
+	CheckBox cb4;
+	File promptFile;
+	TextField sNum;
+	BorderPane screen;
+	Recorder[] listOfRecorders = new Recorder[4];
+	ArrayList<Mixer.Info> allMixerInfos = new ArrayList<Mixer.Info>(4);
+	ArrayList<Mixer.Info> selectedMics = new ArrayList<Mixer.Info>(4);
+	Stage stageOne;
+	Label fileName;
+	ComboBox<String> cond;
 	/**
 	 * Creates a display for the opening setup of a session 
 	 * and allows for transition to the next part.
@@ -414,6 +404,16 @@ public class TextDisplayTrial3 extends Application {
 			return null;
 		}
 	}
+
+	GridPane btnPanel;
+	Label status;
+	Button prev;
+	Button start;
+	Button stop;
+	Button next;
+	Label count;
+	GridPane main;
+	ArrayList<Label> micLabels = new ArrayList<>();
 
 	public Group viewer() {
 		main = new GridPane();
@@ -673,8 +673,7 @@ public class TextDisplayTrial3 extends Application {
 
 				for (int i = 1; i < str.length; i++) {
 					String s = str[i];
-					System.out.println(str[i]);
-					System.out.println("_____________________");
+
 					if (s.charAt(0) == ' ') {
 						s = s.substring(1);
 					}
@@ -712,10 +711,12 @@ public class TextDisplayTrial3 extends Application {
 			
 			
 			//Set new file name
-			String[] current = tasks.get(taskNum);
-			for(int i = 0; i < listOfRecorders.length; i++) {
-				if (listOfRecorders[i] != null) {
-					listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] + ".wav");
+			if (taskNum < tasks.size()) {
+				String[] current = tasks.get(taskNum);
+				for(int i = 0; i < listOfRecorders.length; i++) {
+					if (listOfRecorders[i] != null) {
+							listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] + ".wav");
+					}
 				}
 			}
 		});
@@ -754,10 +755,12 @@ public class TextDisplayTrial3 extends Application {
 			}			
 			
 			//Set new file name
-			String[] current = tasks.get(taskNum);
-			for(int i = 0; i < listOfRecorders.length; i++) {
-				if (listOfRecorders[i] != null) {
-					listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] );
+			if (taskNum > 0) {
+				String[] current = tasks.get(taskNum);
+				for(int i = 0; i < listOfRecorders.length; i++) {
+					if (listOfRecorders[i] != null) {
+						listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] );
+					}
 				}
 			}
 		});
