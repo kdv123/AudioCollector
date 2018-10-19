@@ -209,10 +209,6 @@ public class TextDisplayTrial3 extends Application {
 	}
 
 	int state = 0;
-	CheckBox cb1;
-	CheckBox cb2;
-	CheckBox cb3;
-	CheckBox cb4;
 	File promptFile;
 	TextField sNum;
 	BorderPane screen;
@@ -275,27 +271,11 @@ public class TextDisplayTrial3 extends Application {
 			}
 		};
 		
+		CheckBox micCB;
 		for(int i = 0; i < allMixerInfos.size(); i++) {
-			//Primary Sound is a duplicate of whatever microphone is the default in Windows
-			if(!allMixerInfos.get(i).getName().contains("Primary Sound")) {
-				if (i == 0) {
-					cb1 = new CheckBox(allMixerInfos.get(i).getName());
-					cb1.setOnAction(micCheckHandle);
-					allMics.add(cb1);
-				} else if ( i == 1) {
-					cb2 = new CheckBox(allMixerInfos.get(i).getName());
-					cb2.setOnAction(micCheckHandle);
-					allMics.add(cb2);
-				} else if (i == 2) {
-					cb3 = new CheckBox(allMixerInfos.get(i).getName());
-					cb3.setOnAction(micCheckHandle);
-					allMics.add(cb3);
-				} else if (i == 3) {
-					cb4 = new CheckBox(allMixerInfos.get(i).getName());
-					cb4.setOnAction(micCheckHandle);
-					allMics.add(cb4);
-				}
-			}
+			micCB = new CheckBox(allMixerInfos.get(i).getName());
+			micCB.setOnAction(micCheckHandle);
+			allMics.add(micCB);
 		}
 
 		grid.addRow(0, participantID, partID);
