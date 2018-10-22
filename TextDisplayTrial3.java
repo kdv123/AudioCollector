@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.sound.sampled.AudioInputStream;
@@ -36,6 +37,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 /*
  * GUI for recording audio. Recorder class is used to record and playback audio in WAV format.
@@ -62,6 +64,7 @@ public class TextDisplayTrial3 extends Application {
 	Recorder recorder2;
 	Recorder recorder3;
 	Recorder recorder4;
+	PrintWriter uiLog;
 	
 	//For task generation
 	Label label1 = new Label();
@@ -94,6 +97,12 @@ public class TextDisplayTrial3 extends Application {
 		primaryStage.setHeight(HEIGHT);
 		stageOne = primaryStage;
 		
+		//PrintWriter will write once window is closed
+		Window temp = scene.getWindow();
+		temp.setOnCloseRequest( e -> {
+			uiLog.print("<Close Window>");
+			uiLog.close();
+		});
 	}
 	
 	//For recorded file name
@@ -312,6 +321,11 @@ public class TextDisplayTrial3 extends Application {
 			}
 
 			setupFileSystem(partID, sNum, cond);
+			try {
+				uiLog = new PrintWriter(new File(recorder1.getFilePath() + File.separator + "UILog.txt"));
+			} catch (FileNotFoundException fnfe) {
+				fnfe.printStackTrace();
+			}
 
 			if (selectedMics.size() == 0) {
 				Alert alert = new Alert(AlertType.ERROR, "No microphone is selected\nPlease select a mic to continue", ButtonType.OK);
@@ -572,18 +586,22 @@ public class TextDisplayTrial3 extends Application {
 			micLabels.add(status);
 			
 			playback.setOnAction(event -> {
-				if(((Button) event.getSource()).getText().contains("1") && listOfRecorders[0] != null){
+				if(((Button) event.getSource()).getText().contains("1") && listOfRecorders[0] != null && listOfRecorders[0].getFile().exists()){
 					listOfRecorders[0].startPlaybackWAV();
 					drawData(listOfRecorders[0].getFile());
-				} else if (((Button) event.getSource()).getText().contains("2") && listOfRecorders[1] != null) {
+					uiLog.println("<Playback1>");
+				} else if (((Button) event.getSource()).getText().contains("2") && listOfRecorders[1] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[1].startPlaybackWAV();
 					drawData(listOfRecorders[1].getFile());
-				} else if (((Button) event.getSource()).getText().contains("3") && listOfRecorders[2] != null) {
+					uiLog.println("<Playback2>");
+				} else if (((Button) event.getSource()).getText().contains("3") && listOfRecorders[2] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[2].startPlaybackWAV();
-					drawData(listOfRecorders[1].getFile());
-				} else if (((Button) event.getSource()).getText().contains("4") && listOfRecorders[3] != null) {
+					drawData(listOfRecorders[2].getFile());
+					uiLog.println("<PlaybackBtn3>");
+				} else if (((Button) event.getSource()).getText().contains("4") && listOfRecorders[3] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[3].startPlaybackWAV();
-					drawData(listOfRecorders[1].getFile());
+					drawData(listOfRecorders[3].getFile());
+					uiLog.println("<PlaybackBtn4>");
 				}
 			});
 		}
@@ -628,15 +646,18 @@ public class TextDisplayTrial3 extends Application {
 
 		next.setDisable(true);
 		stop.setDisable(true);
+		prev.setDisable(true);
 		//		playback.setDefaultButton(false);
 		start.setDefaultButton(true);
 		start.requestFocus();
 
 		// Default buttons not currently working for typing ENTER to move to the next one
 		next.setOnAction(event -> {
+			uiLog.println("<Next>");
 			
 			start.setDisable(false);
-			next.setDisable(false);
+			next.setDisable(true);
+			prev.setDisable(false);
 			stop.setDisable(true);
 			start.setDefaultButton(true);
 			stop.setDefaultButton(false);
@@ -702,6 +723,7 @@ public class TextDisplayTrial3 extends Application {
 		});
 		
 		prev.setOnAction(event -> {
+			uiLog.println("<Previous>");
 			start.setDisable(false);
 			next.setDisable(false);
 			stop.setDisable(true);
@@ -747,6 +769,7 @@ public class TextDisplayTrial3 extends Application {
 
 		/* Listeners attached to buttons here.  Nothing currently attached to "next" */
 		start.setOnAction(event -> {
+			uiLog.println("<Start>");
 			for (Label lab: micLabels) {
 				lab.setBackground(backgrounds(Color.GREEN, 0, 0));
 				lab.setText("Status:  Recording...");
@@ -772,6 +795,7 @@ public class TextDisplayTrial3 extends Application {
 		});
 		
 		stop.setOnAction(event -> {
+			uiLog.println("<Stop>");
 			for (int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null) {
 					listOfRecorders[i].stopRecording();
@@ -791,8 +815,6 @@ public class TextDisplayTrial3 extends Application {
 			start.setDefaultButton(false);
 
 		});
-
-
 	}
 	
 	public Group endScreen() {
@@ -805,6 +827,8 @@ public class TextDisplayTrial3 extends Application {
 		grid.addRow(0, lab);
 		Button exit = new Button("Exit");
 		exit.setOnAction(e -> {
+			uiLog.print("<Final Exit>");
+			uiLog.close();
 			stageOne.close();
 		});
 		exit.setPrefWidth(1000);

@@ -244,6 +244,9 @@ public class Recorder {
 		Clip testClip = null;
 		AudioInputStream audioStream;
 		
+		if (!getFile().exists())
+			System.err.println("No file recorded!");
+		
 		try {
 			audioStream = AudioSystem.getAudioInputStream(getFile());
 			testClip = AudioSystem.getClip();
@@ -339,6 +342,10 @@ public class Recorder {
 	
 	public String getFileName() {
 		return recFile.toString();
+	}
+	
+	public String getFilePath() {
+		return pathName;
 	}
 	
 	public boolean setFilePath(String pathname) {
