@@ -100,8 +100,10 @@ public class TextDisplayTrial3 extends Application {
 		//PrintWriter will write once window is closed
 		Window temp = scene.getWindow();
 		temp.setOnCloseRequest( e -> {
-			uiLog.print("<Close Window>");
-			uiLog.close();
+			if (uiLog != null) {
+				uiLog.print("<Close Window>");
+				uiLog.close();
+			}
 		});
 	}
 	
