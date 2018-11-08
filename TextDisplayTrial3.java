@@ -649,7 +649,6 @@ public class TextDisplayTrial3 extends Application {
 		next.setDisable(true);
 		stop.setDisable(true);
 		prev.setDisable(true);
-		//		playback.setDefaultButton(false);
 		start.setDefaultButton(true);
 		start.requestFocus();
 
@@ -882,7 +881,7 @@ public class TextDisplayTrial3 extends Application {
 			Line.Info[] lines = m.getTargetLineInfo();
 			
 			for (Line.Info li : lines) {
-				if(li.toString().equals("interface TargetDataLine supporting 8 audio formats, and buffers of at least 32 bytes")) {
+				if(li.toString().contains("interface TargetDataLine")) {
 					allMixerInfos.add(mixInfo);
 				}
 			}			
