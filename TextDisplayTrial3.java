@@ -383,7 +383,9 @@ public class TextDisplayTrial3 extends Application {
 				}
 				
 				if (dirs) {
-					tempRec.setFilePath(t);	//mkdirs() is called in class
+					File temp = new File(t);	//make appropriate directories
+					temp.mkdirs();
+					tempRec.setFilePath(t);
 					tempRec.setFileName(mixName + "_" + current[0] + ".wav");
 				} else {
 					listOfRecorders[i].setFileName(mixName + "_" + current[0] + ".wav");
@@ -758,11 +760,11 @@ public class TextDisplayTrial3 extends Application {
 			}			
 			
 			//Set new file name
-			if (taskNum > 0) {
+			if (taskNum >= 0) {
 				String[] current = tasks.get(taskNum);
 				for(int i = 0; i < listOfRecorders.length; i++) {
 					if (listOfRecorders[i] != null) {
-						listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] );
+						listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] + ".wav");
 					}
 				}
 			}
