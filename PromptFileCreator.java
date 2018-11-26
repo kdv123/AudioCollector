@@ -21,8 +21,7 @@ public class PromptFileCreator {
 
 
 		
-		String firstLine = scan.nextLine();
-		System.out.printf("Definition Line: %s\n", firstLine);
+		scan.nextLine();	//First line
 		
 		while(scan.hasNext()) {
 			String s = scan.nextLine();
@@ -34,32 +33,135 @@ public class PromptFileCreator {
 				testLines.add(s);
 		}
 		
+		/*
 		System.out.printf("Training Lines index %d: %s\n Size: %d\n", 0, trainingLines.get(0), trainingLines.size());
 		System.out.printf("Development Lines index %d: %s\n Size: %d\n", 0, developmentLines.get(0), developmentLines.size());
-		System.out.printf("Test Lines index %d: %s\n Size: %d\n", 0, testLines.get(0), testLines.size());
+		System.out.printf("Test Lines index %d: %s\n Size: %d\n", 0, testLines.get(0), testLines.size()); */
 		
-		createPromptSets(developmentLines);
+		//See method header
+		createDevPromptSets(developmentLines);
 	}
 	
-	private static void createPromptSets(ArrayList<String> lines) {
-		if (lines.equals(developmentLines)) {
-			System.out.println("Develpment");
-		} else if (lines.equals(testLines)) {
-			System.out.println("Test");
-		} else if (lines.equals(trainingLines)) {
-			System.out.println("Training");
-		}
-		PrintWriter ASpeakerOutput = null;
-		PrintWriter BSpeakerOutput = null;
-		try {
-			ASpeakerOutput = new PrintWriter(new File("promptSet1.txt"));
-			BSpeakerOutput = new PrintWriter(new File("Name"));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	/*
+	 * Currently only creating development lines. Functionality for test lines should also be available, but have not been tested yet.
+	 * Using this method, every 28 lines will creates 84 prompts for an odd number participant and 84 prompts for an even number participant.
+	 * For the development this will create 20 prompt files. 280 Development lines, 10 for odd participant, 10 for even participant. Each participant
+	 * will speak 84 total prompts. We are assuming 3 prompts will take one minute. Thus 28 minutes for the times the user will be utilizing the interface.
+	 */
+	private static void createDevPromptSets(ArrayList<String> lines) {
+		int subSize = 28;
+
+		//For each set of 28 lines in the development lines set (280 total)
+		for (int i = 0; i < 10; i++) {
+			//File name syntax: p<participant #>_dev_<lineStartFromSet>_<lineEndFromSet>.txt
+			String fileNameOdd = "";
+			String fileNameEven = "";
+			
+			switch (i) {
+			case 0:
+				fileNameOdd = "p1_dev.txt";
+				fileNameEven = "p2_dev.txt";
+				break;
+			case 1:
+				fileNameOdd = "p3_dev.txt";
+				fileNameEven = "p4_dev.txt";
+				break;
+			case 2:
+				fileNameOdd = "p5_dev.txt";
+				fileNameEven = "p6_dev.txt";
+				break;
+			case 3:
+				fileNameOdd = "p7_dev.txt";
+				fileNameEven = "p8_dev.txt";
+				break;
+			case 4:
+				fileNameOdd = "p9_dev.txt";
+				fileNameEven = "p10_dev.txt";
+				break;
+			case 5:
+				fileNameOdd = "p11_dev.txt";
+				fileNameEven = "p12_dev.txt"; 
+				break;
+			case 6:
+				fileNameOdd = "p13_dev.txt";
+				fileNameEven = "p14_dev.txt";
+				break;
+			case 7:
+				fileNameOdd = "p15_dev.txt";
+				fileNameEven = "p16_dev.txt";
+				break;
+			case 8:
+				fileNameOdd = "p17_dev.txt";
+				fileNameEven = "p18_dev.txt";
+				break;
+			case 9:
+				fileNameOdd = "p19_dev.txt";
+				fileNameEven = "p20_dev.txt";
+				break;
+			}
+			
+			PrintWriter outputOdd = null;
+			PrintWriter outputEven = null;
+			try {
+				outputOdd = new PrintWriter(fileNameOdd);
+				outputEven = new PrintWriter(fileNameEven);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			
+			int numOdd = 1;
+			int numEven = 1;
+			//String context: <highlighted speaker>_dev_chainNum_<stuff to print to screen>
+			for (int j = i * subSize; j < (i+1) * subSize; j++) {
+				Scanner scan = new Scanner(lines.get(j));
+				scan.useDelimiter("\t");
+				String dev = scan.next();
+				String chain = scan.next();
+				chain = chain.substring(5);		//removes the chain part
+				String a1 = scan.next();
+				String b1 = scan.next();
+				String a2 = scan.next();
+				String b2 = scan.next();
+				String a3 = scan.next();
+				String b3 = scan.next();
+				
+				if (j % 2 == 0) {
+					outputOdd.println("a1_" + dev + numOdd++ + "\t<h>" + a1 + "</h>\t" + b1);
+					outputOdd.println("a2_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>" );
+					outputOdd.println("a3_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+					outputEven.println("b1_" + dev + numEven++ + "\t" + a1 + "\t<h>" + b1 + "</h>");
+					outputEven.println("b2_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+					outputEven.println("b3_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+				} else {
+					outputEven.println("a1_" + dev + numEven++ + "\t<h>" + a1 + "</h> " + b1);
+					outputEven.println("a2_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + " \t<h>" + a2 + "</h>" );
+					outputEven.println("a3_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+					outputOdd.println("b1_" + dev + numOdd++ + "\t" + a1 + "\t<h>" + b1 + "</h>");
+					outputOdd.println("b2_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+					outputOdd.println("b3_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+				}
+				
+				scan.close();
+			}
+			
+			outputOdd.close();
+			outputEven.close();
 		}
 		
-		ASpeakerOutput.close();
-		BSpeakerOutput.close();
+		
+		
+		
+//		PrintWriter ASpeakerOutput = null;
+//		PrintWriter BSpeakerOutput = null;
+//		try {
+//			ASpeakerOutput = new PrintWriter(new File("promptSet1.txt"));
+//			BSpeakerOutput = new PrintWriter(new File("Name"));
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		ASpeakerOutput.close();
+//		BSpeakerOutput.close();
 	}
 }

@@ -1,0 +1,84 @@
+a1_dev1	<h>What is on TV?</h>	THE NEW IS ON RIGHT NOW.
+a2_dev2	What is on TV?	THE NEW IS ON RIGHT NOW.	<h>I know you like the news but no need to get upset.</h>
+a3_dev3	What is on TV?	THE NEW IS ON RIGHT NOW.	I know you like the news but no need to get upset.	Relax, there's a story about a dog that saved a kid's life, you should take a look for yourself!	<h>Okay. You seem really excitable today.</h>
+b1_dev4	What is for dinner?	<h>Chicken, rice and broccoli.</h>
+b2_dev5	What is for dinner?	Chicken, rice and broccoli.	Where's the beef?	<h>The beef is at Wendy's but I have no money, unless you are buying?</h>
+b3_dev6	What is for dinner?	Chicken, rice and broccoli.	Where's the beef?	The beef is at Wendy's but I have no money, unless you are buying?	Sure lets go	<h>I was only joking. I already have everything ready for supper and we should just eat here.</h>
+a1_dev7	<h>What is the giant black thing over there?</h>	I don't want to find out.
+a2_dev8	What is the giant black thing over there?	I don't want to find out.	<h>Well one of us has to go check it out, and I killed that spider for you last week, so it's your turn to check it out!</h>
+a3_dev9	What is the giant black thing over there?	I don't want to find out.	Well one of us has to go check it out, and I killed that spider for you last week, so it's your turn to check it out!	You only killed the spider because I had to get rid of the bat in the attic before that! So it's your turn again!	<h>No that would still make it your turn again.</h>
+b1_dev10	Do you want something to eat?	<h>Yes, I'm starved.</h>
+b2_dev11	Do you want something to eat?	Yes, I'm starved.	Me too, let's get pizza!	<h>I know a great pizzeria that is not very far away.</h>
+b3_dev12	Do you want something to eat?	Yes, I'm starved.	Me too, let's get pizza!	I know a great pizzeria that is not very far away.	I know which one you're talking about. I think they're great, too.	<h>Alright! Let's get going!</h>
+a1_dev13	<h>Why should I close the window?</h>	You will let in flies.
+a2_dev14	Why should I close the window?	You will let in flies.	<h>Maybe i'd rather have the flies, it's so hot in here!</h>
+a3_dev15	Why should I close the window?	You will let in flies.	Maybe i'd rather have the flies, it's so hot in here!	Just remember that  when they are crawling on you .	<h>Hey, brilliant idea!  Why don't we buy window screens!</h>
+b1_dev16	What would you like?	<h>I would love a million dollars please.</h>
+b2_dev17	What would you like?	I would love a million dollars please.	I'd love to give you that but I can't.	<h>That's a real shame.</h>
+b3_dev18	What would you like?	I would love a million dollars please.	I'd love to give you that but I can't.	That's a real shame.	I don't think so	<h>Can i get another wish?</h>
+a1_dev19	<h>Where is the restroom?</h>	It's on the second floor, right off the mezzanine.
+a2_dev20	Where is the restroom?	It's on the second floor, right off the mezzanine.	<h>ok, can you show me the way?</h>
+a3_dev21	Where is the restroom?	It's on the second floor, right off the mezzanine.	ok, can you show me the way?	What...you don't know what a mezzanine is??	<h>I do, I just want to make sure.</h>
+b1_dev22	I also like baseball, do you?	<h>No much. I prefer football</h>
+b2_dev23	I also like baseball, do you?	No much. I prefer football	I like football as well!	<h>Baseball does not have enough action to keep me interested.</h>
+b3_dev24	I also like baseball, do you?	No much. I prefer football	I like football as well!	Baseball does not have enough action to keep me interested.	It's a more cerebral game, that's for sure.	<h>Are you saying I'm stupid?</h>
+a1_dev25	<h>What do you do?</h>	I stay at home with my children.
+a2_dev26	What do you do?	I stay at home with my children.	<h>Oh, how old are your children?</h>
+a3_dev27	What do you do?	I stay at home with my children.	Oh, how old are your children?	Two and four - they sure keep me busy.	<h>Sounds like you have your hands full.</h>
+b1_dev28	What do you want to do?	<h>I don't know, what do you want to do?</h>
+b2_dev29	What do you want to do?	I don't know, what do you want to do?	I don't know, what do you want to do??	<h>I want to do whatever you want to do.</h>
+b3_dev30	What do you want to do?	I don't know, what do you want to do?	I don't know, what do you want to do??	I want to do whatever you want to do.	I have no idea what I want to do.  What do you want to do?	<h>This conversation is not getting us very far!</h>
+a1_dev31	<h>Did you watch the football game last night?</h>	No I went to be early
+a2_dev32	Did you watch the football game last night?	No I went to be early	<h>Too bad, it was a great game.</h>
+a3_dev33	Did you watch the football game last night?	No I went to be early	Too bad, it was a great game.	Really? I don't really like watching football.	<h>Who doesn't like football?</h>
+b1_dev34	Have you see what the dog was wearing today?	<h>no i haven't paid attention to it</h>
+b2_dev35	Have you see what the dog was wearing today?	no i haven't paid attention to it	The dog is wearing clothes, and you couldn't be bothered to notice what clothing the dog is wearing?	<h>Well, I'm feeling quite sleepy today.</h>
+b3_dev36	Have you see what the dog was wearing today?	no i haven't paid attention to it	The dog is wearing clothes, and you couldn't be bothered to notice what clothing the dog is wearing?	Well, I'm feeling quite sleepy today.	You really must be.	<h>you work all day so long thats why.</h>
+a1_dev37	<h>When will I get to see you again?</h>	MAYBE FOR THE HOLIDAYS.
+a2_dev38	When will I get to see you again?	MAYBE FOR THE HOLIDAYS.	<h>That seems so far away.</h>
+a3_dev39	When will I get to see you again?	MAYBE FOR THE HOLIDAYS.	That seems so far away.	OK, how about we video chat then?	<h>It's not the same, though. Can't you come before?</h>
+b1_dev40	Did you plant tomatoes?	<h>No, I don't like tomatoes.</h>
+b2_dev41	Did you plant tomatoes?	No, I don't like tomatoes.	What else did you plant?	<h>Eggplant, squash and cucumbers.</h>
+b3_dev42	Did you plant tomatoes?	No, I don't like tomatoes.	What else did you plant?	Eggplant, squash and cucumbers.	So, any particular reason for your lack of love for tomatoes?	<h>Because they are disgusting pieces of squishy fruit that have no place in a proper salad.</h>
+a1_dev43	<h>Have you met my husband?</h>	I think so. Kevin, right? With a beard?
+a2_dev44	Have you met my husband?	I think so. Kevin, right? With a beard?	<h>No, Ralph, very bald...hairless actually.</h>
+a3_dev45	Have you met my husband?	I think so. Kevin, right? With a beard?	No, Ralph, very bald...hairless actually.	Oh, so who was the bearded guy I saw you with the other day?	<h>You mean my older brother? He was visiting from out of town.</h>
+b1_dev46	Can you select a dress for me?	<h>Yeah, do you have any preferences though?</h>
+b2_dev47	Can you select a dress for me?	Yeah, do you have any preferences though?	Anything that makes my butt look small.	<h>Black is such a thinning color, but I say flaunt it.</h>
+b3_dev48	Can you select a dress for me?	Yeah, do you have any preferences though?	Anything that makes my butt look small.	Black is such a thinning color, but I say flaunt it.	I don't know. But I guess I could try something that shows off a little.	<h>You'll look great!</h>
+a1_dev49	<h>Can you bring me a magazine?</h>	Which one would you like?
+a2_dev50	Can you bring me a magazine?	Which one would you like?	<h>Something with lots of puzzles in it, please.</h>
+a3_dev51	Can you bring me a magazine?	Which one would you like?	Something with lots of puzzles in it, please.	Ok, what about the Puzzle Pack 5 magazine with weekly word searches and crossword puzzles?	<h>Not that one.  I have completed all the puzzles in that magazine.  Puzzle pack 10 please.</h>
+b1_dev52	Where can I get one of those?	<h>You can get one at the toy shop on Baker Street.</h>
+b2_dev53	Where can I get one of those?	You can get one at the toy shop on Baker Street.	Thanks!  Will you take me there?	<h>Yes! Are you free tomorrow?</h>
+b3_dev54	Where can I get one of those?	You can get one at the toy shop on Baker Street.	Thanks!  Will you take me there?	Yes! Are you free tomorrow?	Yes, I am free until evening.	<h>Darn, I have to work during the day. Are you free this weekend?</h>
+a1_dev55	<h>What aren't you telling me?</h>	Nothing, I have told you everything I know.
+a2_dev56	What aren't you telling me?	Nothing, I have told you everything I know.	<h>I can tell by your shifty eyes that you're lying!</h>
+a3_dev57	What aren't you telling me?	Nothing, I have told you everything I know.	I can tell by your shifty eyes that you're lying!	What are you accusing me of?	<h>You are hiding something from me!</h>
+b1_dev58	Do you have more than one?	<h>I have three total I believe.</h>
+b2_dev59	Do you have more than one?	I have three total I believe.	Sooooo....more than one.	<h>Wow, you are so perceptive.</h>
+b3_dev60	Do you have more than one?	I have three total I believe.	Sooooo....more than one.	Wow, you are so perceptive.	I guess I am. So, can you lend me one?	<h>I could, but then I would have to worry about when I was going to get it back.</h>
+a1_dev61	<h>Did anyone take out the trash?</h>	No, I forgot to when I left the house. I'll take it out now.
+a2_dev62	Did anyone take out the trash?	No, I forgot to when I left the house. I'll take it out now.	<h>Thanks, I really appreciate it.</h>
+a3_dev63	Did anyone take out the trash?	No, I forgot to when I left the house. I'll take it out now.	Thanks, I really appreciate it.	We're short on trash bags. Did you pick some up at the store?	<h>I did. They are in the pantry.</h>
+b1_dev64	What time is it?	<h>It's 9 o'clock.</h>
+b2_dev65	What time is it?	It's 9 o'clock.	Oh no, I better get home so I can let my dog out.	<h>Please drive safely.</h>
+b3_dev66	What time is it?	It's 9 o'clock.	Oh no, I better get home so I can let my dog out.	Please drive safely.	Of course I will.	<h>Goodbye! See you tomorrow.</h>
+a1_dev67	<h>Can I pet your dog?</h>	Sure, that's fine!
+a2_dev68	Can I pet your dog?	Sure, that's fine!	<h>What kind of dog is it?</h>
+a3_dev69	Can I pet your dog?	Sure, that's fine!	What kind of dog is it?	My dog is a bulldog.	<h>My, your bulldog is so friendly!</h>
+b1_dev70	How was the test?	<h>The test was too good.</h>
+b2_dev71	How was the test?	The test was too good.	I think I did pretty well too.	<h>I bet I did better than you.</h>
+b3_dev72	How was the test?	The test was too good.	I think I did pretty well too.	I bet I did better than you.	What do you want to bet?	<h>I'll bet you a free lunch that I did better than you.</h>
+a1_dev73	<h>Do you like jokes?</h>	Of course I do!  Go ahead, I can tell you have a good one for me - let's hear it.
+a2_dev74	Do you like jokes?	Of course I do!  Go ahead, I can tell you have a good one for me - let's hear it.	<h>I asked if you like jokes, not if you want to hear one.</h>
+a3_dev75	Do you like jokes?	Of course I do!  Go ahead, I can tell you have a good one for me - let's hear it.	I asked if you like jokes, not if you want to hear one.	Now that's disappointing. I was ready to be amused.	<h>I have many jokes but they aren't appropriate for church.</h>
+b1_dev76	Where can we go?	<h>We can go to my place</h>
+b2_dev77	Where can we go?	We can go to my place	Would you like to get drunk?	<h>Not tonight, sorry.</h>
+b3_dev78	Where can we go?	We can go to my place	Would you like to get drunk?	Not tonight, sorry.	Well, I may have some wine anyway.	<h>If you really twist my arm maybe I will have a glass, or ten.</h>
+a1_dev79	<h>Can we go to the movie, tomorrow?</h>	Sure, as long as you get all your homework done tonight.
+a2_dev80	Can we go to the movie, tomorrow?	Sure, as long as you get all your homework done tonight.	<h>Sure! Do you want to watch an action movie?</h>
+a3_dev81	Can we go to the movie, tomorrow?	Sure, as long as you get all your homework done tonight.	Sure! Do you want to watch an action movie?	No, I was thinking a romantic comedy. I know you love those.	<h>I do but not as much as i love you.</h>
+b1_dev82	How is your mother doing?	<h>My mom's well, thanks for asking!</h>
+b2_dev83	How is your mother doing?	My mom's well, thanks for asking!	Is she still sewing?	<h>Yes, she helped make a quilt at the church last week.</h>
+b3_dev84	How is your mother doing?	My mom's well, thanks for asking!	Is she still sewing?	Yes, she helped make a quilt at the church last week.	I admire those that quilt. It's such a great skill!	<h>She is great at what she does.</h>

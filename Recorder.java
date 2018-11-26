@@ -81,19 +81,16 @@ public class Recorder {
 		int recNum = 0;
 		while (tempFile.exists()) {
 			if (tempFile.getName().contains("bad")) {
-				System.out.println("First if");
 				int i = tempFile.getName().indexOf("bad");
 				String s = tempFile.getName().substring(i, i+5);
 				String replacement = tempFile.getName().replaceAll(s, "");
 				tempFile = new File(tempFile.getParentFile() + File.separator + "bad" + recNum +"_" + replacement);
 			} else if (!tempFile.getName().contains("bad")) {
-				System.out.println("Second if");
 				tempFile = new File(tempFile.getParentFile() + File.separator + "bad" + recNum++ + "_" + tempFile.getName());
 			}
 			recNum++;
 		}
 		
-		System.out.println(tempFile.getName());
 		return tempFile;
 	}
 	

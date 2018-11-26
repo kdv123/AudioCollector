@@ -16,6 +16,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -67,10 +68,8 @@ public class TextDisplayTrial3 extends Application {
 	PrintWriter uiLog;
 	
 	//For task generation
-	Label label1 = new Label();
-	Label label2 = new Label();
-	Label label3 = new Label();
-	ArrayList<String []> tasks;
+	ArrayList<ArrayList<String>> allTasks;
+	ArrayList<Label> taskLabels = new ArrayList<Label>();
 	static String [] command = {};
 	
 	//For main stage of GUI
@@ -82,12 +81,7 @@ public class TextDisplayTrial3 extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		tasks = scanMe(new File("test.txt"));
-		totalTasks = tasks.size();
-//		Group g = viewer();
 		screen = new BorderPane();
-		//screen.setCenter(directions);
-//		screen.setBottom(g);
 		scene = new Scene(startScreen(primaryStage));
 		parseCommandLine(command);
 		primaryStage.setScene(scene);
@@ -322,7 +316,6 @@ public class TextDisplayTrial3 extends Application {
 				}
 			}
 
-			setupFileSystem(partID, sNum, cond);
 			try {
 				uiLog = new PrintWriter(new File(recorder1.getFilePath() + File.separator + "UILog.txt"));
 			} catch (FileNotFoundException fnfe) {
@@ -341,8 +334,10 @@ public class TextDisplayTrial3 extends Application {
 			
 			state = 1;
 			taskNum = 0;
-			tasks = scanMe(promptFile);
-			totalTasks = tasks.size();
+			scanMe(promptFile);
+			totalTasks = allTasks.size();
+			setupFileSystem(partID, sNum, cond);
+			
 			screen.setBottom(viewer());
 			scene.setRoot(screen);
 		});
@@ -365,7 +360,7 @@ public class TextDisplayTrial3 extends Application {
 				participantName = partID.getText();
 				sesNum = sNum.getText();
 				condVal = cond.getValue();
-				String[] current = tasks.get(taskNum);
+				ArrayList<String> current = allTasks.get(taskNum);
 				
 				if(participantName.length() != 0) {
 					t += File.separator + participantName;
@@ -386,9 +381,9 @@ public class TextDisplayTrial3 extends Application {
 					File temp = new File(t);	//make appropriate directories
 					temp.mkdirs();
 					tempRec.setFilePath(t);
-					tempRec.setFileName(mixName + "_" + current[0] + ".wav");
+					tempRec.setFileName(mixName + "_" + current.get(0) + ".wav");
 				} else {
-					listOfRecorders[i].setFileName(mixName + "_" + current[0] + ".wav");
+					listOfRecorders[i].setFileName(mixName + "_" + current.get(0) + ".wav");
 				}
 			}
 		}
@@ -427,7 +422,11 @@ public class TextDisplayTrial3 extends Application {
 		taskBar.add(spacer, 0, 0);
 		taskBar.add(count, 1, 0);
 		main.add(taskBar, 0, 0);
-		main.add(prompt(), 0, 1);
+		
+		GridPane temp = prompt();
+		temp.setAlignment(Pos.TOP_CENTER);
+		main.add(temp, 0, 1);
+		
 		main.add(mics(), 0, 2);
 		Label label = new Label();
 		label.setPrefSize(800, 50);
@@ -438,106 +437,112 @@ public class TextDisplayTrial3 extends Application {
 		g.getChildren().add(main);
 		return g;
 	}
-
-	/**
-	 * Parses the given session control file into its constituent parts and 
-	 * returns them as an array list of String arrays
-	 * @param filename
-	 * @return
+	
+	/*
+	 * Scans the prompt file.
+	 * 
+	 * I changed the format of the definition files. I thought the <br> were kind of redundant. Each sentence in a prompt is just tab delimited for each speaker. Each speaker
+	 * is its own element in an ArrayList (the tasks can be several sizes) the whole prompt is then added to allTasks.
 	 */
-	private ArrayList<String []> scanMe(File filename) {
-		ArrayList<String []> list = new ArrayList<>();
-		String id = "";
-		String context = "";
-
-		try (Scanner scan = new Scanner(filename)) {
+	private void scanMe(File promptFileName) {
+		ArrayList<ArrayList<String>> tempAllTasks = new ArrayList<ArrayList<String>>();
+		
+		try (Scanner scan = new Scanner(promptFileName)) {
 			while (scan.hasNext()) {
-				String [] tasks = new String[4];
-				String task = scan.nextLine();
-				Scanner cols = new Scanner(task);
-				cols.useDelimiter("\t");
-				id = null;
-				while(cols.hasNext()) {
-					if (id == null) {
-						id = cols.next();
-						tasks[0] = id;
-					} else {
-						context = cols.nextLine();
-						//System.out.println(context);
-					}
+				Scanner lineScanner = new Scanner(scan.nextLine());
+				lineScanner.useDelimiter("\t");
+				
+				ArrayList<String> parts = new ArrayList<String>();
+				while (lineScanner.hasNext()) {
+					parts.add(lineScanner.next());
 				}
-				parseTask(context, tasks);
-				list.add(tasks);
-				cols.close();
+				
+				tempAllTasks.add(parts);
+				lineScanner.close();
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		return list;
-	}
-
-	/**
-	 * Helper method parses the context string and desired speech string into a
-	 * given String array
-	 * @param context
-	 * @param parts
-	 */
-	private void parseTask(String context, String [] parts) {
-		Scanner info = new Scanner(context);
-		for (int i = 1; i < parts.length; i++) {
-			parts[i] = "";
-		}
-		int part = 1;
-		while(info.hasNext()) {
-			String s = info.next();
-			if (s.equals("<br>")) {
-				parts[part] += "\n";	
-			} else if (s.equals("<h>")) {
-				part = 2;
-			} else if (s.equals("</h>")) {
-				part = 3;
-			} else {
-				parts[part] += " " + s + " ";
-			}
-		}
-		info.close();
-	}
-
-	public Group prompt() {
-		Group group = new Group();
-		GridPane grid = new GridPane();
-		grid.setPrefSize(800,  300);
-
-		String [] str = tasks.get(taskNum);
 		
-		for (int i = 1; i < 4; i++) {
-			String s = str[i];
-			if (s.charAt(0) == ' ') {
-				s = s.substring(1);
-			}
-			Label label = new Label();
-			switch(i) {
-			case 1:  label = label1; break;
-			case 2:  label = label2; break;
-			case 3:  label = label3; break;
-			}
-			label.setText(s);
-			label.setMaxWidth(800);
-			label.setFont(Font.font(30));
-			label.setWrapText(true);
-			label.setPrefWidth(800);
-			if (i == 2) {
-				label.setTextFill(Color.BLACK);
-				label.setBackground(promptFill());
+		allTasks = tempAllTasks;
+	}
+	
+	public GridPane prompt() {
+		GridPane grid = new GridPane();
+		grid.setPrefSize(800, 300);
+		
+		ArrayList<String> task = allTasks.get(taskNum);
+		
+		for (int i = 1; i < task.size(); i++) {
+			String tempString = task.get(i);
+			Label tempLabel = new Label();
+			
+			if (tempString.contains("<h>") && tempString.contains("</h>")) {
+				tempLabel.setTextFill(Color.BLACK);
+				tempLabel.setBackground(promptFill());
+				tempString = tempString.replaceAll("<h>", "");
+				tempString = tempString.replaceAll("</h>", "");
+			} else if (tempString.contains("<h>") && !tempString.contains("</h>")) {
+				System.err.println("FILE IS INCORRECT");
 			} else {
-				label.setTextFill(Color.GRAY);
-				label.setBackground(contextFill());
-			}	
-			grid.add(label, 0, i - 1);
+				tempLabel.setTextFill(Color.GRAY);
+				tempLabel.setBackground(contextFill());
+			}
+			
+			if (i % 2 == 1) {
+				tempString = "A" + (i/2 + 1) + ": " + tempString;
+			} else {
+				tempString = "B" + (i/2 + 1) + ": " + tempString; 
+			}
+			
+			tempLabel.setText(tempString);
+			tempLabel.setWrapText(true);
+			tempLabel.setPrefWidth(800);
+			tempLabel.setFont(Font.font(24));
+			
+			taskLabels.add(tempLabel);
+			grid.addRow(i -1, tempLabel);
 		}
+		
 		grid.setBackground(background(Color.TRANSPARENT));
-		group.getChildren().add(grid);
-		return group;
+		return grid;
+	}
+	
+	public ArrayList<Label> updateLabels() {
+		ArrayList<String> task = allTasks.get(taskNum);
+		ArrayList<Label> tempTaskLabels = new ArrayList<Label>();
+		
+		for (int i = 1; i < task.size(); i++) {
+			String tempString = task.get(i);
+			Label tempLabel = new Label();
+			
+			if (tempString.contains("<h>") && tempString.contains("</h>")) {
+				tempLabel.setTextFill(Color.BLACK);
+				tempLabel.setBackground(promptFill());
+				tempString = tempString.replaceAll("<h>", "");
+				tempString = tempString.replaceAll("</h>", "");
+			} else if (tempString.contains("<h>") && !tempString.contains("</h>")) {
+				System.err.println("FILE IS INCORRECT");
+			} else {
+				tempLabel.setTextFill(Color.GRAY);
+				tempLabel.setBackground(contextFill());
+			}
+			
+			if (i % 2 == 1) {
+				tempString = "A" + (i/2 + 1) + ": " + tempString;
+			} else {
+				tempString = "B" + (i/2 + 1) + ": " + tempString; 
+			}
+			
+			tempLabel.setText(tempString);
+			tempLabel.setWrapText(true);
+			tempLabel.setPrefWidth(800);
+			tempLabel.setFont(Font.font(24));
+			
+			tempTaskLabels.add(tempLabel);
+		}
+		
+		return tempTaskLabels;
 	}
 
 	private Background promptFill() {
@@ -550,14 +555,6 @@ public class TextDisplayTrial3 extends Application {
 
 	private Background neutralFill() {
 		return new Background(new BackgroundFill(Color.PINK, new CornerRadii(2), new Insets(0)));
-	}
-
-	private Background recordingFill() {
-		return new Background(new BackgroundFill(Color.GREEN, new CornerRadii(2), new Insets(0)));
-	}
-
-	private Background stoppedFill() {
-		return new Background(new BackgroundFill(Color.RED, new CornerRadii(2), new Insets(0)));
 	}
 
 	private Background background(Color c) {
@@ -577,7 +574,6 @@ public class TextDisplayTrial3 extends Application {
 			status.setMaxWidth(600);
 			status.setPrefWidth(600);
 			status.setPrefHeight(MIC_H);
-			//status.setBorder(new Border));
 			status.setBackground(neutralFill());
 			
 			Button playback = new Button("Playback Mic " + (i+1));
@@ -673,53 +669,20 @@ public class TextDisplayTrial3 extends Application {
 			
 			taskNum++;
 			if (taskNum < totalTasks) {
-				String [] str = tasks.get(taskNum);
-
-				for (int i = 1; i < str.length; i++) {
-					String s = str[i];
-
-					if (s.charAt(0) == ' ') {
-						s = s.substring(1);
-					}
-					Label label = new Label();
-					switch(i) {
-					case 1:  label = label1; break;
-					case 2:  label = label2; break;
-					case 3:  label = label3; break;
-					}
-					label.setText(s);
-				}
+				taskLabels = updateLabels();
 				count.setText("Task " + (taskNum + 1) + " of " + totalTasks);
-			} else {
-//				Group en = new Group();
-//				GridPane grid = new GridPane();
-//				Button restart = new Button("New Session");
-//				restart.setOnAction(e -> {
-//					scene.setRoot(startScreen(stageOne));
-//					taskNum = 0;					
-//				});
-//				Button exit = new Button("Exit");
-//				exit.setOnAction(e -> {
-//					stageOne.close();
-//				});
-//				exit.setBackground(background(Color.RED));
-//				restart.setBackground(background(Color.GREEN));
-//				grid.setBackground(background(Color.AZURE));
-//				grid.add(restart, 2, 1);
-//				grid.add(exit, 2, 4);
-//				en.getChildren().add(grid);
-//				//en.getChildren().add(new Rectangle(0, 0, 1000, 400));
-				
+				screen.setBottom(viewer());
+				scene.setRoot(screen);
+			} else {	
 				scene.setRoot(endScreen());
 			}
 			
-			
 			//Set new file name
-			if (taskNum < tasks.size()) {
-				String[] current = tasks.get(taskNum);
+			if (taskNum < totalTasks) {
+				ArrayList<String> current = allTasks.get(taskNum);
 				for(int i = 0; i < listOfRecorders.length; i++) {
 					if (listOfRecorders[i] != null) {
-							listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] + ".wav");
+							listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current.get(0) + ".wav");
 					}
 				}
 			}
@@ -741,30 +704,18 @@ public class TextDisplayTrial3 extends Application {
 			
 			taskNum--;
 			if (taskNum < totalTasks && taskNum >= 0) {
-				String [] str = tasks.get(taskNum);
-
-				for (int i = 1; i < str.length; i++) {
-					String s = str[i];
-					if (s.charAt(0) == ' ') {
-						s = s.substring(1);
-					}
-					Label label = new Label();
-					switch(i) {
-					case 1:  label = label1; break;
-					case 2:  label = label2; break;
-					case 3:  label = label3; break;
-					}
-					label.setText(s);
-				}
+				taskLabels = updateLabels();
 				count.setText("Task " + (taskNum + 1) + " of " + totalTasks);
+				screen.setBottom(viewer());
+				scene.setRoot(screen);
 			}			
 			
 			//Set new file name
 			if (taskNum >= 0) {
-				String[] current = tasks.get(taskNum);
+				ArrayList<String> current = allTasks.get(taskNum);
 				for(int i = 0; i < listOfRecorders.length; i++) {
 					if (listOfRecorders[i] != null) {
-						listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current[0] + ".wav");
+						listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current.get(0) + ".wav");
 					}
 				}
 			}

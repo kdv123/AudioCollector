@@ -1,0 +1,84 @@
+a1_dev1	<h>What's the funniest movie you've ever seen?</h>	Bridesmaids is the funniest movie I've ever seen.
+a2_dev2	What's the funniest movie you've ever seen?	Bridesmaids is the funniest movie I've ever seen.	<h>Isn't it? Did you see it in the theater?</h>
+a3_dev3	What's the funniest movie you've ever seen?	Bridesmaids is the funniest movie I've ever seen.	Isn't it? Did you see it in the theater?	I did; I saw it with Jeff!	<h>I thought you didn't like Jeff.</h>
+b1_dev4	What is your name?	<h>My name is Rey.</h>
+b2_dev5	What is your name?	My name is Rey.	Nice to meet you Rey, anything I can do for you while I am here?	<h>Yeah thanks, could you get me the menu and a club soda?</h>
+b3_dev6	What is your name?	My name is Rey.	Nice to meet you Rey, anything I can do for you while I am here?	Yeah thanks, could you get me the menu and a club soda?	Absolutely, I will be right back.	<h>Great, thank you.</h>
+a1_dev7	<h>How's you mother doing?</h>	She is quite well now.
+a2_dev8	How's you mother doing?	She is quite well now.	<h>That's good!  I was worried about her!</h>
+a3_dev9	How's you mother doing?	She is quite well now.	That's good!  I was worried about her!	Yeah she's doing a lot better thanks for asking.	<h>When will they release her from the hospital?</h>
+b1_dev10	How was your trip?	<h>It was great! We had a good time.</h>
+b2_dev11	How was your trip?	It was great! We had a good time.	When did you get back?	<h>Late Tuesday night.</h>
+b3_dev12	How was your trip?	It was great! We had a good time.	When did you get back?	Late Tuesday night.	Where all did you end up going?	<h>We drove cross country and stopped at a lot of places. Do you want to see my photos?</h>
+a1_dev13	<h>Why are you talking to me like that?</h>	Because you're not listening!
+a2_dev14	Why are you talking to me like that?	Because you're not listening!	<h>I think you are being extremely rude.</h>
+a3_dev15	Why are you talking to me like that?	Because you're not listening!	I think you are being extremely rude.	You're not listening to me! That's rude!	<h>Look here mister, I am listening to you. It is not my fault if you don't make any sense when speaking.</h>
+b1_dev16	Hey, do you know if there's a sale at that trendy clothing store today?	<h>No there are never sales in that store.</h>
+b2_dev17	Hey, do you know if there's a sale at that trendy clothing store today?	No there are never sales in that store.	That's unfortunate, they have so many great pieces in there.	<h>I know. I too wish they had a sale someday.</h>
+b3_dev18	Hey, do you know if there's a sale at that trendy clothing store today?	No there are never sales in that store.	That's unfortunate, they have so many great pieces in there.	I know. I too wish they had a sale someday.	What if I told you there was a sale today? Would you go?	<h>Of course I would!</h>
+a1_dev19	<h>What should we get dad for Father's Day?</h>	What about a robot vacuum cleaner?
+a2_dev20	What should we get dad for Father's Day?	What about a robot vacuum cleaner?	<h>Or a golf gift certificate</h>
+a3_dev21	What should we get dad for Father's Day?	What about a robot vacuum cleaner?	Or a golf gift certificate	Dad hates golf. What's wrong with you?	<h>Sorry, I was having a flashback to the war.</h>
+b1_dev22	I like music, could you play some CDs for me?	<h>You want country or pop?</h>
+b2_dev23	I like music, could you play some CDs for me?	You want country or pop?	I would prefer some old school country, please.	<h>I have a blue grass CD, will that work?</h>
+b3_dev24	I like music, could you play some CDs for me?	You want country or pop?	I would prefer some old school country, please.	I have a blue grass CD, will that work?	Sure, let's try that.	<h>My grandpa got me into bluegrass.</h>
+a1_dev25	<h>What time is dinner?</h>	Dinner tonight is at 7 pm.
+a2_dev26	What time is dinner?	Dinner tonight is at 7 pm.	<h>What are you making?</h>
+a3_dev27	What time is dinner?	Dinner tonight is at 7 pm.	What are you making?	Are you kidding me? It's your turn to make dinner!	<h>No it's not!  I made dinner last night!</h>
+b1_dev28	Can you send me a picture of the assignment?	<h>Yes, I will email it to you later.</h>
+b2_dev29	Can you send me a picture of the assignment?	Yes, I will email it to you later.	Great, Thank you!	<h>LET ME KNOW WHEN YOU GET THE EMAIL.</h>
+b3_dev30	Can you send me a picture of the assignment?	Yes, I will email it to you later.	Great, Thank you!	LET ME KNOW WHEN YOU GET THE EMAIL.	I will. Do you think this assignment will take long to do?	<h>Depends on how well you know the topic.</h>
+a1_dev31	<h>Can you arrange a meeting?</h>	Yes how about right now?
+a2_dev32	Can you arrange a meeting?	Yes how about right now?	<h>That's even better!  Go ahead and grab a seat.</h>
+a3_dev33	Can you arrange a meeting?	Yes how about right now?	That's even better!  Go ahead and grab a seat.	Okay, I'll be in conference room number one.	<h>Oh and don't forget we will be talking about the surprise party.</h>
+b1_dev34	Do you want to stay?	<h>No, I miss my home.</h>
+b2_dev35	Do you want to stay?	No, I miss my home.	Please don't go, I'll miss you.	<h>I'll come to visit you every weekend.</h>
+b3_dev36	Do you want to stay?	No, I miss my home.	Please don't go, I'll miss you.	I'll come to visit you every weekend.	Well okay then, I guess I'll cope.	<h>You should try and visit me whenever you can also.</h>
+a1_dev37	<h>Is it far from here?</h>	NO, NOT MUCH FURTHER.
+a2_dev38	Is it far from here?	NO, NOT MUCH FURTHER.	<h>Are you sure? Because I'm getting hungry.</h>
+a3_dev39	Is it far from here?	NO, NOT MUCH FURTHER.	Are you sure? Because I'm getting hungry.	I'm positive, it's only about ten miles.	<h>When we get there can we eat first?</h>
+b1_dev40	Can you take me somewhere?	<h>Where do you want to go?</h>
+b2_dev41	Can you take me somewhere?	Where do you want to go?	The supermarket near the mall.	<h>Which one, Cubs or Lunds?</h>
+b3_dev42	Can you take me somewhere?	Where do you want to go?	The supermarket near the mall.	Which one, Cubs or Lunds?	I want to go to Lunds because its cheaper	<h>What do you want to buy anyway?</h>
+a1_dev43	<h>What kind of mascara are you wearing?</h>	Maybe it's Maybelline.
+a2_dev44	What kind of mascara are you wearing?	Maybe it's Maybelline.	<h>Was it very expensive?</h>
+a3_dev45	What kind of mascara are you wearing?	Maybe it's Maybelline.	Was it very expensive?	Not at all, about seven dollars. Good value.	<h>Seven dollars?  I just use charcoal that I get for free from the refinery.</h>
+b1_dev46	Have you met them yet?	<h>Yes but only briefly</h>
+b2_dev47	Have you met them yet?	Yes but only briefly	They're very nice people.	<h>I THOUGHT SO TOO!</h>
+b3_dev48	Have you met them yet?	Yes but only briefly	They're very nice people.	I THOUGHT SO TOO!	OK, but you really don't have to yell.	<h>Sorry I just get excited.</h>
+a1_dev49	<h>Where did you find it?</h>	I found it under the couch.
+a2_dev50	Where did you find it?	I found it under the couch.	<h>Let me have it please.  Those belong to me.</h>
+a3_dev51	Where did you find it?	I found it under the couch.	Let me have it please.  Those belong to me.	OK, but I think the dog chewed it some.	<h>What! I knew that dog has had it out for me!</h>
+b1_dev52	Do you want to eat at home?	<h>No, I would rather go out.</h>
+b2_dev53	Do you want to eat at home?	No, I would rather go out.	Please, we could stay home and eat in bed.	<h>That just sounds silly.</h>
+b3_dev54	Do you want to eat at home?	No, I would rather go out.	Please, we could stay home and eat in bed.	That just sounds silly.	I am silly. Silly for you, you goof.	<h>I love you.</h>
+a1_dev55	<h>WHAT DID YOU DO FOR THE HOLIDAYS?</h>	I ate too much.
+a2_dev56	WHAT DID YOU DO FOR THE HOLIDAYS?	I ate too much.	<h>What did you eat?</h>
+a3_dev57	WHAT DID YOU DO FOR THE HOLIDAYS?	I ate too much.	What did you eat?	Turkey, stuffing, yams, green bean casserole, mashed potatoes, dinner rolls with butter, pumpkin pie and cherry cheesecake.  This is why I'm fat.	<h>You're not fat!</h>
+b1_dev58	What is your favorite dish?	<h>I love calzones.</h>
+b2_dev59	What is your favorite dish?	I love calzones.	I love calzones also.	<h>Have you tried them at the new pizzeria by the mall?</h>
+b3_dev60	What is your favorite dish?	I love calzones.	I love calzones also.	Have you tried them at the new pizzeria by the mall?	Yes! Unfortunately, they made me break out in hives.	<h>Oh no, that's terrible!</h>
+a1_dev61	<h>How is the weather outside?</h>	It's nice and sunny
+a2_dev62	How is the weather outside?	It's nice and sunny	<h>Awesome!  My favorite weather!</h>
+a3_dev63	How is the weather outside?	It's nice and sunny	Awesome!  My favorite weather!	Shall we head over to the water park?	<h>Yes, just give me a few minutes to get my bathing suit.</h>
+b1_dev64	Did you see the match today?	<h>Yes i did</h>
+b2_dev65	Did you see the match today?	Yes i did	It was so boring.	<h>Agreed. I almost fell asleep.</h>
+b3_dev66	Did you see the match today?	Yes i did	It was so boring.	Agreed. I almost fell asleep.	I hope the next one is more exciting. Who is he playing against then?	<h>I don't know, some new guy.</h>
+a1_dev67	<h>How is this dress?</h>	That dress looks great on you!
+a2_dev68	How is this dress?	That dress looks great on you!	<h>It doesn't make my butt look fat?</h>
+a3_dev69	How is this dress?	That dress looks great on you!	It doesn't make my butt look fat?	Not at all. The ruffles are hiding it.	<h>So my butt looks fat?</h>
+b1_dev70	What if I don't make it?	<h>You will, you will be just fine.</h>
+b2_dev71	What if I don't make it?	You will, you will be just fine.	Okay I will try.	<h>You can call me if you have any problems.</h>
+b3_dev72	What if I don't make it?	You will, you will be just fine.	Okay I will try.	You can call me if you have any problems.	But you never answer my voicemails.	<h>That's because no one uses voicemail anymore...</h>
+a1_dev73	<h>Would you like to go to get coffee?</h>	Yes, I could use a good cup of coffee
+a2_dev74	Would you like to go to get coffee?	Yes, I could use a good cup of coffee	<h>Do they have food at the coffee shop?</h>
+a3_dev75	Would you like to go to get coffee?	Yes, I could use a good cup of coffee	Do they have food at the coffee shop?	Sure, but it's honestly not very good.	<h>Good to know, is there another place that has good coffee and food?</h>
+b1_dev76	What's your favorite food?	<h>I like any type of Asian food.</h>
+b2_dev77	What's your favorite food?	I like any type of Asian food.	Can you be a little specific? I was planning a surprise!	<h>Thai food is always welcome.</h>
+b3_dev78	What's your favorite food?	I like any type of Asian food.	Can you be a little specific? I was planning a surprise!	Thai food is always welcome.	I love Thai food too! Have you been to Thailand?	<h>I've never left the country!</h>
+a1_dev79	<h>How did you like the movie?</h>	It was a bit boring but it had its moments.
+a2_dev80	How did you like the movie?	It was a bit boring but it had its moments.	<h>Oh yeah? What was your favorite part in the movie?</h>
+a3_dev81	How did you like the movie?	It was a bit boring but it had its moments.	Oh yeah? What was your favorite part in the movie?	There was a funny scene where they were making jokes in the car	<h>That doesn't seem too exciting.</h>
+b1_dev82	Do you need another drink?	<h>I need a lot more drinks</h>
+b2_dev83	Do you need another drink?	I need a lot more drinks	Why? What's going on?	<h>Nothing I was just hoping to get you to buy me a lot of free drinks tonight.</h>
+b3_dev84	Do you need another drink?	I need a lot more drinks	Why? What's going on?	Nothing I was just hoping to get you to buy me a lot of free drinks tonight.	That's pretty funny, but you had me worried there for a minute.	<h>Just buy me a drink already please. Long island iced tea.</h>

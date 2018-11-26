@@ -1,0 +1,84 @@
+a1_dev1	<h>When do your holidays begin?</h>	In about four weeks.
+a2_dev2	When do your holidays begin?	In about four weeks.	<h>Where are you planning to go in holidays?</h>
+a3_dev3	When do your holidays begin?	In about four weeks.	Where are you planning to go in holidays?	I will probably go to Hawaii.	<h>Have you been there before?</h>
+b1_dev4	Can I go to bed?	<h>Yes you can. See you in the morning.</h>
+b2_dev5	Can I go to bed?	Yes you can. See you in the morning.	Aren't you coming with me?	<h>In a little while.</h>
+b3_dev6	Can I go to bed?	Yes you can. See you in the morning.	Aren't you coming with me?	In a little while.	OK but if you change your mind I'll be reading for awhile.	<h>Sounds good, I'll join you soon.</h>
+a1_dev7	<h>Where are we going?</h>	I thought we'd stop by that little candle shop that you like.
+a2_dev8	Where are we going?	I thought we'd stop by that little candle shop that you like.	<h>Oh, thank-you so much!  You know me so well!</h>
+a3_dev9	Where are we going?	I thought we'd stop by that little candle shop that you like.	Oh, thank-you so much!  You know me so well!	What is your favorite scent of candle?	<h>I really like sandalwood.</h>
+b1_dev10	Would you please make sure my insurance cards are in my wallet?	<h>Yup. They're there.</h>
+b2_dev11	Would you please make sure my insurance cards are in my wallet?	Yup. They're there.	You didn't take any money out of my wallet, did you?	<h>Yeah I needed lunch money.</h>
+b3_dev12	Would you please make sure my insurance cards are in my wallet?	Yup. They're there.	You didn't take any money out of my wallet, did you?	Yeah I needed lunch money.	I will gladly give you lunch money, but don't take my money without permission! That's stealing.	<h>I was already in your wallet, I didn't steal it I took it.</h>
+a1_dev13	<h>Are you going on a date?</h>	Yes! Finally a night out with my hubby!
+a2_dev14	Are you going on a date?	Yes! Finally a night out with my hubby!	<h>Where are you two going to do?</h>
+a3_dev15	Are you going on a date?	Yes! Finally a night out with my hubby!	Where are you two going to do?	We are going to the movies.	<h>What movie are you going to see?</h>
+b1_dev16	Where is a good place to eat around here?	<h>There's a great casual place not far from here. The food is good and it's cheap.</h>
+b2_dev17	Where is a good place to eat around here?	There's a great casual place not far from here. The food is good and it's cheap.	What type of food do they have?	<h>It's an Asian-French fusion restaurant. It was highly rated by a local blogger.</h>
+b3_dev18	Where is a good place to eat around here?	There's a great casual place not far from here. The food is good and it's cheap.	What type of food do they have?	It's an Asian-French fusion restaurant. It was highly rated by a local blogger.	Wait, was this the same blogger who recommended the Thai place?	<h>Yes she is amazing</h>
+a1_dev19	<h>Do you know if they are still accepting applications?</h>	No, the deadline was yesterday.
+a2_dev20	Do you know if they are still accepting applications?	No, the deadline was yesterday.	<h>Oh no, I missed it!</h>
+a3_dev21	Do you know if they are still accepting applications?	No, the deadline was yesterday.	Oh no, I missed it!	Sucks to be you.	<h>I see you came in as runner up in the Compassion Awards.</h>
+b1_dev22	What did you say?	<h>I asked you what you did today.</h>
+b2_dev23	What did you say?	I asked you what you did today.	I went jogging.	<h>Where did you go?</h>
+b3_dev24	What did you say?	I asked you what you did today.	I went jogging.	Where did you go?	Around the new development, They have a nice park there.	<h>Really? That's great!</h>
+a1_dev25	<h>Would you be so kind as to bring me my slippers?</h>	They are literally two inches from your feet.  Quit being so lazy.
+a2_dev26	Would you be so kind as to bring me my slippers?	They are literally two inches from your feet.  Quit being so lazy.	<h>Watch your mouth, young lady!</h>
+a3_dev27	Would you be so kind as to bring me my slippers?	They are literally two inches from your feet.  Quit being so lazy.	Watch your mouth, young lady!	Maybe I would if you could do anything without ordering me around.	<h>Ill order you around all I please!</h>
+b1_dev28	What are we having for lunch?	<h>I'm making grilled cheese on wheat, and tomatoe soup.</h>
+b2_dev29	What are we having for lunch?	I'm making grilled cheese on wheat, and tomatoe soup.	That's not lunch,that's a appetizer	<h>Then you can make your own lunch!</h>
+b3_dev30	What are we having for lunch?	I'm making grilled cheese on wheat, and tomatoe soup.	That's not lunch,that's a appetizer	Then you can make your own lunch!	Ok, I will!	<h>and correct your grammar while you're at it.</h>
+a1_dev31	<h>Where did the dog go?</h>	She went out to the backyard with the kids.
+a2_dev32	Where did the dog go?	She went out to the backyard with the kids.	<h>What kids? we don't have kids.</h>
+a3_dev33	Where did the dog go?	She went out to the backyard with the kids.	What kids? we don't have kids.	With the neighbor's kids. They came over and asked if they could play ball with her for a bit.	<h>Is somebody watching them?</h>
+b1_dev34	Do you know where the remote is?	<h>No but try checking underneath or between the couch cushions.</h>
+b2_dev35	Do you know where the remote is?	No but try checking underneath or between the couch cushions.	It always seems to end up there.	<h>Grab any loose change you find.</h>
+b3_dev36	Do you know where the remote is?	No but try checking underneath or between the couch cushions.	It always seems to end up there.	Grab any loose change you find.	No problem, I was going to do that anyway.	<h>Also grab anything you find in there..</h>
+a1_dev37	<h>Can we go to Six Flags?</h>	Six Flags is for chumps. Real men do it Disney.
+a2_dev38	Can we go to Six Flags?	Six Flags is for chumps. Real men do it Disney.	<h>Why don't you like Six Flags?</h>
+a3_dev39	Can we go to Six Flags?	Six Flags is for chumps. Real men do it Disney.	Why don't you like Six Flags?	People die there.	<h>Are you sure people don't die at Disney?</h>
+b1_dev40	Do you have a dog?	<h>Yes, I have 4 dogs</h>
+b2_dev41	Do you have a dog?	Yes, I have 4 dogs	How much food do you need to buy a week?	<h>More than I buy my family.</h>
+b3_dev42	Do you have a dog?	Yes, I have 4 dogs	How much food do you need to buy a week?	More than I buy my family.	I bet that gets expensive.	<h>You bet. dog food is expensive.</h>
+a1_dev43	<h>Can we go out for a drive?</h>	Yeah go start the car
+a2_dev44	Can we go out for a drive?	Yeah go start the car	<h>Would you like to go to a movie after the drive?</h>
+a3_dev45	Can we go out for a drive?	Yeah go start the car	Would you like to go to a movie after the drive?	I just have too much work to do tonight, sorry.	<h>How about a movie tomorrow night?</h>
+b1_dev46	Could you please help me find someone to shovel my sidewalks?	<h>I can put an ad up for you.</h>
+b2_dev47	Could you please help me find someone to shovel my sidewalks?	I can put an ad up for you.	I would appreciate that. I pay well.	<h>How much is well to you?</h>
+b3_dev48	Could you please help me find someone to shovel my sidewalks?	I can put an ad up for you.	I would appreciate that. I pay well.	How much is well to you?	at least $20	<h>That sounds about right!</h>
+a1_dev49	<h>Could you please tell the nurse that I have been getting constipated?</h>	I will let her know
+a2_dev50	Could you please tell the nurse that I have been getting constipated?	I will let her know	<h>Also let her know that i've been trying fiber and anti constipation pills, but nothing has worked.</h>
+a3_dev51	Could you please tell the nurse that I have been getting constipated?	I will let her know	Also let her know that i've been trying fiber and anti constipation pills, but nothing has worked.	Have you been drinking plenty of fluids?	<h>Yes, I've been drinking lots of water, Gatorade, and fruit juice.</h>
+b1_dev52	Is your daughter still in girl scouts?	<h>NO she got bored of it.</h>
+b2_dev53	Is your daughter still in girl scouts?	NO she got bored of it.	I would think so.  She's 27 isn't she?	<h>Haha. 8 going on 27!</h>
+b3_dev54	Is your daughter still in girl scouts?	NO she got bored of it.	I would think so.  She's 27 isn't she?	Haha. 8 going on 27!	She's growing up way too fast!	<h>So what's she interested in lately?</h>
+a1_dev55	<h>How many pets do you have?</h>	I have 3 total pets.
+a2_dev56	How many pets do you have?	I have 3 total pets.	<h>What kinds of pets are they?</h>
+a3_dev57	How many pets do you have?	I have 3 total pets.	What kinds of pets are they?	I have 2 dogs and a cat.	<h>And they get along?</h>
+b1_dev58	Can you help me?	<h>Of course, what do you need me to do?</h>
+b2_dev59	Can you help me?	Of course, what do you need me to do?	Reach that bottle of wine on the top shelf.	<h>What are going to do with the wine?</h>
+b3_dev60	Can you help me?	Of course, what do you need me to do?	Reach that bottle of wine on the top shelf.	What are going to do with the wine?	I'M GOING TO USE IT IN THE FOOD I'M MAKING FOR DINNER	<h>Please stop yelling silly.</h>
+a1_dev61	<h>Will I be able to walk again?</h>	With exercise and therapy it's likely.
+a2_dev62	Will I be able to walk again?	With exercise and therapy it's likely.	<h>How long do you think that will take?</h>
+a3_dev63	Will I be able to walk again?	With exercise and therapy it's likely.	How long do you think that will take?	It will probably take several months.	<h>Well I guess my tennis career will have to wait.</h>
+b1_dev64	How was your night?	<h>it was okay</h>
+b2_dev65	How was your night?	it was okay	Did you sleep well?	<h>Pretty well, but I had some bad dreams.</h>
+b3_dev66	How was your night?	it was okay	Did you sleep well?	Pretty well, but I had some bad dreams.	That's never fun.	<h>Well yeah, but now that I'm awake I can go on with my day.</h>
+a1_dev67	<h>Could you please turn off the television?</h>	No, this is my favorite show
+a2_dev68	Could you please turn off the television?	No, this is my favorite show	<h>Please, I don't want to watch it.</h>
+a3_dev69	Could you please turn off the television?	No, this is my favorite show	Please, I don't want to watch it.	I'll put it on the DVR, but you don't know what you're missing.	<h>It's been a long day. Maybe I'll watch it with you later.</h>
+b1_dev70	Do you need gas?	<h>No my tank is full</h>
+b2_dev71	Do you need gas?	No my tank is full	Well I can still give you a couple of bucks for taking me home today.	<h>That's okay, you can drive tomorrow.</h>
+b3_dev72	Do you need gas?	No my tank is full	Well I can still give you a couple of bucks for taking me home today.	That's okay, you can drive tomorrow.	I'd rather you drive tomorrow, if you don't mind.  Why should I put the wear and tear on my car when I could just give you a few bucks for gas?	<h>Why am I still driving you if that's your attitude? How about you put some wear and tear on your shoes right now and get the hell out of my car?</h>
+a1_dev73	<h>Where is my daughter today?</h>	She's with her grandparents.
+a2_dev74	Where is my daughter today?	She's with her grandparents.	<h>What are they doing?</h>
+a3_dev75	Where is my daughter today?	She's with her grandparents.	What are they doing?	I think they're going to the zoo!	<h>I hope she has fun.</h>
+b1_dev76	Who is coming today?	<h>Your Dad is coming to visit you.</h>
+b2_dev77	Who is coming today?	Your Dad is coming to visit you.	Is he mad at me?	<h>I don't think he is mad. Should he be mad at you?</h>
+b3_dev78	Who is coming today?	Your Dad is coming to visit you.	Is he mad at me?	I don't think he is mad. Should he be mad at you?	Well last time we talked he seemed kind of short with me.	<h>Everyone seems short with you when you're 6'6. Ha ha.</h>
+a1_dev79	<h>Could you please get me one of my painkillers?</h>	No, you've had way too many already
+a2_dev80	Could you please get me one of my painkillers?	No, you've had way too many already	<h>I don't care.  The pain is still killing me!</h>
+a3_dev81	Could you please get me one of my painkillers?	No, you've had way too many already	I don't care.  The pain is still killing me!	We could go to the ER to see if there's something else going on that's causing you more pain than your painkillers can handle.	<h>That may be a good idea.</h>
+b1_dev82	Will you help me?	<h>Yes definitely I will help you.</h>
+b2_dev83	Will you help me?	Yes definitely I will help you.	Thanks, can you just hold this right there?	<h>Yes, sure. I've got it.</h>
+b3_dev84	Will you help me?	Yes definitely I will help you.	Thanks, can you just hold this right there?	Yes, sure. I've got it.	Let me know if it gets too heavy for you.	<h>It's too heavy!</h>

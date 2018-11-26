@@ -1,0 +1,84 @@
+a1_dev1	<h>What time is the parade?</h>	The parade will start just after noon.
+a2_dev2	What time is the parade?	The parade will start just after noon.	<h>Should we leave early to get a good spot?</h>
+a3_dev3	What time is the parade?	The parade will start just after noon.	Should we leave early to get a good spot?	Yes, we should leave as soon as possible or we won't be able to see anything.	<h>Let's start getting ready then.</h>
+b1_dev4	What is your favourite colour?	<h>Blue, most of the time.</h>
+b2_dev5	What is your favourite colour?	Blue, most of the time.	Most of the time?  What is it the rest of the time?	<h>The rest of the time, I prefer chartreuse.</h>
+b3_dev6	What is your favourite colour?	Blue, most of the time.	Most of the time?  What is it the rest of the time?	The rest of the time, I prefer chartreuse.	Chartreuse? Never heard of it. Is it French?	<h>No, it's a color.</h>
+a1_dev7	<h>Where are my friends now?</h>	I think that they are in their dance class now.
+a2_dev8	Where are my friends now?	I think that they are in their dance class now.	<h>Oh, I was hoping we could have all gone to see a movie together</h>
+a3_dev9	Where are my friends now?	I think that they are in their dance class now.	Oh, I was hoping we could have all gone to see a movie together	Well, I'm not doing anything. Wanna go with me instead?	<h>Of course! What would you like to see?</h>
+b1_dev10	What did you guys get me for the Holidays?	<h>I can't tell you, you have to wait and open it on Christmas!</h>
+b2_dev11	What did you guys get me for the Holidays?	I can't tell you, you have to wait and open it on Christmas!	Please tell me!	<h>No peeking until Christmas.</h>
+b3_dev12	What did you guys get me for the Holidays?	I can't tell you, you have to wait and open it on Christmas!	Please tell me!	No peeking until Christmas.	Well, if you say so, but I won't tell you what I got you, either!	<h>I accept this compromise.</h>
+a1_dev13	<h>Anything special for dinner?</h>	No, just meatloaf and mashed potatoes.
+a2_dev14	Anything special for dinner?	No, just meatloaf and mashed potatoes.	<h>That sounds delicious</h>
+a3_dev15	Anything special for dinner?	No, just meatloaf and mashed potatoes.	That sounds delicious	Well I'm glad you think so.	<h>Especially the way you make it.</h>
+b1_dev16	Did you get the homework done?	<h>Yes I got some homework.</h>
+b2_dev17	Did you get the homework done?	Yes I got some homework.	No, I asked if it was done, not if you had some.	<h>I will do it later.</h>
+b3_dev18	Did you get the homework done?	Yes I got some homework.	No, I asked if it was done, not if you had some.	I will do it later.	You will do it now, or no pudding for you!	<h>OK, I will do it now.</h>
+a1_dev19	<h>Would you be able to get him to meet me?</h>	I can ask him if he is willing.
+a2_dev20	Would you be able to get him to meet me?	I can ask him if he is willing.	<h>What do you mean 'if he is willing'?</h>
+a3_dev21	Would you be able to get him to meet me?	I can ask him if he is willing.	What do you mean 'if he is willing'?	I CAN ASK IF HE WANTS TO MEET YOU.	<h>Fine, tell him this is really important, please.</h>
+b1_dev22	Would you like to go to the park?	<h>Yes let's go now.</h>
+b2_dev23	Would you like to go to the park?	Yes let's go now.	I haven't been to the park in over a year!	<h>Wow, that's a long time!  What has kept you away?</h>
+b3_dev24	Would you like to go to the park?	Yes let's go now.	I haven't been to the park in over a year!	Wow, that's a long time!  What has kept you away?	Work has been hectic and taking up all my time lately.	<h>You should make time to relax.</h>
+a1_dev25	<h>Can you call my father?</h>	YES, WHAT IS HIS NUMBER?
+a2_dev26	Can you call my father?	YES, WHAT IS HIS NUMBER?	<h>Let me read that out for you. There you go 9054599644.</h>
+a3_dev27	Can you call my father?	YES, WHAT IS HIS NUMBER?	Let me read that out for you. There you go 9054599644.	Okay, I will call him now.	<h>Thanks, tell him to pick me up at the Pelican bar.  I am a bit drunk.</h>
+b1_dev28	Can you hand me my gray shirt?	<h>The one on the chair?</h>
+b2_dev29	Can you hand me my gray shirt?	The one on the chair?	No the one from my closet.	<h>Oh okay, I'll go grab it.</h>
+b3_dev30	Can you hand me my gray shirt?	The one on the chair?	No the one from my closet.	Oh okay, I'll go grab it.	Good. Thank you.	<h>Do you mind me asking why you have 27 gray shirts in the first place?</h>
+a1_dev31	<h>When will you arrive home?</h>	About 7 o'clock
+a2_dev32	When will you arrive home?	About 7 o'clock	<h>Ok, I will be at class by then.</h>
+a3_dev33	When will you arrive home?	About 7 o'clock	Ok, I will be at class by then.	I'll have dinner in the fridge, when you get home, all you have to do is warm it.	<h>Thanks a lot. So, how did your day go?</h>
+b1_dev34	Will there be a retest?	<h>NO, THIS IS THE FINAL TEST.</h>
+b2_dev35	Will there be a retest?	NO, THIS IS THE FINAL TEST.	When will the test be graded?	<h>One week from today.</h>
+b3_dev36	Will there be a retest?	NO, THIS IS THE FINAL TEST.	When will the test be graded?	One week from today.	Whoah, that's really fast, thank you for that.	<h>You're welcome. I assumed that you all would want your grades back quickly.</h>
+a1_dev37	<h>What is for lunch?</h>	We're ordering pizza.
+a2_dev38	What is for lunch?	We're ordering pizza.	<h>We had pizza yesterday, couldn't we have something else?</h>
+a3_dev39	What is for lunch?	We're ordering pizza.	We had pizza yesterday, couldn't we have something else?	How about Chinese?	<h>Okay, that sounds better.</h>
+b1_dev40	Can you find my jacket for me please?	<h>YES, I'LL TRY.</h>
+b2_dev41	Can you find my jacket for me please?	YES, I'LL TRY.	Thank you, dearheart.	<h>You're welcome. I think it's in the car.</h>
+b3_dev42	Can you find my jacket for me please?	YES, I'LL TRY.	Thank you, dearheart.	You're welcome. I think it's in the car.	Found it! What is on it?	<h>Your drivers licence and a couple of nickels.</h>
+a1_dev43	<h>Where would you like to get breakfast?</h>	I would like to go to the diner down the street.
+a2_dev44	Where would you like to get breakfast?	I would like to go to the diner down the street.	<h>Is that the little place that puts whipped cream and sprinkles on the hot cocoa?</h>
+a3_dev45	Where would you like to get breakfast?	I would like to go to the diner down the street.	Is that the little place that puts whipped cream and sprinkles on the hot cocoa?	Yes it is, and they have the pancakes with chocolate chip smiley face.	<h>I'm going to get that with some strawberry milk.</h>
+b1_dev46	Where did the cat go?	<h>I have no idea.</h>
+b2_dev47	Where did the cat go?	I have no idea.	Last time I saw it playing in the kitchen.	<h>Then why don't you go look for it in the kitchen?</h>
+b3_dev48	Where did the cat go?	I have no idea.	Last time I saw it playing in the kitchen.	Then why don't you go look for it in the kitchen?	Why don't YOU go look for it in the kitchen?	<h>I looked already, can you please go check?</h>
+a1_dev49	<h>Where are my shoes?</h>	in your room
+a2_dev50	Where are my shoes?	in your room	<h>Quite surprising, I kept them in the lobby, who did put them in the room?</h>
+a3_dev51	Where are my shoes?	in your room	Quite surprising, I kept them in the lobby, who did put them in the room?	I did. Because I got tired of tripping over them.	<h>Is there a better place I can keep them near the lobby?</h>
+b1_dev52	What is the plan for today?	<h>Let's go see a movie!</h>
+b2_dev53	What is the plan for today?	Let's go see a movie!	Is there a movie you want to see?	<h>Not particularly, we will decide when we get there.</h>
+b3_dev54	What is the plan for today?	Let's go see a movie!	Is there a movie you want to see?	Not particularly, we will decide when we get there.	I hope there is at least one good option.	<h>I am up for an action flick or a comedy...how about you?</h>
+a1_dev55	<h>What are you having for dinner?</h>	I'm going to Chipotle.
+a2_dev56	What are you having for dinner?	I'm going to Chipotle.	<h>I love Chipotle!</h>
+a3_dev57	What are you having for dinner?	I'm going to Chipotle.	I love Chipotle!	WHAT KIND OF BURRITO DO YOU LIKE?	<h>I like the chicken.</h>
+b1_dev58	Is that a new watch?	<h>It is! I got it yesterday.</h>
+b2_dev59	Is that a new watch?	It is! I got it yesterday.	It's beautiful, where did you get it?	<h>It's actually a present from my mother.</h>
+b3_dev60	Is that a new watch?	It is! I got it yesterday.	It's beautiful, where did you get it?	It's actually a present from my mother.	Any special occasion?	<h>Yes I actually graduated college with my Doctorates!!!</h>
+a1_dev61	<h>Do you like jazz?</h>	No I don't care for anything that isn't dubstep.
+a2_dev62	Do you like jazz?	No I don't care for anything that isn't dubstep.	<h>What is dubstep?</h>
+a3_dev63	Do you like jazz?	No I don't care for anything that isn't dubstep.	What is dubstep?	I'm surprised you haven't heard of it before.	<h>Is it more like electronica or rock?</h>
+b1_dev64	Do you have a light?	<h>No, sorry.  I don't smoke</h>
+b2_dev65	Do you have a light?	No, sorry.  I don't smoke	Well, what good are you?	<h>Sorry that I don't want to suck on a cancer stick.</h>
+b3_dev66	Do you have a light?	No, sorry.  I don't smoke	Well, what good are you?	Sorry that I don't want to suck on a cancer stick.	No need to be rude about it.	<h>You should try the E-cigs.</h>
+a1_dev67	<h>Did you see that new movie?</h>	Not yet, but my sister went and said it was pretty good.  Kept her attention.
+a2_dev68	Did you see that new movie?	Not yet, but my sister went and said it was pretty good.  Kept her attention.	<h>That doesn't count, she is easily impressed.</h>
+a3_dev69	Did you see that new movie?	Not yet, but my sister went and said it was pretty good.  Kept her attention.	That doesn't count, she is easily impressed.	Wow, what a rude thing to say. Well, goodbye, I'll see you later.	<h>I was just kidding; your sister's very nice.</h>
+b1_dev70	What are you doing today?	<h>I'm going to the store later</h>
+b2_dev71	What are you doing today?	I'm going to the store later	Can you pick something up for dinner while you're out?	<h>Sure, what would you like to have?</h>
+b3_dev72	What are you doing today?	I'm going to the store later	Can you pick something up for dinner while you're out?	Sure, what would you like to have?	Let's have chicken parmesan. I'll cook if you pick up the ingredients.	<h>OK, sounds great!</h>
+a1_dev73	<h>Would you be willing to go to Six Flags with me?</h>	I'd like that. How about next weekend?
+a2_dev74	Would you be willing to go to Six Flags with me?	I'd like that. How about next weekend?	<h>That doesn't suit me</h>
+a3_dev75	Would you be willing to go to Six Flags with me?	I'd like that. How about next weekend?	That doesn't suit me	What is  a good day to  fit  your  needs ?	<h>I'm getting my free day on Wednesday this week.</h>
+b1_dev76	Can you look up directions please?	<h>Where do you want to go?</h>
+b2_dev77	Can you look up directions please?	Where do you want to go?	I would like to go to the new mall.	<h>The one by the lake?</h>
+b3_dev78	Can you look up directions please?	Where do you want to go?	I would like to go to the new mall.	The one by the lake?	No, the one UNDER the lake. Of course the one by the lake!	<h>I thought we were going looking for Atlantis.</h>
+a1_dev79	<h>What is the weather forecast for tomorrow?</h>	Cloudy, with a 20% chance of rain.
+a2_dev80	What is the weather forecast for tomorrow?	Cloudy, with a 20% chance of rain.	<h>Oh, now that's sucks!</h>
+a3_dev81	What is the weather forecast for tomorrow?	Cloudy, with a 20% chance of rain.	Oh, now that's sucks!	Really? It's only 20% chance and the weather people are almost always wrong.	<h>I am actually wanting it to rain so I don't have to go out and water the garden myself.</h>
+b1_dev82	How is the weather?	<h>It's good, it's warm outside</h>
+b2_dev83	How is the weather?	It's good, it's warm outside	Should I carry an umbrella? Is it too hot or just mildly sunny?	<h>It's getting quit hot out, actually.</h>
+b3_dev84	How is the weather?	It's good, it's warm outside	Should I carry an umbrella? Is it too hot or just mildly sunny?	It's getting quit hot out, actually.	Okay looks like I will bring an umbrella and sunscreen then, thanks!	<h>Don't mention it.</h>
