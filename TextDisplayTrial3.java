@@ -16,10 +16,8 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -655,7 +653,6 @@ public class TextDisplayTrial3 extends Application {
 
 		next.setDisable(true);
 		stop.setDisable(true);
-		prev.setDisable(true);
 		start.setDefaultButton(true);
 		start.requestFocus();
 
@@ -698,35 +695,40 @@ public class TextDisplayTrial3 extends Application {
 		});
 		
 		prev.setOnAction(event -> {
-			uiLog.println("<Previous>");
-			start.setDisable(false);
-			next.setDisable(false);
-			stop.setDisable(true);
-			start.setDefaultButton(true);
-			stop.setDefaultButton(false);
-			next.setDefaultButton(false);
-			
-			for (Label lab: micLabels) {
-				lab.setBackground(backgrounds(Color.PEACHPUFF, 0, 0));
-				lab.setText("Status:  ");
-			}
-			
-			taskNum--;
-			if (taskNum < totalTasks && taskNum >= 0) {
-				taskLabels = updateLabels();
-				count.setText("Task " + (taskNum + 1) + " of " + totalTasks);
-				screen.setBottom(viewer());
-				scene.setRoot(screen);
-			}			
-			
-			//Set new file name
-			if (taskNum >= 0) {
-				ArrayList<String> current = allTasks.get(taskNum);
-				for(int i = 0; i < listOfRecorders.length; i++) {
-					if (listOfRecorders[i] != null) {
-						listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current.get(0) + ".wav");
+			if (taskNum > 0) {
+				uiLog.println("<Previous>");
+				start.setDisable(false);
+				next.setDisable(false);
+				prev.setDisable(false);
+				stop.setDisable(true);
+				start.setDefaultButton(true);
+				stop.setDefaultButton(false);
+				next.setDefaultButton(false);
+				
+				for (Label lab: micLabels) {
+					lab.setBackground(backgrounds(Color.PEACHPUFF, 0, 0));
+					lab.setText("Status:  ");
+				}
+				
+				taskNum--;
+				if (taskNum < totalTasks && taskNum >= 0) {
+					taskLabels = updateLabels();
+					count.setText("Task " + (taskNum + 1) + " of " + totalTasks);
+					screen.setBottom(viewer());
+					scene.setRoot(screen);
+				}			
+				
+				//Set new file name
+				if (taskNum >= 0) {
+					ArrayList<String> current = allTasks.get(taskNum);
+					for(int i = 0; i < listOfRecorders.length; i++) {
+						if (listOfRecorders[i] != null) {
+							listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current.get(0) + ".wav");
+						}
 					}
 				}
+			} else {
+				prev.setDisable(true);
 			}
 		});
 
