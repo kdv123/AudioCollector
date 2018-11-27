@@ -1,4 +1,0 @@
-<Start>
-<Stop>
-<Playback1>
-<Close Window>

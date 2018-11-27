@@ -77,7 +77,7 @@ public class TextDisplayTrial3 extends Application {
 	static String [] command = {};
 	
 	//For main stage of GUI
-	double WIDTH = 1000;
+	double WIDTH = 1100;
 	double HEIGHT = 800;
 	double MIC_H = 65;
 	double MIC_W = 800;
@@ -103,6 +103,8 @@ public class TextDisplayTrial3 extends Application {
 				uiLog.close();
 			}
 		});
+		
+		primaryStage.centerOnScreen();
 	}
 	
 	//For recorded file name
@@ -148,14 +150,12 @@ public class TextDisplayTrial3 extends Application {
 		}
 		int width = pts.length / (int)MIC_W;
 		double pix = MIC_W/pts.length;
-		double sum = 0;
 		Rectangle back = new Rectangle(0, 0, MIC_W, MIC_H);
 		back.setFill(Color.ALICEBLUE);
 		g.getChildren().add(back);
 		Rectangle r = new Rectangle(0, 2, MIC_W, MIC_H);
 		r.setFill(Color.LIGHTGOLDENRODYELLOW);
 		g.getChildren().add(r);
-		long start = System.currentTimeMillis();
 		for (int i = 0; i < pts.length; i += width) {
 			//System.out.println("pts: " + pts[i]);
 			// formula for height:  y = (1-pts[i]) * half-of-desired-height; h = pts[i] * desired-height
@@ -163,8 +163,6 @@ public class TextDisplayTrial3 extends Application {
 			Rectangle rect = new Rectangle(i * pix, (1 - pts[i]) * (r.getHeight()/2) + 2, 1, pts[i] * r.getHeight());
 			g.getChildren().add(rect);
 		}
-		long end = System.currentTimeMillis();
-		//System.out.println(end - start);
 
 		Scene s = new Scene(g);
 		WritableImage i = new WritableImage((int)MIC_W, (int)MIC_H);
@@ -434,7 +432,6 @@ public class TextDisplayTrial3 extends Application {
 		main.add(taskBar, 0, 0);
 		
 		GridPane temp = prompt();
-		temp.setAlignment(Pos.TOP_CENTER);
 		main.add(temp, 0, 1);
 		
 		main.add(mics(), 0, 2);
@@ -571,6 +568,9 @@ public class TextDisplayTrial3 extends Application {
 		return new Background(new BackgroundFill(c, new CornerRadii(2), new Insets(0)));
 	}
 
+	ArrayList<Label> micNameLabels = new ArrayList<Label>(4);
+	ArrayList<ImageView> waveImages = new ArrayList<ImageView>(4);
+	
 	public Group mics() {
 		Group group = new Group();
 		GridPane grid = new GridPane();
@@ -579,11 +579,11 @@ public class TextDisplayTrial3 extends Application {
 			Label label = new Label("Mic " + (i + 1) + ": ");
 			label.setPrefSize(100,  MIC_H);
 			label.setFont(Font.font(20));
-			ImageView status = new ImageView();
-			//Label status = new Label("Status: ");
-			//status.setBorder(new Border));
+			micNameLabels.add(label);
+			ImageView wave = new ImageView();
+			waveImages.add(wave);
 			if ( listOfRecorders[i] != null && listOfRecorders[i].getFile() != null ) {
-				status.setImage(drawData(listOfRecorders[i].getFile()));
+				wave.setImage(drawData(listOfRecorders[i].getFile()));
 			}
 			
 			Button playback = new Button("Playback Mic " + (i+1));
@@ -591,25 +591,25 @@ public class TextDisplayTrial3 extends Application {
 			playback.setMaxSize(100, MIC_H);
 			playback.setMaxWidth(800);
 			grid.add(label, 0, i, 1, 1);
-			grid.add(status, 1, i, 1, 1);
+			grid.add(wave, 1, i, 1, 1);
 			grid.add(playback, 2, i, 1, 1);
 			
 			playback.setOnAction(event -> {
 				if(((Button) event.getSource()).getText().contains("1") && listOfRecorders[0] != null && listOfRecorders[0].getFile().exists()){
 					listOfRecorders[0].startPlaybackWAV();
-					status.setImage(drawData(listOfRecorders[0].getFile()));
+					//wave.setImage(drawData(listOfRecorders[0].getFile()));
 					uiLog.println("<Playback1>");
 				} else if (((Button) event.getSource()).getText().contains("2") && listOfRecorders[1] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[1].startPlaybackWAV();
-					status.setImage(drawData(listOfRecorders[1].getFile()));
+					//wave.setImage(drawData(listOfRecorders[1].getFile()));
 					uiLog.println("<Playback2>");
 				} else if (((Button) event.getSource()).getText().contains("3") && listOfRecorders[2] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[2].startPlaybackWAV();
-					status.setImage(drawData(listOfRecorders[2].getFile()));
+					//wave.setImage(drawData(listOfRecorders[2].getFile()));
 					uiLog.println("<PlaybackBtn3>");
 				} else if (((Button) event.getSource()).getText().contains("4") && listOfRecorders[3] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[3].startPlaybackWAV();
-					status.setImage(drawData(listOfRecorders[3].getFile()));
+					//wave.setImage(drawData(listOfRecorders[3].getFile()));
 					uiLog.println("<PlaybackBtn4>");
 				}
 			});
@@ -733,9 +733,9 @@ public class TextDisplayTrial3 extends Application {
 		/* Listeners attached to buttons here.  Nothing currently attached to "next" */
 		start.setOnAction(event -> {
 			uiLog.println("<Start>");
-			for (Label lab: micLabels) {
-				lab.setBackground(backgrounds(Color.GREEN, 0, 0));
-				lab.setText("Status:  Recording...");
+			
+			for (Label l : micNameLabels) {
+				l.setBackground(backgrounds(Color.GREEN, 0, 0));
 			}
 			
 			start.setDisable(true);
@@ -762,12 +762,12 @@ public class TextDisplayTrial3 extends Application {
 			for (int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null) {
 					listOfRecorders[i].stopRecording();
+					waveImages.get(i).setImage(drawData(listOfRecorders[i].getFile()));
 				}
 			}
 			
-			for (Label lab: micLabels) {
-				lab.setBackground(backgrounds(Color.RED, 0, 0));
-				lab.setText("Status:  Stopped ...");
+			for (Label l : micNameLabels) {
+				l.setBackground(backgrounds(Color.RED, 0, 0));
 			}
 			
 			start.setDisable(false);
@@ -819,7 +819,6 @@ public class TextDisplayTrial3 extends Application {
 		} catch (LineUnavailableException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
