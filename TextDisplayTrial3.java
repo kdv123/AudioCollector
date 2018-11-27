@@ -140,7 +140,12 @@ public class TextDisplayTrial3 extends Application {
 	public Image drawData(File temp) {
 		//Stage stage = new Stage();
 		Group g = new Group();
-		double [] pts = read(temp);
+		double [] pts;
+		if ( temp.exists() ) {
+			pts = read(temp);
+		} else {
+			pts = new double[0];
+		}
 		int width = pts.length / (int)MIC_W;
 		double pix = MIC_W/pts.length;
 		double sum = 0;
