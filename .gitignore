@@ -1,32 +1,7 @@
-<<<<<<< HEAD
-/SimpleAudioRecorder$1.class
-/SimpleAudioRecorder.class
-/ViewForRecorder.class
-/SimpleAudioRecorder2$1.class
-/SimpleAudioRecorder2.class
-/SimpleAudioRecorder2$2.class
-=======
 /Recorder.class
-/Driver.class
->>>>>>> master
-/Playback.class
-/CsvWriter.class
-/rawDataObtainer.class
-/RawDataGraph.class
-/RawDataGraphExample.class
-/Recorder$1.class
-/Recorder$2.class
-/ViewForRecorder2.class
-/TextDisplayTrial.class
-/TextDisplayTrial2.class
-/DecimalBinaryTest.class
-/RawDataGraphExample2.class
-/UILog.txt
-<<<<<<< HEAD
-/ViewForRecorder3.class
 /TextDisplayTrial3.class
-/ByteReadTest.class
-=======
-/Recorder$3.class
->>>>>>> master
+/Recorder$*.class
+/UILog.txt
 /PromptFileCreator.class
+/*.wav
+!/buttonBeep.wav
