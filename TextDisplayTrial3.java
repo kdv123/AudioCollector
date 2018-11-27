@@ -18,6 +18,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -25,6 +26,9 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -137,17 +141,17 @@ public class TextDisplayTrial3 extends Application {
 		}
 	}
 
-	public void drawData(File temp) {
-		Stage stage = new Stage();
+	public Image drawData(File temp) {
+		//Stage stage = new Stage();
 		Group g = new Group();
 		double [] pts = read(temp);
-		int width = pts.length / 1000;
-		double pix = 1000.0/pts.length;
+		int width = pts.length / (int)MIC_W;
+		double pix = MIC_W/pts.length;
 		double sum = 0;
-		Rectangle back = new Rectangle(0, 0, 1000, 500);
+		Rectangle back = new Rectangle(0, 0, MIC_W, MIC_H);
 		back.setFill(Color.ALICEBLUE);
 		g.getChildren().add(back);
-		Rectangle r = new Rectangle(0, 50, 1000, 400);
+		Rectangle r = new Rectangle(0, 2, MIC_W, MIC_H);
 		r.setFill(Color.LIGHTGOLDENRODYELLOW);
 		g.getChildren().add(r);
 		long start = System.currentTimeMillis();
@@ -155,15 +159,16 @@ public class TextDisplayTrial3 extends Application {
 			//System.out.println("pts: " + pts[i]);
 			// formula for height:  y = (1-pts[i]) * half-of-desired-height; h = pts[i] * desired-height
 			// 50 gives a buffer for those cases that produce an overflowing decimal greater than 1.0 for pts[i]
-			Rectangle rect = new Rectangle(i * pix, (1 - pts[i]) * 200 + 50, 1, pts[i] * 400);
+			Rectangle rect = new Rectangle(i * pix, (1 - pts[i]) * (r.getHeight()/2) + 2, 1, pts[i] * r.getHeight());
 			g.getChildren().add(rect);
 		}
 		long end = System.currentTimeMillis();
 		//System.out.println(end - start);
 
 		Scene s = new Scene(g);
-		stage.setScene(s);
-		stage.show();
+		WritableImage i = new WritableImage((int)MIC_W, (int)MIC_H);
+		s.snapshot(i);
+		return i;
 	}
 
 	/**
@@ -568,13 +573,12 @@ public class TextDisplayTrial3 extends Application {
 			Label label = new Label("Mic " + (i + 1) + ": ");
 			label.setPrefSize(100,  MIC_H);
 			label.setFont(Font.font(20));
-			Label status = new Label("Status: ");
-			status.setFont(Font.font(20));
-			status.setMaxWidth(600);
-			status.setPrefWidth(600);
-			status.setPrefHeight(MIC_H);
+			ImageView status = new ImageView();
+			//Label status = new Label("Status: ");
 			//status.setBorder(new Border));
-			status.setBackground(neutralFill());
+			if ( listOfRecorders[i] != null && listOfRecorders[i].getFile() != null ) {
+				status.setImage(drawData(listOfRecorders[i].getFile()));
+			}
 			
 			Button playback = new Button("Playback Mic " + (i+1));
 			playback.setFont(Font.font(15));
@@ -583,24 +587,23 @@ public class TextDisplayTrial3 extends Application {
 			grid.add(label, 0, i, 1, 1);
 			grid.add(status, 1, i, 1, 1);
 			grid.add(playback, 2, i, 1, 1);
-			micLabels.add(status);
 			
 			playback.setOnAction(event -> {
 				if(((Button) event.getSource()).getText().contains("1") && listOfRecorders[0] != null && listOfRecorders[0].getFile().exists()){
 					listOfRecorders[0].startPlaybackWAV();
-					drawData(listOfRecorders[0].getFile());
+					status.setImage(drawData(listOfRecorders[0].getFile()));
 					uiLog.println("<Playback1>");
 				} else if (((Button) event.getSource()).getText().contains("2") && listOfRecorders[1] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[1].startPlaybackWAV();
-					drawData(listOfRecorders[1].getFile());
+					status.setImage(drawData(listOfRecorders[1].getFile()));
 					uiLog.println("<Playback2>");
 				} else if (((Button) event.getSource()).getText().contains("3") && listOfRecorders[2] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[2].startPlaybackWAV();
-					drawData(listOfRecorders[2].getFile());
+					status.setImage(drawData(listOfRecorders[2].getFile()));
 					uiLog.println("<PlaybackBtn3>");
 				} else if (((Button) event.getSource()).getText().contains("4") && listOfRecorders[3] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[3].startPlaybackWAV();
-					drawData(listOfRecorders[3].getFile());
+					status.setImage(drawData(listOfRecorders[3].getFile()));
 					uiLog.println("<PlaybackBtn4>");
 				}
 			});
