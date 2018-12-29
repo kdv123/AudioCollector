@@ -1,0 +1,9 @@
+a1_practice	<h>Would you like to sit down?</h>
+a2_practice	Would you like to sit down?	No, I'm fine standing up	<h>Are you sure you don't want to sit down?</h>
+a3_practice	Would you like to sit down?	No, I'm fine standing up	Are you sure you don't want to sit down?	Been sitting all day. Work was just one meeting after another.	<h>Oh, I'm sorry. I don't enjoy work days like that.</h>
+a1_practice	Would you like to go to the mall?	<h>SURE I'D LOVE TO.</h>
+a2_practice	Would you like to go to the mall?	SURE I'D LOVE TO.	What time do you want to leave?	<h>How about after my shower?</h>
+a3_practice	Would you like to go to the mall?	SURE I'D LOVE TO.	What time do you want to leave?	How about after my shower?	How long will that take?	<h>Around 15 minutes max.</h>
+a1_practice	<h>Do you want to get McDonalds?</h>
+a2_practice	Do you want to get McDonalds?	No that food is too fatty.	<h>They have salads and stuff, too.</h>
+a3_practice	Do you want to get McDonalds?	No that food is too fatty.	They have salads and stuff, too.	I know but everything there just kind of tastes like McDonald's, you know?	<h>I do know. I think that's kind of the point. We can go somewhere else, though.</h>

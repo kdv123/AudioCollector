@@ -33,15 +33,54 @@ public class PromptFileCreator {
 				testLines.add(s);
 		}
 		
-		/*
-		System.out.printf("Training Lines index %d: %s\n Size: %d\n", 0, trainingLines.get(0), trainingLines.size());
-		System.out.printf("Development Lines index %d: %s\n Size: %d\n", 0, developmentLines.get(0), developmentLines.size());
-		System.out.printf("Test Lines index %d: %s\n Size: %d\n", 0, testLines.get(0), testLines.size()); */
-		
 		//See method header
-		createDevPromptSets(developmentLines);
+		//createDevPromptSets(developmentLines);
+		createPracticePrompts(trainingLines);
 	}
 	
+	/*
+	 * Create 9 practice prompts
+	 */
+	private static void createPracticePrompts(ArrayList<String> lines) {
+		PrintWriter practiceWriter = null;
+		
+		try {
+			practiceWriter = new PrintWriter("practice.txt");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		for (int i = 0; i < 3; i++) {
+			
+			Scanner scan = new Scanner(lines.get(i));
+			scan.useDelimiter("\t");
+			String train = scan.next();
+			String chain = scan.next();
+			chain = chain.substring(5);		//removes the chain part
+			String a1 = scan.next();
+			String b1 = scan.next();
+			String a2 = scan.next();
+			String b2 = scan.next();
+			String a3 = scan.next();
+			String b3 = scan.next();
+			
+			if (i % 2 == 0) {
+				practiceWriter.println("a1_practice\t" + "<h>" + a1 + "</h>");
+				practiceWriter.println("a2_practice\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>");
+				practiceWriter.println("a3_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+			} else {
+				practiceWriter.println("a1_practice\t" + a1 + "\t<h>" + b1 + "</h>");
+				practiceWriter.println("a2_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+				practiceWriter.println("a3_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+			}
+			
+		}
+		
+		scan.close();
+		practiceWriter.close();
+		
+	}
+
 	/*
 	 * Currently only creating development lines. Functionality for test lines should also be available, but have not been tested yet.
 	 * Using this method, every 28 lines will creates 84 prompts for an odd number participant and 84 prompts for an even number participant.
@@ -126,14 +165,14 @@ public class PromptFileCreator {
 				String b3 = scan.next();
 				
 				if (j % 2 == 0) {
-					outputOdd.println("a1_" + dev + numOdd++ + "\t<h>" + a1 + "</h>\t" + b1);
+					outputOdd.println("a1_" + dev + numOdd++ + "\t<h>" + a1 + "</h>");
 					outputOdd.println("a2_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>" );
 					outputOdd.println("a3_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
 					outputEven.println("b1_" + dev + numEven++ + "\t" + a1 + "\t<h>" + b1 + "</h>");
 					outputEven.println("b2_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
 					outputEven.println("b3_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
 				} else {
-					outputEven.println("a1_" + dev + numEven++ + "\t<h>" + a1 + "</h> " + b1);
+					outputEven.println("a1_" + dev + numEven++ + "\t<h>" + a1 + "</h>");
 					outputEven.println("a2_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + " \t<h>" + a2 + "</h>" );
 					outputEven.println("a3_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
 					outputOdd.println("b1_" + dev + numOdd++ + "\t" + a1 + "\t<h>" + b1 + "</h>");
