@@ -71,7 +71,6 @@ public class TextDisplayTrial3 extends Application {
 	
 	//For task generation
 	ArrayList<ArrayList<String>> allTasks;
-	ArrayList<ArrayList<String>> practiceTasks;
 	ArrayList<Label> taskLabels = new ArrayList<Label>();
 	static String [] command = {};
 	
@@ -222,7 +221,6 @@ public class TextDisplayTrial3 extends Application {
 
 	int state = 0;
 	File promptFile;
-	File practiceFile = new File("practice.txt");
 	TextField sNum;
 	BorderPane screen;
 	Recorder[] listOfRecorders = new Recorder[4];
@@ -342,9 +340,7 @@ public class TextDisplayTrial3 extends Application {
 			
 			state = 1;
 			taskNum = 0;
-			scanMe(promptFile, false);	//not practice file
-			scanMe(practiceFile, true);	//practice file
-			
+			scanMe(promptFile);
 			totalTasks = allTasks.size();
 			setupFileSystem(partID, sNum, cond);
 			
@@ -365,7 +361,6 @@ public class TextDisplayTrial3 extends Application {
 		
 		for (int i = 0; i < listOfRecorders.length; i++) {
 			Recorder tempRec = listOfRecorders[i];
-			
 			if (tempRec != null) {
 				String mixName = getMixForFile(listOfRecorders[i]);
 				participantName = partID.getText();
@@ -454,7 +449,7 @@ public class TextDisplayTrial3 extends Application {
 	 * I changed the format of the definition files. I thought the <br> were kind of redundant. Each sentence in a prompt is just tab delimited for each speaker. Each speaker
 	 * is its own element in an ArrayList (the tasks can be several sizes) the whole prompt is then added to allTasks.
 	 */
-	private void scanMe(File promptFileName, boolean practice) {
+	private void scanMe(File promptFileName) {
 		ArrayList<ArrayList<String>> tempAllTasks = new ArrayList<ArrayList<String>>();
 		
 		try (Scanner scan = new Scanner(promptFileName)) {
@@ -473,11 +468,8 @@ public class TextDisplayTrial3 extends Application {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		if (!practice) {
-			allTasks = tempAllTasks;
-		} else {
-			practiceTasks = tempAllTasks;
-		}
+		
+		allTasks = tempAllTasks;
 	}
 	
 	public GridPane prompt() {

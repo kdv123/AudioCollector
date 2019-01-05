@@ -1,84 +1,84 @@
 b1_dev1	Around what time should I call you next weekend?	<h>Saturday afternoon sounds good.</h>
 b2_dev2	Around what time should I call you next weekend?	Saturday afternoon sounds good.	Alright, I will call you then.	<h>Sure, maybe text me first because I may be running some errands before that.</h>
 b3_dev3	Around what time should I call you next weekend?	Saturday afternoon sounds good.	Alright, I will call you then.	Sure, maybe text me first because I may be running some errands before that.	If I don't respond to your text it may be because I am in the shower.	<h>What if I just call you?</h>
-a1_dev4	<h>Why did you want to go there?</h>
+a1_dev4	<h>Why did you want to go there?</h> Because I've never been to an adult theatre before, and I just want to see what it's like.
 a2_dev5	Why did you want to go there?	Because I've never been to an adult theatre before, and I just want to see what it's like. 	<h>What did you think of it?</h>
 a3_dev6	Why did you want to go there?	Because I've never been to an adult theatre before, and I just want to see what it's like.	What did you think of it?	It was pretty dirty.  Disgusting, actually. From now on I'm just watching Netflix at home.	<h>Indeed. Popcorn at home would be fresher too.</h>
 b1_dev7	What's your favorite videogame?	<h>I do not play many video games but since you asked, it would be Candy Crush.</h>
 b2_dev8	What's your favorite videogame?	I do not play many video games but since you asked, it would be Candy Crush.	That's not a real video game.	<h>Oh really? What makes a real video game, then?</h>
 b3_dev9	What's your favorite videogame?	I do not play many video games but since you asked, it would be Candy Crush.	That's not a real video game.	Oh really? What makes a real video game, then?	Is it you who's been sending me all those Candy Crush invites?	<h>You better watch your tone there, Mr. Sanders.  I am going to break the glass ceiling on Candy Crush success!</h>
-a1_dev10	<h>Why is that bill so high?</h>
+a1_dev10	<h>Why is that bill so high?</h> It's because we had that water leak
 a2_dev11	Why is that bill so high?	It's because we had that water leak 	<h>Yeah, that is right.  Hopefully we can get the leak fixed as soon as possible.</h>
 a3_dev12	Why is that bill so high?	It's because we had that water leak	Yeah, that is right.  Hopefully we can get the leak fixed as soon as possible.	How much will it cost?	<h>A lot. We'll be living on raman noodles for a while.</h>
 b1_dev13	Do you have any big plans for the holiday weekend?	<h>Yes, I'm hoping to go visit friends in Toronto.  How about you?</h>
 b2_dev14	Do you have any big plans for the holiday weekend?	Yes, I'm hoping to go visit friends in Toronto.  How about you?	I plan to go to garage sales.	<h>Are you looking for something special?</h>
 b3_dev15	Do you have any big plans for the holiday weekend?	Yes, I'm hoping to go visit friends in Toronto.  How about you?	I plan to go to garage sales.	Are you looking for something special?	Yes, Im looking for a dresser.	<h>I have an antique dresser in my attic you may be interested in.</h>
-a1_dev16	<h>When do we eat?</h>
+a1_dev16	<h>When do we eat?</h> We'll be eating shortly.
 a2_dev17	When do we eat?	We'll be eating shortly. 	<h>I'm not really hungry.</h>
 a3_dev18	When do we eat?	We'll be eating shortly.	I'm not really hungry.	Do you want to push back dinner, then?	<h>No, you can go ahead and eat and I will have something a bit later.</h>
 b1_dev19	When is the graduation for the high school this year?	<h>Its in late May.</h>
 b2_dev20	When is the graduation for the high school this year?	Its in late May.	Do you know the date?	<h>Not offhand, but I can get it for you.</h>
 b3_dev21	When is the graduation for the high school this year?	Its in late May.	Do you know the date?	Not offhand, but I can get it for you.	Please do; I'd really like to attend if I can.	<h>I have the perfect dress to wear</h>
-a1_dev22	<h>How come she gets the larger steak?</h>
+a1_dev22	<h>How come she gets the larger steak?</h> Because she paid for the larger steak.
 a2_dev23	How come she gets the larger steak?	Because she paid for the larger steak. 	<h>I guess you get what you pay for.</h>
 a3_dev24	How come she gets the larger steak?	Because she paid for the larger steak.	I guess you get what you pay for.	You can say that again.	<h>Next time I should probably order the larger one.</h>
 b1_dev25	Do you know what happened to my shirt?	<h>I think the dog ate it</h>
 b2_dev26	Do you know what happened to my shirt?	I think the dog ate it	That must be a joke.	<h>OK, the dog just mauled it.</h>
 b3_dev27	Do you know what happened to my shirt?	I think the dog ate it	That must be a joke.	OK, the dog just mauled it.	Your right my shirt is ruined.	<h>Thankfully it wasn't one of your favorites!!</h>
-a1_dev28	<h>How have you been?</h>
+a1_dev28	<h>How have you been?</h> Pretty good, you?
 a2_dev29	How have you been?	Pretty good, you? 	<h>Not really.  My mother died last month. It's so hard on us all right now.</h>
 a3_dev30	How have you been?	Pretty good, you?	Not really.  My mother died last month. It's so hard on us all right now.	I'm so sorry to hear that!	<h>She had been sick for a while, so it was kind of expected.</h>
 b1_dev31	Is the line to the bathroom really long?	<h>yes the line to the bathroom is long like the Disneyland lines.</h>
 b2_dev32	Is the line to the bathroom really long?	yes the line to the bathroom is long like the Disneyland lines.	Oh, then I will just wait until we get home.	<h>Probably your best option.</h>
 b3_dev33	Is the line to the bathroom really long?	yes the line to the bathroom is long like the Disneyland lines.	Oh, then I will just wait until we get home.	Probably your best option.	Then we probably need to leave now since they never have enough stalls for women.	<h>Okay, let's go. I don't want you to have an accident.</h>
-a1_dev34	<h>What is wrong with you?</h>
+a1_dev34	<h>What is wrong with you?</h> Nothing at all, why?
 a2_dev35	What is wrong with you?	Nothing at all, why? 	<h>You were really mean to the new girl.</h>
 a3_dev36	What is wrong with you?	Nothing at all, why?	You were really mean to the new girl.	She's my step-sister! And she purposely wrecked my shoes last night!	<h>Oh....well then, of course it's alright to be mean to her then.</h>
 b1_dev37	When do you have to be home?	<h>I need to be home by 11pm.</h>
 b2_dev38	When do you have to be home?	I need to be home by 11pm.	I think we can manage that. The movie is over at 10:30.	<h>You think we should bring a blanket?</h>
 b3_dev39	When do you have to be home?	I need to be home by 11pm.	I think we can manage that. The movie is over at 10:30.	You think we should bring a blanket?	Yeah I think we should! Can you bring one? I don't think I have any at home.	<h>Sure, I will bring the blanket.</h>
-a1_dev40	<h>What made you wake up early?</h>
+a1_dev40	<h>What made you wake up early?</h> I have to go to work.
 a2_dev41	What made you wake up early?	I have to go to work. 	<h>I meant earlier this morning because I could hear you downstairs coughing.</h>
 a3_dev42	What made you wake up early?	I have to go to work.	I meant earlier this morning because I could hear you downstairs coughing.	Oh, that. I think it was just the fact that the room was light.	<h>If the light wakes you up, you should pull the shades down before you go to sleep every night. You woke me up moving around and coughing.</h>
 b1_dev43	How do we get there?	<h>You can take a right at the next traffic light.</h>
 b2_dev44	How do we get there?	You can take a right at the next traffic light.	OK, what do I do after that?	<h>I'M NOT SURE, LET ME LOOK.</h>
 b3_dev45	How do we get there?	You can take a right at the next traffic light.	OK, what do I do after that?	I'M NOT SURE, LET ME LOOK.	Okay. Hurry up, though, it's green.	<h>I will get back to you. Let me think</h>
-a1_dev46	<h>How much is it for just one?</h>
+a1_dev46	<h>How much is it for just one?</h> You will pay one dollar for one person.
 a2_dev47	How much is it for just one?	You will pay one dollar for one person. 	<h>Do you take cash?</h>
 a3_dev48	How much is it for just one?	You will pay one dollar for one person.	Do you take cash?	It's only a buck so cash is all we accept.	<h>Excellent, that's all I have.</h>
 b1_dev49	You want a shortcut to where exactly ?	<h>From here to the store on 5th.</h>
 b2_dev50	You want a shortcut to where exactly ?	From here to the store on 5th.	The store by the McDonald's on 5th?	<h>Sure. I just need to get to 5th street mainly.</h>
 b3_dev51	You want a shortcut to where exactly ?	From here to the store on 5th.	The store by the McDonald's on 5th?	Sure. I just need to get to 5th street mainly.	Make a left at the next light and go straight ahead for one mile.	<h>Thanks.  You are a lifesaver.</h>
-a1_dev52	<h>How are you feeling?</h>
+a1_dev52	<h>How are you feeling?</h> Better than I was yesterday
 a2_dev53	How are you feeling?	Better than I was yesterday 	<h>Great you will feel even better than that tomorrow.</h>
 a3_dev54	How are you feeling?	Better than I was yesterday	Great you will feel even better than that tomorrow.	When you had the flu you felt better after three days?	<h>No, not that quick. I felt better after four.</h>
 b1_dev55	How do you feel after what happened?	<h>Upset, tired, and in need of a drink.</h>
 b2_dev56	How do you feel after what happened?	Upset, tired, and in need of a drink.	Want company for the drink?	<h>Depends, who is the company going to be?</h>
 b3_dev57	How do you feel after what happened?	Upset, tired, and in need of a drink.	Want company for the drink?	Depends, who is the company going to be?	Well, I was thinking, me. But if you'd rather drink alone, I'd understand.	<h>It's not that I don't value your company, I'd just rather be alone right now.</h>
-a1_dev58	<h>Where can I find it?</h>
+a1_dev58	<h>Where can I find it?</h> IT'S IN THE KITCHEN.
 a2_dev59	Where can I find it?	IT'S IN THE KITCHEN. 	<h>Where in the kitchen?</h>
 a3_dev60	Where can I find it?	IT'S IN THE KITCHEN.	Where in the kitchen?	Where would you think the microwave would be in the kitchen?	<h>Well, I would at least think you had a visible microwave, but I still can't see it!</h>
 b1_dev61	How was your day?	<h>IT WAS NICE.</h>
 b2_dev62	How was your day?	IT WAS NICE.	You're yelling at me again	<h>Oops, sorry. Didn't realize my caps lock was on. It was nice. How about yours?</h>
 b3_dev63	How was your day?	IT WAS NICE.	You're yelling at me again	Oops, sorry. Didn't realize my caps lock was on. It was nice. How about yours?	My day was great!	<h>So, what's going on with Robert?</h>
-a1_dev64	<h>Do you need any other help in setup?</h>
+a1_dev64	<h>Do you need any other help in setup?</h> No, you've covered the procedure very well, thanks.
 a2_dev65	Do you need any other help in setup?	No, you've covered the procedure very well, thanks. 	<h>I'm glad you think that, thanks!</h>
 a3_dev66	Do you need any other help in setup?	No, you've covered the procedure very well, thanks.	I'm glad you think that, thanks!	your welcomr, and thank you for you help/	<h>Let me know if I can assist you further in any way.</h>
 b1_dev67	Do you like going to concerts?	<h>I love them</h>
 b2_dev68	Do you like going to concerts?	I love them	Are you going to one this summer?	<h>Yes, I already have tickets to three.</h>
 b3_dev69	Do you like going to concerts?	I love them	Are you going to one this summer?	Yes, I already have tickets to three.	Wow, you must love music.	<h>Yeah and the amphitheater is only 2 miles from my house.</h>
-a1_dev70	<h>How much will this cost me?</h>
+a1_dev70	<h>How much will this cost me?</h> Just under $100
 a2_dev71	How much will this cost me?	Just under $100 	<h>How much exactly?</h>
 a3_dev72	How much will this cost me?	Just under $100	How much exactly?	It will cost $99.99	<h>Well that is just under a 100 huh.</h>
 b1_dev73	Do you have plans for the weekend?	<h>Yes, I'm going out with friends.</h>
 b2_dev74	Do you have plans for the weekend?	Yes, I'm going out with friends.	May I come with you?	<h>YES WE'D LOVE TO HAVE YOU COME WITH US.</h>
 b3_dev75	Do you have plans for the weekend?	Yes, I'm going out with friends.	May I come with you?	YES WE'D LOVE TO HAVE YOU COME WITH US.	Nice! What time?	<h>We usually meet up at 11 am in Piedmont Park.</h>
-a1_dev76	<h>Could you get me a drink of water please?</h>
+a1_dev76	<h>Could you get me a drink of water please?</h> Absolutely! Would you like lemon?
 a2_dev77	Could you get me a drink of water please?	Absolutely! Would you like lemon? 	<h>I would love lemon.</h>
 a3_dev78	Could you get me a drink of water please?	Absolutely! Would you like lemon?	I would love lemon.	Just a minute, let me find a clean cup.	<h>Thank you! Want to sit down and chat for a bit?</h>
 b1_dev79	How does that make you feel?	<h>Well Paul it makes me feel like a bag of ass!</h>
 b2_dev80	How does that make you feel?	Well Paul it makes me feel like a bag of ass!	That is a very colourful turn of phrase.	<h>I just can't understand why this happened!</h>
 b3_dev81	How does that make you feel?	Well Paul it makes me feel like a bag of ass!	That is a very colourful turn of phrase.	I just can't understand why this happened!	Me either. However, I think you just created my new favorite phrase.	<h>I'll have to charge you for my creativity since this had to happen to me. I'll make you pay, lol.</h>
-a1_dev82	<h>What do you mean?</h>
+a1_dev82	<h>What do you mean?</h> I mean you cannot go.
 a2_dev83	What do you mean?	I mean you cannot go. 	<h>But I really want to.</h>
 a3_dev84	What do you mean?	I mean you cannot go.	But I really want to.	I don't have an extra ticket, sorry.	<h>What if I buy my own ticket?</h>

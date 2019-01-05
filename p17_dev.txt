@@ -1,82 +1,82 @@
-a1_dev1	<h>I have my driver's license.  Do you have yours?</h>
+a1_dev1	<h>I have my driver's license.  Do you have yours?</h>	Of course, it's in my wallet.
 a2_dev2	I have my driver's license.  Do you have yours?	Of course, it's in my wallet.	<h>Ok good. Hopefully they will let us in then.</h>
 a3_dev3	I have my driver's license.  Do you have yours?	Of course, it's in my wallet.	Ok good. Hopefully they will let us in then.	The line looks really long though. Are you sure this is the club you want to go to?	<h>Yes, but if you would rather not wait we can go to a different one.</h>
 b1_dev4	Where are you from?	<h>I hail from Jamaica.</h>
 b2_dev5	Where are you from?	I hail from Jamaica.	Weird. I don't hear any accent.	<h>I went to an American school.</h>
 b3_dev6	Where are you from?	I hail from Jamaica.	Weird. I don't hear any accent.	I went to an American school.	Cool. Where in Jamaica?	<h>I went to school in the capital.</h>
-a1_dev7	<h>Oh, i am so sorry to hear that, why not try to sleep now?</h>
+a1_dev7	<h>Oh, i am so sorry to hear that, why not try to sleep now?</h>	You're right. I need to get some rest.
 a2_dev8	Oh, i am so sorry to hear that, why not try to sleep now?	You're right. I need to get some rest.	<h>Would you like to use our guest room until dinner is ready?</h>
 a3_dev9	Oh, i am so sorry to hear that, why not try to sleep now?	You're right. I need to get some rest.	Would you like to use our guest room until dinner is ready?	That would be amazing.	<h>Go upstairs, first door on the right.</h>
 b1_dev10	How old is your son?	<h>12 next year</h>
 b2_dev11	How old is your son?	12 next year	He will be driving before you know it!	<h>I know! Did you know he wants to start dating already?</h>
 b3_dev12	How old is your son?	12 next year	He will be driving before you know it!	I know! Did you know he wants to start dating already?	That's pretty much what most boys at that age wants to do.	<h>Yeah, but I think it's too soon though.</h>
-a1_dev13	<h>How are you guys doing?</h>
+a1_dev13	<h>How are you guys doing?</h>	We are doing fine, thanks for asking.
 a2_dev14	How are you guys doing?	We are doing fine, thanks for asking.	<h>You're welcome!  You all should come visit sometime!</h>
 a3_dev15	How are you guys doing?	We are doing fine, thanks for asking.	You're welcome!  You all should come visit sometime!	I'd love that! When are you free?	<h>My schedule is pretty full but maybe sometime this summer?</h>
 b1_dev16	Do you think that bugs have souls?	<h>I believe all living things have souls.</h>
 b2_dev17	Do you think that bugs have souls?	I believe all living things have souls.	I do as well	<h>Demon souls, that is.</h>
 b3_dev18	Do you think that bugs have souls?	I believe all living things have souls.	I do as well	Demon souls, that is.	Oh, you silly!	<h>How did we get on this subject anyway?</h>
-a1_dev19	<h>Can I give it a try?</h>
+a1_dev19	<h>Can I give it a try?</h>	No you need a licence.
 a2_dev20	Can I give it a try?	No you need a licence.	<h>What sort of licence?</h>
 a3_dev21	Can I give it a try?	No you need a licence.	What sort of licence?	A fishing license.	<h>How do I go about getting he license today so I can try it?</h>
 b1_dev22	Whose turn is it?	<h>It's your turn</h>
 b2_dev23	Whose turn is it?	It's your turn	How was your day?	<h>It was horrible.</h>
 b3_dev24	Whose turn is it?	It's your turn	How was your day?	It was horrible.	Oh no! Tell me what happened!	<h>don't feel like discussing</h>
-a1_dev25	<h>Where are you from?</h>
+a1_dev25	<h>Where are you from?</h>	I'm originally from Minneapolis, Minnesota.
 a2_dev26	Where are you from?	I'm originally from Minneapolis, Minnesota.	<h>Why did you move from there?</h>
 a3_dev27	Where are you from?	I'm originally from Minneapolis, Minnesota.	Why did you move from there?	I went off to college. Couldn't pass up a basketball scholarship.	<h>That's a shame. What do you do for a living now?</h>
 b1_dev28	Is there something on my back?	<h>It's a spider!</h>
 b2_dev29	Is there something on my back?	It's a spider!	No!  Get it off!!!!	<h>No I don't want to touch it!</h>
 b3_dev30	Is there something on my back?	It's a spider!	No!  Get it off!!!!	No I don't want to touch it!	Grab that magazine and use it!	<h>YOU grab the magazine and use it yourself!</h>
-a1_dev31	<h>Where did you go?</h>
+a1_dev31	<h>Where did you go?</h>	Sorry, I just went to run some errands and pick up dinner. Were you worried?
 a2_dev32	Where did you go?	Sorry, I just went to run some errands and pick up dinner. Were you worried?	<h>Yes I was. I thought you got kidnapped.</h>
 a3_dev33	Where did you go?	Sorry, I just went to run some errands and pick up dinner. Were you worried?	Yes I was. I thought you got kidnapped.	Yep, I got kidnapped and now I'm back. Anyway, ready to eat?	<h>Your cynical remarks will get you nowhere.</h>
 b1_dev34	What can I take for the pain?	<h>Take 2 200 mg ibuprofen every four hours, if that isn't enough, you can take up to 800 milligrams of ibuprofen every four hours.</h>
 b2_dev35	What can I take for the pain?	Take 2 200 mg ibuprofen every four hours, if that isn't enough, you can take up to 800 milligrams of ibuprofen every four hours.	Okay, thank you so much Doctor	<h>You can call me in the morning if it's not better.</h>
 b3_dev36	What can I take for the pain?	Take 2 200 mg ibuprofen every four hours, if that isn't enough, you can take up to 800 milligrams of ibuprofen every four hours.	Okay, thank you so much Doctor	You can call me in the morning if it's not better.	What should I call you? Surely not Shirley.	<h>You can call me bob</h>
-a1_dev37	<h>Are you going to the baby shower?</h>
+a1_dev37	<h>Are you going to the baby shower?</h>	No, I can't make it.
 a2_dev38	Are you going to the baby shower?	No, I can't make it.	<h>Why? Do you have some other important plans?</h>
 a3_dev39	Are you going to the baby shower?	No, I can't make it.	Why? Do you have some other important plans?	Actually, I do. I'm going in for liposuction.	<h>Can't you reschedule that?</h>
 b1_dev40	How can you tell when someone is lying to you?	<h>If they avoid looking in your eyes.</h>
 b2_dev41	How can you tell when someone is lying to you?	If they avoid looking in your eyes.	Can you tell if I'm lying to you right now when I say I value your friendship?	<h>I think you're lying for sure.</h>
 b3_dev42	How can you tell when someone is lying to you?	If they avoid looking in your eyes.	Can you tell if I'm lying to you right now when I say I value your friendship?	I think you're lying for sure.	yeah... you suck as a lie detector	<h>Fine, you are my best friend.</h>
-a1_dev43	<h>Where is the bathroom?</h>
+a1_dev43	<h>Where is the bathroom?</h>	Over in the back corner
 a2_dev44	Where is the bathroom?	Over in the back corner	<h>That's a potted plant</h>
 a3_dev45	Where is the bathroom?	Over in the back corner	That's a potted plant	No, there's the bathroom door behind the plant!	<h>You mean I have to go around that plant to get to the bathroom? That plant's HUGE!</h>
 b1_dev46	I can't really respond by text can you call me instead?	<h>I will call you in some minutes, okay?</h>
 b2_dev47	I can't really respond by text can you call me instead?	I will call you in some minutes, okay?	OK - I'll wait for your call.	<h>Talk to you soon.</h>
 b3_dev48	I can't really respond by text can you call me instead?	I will call you in some minutes, okay?	OK - I'll wait for your call.	Talk to you soon.	Hey, so, what's up?	<h>Uh, I was wondering why you couldn't respond by text?</h>
-a1_dev49	<h>Are we having lunch soon?</h>
+a1_dev49	<h>Are we having lunch soon?</h>	YES, JUST A FEW MINUTES.
 a2_dev50	Are we having lunch soon?	YES, JUST A FEW MINUTES.	<h>I am starving to death over here!</h>
 a3_dev51	Are we having lunch soon?	YES, JUST A FEW MINUTES.	I am starving to death over here!	I seriously doubt that!	<h>I haven't eaten in two days!</h>
 b1_dev52	ARE YOU EXCITED ABOUT YOUR NEW CAREER?	<h>Yes. I finally found a job I really want to do.</h>
 b2_dev53	ARE YOU EXCITED ABOUT YOUR NEW CAREER?	Yes. I finally found a job I really want to do.	That's wonderful! What is it?  Oh, and sorry for SHOUTING earlier.  Apparently I need to learn some manners!	<h>Thanks!  I'm now the principal at a small charter school focused on integrating coding and technology into all aspects of the curriculum. It's going to be groundbreaking!</h>
 b3_dev54	ARE YOU EXCITED ABOUT YOUR NEW CAREER?	Yes. I finally found a job I really want to do.	That's wonderful! What is it?  Oh, and sorry for SHOUTING earlier.  Apparently I need to learn some manners!	Thanks!  I'm now the principal at a small charter school focused on integrating coding and technology into all aspects of the curriculum. It's going to be groundbreaking!	Really,  That sounds really really awesome	<h>Yeah, I'm so EXCITED!</h>
-a1_dev55	<h>Can we go to the park?</h>
+a1_dev55	<h>Can we go to the park?</h>	what can we do in the park?
 a2_dev56	Can we go to the park?	what can we do in the park?	<h>Swing and talk like we used to.</h>
 a3_dev57	Can we go to the park?	what can we do in the park?	Swing and talk like we used to.	That sounds awfully nostalgic, let's get ice cream first like old times.	<h>Oh yes, that sounds nice.</h>
 b1_dev58	Is there any news yet?	<h>No news yet</h>
 b2_dev59	Is there any news yet?	No news yet	Will you text me if there is?	<h>As soon as I hear anything.</h>
 b3_dev60	Is there any news yet?	No news yet	Will you text me if there is?	As soon as I hear anything.	I am worried if she is alright	<h>i will let you know once i hear anything.</h>
-a1_dev61	<h>did she pee her pants?</h>
+a1_dev61	<h>did she pee her pants?</h>	I think she must have.
 a2_dev62	did she pee her pants?	I think she must have.	<h>She must be so embarassed.</h>
 a3_dev63	did she pee her pants?	I think she must have.	She must be so embarassed.	She doesn't look embarrassed.	<h>Well, she's only two years old!</h>
 b1_dev64	What would you like to drink?	<h>A gin and tonic, please.</h>
 b2_dev65	What would you like to drink?	A gin and tonic, please.	Two thirds gin and one third tonic, like usual?	<h>That sounds perfect, thanks!</h>
 b3_dev66	What would you like to drink?	A gin and tonic, please.	Two thirds gin and one third tonic, like usual?	That sounds perfect, thanks!	Here you go; enjoy.	<h>That was wonderful, thank you.</h>
-a1_dev67	<h>What is your name?</h>
+a1_dev67	<h>What is your name?</h>	My name is Al. What's yours?
 a2_dev68	What is your name?	My name is Al. What's yours?	<h>My name is Maria. I was named after my grandma.</h>
 a3_dev69	What is your name?	My name is Al. What's yours?	My name is Maria. I was named after my grandma.	WHO DO YOU THINK I AM NAMED AFTER?	<h>Probably Al Bundy.  Why are you shouting?</h>
 b1_dev70	When did Scott get home?	<h>AT 1:00 PM</h>
 b2_dev71	When did Scott get home?	AT 1:00 PM	Is that his usual time?	<h>No, but he got stuck at the office.</h>
 b3_dev72	When did Scott get home?	AT 1:00 PM	Is that his usual time?	No, but he got stuck at the office.	Yeah, that happens.	<h>I hate being done late like that.</h>
-a1_dev73	<h>How is she going to get there?</h>
+a1_dev73	<h>How is she going to get there?</h>	I don't know
 a2_dev74	How is she going to get there?	I don't know	<h>Did you offer to drive her?</h>
 a3_dev75	How is she going to get there?	I don't know	Did you offer to drive her?	No, she's far too mean for me to spend time with her like that.	<h>Then why did you invite her in the first place?</h>
 b1_dev76	Can you fix the computer for me?	<h>yes I can</h>
 b2_dev77	Can you fix the computer for me?	yes I can	It gave me the blue screen of death after downloading a few games.	<h>Ah, I'm sorry. I'll try to make that better.</h>
 b3_dev78	Can you fix the computer for me?	yes I can	It gave me the blue screen of death after downloading a few games.	Ah, I'm sorry. I'll try to make that better.	All right, please do.	<h>Were there any messages before the blue screen?</h>
-a1_dev79	<h>What do you want to do?</h>
+a1_dev79	<h>What do you want to do?</h>	I would like to go to the movies.
 a2_dev80	What do you want to do?	I would like to go to the movies.	<h>Awesome!  I'll go bring the car around!</h>
 a3_dev81	What do you want to do?	I would like to go to the movies.	Awesome!  I'll go bring the car around!	See you soon then!	<h>Think of what you want to watch when we get there.</h>
 b1_dev82	Where are you from?	<h>I'm from America.</h>
