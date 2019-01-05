@@ -221,6 +221,7 @@ public class TextDisplayTrial3 extends Application {
 
 	int state = 0;
 	File promptFile;
+	File practiceFile = new File("practice.txt");
 	TextField sNum;
 	BorderPane screen;
 	Recorder[] listOfRecorders = new Recorder[4];
@@ -340,6 +341,7 @@ public class TextDisplayTrial3 extends Application {
 			
 			state = 1;
 			taskNum = 0;
+			scanMe(practiceFile);
 			scanMe(promptFile);
 			totalTasks = allTasks.size();
 			setupFileSystem(partID, sNum, cond);
@@ -449,10 +451,12 @@ public class TextDisplayTrial3 extends Application {
 	 * I changed the format of the definition files. I thought the <br> were kind of redundant. Each sentence in a prompt is just tab delimited for each speaker. Each speaker
 	 * is its own element in an ArrayList (the tasks can be several sizes) the whole prompt is then added to allTasks.
 	 */
-	private void scanMe(File promptFileName) {
-		ArrayList<ArrayList<String>> tempAllTasks = new ArrayList<ArrayList<String>>();
+	private void scanMe(File promptFile) {
+		if (allTasks == null) {
+			allTasks = new ArrayList<ArrayList<String>>();
+		}
 		
-		try (Scanner scan = new Scanner(promptFileName)) {
+		try (Scanner scan = new Scanner(promptFile)) {
 			while (scan.hasNext()) {
 				Scanner lineScanner = new Scanner(scan.nextLine());
 				lineScanner.useDelimiter("\t");
@@ -462,14 +466,13 @@ public class TextDisplayTrial3 extends Application {
 					parts.add(lineScanner.next());
 				}
 				
-				tempAllTasks.add(parts);
+				allTasks.add(parts);
 				lineScanner.close();
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		
-		allTasks = tempAllTasks;
 	}
 	
 	public GridPane prompt() {
