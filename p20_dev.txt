@@ -1,84 +1,84 @@
 b1_dev1	How much homework do you have?	<h>None. I'm 42 years old. What a bizarre question.</h>
 b2_dev2	How much homework do you have?	None. I'm 42 years old. What a bizarre question.	I wasn't talking to you. Go away.	<h>Fine. No need to be rude.</h>
 b3_dev3	How much homework do you have?	None. I'm 42 years old. What a bizarre question.	I wasn't talking to you. Go away.	Fine. No need to be rude.	If you don't like my attitude take a hike	<h>No, you take a hike. This is my house!</h>
-a1_dev4	<h>Where is the library?</h> On the corner of Main and Poplar
+a1_dev4	<h>Where is the library?</h>
 a2_dev5	Where is the library?	On the corner of Main and Poplar 	<h>Do you know the hours?</h>
 a3_dev6	Where is the library?	On the corner of Main and Poplar	Do you know the hours?	I believe it's open 9-5 during the week.	<h>Do you go there often?</h>
 b1_dev7	What's your kid been up to lately?	<h>That is none of your business.</h>
 b2_dev8	What's your kid been up to lately?	That is none of your business.	No need to be so rude!	<h>I just  get tired of people asking .</h>
 b3_dev9	What's your kid been up to lately?	That is none of your business.	No need to be so rude!	I just  get tired of people asking .	Better to be asked than for people not to care!	<h>Not when asking becomes conversations i don't care for or have time to have.</h>
-a1_dev10	<h>What movie was she in?</h> She was in Gone with the Wind
+a1_dev10	<h>What movie was she in?</h>
 a2_dev11	What movie was she in?	She was in Gone with the Wind 	<h>I knew I recognized her.</h>
 a3_dev12	What movie was she in?	She was in Gone with the Wind	I knew I recognized her.	DO YOU KNOW WHAT OTHER MOVIES SHE WAS IN?	<h>Um...I think maybe that movie about breakfast somewhere.</h>
 b1_dev13	Did you buy a new coat?	<h>Thank you for noticing. Do you like it?</h>
 b2_dev14	Did you buy a new coat?	Thank you for noticing. Do you like it?	How could one not notice that?  You can see it from the moon.	<h>Is that good or bad?</h>
 b3_dev15	Did you buy a new coat?	Thank you for noticing. Do you like it?	How could one not notice that?  You can see it from the moon.	Is that good or bad?	Well, that depends on how you look at it.	<h>Well I love it</h>
-a1_dev16	<h>Why is the dog eating bubble-gum?</h> He is being a very naughty boy!
+a1_dev16	<h>Why is the dog eating bubble-gum?</h>
 a2_dev17	Why is the dog eating bubble-gum?	He is being a very naughty boy! 	<h>I think the naughty boy is whoever left gum laying around for the poor dog to find and eat.</h>
 a3_dev18	Why is the dog eating bubble-gum?	He is being a very naughty boy!	I think the naughty boy is whoever left gum laying around for the poor dog to find and eat.	Or an innocent boy who made a mistake.	<h>Either way, someone take the gum from the dog.</h>
 b1_dev19	Will I get to see your brother?	<h>If he is home</h>
 b2_dev20	Will I get to see your brother?	If he is home	Does he go out much?	<h>He is gone most of the time, he is really busy.</h>
 b3_dev21	Will I get to see your brother?	If he is home	Does he go out much?	He is gone most of the time, he is really busy.	What does your brother do to keep him so busy?	<h>he works a lot</h>
-a1_dev22	<h>Where is your restroom?</h> Around that corner.
+a1_dev22	<h>Where is your restroom?</h>
 a2_dev23	Where is your restroom?	Around that corner. 	<h>Which corner, the one to the right or left?</h>
 a3_dev24	Where is your restroom?	Around that corner.	Which corner, the one to the right or left?	The one on the right	<h>Okay, thank you!</h>
 b1_dev25	What kind of music do you like?	<h>Mostly death metal.</h>
 b2_dev26	What kind of music do you like?	Mostly death metal.	Cool, what bands do you listen to?	<h>I love the Dresden Dolls.</h>
 b3_dev27	What kind of music do you like?	Mostly death metal.	Cool, what bands do you listen to?	I love the Dresden Dolls.	Aren't they a group for old ladies?	<h>Punk rock old ladies, maybe!</h>
-a1_dev28	<h>Who is going to win the Presidential elections?</h> I really think Hillary has a chance.
+a1_dev28	<h>Who is going to win the Presidential elections?</h>
 a2_dev29	Who is going to win the Presidential elections?	I really think Hillary has a chance. 	<h>Any candidate but Trump is fine with me at this point.</h>
 a3_dev30	Who is going to win the Presidential elections?	I really think Hillary has a chance.	Any candidate but Trump is fine with me at this point.	Don't throw away your vote.	<h>I won't- I just said I wasn't voting for Trump. I am going to recuse myself from voting for him because I might be biased due to taking a Spanish course in high school.</h>
 b1_dev31	Do you have my email ID?	<h>YES, I DO.</h>
 b2_dev32	Do you have my email ID?	YES, I DO.	WHY ARE YOU YELLING?	<h>I'm sorry, I forgot caps lock was on.</h>
 b3_dev33	Do you have my email ID?	YES, I DO.	WHY ARE YOU YELLING?	I'm sorry, I forgot caps lock was on.	Do you remember my password?	<h>No, you should remember your own passwords!</h>
-a1_dev34	<h>Can you call my son?</h> I need his phone number first.
+a1_dev34	<h>Can you call my son?</h>
 a2_dev35	Can you call my son?	I need his phone number first. 	<h>So you're saying you can't?</h>
 a3_dev36	Can you call my son?	I need his phone number first.	So you're saying you can't?	That's exactly what I am saying. Why don't you call your son?	<h>He won't answer my calls.</h>
 b1_dev37	Where can I purchase this product?	<h>You can purchase it at home depot.</h>
 b2_dev38	Where can I purchase this product?	You can purchase it at home depot.	I always get lost in that store.	<h>Maybe you could ask a sales associate to help you find it then.</h>
 b3_dev39	Where can I purchase this product?	You can purchase it at home depot.	I always get lost in that store.	Maybe you could ask a sales associate to help you find it then.	That seems to be what always happens to me.	<h>And do they help you?</h>
-a1_dev40	<h>May I call you sometime?</h> Sure. Do you have my number?
+a1_dev40	<h>May I call you sometime?</h>
 a2_dev41	May I call you sometime?	Sure. Do you have my number? 	<h>I sure do!  I have it saved in my phone.</h>
 a3_dev42	May I call you sometime?	Sure. Do you have my number?	I sure do!  I have it saved in my phone.	I thought so.	<h>I hope we can have another date really soon.</h>
 b1_dev43	How was your day at work?	<h>It was cool today.</h>
 b2_dev44	How was your day at work?	It was cool today.	What were you working on?	<h>Mind your own business.</h>
 b3_dev45	How was your day at work?	It was cool today.	What were you working on?	Mind your own business.	You must have had a bad day to be so grouchy!	<h>Don't get me started...</h>
-a1_dev46	<h>Can you do me a favor?</h> I'LL TRY, WHAT IS IT?
+a1_dev46	<h>Can you do me a favor?</h>
 a2_dev47	Can you do me a favor?	I'LL TRY, WHAT IS IT? 	<h>Taste this milk and see if it's bad?</h>
 a3_dev48	Can you do me a favor?	I'LL TRY, WHAT IS IT?	Taste this milk and see if it's bad?	No way I'm going to taste that milk!	<h>why don't you like it</h>
 b1_dev49	Do you want to go grocery shopping?	<h>Yes what time?</h>
 b2_dev50	Do you want to go grocery shopping?	Yes what time?	whenever is best for you.	<h>HOW ABOUT WE LEAVE IN 15 MINUTES?</h>
 b3_dev51	Do you want to go grocery shopping?	Yes what time?	whenever is best for you.	HOW ABOUT WE LEAVE IN 15 MINUTES?	we can leave in 15 minutes.	<h>Great, see you out front in 15.</h>
-a1_dev52	<h>Have you been to Canada?</h> Yes, I went there to go moose hunting once. It was just aboot the most fun I've ever had.
+a1_dev52	<h>Have you been to Canada?</h>
 a2_dev53	Have you been to Canada?	Yes, I went there to go moose hunting once. It was just aboot the most fun I've ever had. 	<h>How did you learn to moose hunt?</h>
 a3_dev54	Have you been to Canada?	Yes, I went there to go moose hunting once. It was just aboot the most fun I've ever had.	How did you learn to moose hunt?	By going to Canada.  After hockey, it's their most popular sport.	<h>How many people in Canada do you think love hockey and hunt moose?</h>
 b1_dev55	What time would you like me to come?	<h>How about 8:00?</h>
 b2_dev56	What time would you like me to come?	How about 8:00?	That sounds sorta perfect.	<h>You're sorta perfect.</h>
 b3_dev57	What time would you like me to come?	How about 8:00?	That sounds sorta perfect.	You're sorta perfect.	Oh? Is that where we're going with this?	<h>Is that where you want it to go?</h>
-a1_dev58	<h>Can you hang my clothes please?</h> Yes, I can.
+a1_dev58	<h>Can you hang my clothes please?</h>
 a2_dev59	Can you hang my clothes please?	Yes, I can. 	<h>Great, Thank you!</h>
 a3_dev60	Can you hang my clothes please?	Yes, I can.	Great, Thank you!	Do you have more clothes to wash?	<h>No, just the jumbo load I did earlier.</h>
 b1_dev61	Did the phone ring?	<h>Yeah it was a wrong number</h>
 b2_dev62	Did the phone ring?	Yeah it was a wrong number	Was it the hotline bling?	<h>No some guy with an accent was asking me if my refrigerator was running.</h>
 b3_dev63	Did the phone ring?	Yeah it was a wrong number	Was it the hotline bling?	No some guy with an accent was asking me if my refrigerator was running.	Sure it was.	<h>Are you doubting me? You don't know me! You can't judge me! YOU'RE NOT MY MOTHER!</h>
-a1_dev64	<h>I am busy at the moment, can we talk later?</h> Yeah just call me then.
+a1_dev64	<h>I am busy at the moment, can we talk later?</h>
 a2_dev65	I am busy at the moment, can we talk later?	Yeah just call me then. 	<h>Is 9.00pm ok?</h>
 a3_dev66	I am busy at the moment, can we talk later?	Yeah just call me then.	Is 9.00pm ok?	9:00pm should be fine.	<h>Are your kids in bed at that time?</h>
 b1_dev67	Can you help me?	<h>Depends on if you're in need of sexual healing or not.</h>
 b2_dev68	Can you help me?	Depends on if you're in need of sexual healing or not.	Um, I think I'll pass.  You sound like a creeper.	<h>I'm sorry that you can't recognize the special skills that I offer.</h>
 b3_dev69	Can you help me?	Depends on if you're in need of sexual healing or not.	Um, I think I'll pass.  You sound like a creeper.	I'm sorry that you can't recognize the special skills that I offer.	And that would be why you are single.	<h>Single handed, unfortunately.</h>
-a1_dev70	<h>Do you know where my keys are?</h> Yeah, you left them in your jacket pocket.
+a1_dev70	<h>Do you know where my keys are?</h>
 a2_dev71	Do you know where my keys are?	Yeah, you left them in your jacket pocket. 	<h>Oh no, the jacket that just went into the washing machine?</h>
 a3_dev72	Do you know where my keys are?	Yeah, you left them in your jacket pocket.	Oh no, the jacket that just went into the washing machine?	Uh oh. Yes, that's the one, unfortunately.	<h>Ahh, ok. I will have to fish them out.</h>
 b1_dev73	Do you think the Crocodile Hunter got a little too close and comfortable with those animals?	<h>I don't know - they are wild animals, after all.</h>
 b2_dev74	Do you think the Crocodile Hunter got a little too close and comfortable with those animals?	I don't know - they are wild animals, after all.	That is a good point. He was not scared at all.	<h>I think it  was just a  freak thing that  killed  him .</h>
 b3_dev75	Do you think the Crocodile Hunter got a little too close and comfortable with those animals?	I don't know - they are wild animals, after all.	That is a good point. He was not scared at all.	I think it  was just a  freak thing that  killed  him .	Yes, you're probably right	<h>It was very sad.</h>
-a1_dev76	<h>Did you receive the check that I sent to you in the mail ?</h> Yes, but I did not appreciate what you wrote in the memo field of the check!
+a1_dev76	<h>Did you receive the check that I sent to you in the mail ?</h>
 a2_dev77	Did you receive the check that I sent to you in the mail ?	Yes, but I did not appreciate what you wrote in the memo field of the check! 	<h>I was just kidding around.</h>
 a3_dev78	Did you receive the check that I sent to you in the mail ?	Yes, but I did not appreciate what you wrote in the memo field of the check!	I was just kidding around.	Well I didn't find it funny !	<h>It'll keep you smiling while the check bounces.</h>
 b1_dev79	Have we met before?	<h>I can't believe you don't remember me! I'm so upset.</h>
 b2_dev80	Have we met before?	I can't believe you don't remember me! I'm so upset.	Well I meet so many people on a day to day basis it's hard to keep up sometimes.	<h>We went on a couple dates a few years back.</h>
 b3_dev81	Have we met before?	I can't believe you don't remember me! I'm so upset.	Well I meet so many people on a day to day basis it's hard to keep up sometimes.	We went on a couple dates a few years back.	I didn't realize that was before my accident. I fell off a rock face when mountain climbing and lost a good portion of my memory. What can you tell me about these dates?	<h>you are kidding right?</h>
-a1_dev82	<h>Is there any food left?</h> A little bit, but we should really go grocery shopping sometime today.
+a1_dev82	<h>Is there any food left?</h>
 a2_dev83	Is there any food left?	A little bit, but we should really go grocery shopping sometime today. 	<h>I hate going to the grocery store on a Saturday.</h>
 a3_dev84	Is there any food left?	A little bit, but we should really go grocery shopping sometime today.	I hate going to the grocery store on a Saturday.	Sometimes we can't avoid that which we hate.	<h>I guess we still need to eat.</h>

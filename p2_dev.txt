@@ -1,84 +1,84 @@
 b1_dev1	Do you remember my password?	<h>No, remember your own passwords. Geez.</h>
 b2_dev2	Do you remember my password?	No, remember your own passwords. Geez.	You don't have to be so hateful.	<h>I'm not, why would I know your password?</h>
 b3_dev3	Do you remember my password?	No, remember your own passwords. Geez.	You don't have to be so hateful.	I'm not, why would I know your password?	I told you what it was five minutes ago!	<h>Well I wasn't paying attention, sorry.</h>
-a1_dev4	<h>Where are you going by the way?</h> That is none of your concern, I do not know you.
+a1_dev4	<h>Where are you going by the way?</h>
 a2_dev5	Where are you going by the way?	That is none of your concern, I do not know you. 	<h>oh, sorry. I thought you were someone else.</h>
 a3_dev6	Where are you going by the way?	That is none of your concern, I do not know you.	oh, sorry. I thought you were someone else.	I hope you find that someone to be extremely attractive.	<h>Anyone would be more attractive than you!</h>
 b1_dev7	How high can you jump?	<h>I can't jump very high at all.</h>
 b2_dev8	How high can you jump?	I can't jump very high at all.	Neither can I really.	<h>I used to be able to , until I got old.</h>
 b3_dev9	How high can you jump?	I can't jump very high at all.	Neither can I really.	I used to be able to , until I got old.	How old ARE you?	<h>Just turned 8 and a half last week!</h>
-a1_dev10	<h>Would you please mail these letters for me?</h> I'll go to the post office on my lunch break.
+a1_dev10	<h>Would you please mail these letters for me?</h>
 a2_dev11	Would you please mail these letters for me?	I'll go to the post office on my lunch break. 	<h>Are you sure? The queue can be really long at lunchtime.</h>
 a3_dev12	Would you please mail these letters for me?	I'll go to the post office on my lunch break.	Are you sure? The queue can be really long at lunchtime.	That's a good point, I'll drop them in the postbox on my way home from work.	<h>Oh, could you pick up dinner on the way home too?</h>
 b1_dev13	What is your dog called?	<h>Drogon the conquerer</h>
 b2_dev14	What is your dog called?	Drogon the conquerer	Mine is called Little Bit.	<h>That's a cute name! Is it short?</h>
 b3_dev15	What is your dog called?	Drogon the conquerer	Mine is called Little Bit.	That's a cute name! Is it short?	Actually he's a giant pit bill. We call him Little Bit because when he was a puppy he bit everything and everyone.	<h>We call mine dragon the conquerer becaue he is 5 pounds but thinks he can take on all comers.</h>
-a1_dev16	<h>Can I borrow your computer?</h> No, I need it for work.
+a1_dev16	<h>Can I borrow your computer?</h>
 a2_dev17	Can I borrow your computer?	No, I need it for work. 	<h>Please, I'll pay you.</h>
 a3_dev18	Can I borrow your computer?	No, I need it for work.	Please, I'll pay you.	Just buy your own computer. I need mine.	<h>But I'm totally broke, maybe I'll steal one from school!</h>
 b1_dev19	Is there a pharmacy nearby?	<h>Yes, on Main Street.</h>
 b2_dev20	Is there a pharmacy nearby?	Yes, on Main Street.	Oh great, thank you.	<h>What do you need?</h>
 b3_dev21	Is there a pharmacy nearby?	Yes, on Main Street.	Oh great, thank you.	What do you need?	Just a few essentials and I don't want to drive too far.	<h>you can order online if you don't want to drive.</h>
-a1_dev22	<h>Can we go to the park?</h> YES, THIS EVENING.
+a1_dev22	<h>Can we go to the park?</h>
 a2_dev23	Can we go to the park?	YES, THIS EVENING. 	<h>What time exactly?</h>
 a3_dev24	Can we go to the park?	YES, THIS EVENING.	What time exactly?	Does six work for you?	<h>Yea, I think I can make it at six.</h>
 b1_dev25	Where is the hotel?	<h>It is in downtown right by the convention center.</h>
 b2_dev26	Where is the hotel?	It is in downtown right by the convention center.	Oh, cool. Thanks!	<h>Are you going to book it online?</h>
 b3_dev27	Where is the hotel?	It is in downtown right by the convention center.	Oh, cool. Thanks!	Are you going to book it online?	Yes, I'm going to do that right now.	<h>Book two rooms..</h>
-a1_dev28	<h>Can you set my alarm clock?</h> I will set it for 8 o clock.
+a1_dev28	<h>Can you set my alarm clock?</h>
 a2_dev29	Can you set my alarm clock?	I will set it for 8 o clock. 	<h>Can you set it for 7:30 instead?</h>
 a3_dev30	Can you set my alarm clock?	I will set it for 8 o clock.	Can you set it for 7:30 instead?	Is that your final answer?	<h>Yes because I don't want to oversleep.</h>
 b1_dev31	Can I borrow a pencil?	<h>Sure, but you will need to sharpen it.</h>
 b2_dev32	Can I borrow a pencil?	Sure, but you will need to sharpen it.	You don't have a mechanical pencil?	<h>No, the lead always breaks off those.</h>
 b3_dev33	Can I borrow a pencil?	Sure, but you will need to sharpen it.	You don't have a mechanical pencil?	No, the lead always breaks off those.	Do you have a sharpener I can borrow as well?	<h>Ironically, my sharpener broke last week and I haven't had a chance to buy a new one.</h>
-a1_dev34	<h>What are your plans for later?</h> I think I'm just going to stay in and watch a movie.
+a1_dev34	<h>What are your plans for later?</h>
 a2_dev35	What are your plans for later?	I think I'm just going to stay in and watch a movie. 	<h>Sounds good. What movie are you going to watch?</h>
 a3_dev36	What are your plans for later?	I think I'm just going to stay in and watch a movie.	Sounds good. What movie are you going to watch?	I think I'll watch Harry Potter.	<h>Have you read the Harry Potter books?</h>
 b1_dev37	Where are you going?	<h>I'm going home.</h>
 b2_dev38	Where are you going?	I'm going home.	I WOULD LIKE TO GO WITH YOU.	<h>Sure you can come along.</h>
 b3_dev39	Where are you going?	I'm going home.	I WOULD LIKE TO GO WITH YOU.	Sure you can come along.	What will you do when you get home?	<h>I don't know yet, probably watch TV.</h>
-a1_dev40	<h>Did you run out of minutes on your phone again?</h> Yes,I find it difficult to keep track of my credit balance.
+a1_dev40	<h>Did you run out of minutes on your phone again?</h>
 a2_dev41	Did you run out of minutes on your phone again?	Yes,I find it difficult to keep track of my credit balance. 	<h>You should get a plan with more minutes.</h>
 a3_dev42	Did you run out of minutes on your phone again?	Yes,I find it difficult to keep track of my credit balance.	You should get a plan with more minutes.	First I need a job with more paycheck.	<h>Welcome to my life!</h>
 b1_dev43	What have you done today?	<h>I woke up and ate breakfast.</h>
 b2_dev44	What have you done today?	I woke up and ate breakfast.	What did you have?	<h>Bacon and eggs.  You?</h>
 b3_dev45	What have you done today?	I woke up and ate breakfast.	What did you have?	Bacon and eggs.  You?	I had a poached egg on wheat toast and a banana.	<h>Sounds so filling</h>
-a1_dev46	<h>Are out of your mind?</h> At this point, I think I may be.
+a1_dev46	<h>Are out of your mind?</h>
 a2_dev47	Are out of your mind?	At this point, I think I may be. 	<h>Has this been going on long?</h>
 a3_dev48	Are out of your mind?	At this point, I think I may be.	Has this been going on long?	Since the daffodils started telling me their secrets.	<h>Maybe we need to have you take a long rest. Vacation time!</h>
 b1_dev49	Do you think I will need to wear a coat when I go outside?	<h>Yes, because if you don't you'll die.</h>
 b2_dev50	Do you think I will need to wear a coat when I go outside?	Yes, because if you don't you'll die.	Why, What's out there?	<h>The cold  the cold is  outside .</h>
 b3_dev51	Do you think I will need to wear a coat when I go outside?	Yes, because if you don't you'll die.	Why, What's out there?	The cold  the cold is  outside .	Well, yeah, but, is it really that bad today?	<h>It is really that cold</h>
-a1_dev52	<h>What is the time?</h> It is 1:48p.m.
+a1_dev52	<h>What is the time?</h>
 a2_dev53	What is the time?	It is 1:48p.m. 	<h>Did you go to lunch already?</h>
 a3_dev54	What is the time?	It is 1:48p.m.	Did you go to lunch already?	Yes, about an hour ago. But, would you like to go with us tomorrow when we go to the new buffet place?	<h>Absolutely, that sounds like a treat!</h>
 b1_dev55	Was it on this side of the street or the other?	<h>No, it was further down on the next block.</h>
 b2_dev56	Was it on this side of the street or the other?	No, it was further down on the next block.	Let me know when you think we are close.	<h>You'll see a brightly lit sign. You can't miss it.</h>
 b3_dev57	Was it on this side of the street or the other?	No, it was further down on the next block.	Let me know when you think we are close.	You'll see a brightly lit sign. You can't miss it.	You would be surprised at how easy I get lost and will miss the sign.	<h>Oh, there it is. You missed it.</h>
-a1_dev58	<h>May I pet your dog?</h> Sure, she really likes it when you scratch behind her ears.
+a1_dev58	<h>May I pet your dog?</h>
 a2_dev59	May I pet your dog?	Sure, she really likes it when you scratch behind her ears. 	<h>She seems very friendly.</h>
 a3_dev60	May I pet your dog?	Sure, she really likes it when you scratch behind her ears.	She seems very friendly.	She is. She loves kids.	<h>That's good. Some dogs definitely do not.</h>
 b1_dev61	Your next appointment with who ?	<h>It's with my cardiologist.</h>
 b2_dev62	Your next appointment with who ?	It's with my cardiologist.	Is everything okay? That doesn't sound good.	<h>Yeah, no worries, you just got my heart a beating baby!</h>
 b3_dev63	Your next appointment with who ?	It's with my cardiologist.	Is everything okay? That doesn't sound good.	Yeah, no worries, you just got my heart a beating baby!	That's the cheesiest line I've ever heard.	<h>Are you really going to see your cardiologist?</h>
-a1_dev64	<h>What would you like?</h> I'd like a cheeseburger and fries.
+a1_dev64	<h>What would you like?</h>
 a2_dev65	What would you like?	I'd like a cheeseburger and fries. 	<h>Awesome!  Please step to the side and your order will be out in five minutes.</h>
 a3_dev66	What would you like?	I'd like a cheeseburger and fries.	Awesome!  Please step to the side and your order will be out in five minutes.	Excuse me, but I think you forgot to give me change...	<h>You paid with your credit card, sir, there is no change.</h>
 b1_dev67	Have you and I met before?	<h>Yes, many years ago at that crazy bachelor party in Reno.</h>
 b2_dev68	Have you and I met before?	Yes, many years ago at that crazy bachelor party in Reno.	Oh yeah, you were with Kevin...guy with the beard.	<h>Yes! Do you still talk to any of the other guys?</h>
 b3_dev69	Have you and I met before?	Yes, many years ago at that crazy bachelor party in Reno.	Oh yeah, you were with Kevin...guy with the beard.	Yes! Do you still talk to any of the other guys?	Not very often. Most of them have moved away.	<h>I keep in touch with one or two of them but most are in other places and we just never seem to get in touch.</h>
-a1_dev70	<h>What did you get your Mother for Mother's Day?</h> a bouquet of red roses
+a1_dev70	<h>What did you get your Mother for Mother's Day?</h>
 a2_dev71	What did you get your Mother for Mother's Day?	a bouquet of red roses 	<h>I bet she really liked that!</h>
 a3_dev72	What did you get your Mother for Mother's Day?	a bouquet of red roses	I bet she really liked that!	They are her favourite.	<h>Waitaminute, you told me your mother died last year!</h>
 b1_dev73	Would you be interested in this?	<h>Why yes, I would be interested in this book.</h>
 b2_dev74	Would you be interested in this?	Why yes, I would be interested in this book.	What interests you most about this book?	<h>I read a favorable review.</h>
 b3_dev75	Would you be interested in this?	Why yes, I would be interested in this book.	What interests you most about this book?	I read a favorable review.	Are you familiar with the author?	<h>yes i am</h>
-a1_dev76	<h>what did you learn in school today?</h> That people got dysentery and died.
+a1_dev76	<h>what did you learn in school today?</h>
 a2_dev77	what did you learn in school today?	That people got dysentery and died. 	<h>Good thing dysentery isn't common anymore.</h>
 a3_dev78	what did you learn in school today?	That people got dysentery and died.	Good thing dysentery isn't common anymore.	It could always come back.	<h>Well, it's pretty unlikely</h>
 b1_dev79	What church do you attend?	<h>The Methodist church</h>
 b2_dev80	What church do you attend?	The Methodist church	What do you like about that church?	<h>I like that they don't expect me to give them money.</h>
 b3_dev81	What church do you attend?	The Methodist church	What do you like about that church?	I like that they don't expect me to give them money.	You really should tithe at least, though.	<h>I do when I can.</h>
-a1_dev82	<h>Do you feel better?</h> No, I feel worse
+a1_dev82	<h>Do you feel better?</h>
 a2_dev83	Do you feel better?	No, I feel worse 	<h>Do you need anything?</h>
 a3_dev84	Do you feel better?	No, I feel worse	Do you need anything?	Yes, some aspirin please.	<h>I only have Tylenol. Is that OK?</h>

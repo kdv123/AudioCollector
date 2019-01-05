@@ -1,84 +1,84 @@
 b1_dev1	What is on TV?	<h>THE NEW IS ON RIGHT NOW.</h>
 b2_dev2	What is on TV?	THE NEW IS ON RIGHT NOW.	I know you like the news but no need to get upset.	<h>Relax, there's a story about a dog that saved a kid's life, you should take a look for yourself!</h>
 b3_dev3	What is on TV?	THE NEW IS ON RIGHT NOW.	I know you like the news but no need to get upset.	Relax, there's a story about a dog that saved a kid's life, you should take a look for yourself!	Okay. You seem really excitable today.	<h>I'm always excited when the news is on.</h>
-a1_dev4	<h>What is for dinner?</h> Chicken, rice and broccoli.
+a1_dev4	<h>What is for dinner?</h>
 a2_dev5	What is for dinner?	Chicken, rice and broccoli. 	<h>Where's the beef?</h>
 a3_dev6	What is for dinner?	Chicken, rice and broccoli.	Where's the beef?	The beef is at Wendy's but I have no money, unless you are buying?	<h>Sure lets go</h>
 b1_dev7	What is the giant black thing over there?	<h>I don't want to find out.</h>
 b2_dev8	What is the giant black thing over there?	I don't want to find out.	Well one of us has to go check it out, and I killed that spider for you last week, so it's your turn to check it out!	<h>You only killed the spider because I had to get rid of the bat in the attic before that! So it's your turn again!</h>
 b3_dev9	What is the giant black thing over there?	I don't want to find out.	Well one of us has to go check it out, and I killed that spider for you last week, so it's your turn to check it out!	You only killed the spider because I had to get rid of the bat in the attic before that! So it's your turn again!	No that would still make it your turn again.	<h>I'm packing my bags and moving out!</h>
-a1_dev10	<h>Do you want something to eat?</h> Yes, I'm starved.
+a1_dev10	<h>Do you want something to eat?</h>
 a2_dev11	Do you want something to eat?	Yes, I'm starved. 	<h>Me too, let's get pizza!</h>
 a3_dev12	Do you want something to eat?	Yes, I'm starved.	Me too, let's get pizza!	I know a great pizzeria that is not very far away.	<h>I know which one you're talking about. I think they're great, too.</h>
 b1_dev13	Why should I close the window?	<h>You will let in flies.</h>
 b2_dev14	Why should I close the window?	You will let in flies.	Maybe i'd rather have the flies, it's so hot in here!	<h>Just remember that  when they are crawling on you .</h>
 b3_dev15	Why should I close the window?	You will let in flies.	Maybe i'd rather have the flies, it's so hot in here!	Just remember that  when they are crawling on you .	Hey, brilliant idea!  Why don't we buy window screens!	<h>Sounds good!  Let's go to the hardware store right now before it gets any hotter.</h>
-a1_dev16	<h>What would you like?</h> I would love a million dollars please.
+a1_dev16	<h>What would you like?</h>
 a2_dev17	What would you like?	I would love a million dollars please. 	<h>I'd love to give you that but I can't.</h>
 a3_dev18	What would you like?	I would love a million dollars please.	I'd love to give you that but I can't.	That's a real shame.	<h>I don't think so</h>
 b1_dev19	Where is the restroom?	<h>It's on the second floor, right off the mezzanine.</h>
 b2_dev20	Where is the restroom?	It's on the second floor, right off the mezzanine.	ok, can you show me the way?	<h>What...you don't know what a mezzanine is??</h>
 b3_dev21	Where is the restroom?	It's on the second floor, right off the mezzanine.	ok, can you show me the way?	What...you don't know what a mezzanine is??	I do, I just want to make sure.	<h>It's ok to just admit you don't know what a mezzanine is, Mr. Trump.</h>
-a1_dev22	<h>I also like baseball, do you?</h> No much. I prefer football
+a1_dev22	<h>I also like baseball, do you?</h>
 a2_dev23	I also like baseball, do you?	No much. I prefer football 	<h>I like football as well!</h>
 a3_dev24	I also like baseball, do you?	No much. I prefer football	I like football as well!	Baseball does not have enough action to keep me interested.	<h>It's a more cerebral game, that's for sure.</h>
 b1_dev25	What do you do?	<h>I stay at home with my children.</h>
 b2_dev26	What do you do?	I stay at home with my children.	Oh, how old are your children?	<h>Two and four - they sure keep me busy.</h>
 b3_dev27	What do you do?	I stay at home with my children.	Oh, how old are your children?	Two and four - they sure keep me busy.	Sounds like you have your hands full.	<h>I sure do!!!! Do you have any children?</h>
-a1_dev28	<h>What do you want to do?</h> I don't know, what do you want to do?
+a1_dev28	<h>What do you want to do?</h>
 a2_dev29	What do you want to do?	I don't know, what do you want to do? 	<h>I don't know, what do you want to do??</h>
 a3_dev30	What do you want to do?	I don't know, what do you want to do?	I don't know, what do you want to do??	I want to do whatever you want to do.	<h>I have no idea what I want to do.  What do you want to do?</h>
 b1_dev31	Did you watch the football game last night?	<h>No I went to be early</h>
 b2_dev32	Did you watch the football game last night?	No I went to be early	Too bad, it was a great game.	<h>Really? I don't really like watching football.</h>
 b3_dev33	Did you watch the football game last night?	No I went to be early	Too bad, it was a great game.	Really? I don't really like watching football.	Who doesn't like football?	<h>I just don't care for it enough to stay up late.</h>
-a1_dev34	<h>Have you see what the dog was wearing today?</h> no i haven't paid attention to it
+a1_dev34	<h>Have you see what the dog was wearing today?</h>
 a2_dev35	Have you see what the dog was wearing today?	no i haven't paid attention to it 	<h>The dog is wearing clothes, and you couldn't be bothered to notice what clothing the dog is wearing?</h>
 a3_dev36	Have you see what the dog was wearing today?	no i haven't paid attention to it	The dog is wearing clothes, and you couldn't be bothered to notice what clothing the dog is wearing?	Well, I'm feeling quite sleepy today.	<h>You really must be.</h>
 b1_dev37	When will I get to see you again?	<h>MAYBE FOR THE HOLIDAYS.</h>
 b2_dev38	When will I get to see you again?	MAYBE FOR THE HOLIDAYS.	That seems so far away.	<h>OK, how about we video chat then?</h>
 b3_dev39	When will I get to see you again?	MAYBE FOR THE HOLIDAYS.	That seems so far away.	OK, how about we video chat then?	It's not the same, though. Can't you come before?	<h>I will try, but I'm not sure I can get the time off work.</h>
-a1_dev40	<h>Did you plant tomatoes?</h> No, I don't like tomatoes.
+a1_dev40	<h>Did you plant tomatoes?</h>
 a2_dev41	Did you plant tomatoes?	No, I don't like tomatoes. 	<h>What else did you plant?</h>
 a3_dev42	Did you plant tomatoes?	No, I don't like tomatoes.	What else did you plant?	Eggplant, squash and cucumbers.	<h>So, any particular reason for your lack of love for tomatoes?</h>
 b1_dev43	Have you met my husband?	<h>I think so. Kevin, right? With a beard?</h>
 b2_dev44	Have you met my husband?	I think so. Kevin, right? With a beard?	No, Ralph, very bald...hairless actually.	<h>Oh, so who was the bearded guy I saw you with the other day?</h>
 b3_dev45	Have you met my husband?	I think so. Kevin, right? With a beard?	No, Ralph, very bald...hairless actually.	Oh, so who was the bearded guy I saw you with the other day?	You mean my older brother? He was visiting from out of town.	<h>okay, i thought he was your husband</h>
-a1_dev46	<h>Can you select a dress for me?</h> Yeah, do you have any preferences though?
+a1_dev46	<h>Can you select a dress for me?</h>
 a2_dev47	Can you select a dress for me?	Yeah, do you have any preferences though? 	<h>Anything that makes my butt look small.</h>
 a3_dev48	Can you select a dress for me?	Yeah, do you have any preferences though?	Anything that makes my butt look small.	Black is such a thinning color, but I say flaunt it.	<h>I don't know. But I guess I could try something that shows off a little.</h>
 b1_dev49	Can you bring me a magazine?	<h>Which one would you like?</h>
 b2_dev50	Can you bring me a magazine?	Which one would you like?	Something with lots of puzzles in it, please.	<h>Ok, what about the Puzzle Pack 5 magazine with weekly word searches and crossword puzzles?</h>
 b3_dev51	Can you bring me a magazine?	Which one would you like?	Something with lots of puzzles in it, please.	Ok, what about the Puzzle Pack 5 magazine with weekly word searches and crossword puzzles?	Not that one.  I have completed all the puzzles in that magazine.  Puzzle pack 10 please.	<h>Sure, you got it!</h>
-a1_dev52	<h>Where can I get one of those?</h> You can get one at the toy shop on Baker Street.
+a1_dev52	<h>Where can I get one of those?</h>
 a2_dev53	Where can I get one of those?	You can get one at the toy shop on Baker Street. 	<h>Thanks!  Will you take me there?</h>
 a3_dev54	Where can I get one of those?	You can get one at the toy shop on Baker Street.	Thanks!  Will you take me there?	Yes! Are you free tomorrow?	<h>Yes, I am free until evening.</h>
 b1_dev55	What aren't you telling me?	<h>Nothing, I have told you everything I know.</h>
 b2_dev56	What aren't you telling me?	Nothing, I have told you everything I know.	I can tell by your shifty eyes that you're lying!	<h>What are you accusing me of?</h>
 b3_dev57	What aren't you telling me?	Nothing, I have told you everything I know.	I can tell by your shifty eyes that you're lying!	What are you accusing me of?	You are hiding something from me!	<h>No. I swear i'm not!</h>
-a1_dev58	<h>Do you have more than one?</h> I have three total I believe.
+a1_dev58	<h>Do you have more than one?</h>
 a2_dev59	Do you have more than one?	I have three total I believe. 	<h>Sooooo....more than one.</h>
 a3_dev60	Do you have more than one?	I have three total I believe.	Sooooo....more than one.	Wow, you are so perceptive.	<h>I guess I am. So, can you lend me one?</h>
 b1_dev61	Did anyone take out the trash?	<h>No, I forgot to when I left the house. I'll take it out now.</h>
 b2_dev62	Did anyone take out the trash?	No, I forgot to when I left the house. I'll take it out now.	Thanks, I really appreciate it.	<h>We're short on trash bags. Did you pick some up at the store?</h>
 b3_dev63	Did anyone take out the trash?	No, I forgot to when I left the house. I'll take it out now.	Thanks, I really appreciate it.	We're short on trash bags. Did you pick some up at the store?	I did. They are in the pantry.	<h>I can't find them here. Are you sure you put them in the pantry?</h>
-a1_dev64	<h>What time is it?</h> It's 9 o'clock.
+a1_dev64	<h>What time is it?</h>
 a2_dev65	What time is it?	It's 9 o'clock. 	<h>Oh no, I better get home so I can let my dog out.</h>
 a3_dev66	What time is it?	It's 9 o'clock.	Oh no, I better get home so I can let my dog out.	Please drive safely.	<h>Of course I will.</h>
 b1_dev67	Can I pet your dog?	<h>Sure, that's fine!</h>
 b2_dev68	Can I pet your dog?	Sure, that's fine!	What kind of dog is it?	<h>My dog is a bulldog.</h>
 b3_dev69	Can I pet your dog?	Sure, that's fine!	What kind of dog is it?	My dog is a bulldog.	My, your bulldog is so friendly!	<h>Thanks, they get a bad reputation.</h>
-a1_dev70	<h>How was the test?</h> The test was too good.
+a1_dev70	<h>How was the test?</h>
 a2_dev71	How was the test?	The test was too good. 	<h>I think I did pretty well too.</h>
 a3_dev72	How was the test?	The test was too good.	I think I did pretty well too.	I bet I did better than you.	<h>What do you want to bet?</h>
 b1_dev73	Do you like jokes?	<h>Of course I do!  Go ahead, I can tell you have a good one for me - let's hear it.</h>
 b2_dev74	Do you like jokes?	Of course I do!  Go ahead, I can tell you have a good one for me - let's hear it.	I asked if you like jokes, not if you want to hear one.	<h>Now that's disappointing. I was ready to be amused.</h>
 b3_dev75	Do you like jokes?	Of course I do!  Go ahead, I can tell you have a good one for me - let's hear it.	I asked if you like jokes, not if you want to hear one.	Now that's disappointing. I was ready to be amused.	I have many jokes but they aren't appropriate for church.	<h>Is that a joke?</h>
-a1_dev76	<h>Where can we go?</h> We can go to my place
+a1_dev76	<h>Where can we go?</h>
 a2_dev77	Where can we go?	We can go to my place 	<h>Would you like to get drunk?</h>
 a3_dev78	Where can we go?	We can go to my place	Would you like to get drunk?	Not tonight, sorry.	<h>Well, I may have some wine anyway.</h>
 b1_dev79	Can we go to the movie, tomorrow?	<h>Sure, as long as you get all your homework done tonight.</h>
 b2_dev80	Can we go to the movie, tomorrow?	Sure, as long as you get all your homework done tonight.	Sure! Do you want to watch an action movie?	<h>No, I was thinking a romantic comedy. I know you love those.</h>
 b3_dev81	Can we go to the movie, tomorrow?	Sure, as long as you get all your homework done tonight.	Sure! Do you want to watch an action movie?	No, I was thinking a romantic comedy. I know you love those.	I do but not as much as i love you.	<h>That is very sweet, I love you too.</h>
-a1_dev82	<h>How is your mother doing?</h> My mom's well, thanks for asking!
+a1_dev82	<h>How is your mother doing?</h>
 a2_dev83	How is your mother doing?	My mom's well, thanks for asking! 	<h>Is she still sewing?</h>
 a3_dev84	How is your mother doing?	My mom's well, thanks for asking!	Is she still sewing?	Yes, she helped make a quilt at the church last week.	<h>I admire those that quilt. It's such a great skill!</h>
