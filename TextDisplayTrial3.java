@@ -16,6 +16,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -38,6 +39,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -323,12 +325,6 @@ public class TextDisplayTrial3 extends Application {
 				}
 			}
 
-			try {
-				uiLog = new PrintWriter(new File(recorder1.getFilePath() + File.separator + "UILog.txt"));
-			} catch (FileNotFoundException fnfe) {
-				fnfe.printStackTrace();
-			}
-
 			if (selectedMics.size() == 0) {
 				Alert alert = new Alert(AlertType.ERROR, "No microphone is selected\nPlease select a mic to continue", ButtonType.OK);
 				alert.showAndWait().ifPresent(response -> {
@@ -346,7 +342,8 @@ public class TextDisplayTrial3 extends Application {
 			totalTasks = allTasks.size();
 			setupFileSystem(partID, sNum, cond);
 			
-			screen.setBottom(viewer());
+			screen.setBottom(transitionScreen("The first 9 prompts are practice prompts\nThe data from the practice will be discarded.", viewer()));
+			//screen.setBottom(viewer());
 			scene.setRoot(screen);
 		});
 		
@@ -390,6 +387,14 @@ public class TextDisplayTrial3 extends Application {
 					temp.mkdirs();
 					tempRec.setFilePath(t);
 					tempRec.setFileName(mixName + "_" + current.get(0) + ".wav");
+					
+					try {
+						uiLog = new PrintWriter(t + File.separator + "UILog.txt");
+					} catch (FileNotFoundException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
 				} else {
 					listOfRecorders[i].setFileName(mixName + "_" + current.get(0) + ".wav");
 				}
@@ -498,9 +503,9 @@ public class TextDisplayTrial3 extends Application {
 			}
 			
 			if (i % 2 == 1) {
-				tempString = "A" + (i/2 + 1) + ": " + tempString;
+				tempString = "A: " + tempString;
 			} else {
-				tempString = "B" + (i/2 + 1) + ": " + tempString; 
+				tempString = "B: " + tempString; 
 			}
 			
 			tempLabel.setText(tempString);
@@ -537,9 +542,9 @@ public class TextDisplayTrial3 extends Application {
 			}
 			
 			if (i % 2 == 1) {
-				tempString = "A" + (i/2 + 1) + ": " + tempString;
+				tempString = "A: " + tempString;
 			} else {
-				tempString = "B" + (i/2 + 1) + ": " + tempString; 
+				tempString = "B:" + tempString; 
 			}
 			
 			tempLabel.setText(tempString);
@@ -598,19 +603,15 @@ public class TextDisplayTrial3 extends Application {
 			playback.setOnAction(event -> {
 				if(((Button) event.getSource()).getText().contains("1") && listOfRecorders[0] != null && listOfRecorders[0].getFile().exists()){
 					listOfRecorders[0].startPlaybackWAV();
-					//wave.setImage(drawData(listOfRecorders[0].getFile()));
 					uiLog.println("<Playback1>");
 				} else if (((Button) event.getSource()).getText().contains("2") && listOfRecorders[1] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[1].startPlaybackWAV();
-					//wave.setImage(drawData(listOfRecorders[1].getFile()));
 					uiLog.println("<Playback2>");
 				} else if (((Button) event.getSource()).getText().contains("3") && listOfRecorders[2] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[2].startPlaybackWAV();
-					//wave.setImage(drawData(listOfRecorders[2].getFile()));
 					uiLog.println("<PlaybackBtn3>");
 				} else if (((Button) event.getSource()).getText().contains("4") && listOfRecorders[3] != null && listOfRecorders[0].getFile().exists()) {
 					listOfRecorders[3].startPlaybackWAV();
-					//wave.setImage(drawData(listOfRecorders[3].getFile()));
 					uiLog.println("<PlaybackBtn4>");
 				}
 			});
@@ -658,7 +659,7 @@ public class TextDisplayTrial3 extends Application {
 		stop.setDisable(true);
 		start.setDefaultButton(true);
 		start.requestFocus();
-
+		
 		// Default buttons not currently working for typing ENTER to move to the next one
 		next.setOnAction(event -> {
 			uiLog.println("<Next>");
@@ -678,6 +679,16 @@ public class TextDisplayTrial3 extends Application {
 			
 			taskNum++;
 			if (taskNum < totalTasks) {
+				ArrayList<String> current = allTasks.get(taskNum);
+				
+				for(int i = 0; i < listOfRecorders.length; i++) {
+					if (listOfRecorders[i] != null) {
+							listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current.get(0) + ".wav");
+							waveImages.set(i, new ImageView(drawData(listOfRecorders[i].getFile())));
+					}
+				}
+				
+				
 				taskLabels = updateLabels();
 				count.setText("Task " + (taskNum + 1) + " of " + totalTasks);
 				screen.setBottom(viewer());
@@ -686,15 +697,6 @@ public class TextDisplayTrial3 extends Application {
 				scene.setRoot(endScreen());
 			}
 			
-			//Set new file name
-			if (taskNum < totalTasks) {
-				ArrayList<String> current = allTasks.get(taskNum);
-				for(int i = 0; i < listOfRecorders.length; i++) {
-					if (listOfRecorders[i] != null) {
-							listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current.get(0) + ".wav");
-					}
-				}
-			}
 		});
 		
 		prev.setOnAction(event -> {
@@ -767,7 +769,9 @@ public class TextDisplayTrial3 extends Application {
 			for (int i = 0; i < listOfRecorders.length; i++) {
 				if (listOfRecorders[i] != null) {
 					listOfRecorders[i].stopRecording();
-					waveImages.get(i).setImage(drawData(listOfRecorders[i].getFile()));
+					waveImages.set(i, new ImageView(drawData(listOfRecorders[i].getFile())));
+					screen.setBottom(viewer());
+					scene.setRoot(screen);
 				}
 			}
 			
@@ -804,6 +808,31 @@ public class TextDisplayTrial3 extends Application {
 		exit.setFont(Font.font(60));
 		grid.addRow(1, exit);
 		group.getChildren().add(grid);
+		return group;
+	}
+	
+	public Group transitionScreen(String text, Group next) {
+		Group group = new Group();
+		BorderPane pane = new BorderPane();
+		Label lab = new Label(text);
+		lab.setPrefWidth(1000);
+		lab.setPrefHeight(400);
+		pane.setCenter(lab);
+		lab.setFont(Font.font(28));
+		lab.setAlignment(Pos.TOP_CENTER);
+		
+		Button proceed = new Button("Click to Continue");
+		proceed.setOnAction(e -> {
+			uiLog.println("<Transition Screen Continue Btn>");
+			screen.setBottom(next);
+		});
+		proceed.setBackground(background(Color.YELLOW));
+		proceed.setPrefWidth(WIDTH);
+		proceed.setFont(Font.font(28));
+		
+		pane.setBottom(proceed);
+		group.getChildren().add(pane);
+		
 		return group;
 	}
 

@@ -69,9 +69,9 @@ public class PromptFileCreator {
 				practiceWriter.println("a2_practice\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>");
 				practiceWriter.println("a3_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
 			} else {
-				practiceWriter.println("a1_practice\t" + a1 + "\t<h>" + b1 + "</h>");
-				practiceWriter.println("a2_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
-				practiceWriter.println("a3_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+				practiceWriter.println("b1_practice\t" + a1 + "\t<h>" + b1 + "</h>");
+				practiceWriter.println("b2_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+				practiceWriter.println("b3_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
 			}
 			
 		}
