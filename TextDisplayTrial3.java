@@ -677,22 +677,37 @@ public class TextDisplayTrial3 extends Application {
 				lab.setText("Status:  ");
 			}
 			
+			//Practice file deletion
+			if (taskNum < 9) {
+				for (int i = 0; i < listOfRecorders.length; i++) {
+					if (listOfRecorders[i] != null) {
+						listOfRecorders[i].getFile().deleteOnExit();
+					}
+				}
+			}
+			
 			taskNum++;
 			if (taskNum < totalTasks) {
 				ArrayList<String> current = allTasks.get(taskNum);
 				
-				for(int i = 0; i < listOfRecorders.length; i++) {
+				for (int i = 0; i < listOfRecorders.length; i++) {
 					if (listOfRecorders[i] != null) {
-							listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current.get(0) + ".wav");
-							waveImages.set(i, new ImageView(drawData(listOfRecorders[i].getFile())));
+						listOfRecorders[i].setFileName(getMixForFile(listOfRecorders[i]) + "_" + current.get(0) + ".wav");
+						waveImages.set(i, new ImageView(drawData(listOfRecorders[i].getFile())));
 					}
 				}
 				
 				
 				taskLabels = updateLabels();
 				count.setText("Task " + (taskNum + 1) + " of " + totalTasks);
-				screen.setBottom(viewer());
-				scene.setRoot(screen);
+				
+				if (taskNum != 9) {
+					screen.setBottom(viewer());
+					scene.setRoot(screen);
+				} else {
+					screen.setBottom(transitionScreen("You are finished with the practice.\n You may begin with the rest of the prompts", viewer()));
+					scene.setRoot(screen);
+				}
 			} else {	
 				scene.setRoot(endScreen());
 			}
@@ -824,8 +839,11 @@ public class TextDisplayTrial3 extends Application {
 		Button proceed = new Button("Click to Continue");
 		proceed.setOnAction(e -> {
 			uiLog.println("<Transition Screen Continue Btn>");
-			screen.setBottom(next);
-		});
+			if (next != null)
+				screen.setBottom(next);
+			else
+				System.err.println("Transition is null");
+		});	
 		proceed.setBackground(background(Color.YELLOW));
 		proceed.setPrefWidth(WIDTH);
 		proceed.setFont(Font.font(28));

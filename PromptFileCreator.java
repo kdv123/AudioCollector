@@ -50,6 +50,7 @@ public class PromptFileCreator {
 			e.printStackTrace();
 		}
 		
+		int count = 1;
 		for (int i = 0; i < 3; i++) {
 			
 			Scanner scan = new Scanner(lines.get(i));
@@ -65,14 +66,15 @@ public class PromptFileCreator {
 			String b3 = scan.next();
 			
 			if (i % 2 == 0) {
-				practiceWriter.println("a1_practice\t" + "<h>" + a1 + "</h>");
-				practiceWriter.println("a2_practice\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>");
-				practiceWriter.println("a3_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+				practiceWriter.println("a1_practice" + count + "\t" + "<h>" + a1 + "</h>");
+				practiceWriter.println("a2_practice" + count +  "\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>");
+				practiceWriter.println("a3_practice" + count +  "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
 			} else {
-				practiceWriter.println("b1_practice\t" + a1 + "\t<h>" + b1 + "</h>");
-				practiceWriter.println("b2_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
-				practiceWriter.println("b3_practice\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+				practiceWriter.println("b1_practice" +  count + "\t"+ a1 + "\t<h>" + b1 + "</h>");
+				practiceWriter.println("b2_practice" + count +  "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+				practiceWriter.println("b3_practice" + count +  "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
 			}
+			count++;
 			
 		}
 		
@@ -165,20 +167,23 @@ public class PromptFileCreator {
 				String b3 = scan.next();
 				
 				if (j % 2 == 0) {
-					outputOdd.println("a1_" + dev + numOdd++ + "\t<h>" + a1 + "</h>");
-					outputOdd.println("a2_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>" );
-					outputOdd.println("a3_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
-					outputEven.println("b1_" + dev + numEven++ + "\t" + a1 + "\t<h>" + b1 + "</h>");
-					outputEven.println("b2_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
-					outputEven.println("b3_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+					outputOdd.println("a1_" + dev + numOdd + "\t<h>" + a1 + "</h>");
+					outputOdd.println("a2_" + dev + numOdd + "\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>" );
+					outputOdd.println("a3_" + dev + numOdd + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+					outputEven.println("b1_" + dev + numEven + "\t" + a1 + "\t<h>" + b1 + "</h>");
+					outputEven.println("b2_" + dev + numEven + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+					outputEven.println("b3_" + dev + numEven + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
 				} else {
-					outputEven.println("a1_" + dev + numEven++ + "\t<h>" + a1 + "</h>");
-					outputEven.println("a2_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + " \t<h>" + a2 + "</h>" );
-					outputEven.println("a3_" + dev + numEven++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
-					outputOdd.println("b1_" + dev + numOdd++ + "\t" + a1 + "\t<h>" + b1 + "</h>");
-					outputOdd.println("b2_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
-					outputOdd.println("b3_" + dev + numOdd++ + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+					outputEven.println("a1_" + dev + numEven + "\t<h>" + a1 + "</h>");
+					outputEven.println("a2_" + dev + numEven + "\t" + a1 + "\t" + b1 + " \t<h>" + a2 + "</h>" );
+					outputEven.println("a3_" + dev + numEven + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+					outputOdd.println("b1_" + dev + numOdd + "\t" + a1 + "\t<h>" + b1 + "</h>");
+					outputOdd.println("b2_" + dev + numOdd + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+					outputOdd.println("b3_" + dev + numOdd + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
 				}
+				
+				numOdd++;
+				numEven++;
 				
 				scan.close();
 			}
@@ -186,21 +191,5 @@ public class PromptFileCreator {
 			outputOdd.close();
 			outputEven.close();
 		}
-		
-		
-		
-		
-//		PrintWriter ASpeakerOutput = null;
-//		PrintWriter BSpeakerOutput = null;
-//		try {
-//			ASpeakerOutput = new PrintWriter(new File("promptSet1.txt"));
-//			BSpeakerOutput = new PrintWriter(new File("Name"));
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		ASpeakerOutput.close();
-//		BSpeakerOutput.close();
 	}
 }
