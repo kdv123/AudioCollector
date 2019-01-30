@@ -357,34 +357,38 @@ public class TextDisplayTrial3 extends Application {
 	private void setupFileSystem(TextField partID, TextField sNum, ComboBox<String> cond) {
 		String t = System.getProperty("user.dir");
 		boolean dirs = false;
+	
+		participantName = partID.getText();
+		sesNum = sNum.getText();
+		condVal = cond.getValue();
+		ArrayList<String> current = allTasks.get(taskNum);
 		
+		if(participantName.length() != 0) {
+			t += File.separator + participantName;
+			dirs = true;
+		}
+		
+		if (sesNum.length() != 0) {
+			t += File.separator + sesNum;
+			dirs = true;
+		}
+		
+		if (condVal != null) {
+			t += File.separator + condVal;
+			dirs = true;
+		}
+		
+		if (dirs) {
+			File temp = new File(t);	//make directories
+			temp.mkdirs();
+		}
+			
 		for (int i = 0; i < listOfRecorders.length; i++) {
 			Recorder tempRec = listOfRecorders[i];
 			if (tempRec != null) {
 				String mixName = getMixForFile(listOfRecorders[i]);
-				participantName = partID.getText();
-				sesNum = sNum.getText();
-				condVal = cond.getValue();
-				ArrayList<String> current = allTasks.get(taskNum);
-				
-				if(participantName.length() != 0) {
-					t += File.separator + participantName;
-					dirs = true;
-				}
-				
-				if (sesNum.length() != 0) {
-					t += File.separator + sesNum;
-					dirs = true;
-				}
-				
-				if (condVal != null) {
-					t += File.separator + condVal;
-					dirs = true;
-				}
 				
 				if (dirs) {
-					File temp = new File(t);	//make appropriate directories
-					temp.mkdirs();
 					tempRec.setFilePath(t);
 					tempRec.setFileName(mixName + "_" + current.get(0) + ".wav");
 					
@@ -394,7 +398,6 @@ public class TextDisplayTrial3 extends Application {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-
 				} else {
 					listOfRecorders[i].setFileName(mixName + "_" + current.get(0) + ".wav");
 				}
