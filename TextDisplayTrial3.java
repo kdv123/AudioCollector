@@ -711,8 +711,9 @@ public class TextDisplayTrial3 extends Application {
 					screen.setBottom(transitionScreen("You are finished with the practice.\n You may begin with the rest of the prompts", viewer()));
 					scene.setRoot(screen);
 				}
-			} else {	
-				scene.setRoot(endScreen());
+			} else {
+				screen.setBottom(endScreen());
+				scene.setRoot(screen);
 			}
 			
 		});
@@ -809,23 +810,26 @@ public class TextDisplayTrial3 extends Application {
 	
 	public Group endScreen() {
 		Group group = new Group();
-		GridPane grid = new GridPane();
-		Label lab = new Label("Thank you for participating\nin our study");
+		BorderPane pane = new BorderPane();
+		Label lab = new Label("Thank you for participating in our study");
 		lab.setPrefWidth(1000);
 		lab.setPrefHeight(400);
-		lab.setBackground(background(Color.PEACHPUFF));
-		grid.addRow(0, lab);
+		pane.setCenter(lab);
+		lab.setFont(Font.font(28));
+		lab.setAlignment(Pos.TOP_CENTER);
+		
 		Button exit = new Button("Exit");
 		exit.setOnAction(e -> {
 			uiLog.print("<Final Exit>");
 			uiLog.close();
 			stageOne.close();
 		});
-		exit.setPrefWidth(1000);
 		exit.setBackground(background(Color.RED));
-		exit.setFont(Font.font(60));
-		grid.addRow(1, exit);
-		group.getChildren().add(grid);
+		exit.setPrefWidth(WIDTH);
+		exit.setFont(Font.font(28));
+		pane.setBottom(exit);
+		
+		group.getChildren().add(pane);
 		return group;
 	}
 	
