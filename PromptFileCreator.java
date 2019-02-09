@@ -6,36 +6,34 @@ import java.util.Scanner;
 
 public class PromptFileCreator {
 	static Scanner scan;
-	static ArrayList<String> trainingLines = new ArrayList<String>();
-	static ArrayList<String> developmentLines = new ArrayList<String>();
-	static ArrayList<String> testLines = new ArrayList<String>();
+	static ArrayList<String> practiceLines = new ArrayList<String>();
+	static ArrayList<String> experimentLines = new ArrayList<String>();
 	
 	public static void main(String[] args) {
 		scan = null;
 		try {
-			scan = new Scanner(new File("turk-dialogues.txt"));
+			scan = new Scanner(new File("turk-dialogues-merged-cleaned-case.txt"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
 		
-		scan.nextLine();	//First line
 		
-		while(scan.hasNext()) {
-			String s = scan.nextLine();
-			if(s.contains("train"))
-				trainingLines.add(s);
-			else if(s.contains("dev"))
-				developmentLines.add(s);
-			else if(s.contains("test"))
-				testLines.add(s);
+		/* Lines 1 to 3 will be to create 9 practice prompts
+		 * We will create 1204 experiment lines as it is divisble by 28
+		 * 28 lines creates 84 practice prompts for participants.
+		 */
+		for (int i = 0; i < 1207 && scan.hasNext(); i++ ) {
+			if (i < 3) {
+				practiceLines.add(scan.nextLine());
+			} else
+				experimentLines.add(scan.nextLine());
 		}
 		
 		//See method header
-		//createDevPromptSets(developmentLines);
-		createPracticePrompts(trainingLines);
+		//Only creating 20 particpant files as of 2/9/2019
+		createParticipantFiles(experimentLines);
+		createPracticePrompts(practiceLines);
 	}
 	
 	/*
@@ -55,9 +53,6 @@ public class PromptFileCreator {
 			
 			Scanner scan = new Scanner(lines.get(i));
 			scan.useDelimiter("\t");
-			String train = scan.next();
-			String chain = scan.next();
-			chain = chain.substring(5);		//removes the chain part
 			String a1 = scan.next();
 			String b1 = scan.next();
 			String a2 = scan.next();
@@ -66,78 +61,72 @@ public class PromptFileCreator {
 			String b3 = scan.next();
 			
 			if (i % 2 == 0) {
-				practiceWriter.println("a1_practice" + count + "\t" + "<h>" + a1 + "</h>");
-				practiceWriter.println("a2_practice" + count +  "\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>");
-				practiceWriter.println("a3_practice" + count +  "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+				practiceWriter.println(count++ + "_practice_a1\t<h>" + a1 + "</h>");
+				practiceWriter.println(count++ + "_practice_a2\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>");
+				practiceWriter.println(count++ + "_practice_a3\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
 			} else {
-				practiceWriter.println("b1_practice" +  count + "\t"+ a1 + "\t<h>" + b1 + "</h>");
-				practiceWriter.println("b2_practice" + count +  "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
-				practiceWriter.println("b3_practice" + count +  "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+				practiceWriter.println(count++ + "_practice_b1\t"+ a1 + "\t<h>" + b1 + "</h>");
+				practiceWriter.println(count++ + "_practice_b2\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+				practiceWriter.println(count++ + "_practice_b3\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
 			}
-			count++;
 			
+			scan.close();
 		}
 		
-		scan.close();
 		practiceWriter.close();
 		
 	}
 
-	/*
-	 * Currently only creating development lines. Functionality for test lines should also be available, but have not been tested yet.
-	 * Using this method, every 28 lines will creates 84 prompts for an odd number participant and 84 prompts for an even number participant.
-	 * For the development this will create 20 prompt files. 280 Development lines, 10 for odd participant, 10 for even participant. Each participant
-	 * will speak 84 total prompts. We are assuming 3 prompts will take one minute. Thus 28 minutes for the times the user will be utilizing the interface.
-	 */
-	private static void createDevPromptSets(ArrayList<String> lines) {
+	private static void createParticipantFiles(ArrayList<String> lines) {
 		int subSize = 28;
-
-		//For each set of 28 lines in the development lines set (280 total)
+		int countOdd = 0;
+		int countEven = 0;
+		
+		//For each set of 28 lines
 		for (int i = 0; i < 10; i++) {
-			//File name syntax: p<participant #>_dev_<lineStartFromSet>_<lineEndFromSet>.txt
 			String fileNameOdd = "";
 			String fileNameEven = "";
 			
 			switch (i) {
 			case 0:
-				fileNameOdd = "p1_dev.txt";
-				fileNameEven = "p2_dev.txt";
+				fileNameOdd = "p1.txt";
+				fileNameEven = "p2.txt";
 				break;
 			case 1:
-				fileNameOdd = "p3_dev.txt";
-				fileNameEven = "p4_dev.txt";
+				fileNameOdd = "p3.txt";
+				fileNameEven = "p4.txt";
 				break;
 			case 2:
-				fileNameOdd = "p5_dev.txt";
-				fileNameEven = "p6_dev.txt";
+				fileNameOdd = "p5.txt";
+				fileNameEven = "p6.txt";
 				break;
 			case 3:
-				fileNameOdd = "p7_dev.txt";
-				fileNameEven = "p8_dev.txt";
+				fileNameOdd = "p7.txt";
+				fileNameEven = "p8.txt";
 				break;
 			case 4:
-				fileNameOdd = "p9_dev.txt";
-				fileNameEven = "p10_dev.txt";
+				fileNameOdd = "p9.txt";
+				fileNameEven = "p10.txt";
 				break;
 			case 5:
-				fileNameOdd = "p11_dev.txt";
-				fileNameEven = "p12_dev.txt"; 
+				fileNameOdd = "p11.txt";
+				fileNameEven = "p12.txt"; 
 				break;
 			case 6:
-				fileNameOdd = "p13_dev.txt";
-				fileNameEven = "p14_dev.txt";
+				fileNameOdd = "p13.txt";
+				fileNameEven = "p14.txt";
 				break;
 			case 7:
-				fileNameOdd = "p15_dev.txt";
-				fileNameEven = "p16_dev.txt";
+				fileNameOdd = "p15.txt";
+				fileNameEven = "p16.txt";
 				break;
 			case 8:
-				fileNameOdd = "p17_dev.txt";
-				fileNameEven = "p18_dev.txt";
+				fileNameOdd = "p17.txt";
+				fileNameEven = "p18.txt";
 				break;
 			case 9:
-				fileNameOdd = "p19_dev.txt";
-				fileNameEven = "p20_dev.txt";
+				fileNameOdd = "p19.txt";
+				fileNameEven = "p20.txt";
 				break;
 			}
 			
@@ -150,15 +139,9 @@ public class PromptFileCreator {
 				e.printStackTrace();
 			}
 			
-			int numOdd = 1;
-			int numEven = 1;
-			//String context: <highlighted speaker>_dev_chainNum_<stuff to print to screen>
 			for (int j = i * subSize; j < (i+1) * subSize; j++) {
 				Scanner scan = new Scanner(lines.get(j));
 				scan.useDelimiter("\t");
-				String dev = scan.next();
-				String chain = scan.next();
-				chain = chain.substring(5);		//removes the chain part
 				String a1 = scan.next();
 				String b1 = scan.next();
 				String a2 = scan.next();
@@ -167,23 +150,20 @@ public class PromptFileCreator {
 				String b3 = scan.next();
 				
 				if (j % 2 == 0) {
-					outputOdd.println("a1_" + dev + numOdd + "\t<h>" + a1 + "</h>");
-					outputOdd.println("a2_" + dev + numOdd + "\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>" );
-					outputOdd.println("a3_" + dev + numOdd + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
-					outputEven.println("b1_" + dev + numEven + "\t" + a1 + "\t<h>" + b1 + "</h>");
-					outputEven.println("b2_" + dev + numEven + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
-					outputEven.println("b3_" + dev + numEven + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+					outputOdd.println(countOdd++ + "_a1\t<h>" + a1 + "</h>");
+					outputOdd.println(countOdd++ + "_a2\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>" );
+					outputOdd.println(countOdd++ + "_a3\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+					outputEven.println(countEven++ + "_b1\t" + a1 + "\t<h>" + b1 + "</h>");
+					outputEven.println(countEven++ + "_b2\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+					outputEven.println(countEven++ +  "_b3\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
 				} else {
-					outputEven.println("a1_" + dev + numEven + "\t<h>" + a1 + "</h>");
-					outputEven.println("a2_" + dev + numEven + "\t" + a1 + "\t" + b1 + " \t<h>" + a2 + "</h>" );
-					outputEven.println("a3_" + dev + numEven + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
-					outputOdd.println("b1_" + dev + numOdd + "\t" + a1 + "\t<h>" + b1 + "</h>");
-					outputOdd.println("b2_" + dev + numOdd + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
-					outputOdd.println("b3_" + dev + numOdd + "\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
+					outputEven.println(countEven++ + "_a1\t<h>" + a1 + "</h>");
+					outputEven.println(countEven++ + "_a2\t" + a1 + "\t" + b1 + " \t<h>" + a2 + "</h>" );
+					outputEven.println(countEven++ + "_a3\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t<h>" + a3 + "</h>");
+					outputOdd.println(countOdd++ + "_b1\t" + a1 + "\t<h>" + b1 + "</h>");
+					outputOdd.println(countOdd++ + "_b2\t" + a1 + "\t" + b1 + "\t" + a2 + "\t<h>" + b2 + "</h>");
+					outputOdd.println(countOdd++ + "_b3\t" + a1 + "\t" + b1 + "\t" + a2 + "\t" + b2 + "\t" + a3 + "\t<h>" + b3 + "</h>");
 				}
-				
-				numOdd++;
-				numEven++;
 				
 				scan.close();
 			}

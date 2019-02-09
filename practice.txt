@@ -1,9 +1,9 @@
-a1_practice1	<h>Would you like to sit down?</h>
-a2_practice1	Would you like to sit down?	No, I'm fine standing up	<h>Are you sure you don't want to sit down?</h>
-a3_practice1	Would you like to sit down?	No, I'm fine standing up	Are you sure you don't want to sit down?	Been sitting all day. Work was just one meeting after another.	<h>Oh, I'm sorry. I don't enjoy work days like that.</h>
-b1_practice2	Would you like to go to the mall?	<h>SURE I'D LOVE TO.</h>
-b2_practice2	Would you like to go to the mall?	SURE I'D LOVE TO.	What time do you want to leave?	<h>How about after my shower?</h>
-b3_practice2	Would you like to go to the mall?	SURE I'D LOVE TO.	What time do you want to leave?	How about after my shower?	How long will that take?	<h>Around 15 minutes max.</h>
-a1_practice3	<h>Do you want to get McDonalds?</h>
-a2_practice3	Do you want to get McDonalds?	No that food is too fatty.	<h>They have salads and stuff, too.</h>
-a3_practice3	Do you want to get McDonalds?	No that food is too fatty.	They have salads and stuff, too.	I know but everything there just kind of tastes like McDonald's, you know?	<h>I do know. I think that's kind of the point. We can go somewhere else, though.</h>
+1_practice_a1	<h>Would you like to sit down?</h>
+2_practice_a2	Would you like to sit down?	"No, I'm fine standing up"	<h>Are you sure you don't want to sit down?</h>
+3_practice_a3	Would you like to sit down?	"No, I'm fine standing up"	Are you sure you don't want to sit down?	Been sitting all day. Work was just one meeting after another.	<h>"Oh, I'm sorry. I don't enjoy work days like that."</h>
+4_practice_b1	Would you like to go to the mall?	<h>Sure I'd love to.</h>
+5_practice_b2	Would you like to go to the mall?	Sure I'd love to.	What time do you want to leave?	<h>How about after my shower?</h>
+6_practice_b3	Would you like to go to the mall?	Sure I'd love to.	What time do you want to leave?	How about after my shower?	How long will that take?	<h>Around 15 minutes max.</h>
+7_practice_a1	<h>Do you want to get McDonalds?</h>
+8_practice_a2	Do you want to get McDonalds?	No that food is too fatty.	<h>"They have salads and stuff, too."</h>
+9_practice_a3	Do you want to get McDonalds?	No that food is too fatty.	"They have salads and stuff, too."	"I know but everything there just kind of tastes like McDonald's, you know?"	<h>"I do know. I think that's kind of the point. We can go somewhere else, though."</h>

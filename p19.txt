@@ -1,0 +1,84 @@
+756_a1	<h>Where are you going?</h>
+757_a2	Where are you going?	To the zoo and a movie	<h>Awesome! Can we come too?</h>
+758_a3	Where are you going?	To the zoo and a movie	Awesome! Can we come too?	"Sure, if you hurry. We're leaving in 30 minutes."	<h>"Cool, thanks. This should be fun!"</h>
+759_b1	What breed of dog is that?	<h>"She is a mix breed, schnauzer and poodle."</h>
+760_b2	What breed of dog is that?	"She is a mix breed, schnauzer and poodle."	Mixed breed dogs are the best kind.	<h>I just love all dogs.</h>
+761_b3	What breed of dog is that?	"She is a mix breed, schnauzer and poodle."	Mixed breed dogs are the best kind.	I just love all dogs.	"Oh, yeah that's cool."	<h>Where did you get her from?</h>
+762_a1	<h>"I need to use the restroom, can you tell me where it is?"</h>
+763_a2	"I need to use the restroom, can you tell me where it is?"	"Go up those stairs, to the left."	<h>Thank you. Have a good day.</h>
+764_a3	"I need to use the restroom, can you tell me where it is?"	"Go up those stairs, to the left."	Thank you. Have a good day.	You as well.	<h>Before I go do I need a key or anything?</h>
+765_b1	Can we go to the store later tonight?	<h>"Yes, around what time?"</h>
+766_b2	Can we go to the store later tonight?	"Yes, around what time?"	Is 11 pm fine for you?	<h>"Yes, that's perfect."</h>
+767_b3	Can we go to the store later tonight?	"Yes, around what time?"	Is 11 pm fine for you?	"Yes, that's perfect."	"Cool, I'll call you when I leave the house."	<h>my phone is broken remember?</h>
+768_a1	<h>Can you fix this?</h>
+769_a2	Can you fix this?	yeah no problem I'll be there soon	<h>"Great, I'll be waiting anxiously."</h>
+770_a3	Can you fix this?	yeah no problem I'll be there soon	"Great, I'll be waiting anxiously."	And I will be moving hurriedly.	<h>What is your estimated time of arrival?</h>
+771_b1	Does it contain Soya?	<h>It isn't listed on the ingredients so I would have to say no.</h>
+772_b2	Does it contain Soya?	It isn't listed on the ingredients so I would have to say no.	Thank you for checking.	<h>"You're very welcome, I hope I'm right."</h>
+773_b3	Does it contain Soya?	It isn't listed on the ingredients so I would have to say no.	Thank you for checking.	"You're very welcome, I hope I'm right."	What do you mean you hope?	<h>I heard that food companies sort of disguise ingredients in food?</h>
+774_a1	<h>Why don't we go out for a meal later?</h>
+775_a2	Why don't we go out for a meal later?	"Alright, where should we go?"	<h>How about Panera?</h>
+776_a3	Why don't we go out for a meal later?	"Alright, where should we go?"	How about Panera?	"Sounds like a plan, man."	<h>Do you know if they have any new salads?</h>
+777_b1	Have you ever visited Spain?	<h>"No, but I'd love to see the bull run. How about you?"</h>
+778_b2	Have you ever visited Spain?	"No, but I'd love to see the bull run. How about you?"	The bull run sounds dangerous and inhumane.	<h>"I guess, but there's lots more to see and do."</h>
+779_b3	Have you ever visited Spain?	"No, but I'd love to see the bull run. How about you?"	The bull run sounds dangerous and inhumane.	"I guess, but there's lots more to see and do."	We could go throw tomatoes at each other.	<h>That sounds gross and messy.</h>
+780_a1	<h>Do you like dogs?</h>
+781_a2	Do you like dogs?	"I despise dogs, but I love peanut butter."	<h>Are you more of a cat person?</h>
+782_a3	Do you like dogs?	"I despise dogs, but I love peanut butter."	Are you more of a cat person?	"I love cats, and also peanut butter. But not together."	<h>Why do you like peanut butter so much?</h>
+783_b1	Where did you buy your house?	<h>I got it from an old lady who lived here before.</h>
+784_b2	Where did you buy your house?	I got it from an old lady who lived here before.	How long have you lived in it?	<h>I have lived here for 10 years.</h>
+785_b3	Where did you buy your house?	I got it from an old lady who lived here before.	How long have you lived in it?	I have lived here for 10 years.	I heard your house is haunted.	<h>That's not true at all.</h>
+786_a1	<h>When will we meet again?</h>
+787_a2	When will we meet again?	Who knows? Next weekend maybe?	<h>"Maybe? Why, what's going to happen to me? What do you know?"</h>
+788_a3	When will we meet again?	Who knows? Next weekend maybe?	"Maybe? Why, what's going to happen to me? What do you know?"	Nothing. You're being paranoid.	<h>I am not being paranoid.</h>
+789_b1	Do you want to go to the pool?	<h>"Okay, as long as those kids aren't still there. They're really kind of annoying."</h>
+790_b2	Do you want to go to the pool?	"Okay, as long as those kids aren't still there. They're really kind of annoying."	"Oh, I don't want to go if there are annoying kids there, either."	<h>Do you know if there is an adults only pool here?</h>
+791_b3	Do you want to go to the pool?	"Okay, as long as those kids aren't still there. They're really kind of annoying."	"Oh, I don't want to go if there are annoying kids there, either."	Do you know if there is an adults only pool here?	"No clue, but we should ask."	<h>Do you want me to call and ask?</h>
+792_a1	<h>How long have you worked here?</h>
+793_a2	How long have you worked here?	I started last January.	<h>Have you learned a lot?</h>
+794_a3	How long have you worked here?	I started last January.	Have you learned a lot?	Yeah sure. In five months I've learned how to put condiments on buns. Huge accomplishment.	<h>if you hate it so much why have you been here five months?</h>
+795_b1	What is his name?	<h>His name is Ken.</h>
+796_b2	What is his name?	His name is Ken.	Where did you meet him?	<h>We went to college together.</h>
+797_b3	What is his name?	His name is Ken.	Where did you meet him?	We went to college together.	And you just happened to run into him?	<h>We were standing in the same line at Starbucks.</h>
+798_a1	<h>Can you tell me one more time?</h>
+799_a2	Can you tell me one more time?	"Sure, you have to double-click on the icon."	<h>Which icon do I click on?</h>
+800_a3	Can you tell me one more time?	"Sure, you have to double-click on the icon."	Which icon do I click on?	You click the small yellow icon on the bottom right of your screen.	<h>"Thanks, now I see it."</h>
+801_b1	What breed is she?	<h>She is a labrador retirever.</h>
+802_b2	What breed is she?	She is a labrador retirever.	Is she obedient?	<h>"When she wants something, yes."</h>
+803_b3	What breed is she?	She is a labrador retirever.	Is she obedient?	"When she wants something, yes."	What do you feed her?	<h>Oh the usual grain free diet</h>
+804_a1	<h>Will my wheelchair fold properly?</h>
+805_a2	Will my wheelchair fold properly?	"Yes, It should."	<h>If it doesn't I am sure we can tow it behind the car.</h>
+806_a3	Will my wheelchair fold properly?	"Yes, It should."	If it doesn't I am sure we can tow it behind the car.	Do you really think that towing it will be safe?	<h>I'm not sure if it's safe but it's the only way we're getting this thing home</h>
+807_b1	How are the kids?	<h>They are acting horrible.</h>
+808_b2	How are the kids?	They are acting horrible.	I'm sorry to hear that.	<h>"Yeah, they need to be punished."</h>
+809_b3	How are the kids?	They are acting horrible.	I'm sorry to hear that.	"Yeah, they need to be punished."	That sounds a bit harsh. Try checking what they want first.	<h>"Sure, because I haven't already fed them, taken them to the park, turned on their favorite movie and offered them crayons, playdoh and silly string."</h>
+810_a1	<h>Where was the last place you looked for it?</h>
+811_a2	Where was the last place you looked for it?	I looked in my room.	<h>"If you kept it tidier, maybe you'd find it."</h>
+812_a3	Where was the last place you looked for it?	I looked in my room.	"If you kept it tidier, maybe you'd find it."	Hahahah you're so funny.	<h>Since it's lost forever in your room of doom lets go get another one.</h>
+813_b1	What was that noise?	<h>The landscaper just started the mower.</h>
+814_b2	What was that noise?	The landscaper just started the mower.	How long will they be mowing?	<h>"A couple of hours, I guess."</h>
+815_b3	What was that noise?	The landscaper just started the mower.	How long will they be mowing?	"A couple of hours, I guess."	Are they going to edge also?	<h>That's not in the agreement but if I ask him nicely I'm sure he will do it.</h>
+816_a1	<h>Are you going home?</h>
+817_a2	Are you going home?	"Yes, I'm gonna make some dinner"	<h>Let's go eat at a restaurant instead. My treat.</h>
+818_a3	Are you going home?	"Yes, I'm gonna make some dinner"	Let's go eat at a restaurant instead. My treat.	Sure where would you like to go?	<h>I'd like some Thai food.Then how about some ice cream?</h>
+819_b1	Do you have headphones I could use?	<h>"Yes, I have a spare set."</h>
+820_b2	Do you have headphones I could use?	"Yes, I have a spare set."	Nevermind I found mine.	<h>Where did you find them?</h>
+821_b3	Do you have headphones I could use?	"Yes, I have a spare set."	Nevermind I found mine.	Where did you find them?	They were underneath the couch.	<h>"Hey, did you happen to feel a flip flop while you were down there? Mine left shoe has been missing for over a week."</h>
+822_a1	<h>Can you open this please?</h>
+823_a2	Can you open this please?	"No, I can't seem to get it, either."	<h>I think we need a new can opener.</h>
+824_a3	Can you open this please?	"No, I can't seem to get it, either."	I think we need a new can opener.	I will pick one up.	<h>All right then.</h>
+825_b1	How did you do?	<h>I believe I did pretty well.</h>
+826_b2	How did you do?	I believe I did pretty well.	Shew! You probably did a lot better than myself.	<h>"Oh come on, I'm sure you did great."</h>
+827_b3	How did you do?	I believe I did pretty well.	Shew! You probably did a lot better than myself.	"Oh come on, I'm sure you did great."	"Nope, I'm a loser, baby."	<h>Not in my eyes.</h>
+828_a1	<h>Why did she leave early yesterday?</h>
+829_a2	Why did she leave early yesterday?	The vet called about her dog.	<h>I hope everything is alright with her pet</h>
+830_a3	Why did she leave early yesterday?	The vet called about her dog.	I hope everything is alright with her pet	she just needs to pick it up.	<h>"Oh, that's relieving."</h>
+831_b1	Do you like Dramas?	<h>"Sure, as long as they're not too melodramatic."</h>
+832_b2	Do you like Dramas?	"Sure, as long as they're not too melodramatic."	"They are dramas, they are meant to be melodramatic, aren't they?"	<h>"I don't think they have to be melodramatic, do they?"</h>
+833_b3	Do you like Dramas?	"Sure, as long as they're not too melodramatic."	"They are dramas, they are meant to be melodramatic, aren't they?"	"I don't think they have to be melodramatic, do they?"	I guess you can be dramatic without going overboard.	<h>"Speaking of overboard, have you tried that sailing trip yet?"</h>
+834_a1	<h>"Can I have some orange juice, please?"</h>
+835_a2	"Can I have some orange juice, please?"	"Certainly, let me get you a glass."	<h>"Can I have some without pulp, please?"</h>
+836_a3	"Can I have some orange juice, please?"	"Certainly, let me get you a glass."	"Can I have some without pulp, please?"	"I'm sorry, I only have extra pulp."	<h>Can we run it through the strainer?</h>
+837_b1	When did the cat get out?	<h>Probably sometime in the afternoon.</h>
+838_b2	When did the cat get out?	Probably sometime in the afternoon.	Did you find her yet?	<h>"No, of course I haven't. That's why I'm putting up Cat Missing signs!"</h>
+839_b3	When did the cat get out?	Probably sometime in the afternoon.	Did you find her yet?	"No, of course I haven't. That's why I'm putting up Cat Missing signs!"	"Well, where did you look already?"	<h>Around the block.</h>

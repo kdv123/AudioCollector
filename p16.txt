@@ -1,0 +1,84 @@
+588_b1	Is it too late?	<h>Not if it's before HIGH NOON.</h>
+589_b2	Is it too late?	Not if it's before HIGH NOON.	"I think it's at three p.m., so I guess that wouldn't work."	<h>"No, sounds like it wouldn't."</h>
+590_b3	Is it too late?	Not if it's before HIGH NOON.	"I think it's at three p.m., so I guess that wouldn't work."	"No, sounds like it wouldn't."	You are confusing me.	<h>"Oh! sorry, yes it is too late for me."</h>
+591_a1	<h>Do you have any times open next week?</h>
+592_a2	Do you have any times open next week?	"No, but I do the following week" 	<h>"Alright, cool! Put me down for a haircut next week."</h>
+593_a3	Do you have any times open next week?	"No, but I do the following week"	"Alright, cool! Put me down for a haircut next week."	"Sure, what day works best for you?"	<h>Wednesday works best for me.</h>
+594_b1	Anyone up for a card game?	<h>"I'm in, how about a game of poker?"</h>
+595_b2	Anyone up for a card game?	"I'm in, how about a game of poker?"	"I was thinking more of Uno, but that's fine."	<h>"Okay, I'll play either one."</h>
+596_b3	Anyone up for a card game?	"I'm in, how about a game of poker?"	"I was thinking more of Uno, but that's fine."	"Okay, I'll play either one."	"Ok, where are the cards?"	<h>In the hall closet on the middle shelf.</h>
+597_a1	<h>How old were you when you moved here?</h>
+598_a2	How old were you when you moved here?	I was 26 	<h>"That's young, do you like it here?"</h>
+599_a3	How old were you when you moved here?	I was 26	"That's young, do you like it here?"	"Yes, I love it."	<h>What was your first impression of this city when you first moved?</h>
+600_b1	What hours are you open?	<h>Today we are open from 8 am to 9 pm.</h>
+601_b2	What hours are you open?	Today we are open from 8 am to 9 pm.	What days are you open?	<h>We are only open on Mondays.</h>
+602_b3	What hours are you open?	Today we are open from 8 am to 9 pm.	What days are you open?	We are only open on Mondays.	Why are you only open on Mondays?	<h>We don't like customers very much.</h>
+603_a1	<h>Can you help me?</h>
+604_a2	Can you help me?	Not right now. 	<h>But I'm about to drop everything!</h>
+605_a3	Can you help me?	Not right now.	But I'm about to drop everything!	"Oh, okay, sorry."	<h>"Thanks, I shouldn't have tried to carry so much."</h>
+606_b1	What's on your mind?	<h>Just thinking about the future!</h>
+607_b2	What's on your mind?	Just thinking about the future!	"Stay in the present, young padawan."	<h>"I try, but it is so hard."</h>
+608_b3	What's on your mind?	Just thinking about the future!	"Stay in the present, young padawan."	"I try, but it is so hard."	Yes it is very hard. That is why it takes lots of practice.	<h>Thank you All Knowing One.</h>
+609_a1	<h>Did you tour a college this weekend?</h>
+610_a2	Did you tour a college this weekend?	"No, I graduated from college 15 years ago." 	<h>Is that what I asked you?</h>
+611_a3	Did you tour a college this weekend?	"No, I graduated from college 15 years ago."	Is that what I asked you?	That seems a little harsh. I don't have any reason to tour one.	<h>I feel like we got off on the wrong foot. Let's start over.</h>
+612_b1	Would you like to watch the game with me?	<h>I would love to watch the game with you.</h>
+613_b2	Would you like to watch the game with me?	I would love to watch the game with you.	I love spending time with you.	<h>The feeling is definitely mutual.</h>
+614_b3	Would you like to watch the game with me?	I would love to watch the game with you.	I love spending time with you.	The feeling is definitely mutual.	Should we grab something to eat before hand?	<h>"Yes, definitely! Are you hungry for a pizza?"</h>
+615_a1	<h>Have you tried that new coffee shop on the corner?</h>
+616_a2	Have you tried that new coffee shop on the corner?	Yes their muffins are amazing! 	<h>Have you tried it?</h>
+617_a3	Have you tried that new coffee shop on the corner?	Yes their muffins are amazing!	Have you tried it?	I have they make amazing drinks.	<h>We should go there together some time.</h>
+618_b1	Did someone pay the insurance bill?	<h>"Yes, I did."</h>
+619_b2	Did someone pay the insurance bill?	"Yes, I did."	"I know, but is the policy up to date?"	<h>Yes it is.</h>
+620_b3	Did someone pay the insurance bill?	"Yes, I did."	"I know, but is the policy up to date?"	Yes it is.	"Ok, I just want to make sure that we are covered, just in case something happens when we are on vacation."	<h>"Sure, that's alright."</h>
+621_a1	<h>How was your day?</h>
+622_a2	How was your day?	It was great. 	<h>"So was mine, everything went well."</h>
+623_a3	How was your day?	It was great.	"So was mine, everything went well."	That's great to hear!	<h>"So, where do we go for dinner?"</h>
+624_b1	Did they like your proposal?	<h>They loved it.</h>
+625_b2	Did they like your proposal?	They loved it.	"Oh my God, that makes me so happy to hear that!"	<h>"Me too, I'm so relieved."</h>
+626_b3	Did they like your proposal?	They loved it.	"Oh my God, that makes me so happy to hear that!"	"Me too, I'm so relieved."	"Me too, because I like it"	<h>"What, in particular, is your favorite part?"</h>
+627_a1	<h>Where is the dog?</h>
+628_a2	Where is the dog?	Last time I saw him he was in the kitchen. 	<h>Make sure he doesn't have mud on his feet.</h>
+629_a3	Where is the dog?	Last time I saw him he was in the kitchen.	Make sure he doesn't have mud on his feet.	Why would he have mud on his feet?	<h>He might have been outside playing in the mud.</h>
+630_b1	How long until the cake is done baking?	<h>About five more minutes. You need to be patient!</h>
+631_b2	How long until the cake is done baking?	About five more minutes. You need to be patient!	But it smells so good!	<h>It will taste even better.</h>
+632_b3	How long until the cake is done baking?	About five more minutes. You need to be patient!	But it smells so good!	It will taste even better.	I can hardly wait!	<h>Why not go to the store and get some milk while you are waiting?</h>
+633_a1	<h>Can you get me some nail clippers?</h>
+634_a2	Can you get me some nail clippers?	Yes I can 	<h>I really need to clip these nails.</h>
+635_a3	Can you get me some nail clippers?	Yes I can	I really need to clip these nails.	I hate when mine are out of control.	<h>Do you need new nail clippers too?</h>
+636_b1	Do you like the food?	<h>"No, I didn't like that food that was so spicy."</h>
+637_b2	Do you like the food?	"No, I didn't like that food that was so spicy."	Would you have liked it if it were less spicy?	<h>"Maybe. I did like the flavors, I just did not like the spice."</h>
+638_b3	Do you like the food?	"No, I didn't like that food that was so spicy."	Would you have liked it if it were less spicy?	"Maybe. I did like the flavors, I just did not like the spice."	What did you like the best?	<h>The wedge salad was great.</h>
+639_a1	<h>Do you need lunch money?</h>
+640_a2	Do you need lunch money?	"Yes, please. Ten bucks should cover it." 	<h>"There you go! Please, if there is any change left, give it back to me."</h>
+641_a3	Do you need lunch money?	"Yes, please. Ten bucks should cover it."	"There you go! Please, if there is any change left, give it back to me."	Thank you! I'll get it back to you right away.	<h>Lunch was a lot cheaper when I was younger</h>
+642_b1	Hi what is your name?	<h>My name is David.</h>
+643_b2	Hi what is your name?	My name is David.	"Hello David, my name is Kevin. I have a beard."	<h>"Yeah, that's kind of obvious."</h>
+644_b3	Hi what is your name?	My name is David.	"Hello David, my name is Kevin. I have a beard."	"Yeah, that's kind of obvious."	Don't you like beards then?	<h>"Yes, I like beards, but I also have eyes and can be a pretty observant person."</h>
+645_a1	<h>What is the weather supposed to be?</h>
+646_a2	What is the weather supposed to be?	Rainy and cold but no snow 	<h>"That's good to hear, I don't have a snow shovel."</h>
+647_a3	What is the weather supposed to be?	Rainy and cold but no snow	"That's good to hear, I don't have a snow shovel."	You should head out and pick one up before the first storm!	<h>"I suppose, but I'm too lazy to go right now."</h>
+648_b1	What would you like for lunch?	<h>I think that we should go to Texas Roadhouse for a steak.</h>
+649_b2	What would you like for lunch?	I think that we should go to Texas Roadhouse for a steak.	But I told you I became a vegan!	<h>"Oh sorry, I keep forgetting. Well, I think they sell salads too."</h>
+650_b3	What would you like for lunch?	I think that we should go to Texas Roadhouse for a steak.	But I told you I became a vegan!	"Oh sorry, I keep forgetting. Well, I think they sell salads too."	You're so insensitive.	<h>Sorry. Lets just go have a nice salad.</h>
+651_a1	<h>Do you want to go running today?</h>
+652_a2	Do you want to go running today?	I hurt my knee yesterday. 	<h>I'm sorry to hear that. I guess I'll have to go it alone. I hope your knee get's better!</h>
+653_a3	Do you want to go running today?	I hurt my knee yesterday.	I'm sorry to hear that. I guess I'll have to go it alone. I hope your knee get's better!	"Yeah, I hope so too. I'm going to see a doctor about it today."	<h>"Well, good luck with that."</h>
+654_b1	Did you fight with mom?	<h>We had a minor disagreement.</h>
+655_b2	Did you fight with mom?	We had a minor disagreement.	What was the disagreement about?	<h>She didn't like my dinner suggestion.</h>
+656_b3	Did you fight with mom?	We had a minor disagreement.	What was the disagreement about?	She didn't like my dinner suggestion.	What did you suggest?	<h>Curry and pita bread.</h>
+657_a1	<h>How did you do that?</h>
+658_a2	How did you do that?	With lots and lots of practice. 	<h>How long have you been playing?</h>
+659_a3	How did you do that?	With lots and lots of practice.	How long have you been playing?	For a little over five years.	<h>Who is your teacher? It looks like it would be fun to learn.</h>
+660_b1	Was your visit a good one?	<h>"No, my visit went horribly, it rained the entire time."</h>
+661_b2	Was your visit a good one?	"No, my visit went horribly, it rained the entire time."	"Oh man, that stinks."	<h>"Yes, it was very disappointing."</h>
+662_b3	Was your visit a good one?	"No, my visit went horribly, it rained the entire time."	"Oh man, that stinks."	"Yes, it was very disappointing."	Did you at least manage to do what you had planned?	<h>"No! I ended up sitting in my room all day waiting it out, but it never happened. Oh well!"</h>
+663_a1	<h>I heard that you planted a garden?</h>
+664_a2	I heard that you planted a garden?	I did plant an herb garden. 	<h>Which herbs did you plant?</h>
+665_a3	I heard that you planted a garden?	I did plant an herb garden.	Which herbs did you plant?	"I planted basil, cilantro, sage, and thyme."	<h>"Oh, how is it growing?"</h>
+666_b1	Could you please put a little salt and pepper on my potatoes?	<h>I sure can.</h>
+667_b2	Could you please put a little salt and pepper on my potatoes?	I sure can.	Awesome! Thanks so much!	<h>Tell me when to stop.</h>
+668_b3	Could you please put a little salt and pepper on my potatoes?	I sure can.	Awesome! Thanks so much!	Tell me when to stop.	One can never have too much salt and pepper on one's potatoes.	<h>"Mmmm, and butter. Salt, pepper and buttery potatoes are the bomb!"</h>
+669_a1	<h>Has Sarah agreed to Tracy's proposal?</h>
+670_a2	Has Sarah agreed to Tracy's proposal?	Yep. They are tying the knot in July. 	<h>"How beautiful, a summer wedding!"</h>
+671_a3	Has Sarah agreed to Tracy's proposal?	Yep. They are tying the knot in July.	"How beautiful, a summer wedding!"	"I know, let's hope it's not too hot though."	<h>"Are they getting married here, or going somewhere?"</h>

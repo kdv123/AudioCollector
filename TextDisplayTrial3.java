@@ -342,8 +342,7 @@ public class TextDisplayTrial3 extends Application {
 			totalTasks = allTasks.size();
 			setupFileSystem(partID, sNum, cond);
 			
-			screen.setBottom(transitionScreen("The first 9 prompts are practice prompts\nThe data from the practice will be discarded.", viewer()));
-			//screen.setBottom(viewer());
+			screen.setBottom(transitionScreen("The first 9 prompts are practice prompts\n", viewer()));
 			scene.setRoot(screen);
 		});
 		
@@ -681,13 +680,13 @@ public class TextDisplayTrial3 extends Application {
 			}
 			
 			//Practice file deletion
-			if (taskNum < 9) {
-				for (int i = 0; i < listOfRecorders.length; i++) {
-					if (listOfRecorders[i] != null) {
-						listOfRecorders[i].getFile().deleteOnExit();
-					}
-				}
-			}
+//			if (taskNum < 9) {
+//				for (int i = 0; i < listOfRecorders.length; i++) {
+//					if (listOfRecorders[i] != null) {
+//						listOfRecorders[i].getFile().deleteOnExit();
+//					}
+//				}
+//			}
 			
 			taskNum++;
 			if (taskNum < totalTasks) {

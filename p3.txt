@@ -1,0 +1,84 @@
+84_a1	<h>Do you know where my shoes are?</h>
+85_a2	Do you know where my shoes are?	They're in the garage by the door.	<h>What are they doing there?</h>
+86_a3	Do you know where my shoes are?	They're in the garage by the door.	What are they doing there?	I was mowing the lawn.	<h>Wearing my shoes? Are they covered in grass now?</h>
+87_b1	Can you please get me some water?	<h>Yes sparkling or still?</h>
+88_b2	Can you please get me some water?	Yes sparkling or still?	Whatever is easiest for you.	<h>"Okay, coming right up."</h>
+89_b3	Can you please get me some water?	Yes sparkling or still?	Whatever is easiest for you.	"Okay, coming right up."	Can you put a slice of lemon in it?	<h>"Yes, let me get that"</h>
+90_a1	<h>"I love that author, are you enjoying the book?"</h>
+91_a2	"I love that author, are you enjoying the book?"	Yes I am.	<h>You should join me at my book club meeting next Tuesday.</h>
+92_a3	"I love that author, are you enjoying the book?"	Yes I am.	You should join me at my book club meeting next Tuesday.	I'd love to! What time?	<h>It's a seven p.m. Do you think you can make it?</h>
+93_b1	What do you want to do today?	<h>I'd like to go to the mall.</h>
+94_b2	What do you want to do today?	I'd like to go to the mall.	What do you plan on buying in the mall?	<h>"I don't plan on buying anything, I just want to people watch."</h>
+95_b3	What do you want to do today?	I'd like to go to the mall.	What do you plan on buying in the mall?	"I don't plan on buying anything, I just want to people watch."	What time do you want to meet at the mall?	<h>I would like to meet at 3 pm.</h>
+96_a1	<h>Do you want to go swimming with me?</h>
+97_a2	Do you want to go swimming with me?	"No, I can't swim."	<h>I can teach you how to swim.</h>
+98_a3	Do you want to go swimming with me?	"No, I can't swim."	I can teach you how to swim.	When do you want to start?	<h>We can start as soon as we can hit the beach!</h>
+99_b1	What time are we having our family barbeque?	<h>Probably around 4:00.</h>
+100_b2	What time are we having our family barbeque?	Probably around 4:00.	Awesome! I'll be ready for you to pick me up around 2:00 PM.	<h>"Sure, can you bring some salad?"</h>
+101_b3	What time are we having our family barbeque?	Probably around 4:00.	Awesome! I'll be ready for you to pick me up around 2:00 PM.	"Sure, can you bring some salad?"	"Sure, any kind in particular?"	<h>"Mother-in-law likes Caesar, so anything else but that one!"</h>
+102_a1	<h>What are you eating?</h>
+103_a2	What are you eating?	Popcorn. Want some?	<h>"Sure, please pass me some."</h>
+104_a3	What are you eating?	Popcorn. Want some?	"Sure, please pass me some."	"This is so salty, you have anything to drink?"	<h>"I have some water, would you like some?"</h>
+105_b1	Is it already spoiled?	<h>Yes throw it out!</h>
+106_b2	Is it already spoiled?	Yes throw it out!	This produce went bad quickly.	<h>"At least we compost, so it doesn't go to a landfill."</h>
+107_b3	Is it already spoiled?	Yes throw it out!	This produce went bad quickly.	"At least we compost, so it doesn't go to a landfill."	How interesting. How does composting work?	<h>It's not hard really.</h>
+108_a1	<h>Do you watch TV?</h>
+109_a2	Do you watch TV?	I only download my shows over the internet.	<h>What's your favorite program?</h>
+110_a3	Do you watch TV?	I only download my shows over the internet.	What's your favorite program?	I really enjoy Game of Thrones.	<h>"Never seen it, sounds stupid."</h>
+111_b1	Did you call the repair man?	<h>Sure did. He's coming tomorrow morning.</h>
+112_b2	Did you call the repair man?	Sure did. He's coming tomorrow morning.	What time tomorrow?	<h>Sometime between 9 AM and 5 PM. That was all he could promise.</h>
+113_b3	Did you call the repair man?	Sure did. He's coming tomorrow morning.	What time tomorrow?	Sometime between 9 AM and 5 PM. That was all he could promise.	Great. There goes my entire day off. I hope he shows up early.	<h>"Me too, I hope you dont have to wait around all day"</h>
+114_a1	<h>Is there anything fun to do that is also affordable?</h>
+115_a2	Is there anything fun to do that is also affordable?	Nothing around here.	<h>Not even a movie or an ice cream parlor?</h>
+116_a3	Is there anything fun to do that is also affordable?	Nothing around here.	Not even a movie or an ice cream parlor?	Movies are too expensive these days. But we could get some ice cream	<h>Is there a Bruster's around here?</h>
+117_b1	Do you have any cash?	<h>I don't carry cash with me.</h>
+118_b2	Do you have any cash?	I don't carry cash with me.	Why don't you carry cash?	<h>"Everything is a slide card now, where have you been?"</h>
+119_b3	Do you have any cash?	I don't carry cash with me.	Why don't you carry cash?	"Everything is a slide card now, where have you been?"	"Buying at small shops and food stalls, I guess."	<h>"Oh, I guess cash does come in handy sometimes, then."</h>
+120_a1	<h>Why are you here?</h>
+121_a2	Why are you here?	I had nothing better to do.	<h>"I have something for you to do, I need help cleaning the garage today!"</h>
+122_a3	Why are you here?	I had nothing better to do.	"I have something for you to do, I need help cleaning the garage today!"	Oh I just remembered I have stuff to do. BYE!	<h>"Yeah sure, you lazy bum."</h>
+123_b1	Can I please get a hot chocolate?	<h>"Sure, I would be happy to get that for you."</h>
+124_b2	Can I please get a hot chocolate?	"Sure, I would be happy to get that for you."	How much will it cost?	<h>"It's 50, but, I'll buy it for you."</h>
+125_b3	Can I please get a hot chocolate?	"Sure, I would be happy to get that for you."	How much will it cost?	"It's 50, but, I'll buy it for you."	Thanks. You don't have to do that.	<h>"it's okay, no problem."</h>
+126_a1	<h>Could you stop that?</h>
+127_a2	Could you stop that?	"No, I like doing it"	<h>"Well, could you keep it down, it's kind of annoying?"</h>
+128_a3	Could you stop that?	"No, I like doing it"	"Well, could you keep it down, it's kind of annoying?"	Put some earplugs in if you don't like it.	<h>Okay stop doing it right now or you are grounded.</h>
+129_b1	Where can we go today?	<h>we can go to mall</h>
+130_b2	Where can we go today?	we can go to mall	Would you prefer the outlet instead of the inside mall?	<h>Either one is fine with me.</h>
+131_b3	Where can we go today?	we can go to mall	Would you prefer the outlet instead of the inside mall?	Either one is fine with me.	"I only got half of my allowance this week, that's why I want to go to the outlet."	<h>"OK, that is fine with me."</h>
+132_a1	<h>Can I borrow a pen?</h>
+133_a2	Can I borrow a pen?	Yes you can.	<h>"Do you have a red pen, by any chance?"</h>
+134_a3	Can I borrow a pen?	Yes you can.	"Do you have a red pen, by any chance?"	"No, only a blue one."	<h>Blue one will do</h>
+135_b1	Do you want to go the casino tomorow?	<h>"Sure, I have a new system I'm certain will work."</h>
+136_b2	Do you want to go the casino tomorow?	"Sure, I have a new system I'm certain will work."	That's what they all say. Which machine are you headed to?	<h>The slot machines. That's where I always go first.</h>
+137_b3	Do you want to go the casino tomorow?	"Sure, I have a new system I'm certain will work."	That's what they all say. Which machine are you headed to?	The slot machines. That's where I always go first.	Beware the one-armed bandit!	<h>I only take $20 and play until it's gone.</h>
+138_a1	<h>Where do you work?</h>
+139_a2	Where do you work?	"Currently, in the southwest region of the US."	<h>Well that's not very specific.</h>
+140_a3	Where do you work?	"Currently, in the southwest region of the US."	Well that's not very specific.	I work in a small city in Arizona.	<h>Do you like it there?</h>
+141_b1	Any good news from my lawyer?	<h>I'm still waiting to hear back from your lawyer.</h>
+142_b2	Any good news from my lawyer?	I'm still waiting to hear back from your lawyer.	"Okay, please let me know once you hear something from him."	<h>Why are you so curious for me to tell you that?</h>
+143_b3	Any good news from my lawyer?	I'm still waiting to hear back from your lawyer.	"Okay, please let me know once you hear something from him."	Why are you so curious for me to tell you that?	"Well it concerns me, too."	<h>What is all this about?</h>
+144_a1	<h>What time is dinner?</h>
+145_a2	What time is dinner?	I can't be bothered to cook.	<h>Are you just going to get take-out when you get hungry?</h>
+146_a3	What time is dinner?	I can't be bothered to cook.	Are you just going to get take-out when you get hungry?	"Yeah, that's what I'm feeling like."	<h>Want to get some chinese food?</h>
+147_b1	Can I please have a look?	<h>You can take a quick peek.</h>
+148_b2	Can I please have a look?	You can take a quick peek.	Where did you find that?	<h>It was in the garage.</h>
+149_b3	Can I please have a look?	You can take a quick peek.	Where did you find that?	It was in the garage.	"Ewww gross, what are you going to do with it?"	<h>I'm going to eat it.</h>
+150_a1	<h>When did you come in the room?</h>
+151_a2	When did you come in the room?	I came in a few minutes ago.	<h>And what happened then?</h>
+152_a3	When did you come in the room?	I came in a few minutes ago.	And what happened then?	"I set down my purse, and that's when the doorbell rang."	<h>Why were you in my room in the first place?</h>
+153_b1	How is your family?	<h>"Everyone is well, thank you."</h>
+154_b2	How is your family?	"Everyone is well, thank you."	Kids still doing well in school?	<h>"Yes, Kristen made the honor roll and decided she wants to be a veterinarian. Ethan is loving his art classes."</h>
+155_b3	How is your family?	"Everyone is well, thank you."	Kids still doing well in school?	"Yes, Kristen made the honor roll and decided she wants to be a veterinarian. Ethan is loving his art classes."	"Smart and ambitious, these kids are going places!"	<h>"To be honest, I'm a little worried about Ethan's math grades, but he has been working really hard and I think he's starting to improve."</h>
+156_a1	<h>Why are you cold?</h>
+157_a2	Why are you cold?	I am always cold	<h>Do you need me to turn the air conditioner off?</h>
+158_a3	Why are you cold?	I am always cold	Do you need me to turn the air conditioner off?	Maybe just turn it down. I don't want to inconvenience everyone else.	<h>Or I could bring you a sweater.</h>
+159_b1	What is your favorite movie?	<h>I have a hard time choosing just one. Right now I really enjoy Deadpool and Star Wars Force Awakens.</h>
+160_b2	What is your favorite movie?	I have a hard time choosing just one. Right now I really enjoy Deadpool and Star Wars Force Awakens.	What did you like about Deadpool? I heard it was a bunch of uninspired humor.	<h>I really like the characters.</h>
+161_b3	What is your favorite movie?	I have a hard time choosing just one. Right now I really enjoy Deadpool and Star Wars Force Awakens.	What did you like about Deadpool? I heard it was a bunch of uninspired humor.	I really like the characters.	Well the main actor is very cute.	<h>Wade Wilson or shall I say Ryan Reynolds is not my type but the detailing and the graphics of his action moves were phenomenal.</h>
+162_a1	<h>"No way, did he really?"</h>
+163_a2	"No way, did he really?"	"Yes, he did."	<h>I wonder why he did that.</h>
+164_a3	"No way, did he really?"	"Yes, he did."	I wonder why he did that.	He's such a jerk.	<h>I'm sorry he did that to you.</h>
+165_b1	Can you fill out my tax declaration?	<h>Yes I will do it later on tonight.</h>
+166_b2	Can you fill out my tax declaration?	Yes I will do it later on tonight.	Sorry for the rush!	<h>Not a problem at all.</h>
+167_b3	Can you fill out my tax declaration?	Yes I will do it later on tonight.	Sorry for the rush!	Not a problem at all.	I appreciate your help very much. Thanks.	<h>Not a problem!</h>
