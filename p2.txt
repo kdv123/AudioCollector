@@ -1,84 +1,84 @@
 0_b1	What do you think of the service here?	<h>The service here Is really good.</h>
 1_b2	What do you think of the service here?	The service here Is really good.	I know! We must come back soon!	<h>It's like the waitress could read my mind.</h>
-2_b3	What do you think of the service here?	The service here Is really good.	I know! We must come back soon!	It's like the waitress could read my mind.	"Yes, she did a great job!"	<h>We will have to leave her a 20% tip.</h>
+2_b3	What do you think of the service here?	The service here Is really good.	I know! We must come back soon!	It's like the waitress could read my mind.	Yes, she did a great job!	<h>We will have to leave her a 20% tip.</h>
 3_a1	<h>Can you tell me where the restroom is?</h>
-4_a2	Can you tell me where the restroom is?	It is around the corner next door left. 	<h>"Thanks, I've been looking everywhere."</h>
-5_a3	Can you tell me where the restroom is?	It is around the corner next door left.	"Thanks, I've been looking everywhere."	No problem! It's in a confusing spot.	<h>That's for sure. Thank you again.</h>
-6_b1	Did the plumber check the drain?	<h>"Yes, he did. It was clogged."</h>
-7_b2	Did the plumber check the drain?	"Yes, he did. It was clogged."	Did he try to snake it to clear the blockage?	<h>"He did, but there was too much stuff to get out with that method."</h>
-8_b3	Did the plumber check the drain?	"Yes, he did. It was clogged."	Did he try to snake it to clear the blockage?	"He did, but there was too much stuff to get out with that method."	So what did he have to do?	<h>He's coming back to suction it in an hour. If that doesn't work then he'll have to open up the pipes.</h>
+4_a2	Can you tell me where the restroom is?	It is around the corner next door left. 	<h>Thanks, I've been looking everywhere.</h>
+5_a3	Can you tell me where the restroom is?	It is around the corner next door left.	Thanks, I've been looking everywhere.	No problem! It's in a confusing spot.	<h>That's for sure. Thank you again.</h>
+6_b1	Did the plumber check the drain?	<h>Yes, he did. It was clogged.</h>
+7_b2	Did the plumber check the drain?	Yes, he did. It was clogged.	Did he try to snake it to clear the blockage?	<h>He did, but there was too much stuff to get out with that method.</h>
+8_b3	Did the plumber check the drain?	Yes, he did. It was clogged.	Did he try to snake it to clear the blockage?	He did, but there was too much stuff to get out with that method.	So what did he have to do?	<h>He's coming back to suction it in an hour. If that doesn't work then he'll have to open up the pipes.</h>
 9_a1	<h>What do you do at home?</h>
 10_a2	What do you do at home?	I work on the computer. 	<h>Do you play games on the computer?</h>
 11_a3	What do you do at home?	I work on the computer.	Do you play games on the computer?	Of course I do.	<h>What type of games do you play?</h>
 12_b1	Is there anything for me in the mail?	<h>There are 2 letters for you.</h>
-13_b2	Is there anything for me in the mail?	There are 2 letters for you.	Did you open them?	<h>"No. They look like bills, though."</h>
-14_b3	Is there anything for me in the mail?	There are 2 letters for you.	Did you open them?	"No. They look like bills, though."	Open them and let me know for sure.	<h>"I am not opening your mail, I will put it right here and you can open it when your ready."</h>
+13_b2	Is there anything for me in the mail?	There are 2 letters for you.	Did you open them?	<h>No. They look like bills, though.</h>
+14_b3	Is there anything for me in the mail?	There are 2 letters for you.	Did you open them?	No. They look like bills, though.	Open them and let me know for sure.	<h>I am not opening your mail, I will put it right here and you can open it when your ready.</h>
 15_a1	<h>How much will that be?</h>
 16_a2	How much will that be?	It'll be $4.50 	<h>$4.50? For a coffee? That is crazy!</h>
 17_a3	How much will that be?	It'll be $4.50	$4.50? For a coffee? That is crazy!	Are you still interested in purchasing the coffee?	<h>No way. I'll take a tap water with no ice.</h>
-18_b1	Want to pick me up?	<h>"Sure, what time?"</h>
-19_b2	Want to pick me up?	"Sure, what time?"	Stop by the house around 8:00.	<h>Sounds good. I'll see you then!</h>
-20_b3	Want to pick me up?	"Sure, what time?"	Stop by the house around 8:00.	Sounds good. I'll see you then!	Is anyone else going?	<h>"No, it's just you and me tonight."</h>
+18_b1	Want to pick me up?	<h>Sure, what time?</h>
+19_b2	Want to pick me up?	Sure, what time?	Stop by the house around 8:00.	<h>Sounds good. I'll see you then!</h>
+20_b3	Want to pick me up?	Sure, what time?	Stop by the house around 8:00.	Sounds good. I'll see you then!	Is anyone else going?	<h>No, it's just you and me tonight.</h>
 21_a1	<h>Did you call the theater?</h>
-22_a2	Did you call the theater?	"So sorry, I forgot to call the theater." 	<h>You can just go online.</h>
-23_a3	Did you call the theater?	"So sorry, I forgot to call the theater."	You can just go online.	"That's true, I'll do that now."	<h>What movie is it that you want to see?</h>
+22_a2	Did you call the theater?	So sorry, I forgot to call the theater. 	<h>You can just go online.</h>
+23_a3	Did you call the theater?	So sorry, I forgot to call the theater.	You can just go online.	That's true, I'll do that now.	<h>What movie is it that you want to see?</h>
 24_b1	What are you fixing for dinner tonight?	<h>Chicken escalopes with salad.</h>
-25_b2	What are you fixing for dinner tonight?	Chicken escalopes with salad.	That sounds good. I'm making fish and rice.	<h>"Ew, I hate fish."</h>
-26_b3	What are you fixing for dinner tonight?	Chicken escalopes with salad.	That sounds good. I'm making fish and rice.	"Ew, I hate fish."	That's Ok. You weren't invited for dinner.	<h>"Ha ha, that was a good one!"</h>
+25_b2	What are you fixing for dinner tonight?	Chicken escalopes with salad.	That sounds good. I'm making fish and rice.	<h>Ew, I hate fish.</h>
+26_b3	What are you fixing for dinner tonight?	Chicken escalopes with salad.	That sounds good. I'm making fish and rice.	Ew, I hate fish.	That's Ok. You weren't invited for dinner.	<h>Ha ha, that was a good one!</h>
 27_a1	<h>When do you plan to start your new job?</h>
 28_a2	When do you plan to start your new job?	At the start of the next quarter. 	<h>How exciting! What field are you going into?</h>
 29_a3	When do you plan to start your new job?	At the start of the next quarter.	How exciting! What field are you going into?	My job is concerned mainly with computer networking.	<h>Are you excited about the change?</h>
-30_b1	Will you play?	<h>"Yes, sounds fun!"</h>
-31_b2	Will you play?	"Yes, sounds fun!"	It is! After we build the blanket fort we are going to have a pillow fight!	<h>I will destroy you! I'm a pillow fighting champion!</h>
-32_b3	Will you play?	"Yes, sounds fun!"	It is! After we build the blanket fort we are going to have a pillow fight!	I will destroy you! I'm a pillow fighting champion!	We'll see about that!	<h>Where will we set up the fort?</h>
+30_b1	Will you play?	<h>Yes, sounds fun!</h>
+31_b2	Will you play?	Yes, sounds fun!	It is! After we build the blanket fort we are going to have a pillow fight!	<h>I will destroy you! I'm a pillow fighting champion!</h>
+32_b3	Will you play?	Yes, sounds fun!	It is! After we build the blanket fort we are going to have a pillow fight!	I will destroy you! I'm a pillow fighting champion!	We'll see about that!	<h>Where will we set up the fort?</h>
 33_a1	<h>Do you want to walk around the park?</h>
-34_a2	Do you want to walk around the park?	"No, the weather is too gloomy." 	<h>It's not that bad outside!</h>
-35_a3	Do you want to walk around the park?	"No, the weather is too gloomy."	It's not that bad outside!	Well there's a lot of rain and the thunder and lightning seem pretty close. You really still want to go out to the park?	<h>Sure! Let me just grab my kite and my umbrella.</h>
+34_a2	Do you want to walk around the park?	No, the weather is too gloomy. 	<h>It's not that bad outside!</h>
+35_a3	Do you want to walk around the park?	No, the weather is too gloomy.	It's not that bad outside!	Well there's a lot of rain and the thunder and lightning seem pretty close. You really still want to go out to the park?	<h>Sure! Let me just grab my kite and my umbrella.</h>
 36_b1	What time did you schedule our pedicures for?	<h>Tomorrow morning at 10.</h>
-37_b2	What time did you schedule our pedicures for?	Tomorrow morning at 10.	"Ok, you better not be late."	<h>I already set my alarm.</h>
-38_b3	What time did you schedule our pedicures for?	Tomorrow morning at 10.	"Ok, you better not be late."	I already set my alarm.	"Great, see you then."	<h>Are you coming with me?</h>
+37_b2	What time did you schedule our pedicures for?	Tomorrow morning at 10.	Ok, you better not be late.	<h>I already set my alarm.</h>
+38_b3	What time did you schedule our pedicures for?	Tomorrow morning at 10.	Ok, you better not be late.	I already set my alarm.	Great, see you then.	<h>Are you coming with me?</h>
 39_a1	<h>Would you like to watch a movie on Netflix with me?</h>
-40_a2	Would you like to watch a movie on Netflix with me?	"Sure, why not. What should we watch?" 	<h>I'm sure there's another Adam Sandler movie. I think he makes one a week.</h>
-41_a3	Would you like to watch a movie on Netflix with me?	"Sure, why not. What should we watch?"	I'm sure there's another Adam Sandler movie. I think he makes one a week.	"Yeah, that's why we shouldn't watch one of them. They're too boring and predictable."	<h>I think Deadpool is available. it's supposed to be stupid funny.</h>
-42_b1	Would you please pick up a birthday gift and a card for my granddaughter?	<h>"Yes, I will get both of those for you."</h>
-43_b2	Would you please pick up a birthday gift and a card for my granddaughter?	"Yes, I will get both of those for you."	What is she into right now?	<h>"She really likes the screaming music, you know the one you can't understand."</h>
-44_b3	Would you please pick up a birthday gift and a card for my granddaughter?	"Yes, I will get both of those for you."	What is she into right now?	"She really likes the screaming music, you know the one you can't understand."	"Oh well, I would need some advice then!"	<h>No worries I'll get them.</h>
+40_a2	Would you like to watch a movie on Netflix with me?	Sure, why not. What should we watch? 	<h>I'm sure there's another Adam Sandler movie. I think he makes one a week.</h>
+41_a3	Would you like to watch a movie on Netflix with me?	Sure, why not. What should we watch?	I'm sure there's another Adam Sandler movie. I think he makes one a week.	Yeah, that's why we shouldn't watch one of them. They're too boring and predictable.	<h>I think Deadpool is available. it's supposed to be stupid funny.</h>
+42_b1	Would you please pick up a birthday gift and a card for my granddaughter?	<h>Yes, I will get both of those for you.</h>
+43_b2	Would you please pick up a birthday gift and a card for my granddaughter?	Yes, I will get both of those for you.	What is she into right now?	<h>She really likes the screaming music, you know the one you can't understand.</h>
+44_b3	Would you please pick up a birthday gift and a card for my granddaughter?	Yes, I will get both of those for you.	What is she into right now?	She really likes the screaming music, you know the one you can't understand.	Oh well, I would need some advice then!	<h>No worries I'll get them.</h>
 45_a1	<h>What are you doing this weekend?</h>
 46_a2	What are you doing this weekend?	I'm going to the beach. 	<h>I hope it's not raining.</h>
 47_a3	What are you doing this weekend?	I'm going to the beach.	I hope it's not raining.	Yeah I want to work on my tan this weekend.	<h>Do you mind if I come?</h>
 48_b1	What's the dosage of my medicines?	<h>I don't know. I'll have to check the labels on all the bottles.</h>
 49_b2	What's the dosage of my medicines?	I don't know. I'll have to check the labels on all the bottles.	Thanks. I'll have to write them down next time.	<h>Let me get a pencil and do that for you now.</h>
 50_b3	What's the dosage of my medicines?	I don't know. I'll have to check the labels on all the bottles.	Thanks. I'll have to write them down next time.	Let me get a pencil and do that for you now.	I appreciate it. It's hard to keep track of all this!	<h>I'm happy to help!</h>
-51_a1	<h>"Hmm, what was that guy's name?"</h>
-52_a2	"Hmm, what was that guy's name?"	I didn't catch it either. 	<h>I think it started with an 'S'.</h>
-53_a3	"Hmm, what was that guy's name?"	I didn't catch it either.	I think it started with an 'S'.	It might have been Shane.	<h>I'll ask him to remind me next time I see him.</h>
-54_b1	What is for dinner?	<h>"Whatever you're making for us, dear."</h>
-55_b2	What is for dinner?	"Whatever you're making for us, dear."	What do you feel like having?	<h>Why do I have to decide?</h>
-56_b3	What is for dinner?	"Whatever you're making for us, dear."	What do you feel like having?	Why do I have to decide?	"OK, then I'll decide, but you have to promise not to wrinkle your nose when I tell you what I'm making."	<h>Not a problem!</h>
+51_a1	<h>Hmm, what was that guy's name?</h>
+52_a2	Hmm, what was that guy's name?	I didn't catch it either. 	<h>I think it started with an 'S'.</h>
+53_a3	Hmm, what was that guy's name?	I didn't catch it either.	I think it started with an 'S'.	It might have been Shane.	<h>I'll ask him to remind me next time I see him.</h>
+54_b1	What is for dinner?	<h>Whatever you're making for us, dear.</h>
+55_b2	What is for dinner?	Whatever you're making for us, dear.	What do you feel like having?	<h>Why do I have to decide?</h>
+56_b3	What is for dinner?	Whatever you're making for us, dear.	What do you feel like having?	Why do I have to decide?	OK, then I'll decide, but you have to promise not to wrinkle your nose when I tell you what I'm making.	<h>Not a problem!</h>
 57_a1	<h>How long have you been driving?</h>
-58_a2	How long have you been driving?	"You mean today or for my lifetime? Today for about a 1/2 hour; for my life, about 12 years." 	<h>I meant your lifetime.</h>
-59_a3	How long have you been driving?	"You mean today or for my lifetime? Today for about a 1/2 hour; for my life, about 12 years."	I meant your lifetime.	Well there you go.	<h>What cars have you driven since you've been driving?</h>
+58_a2	How long have you been driving?	You mean today or for my lifetime? Today for about a 1/2 hour; for my life, about 12 years. 	<h>I meant your lifetime.</h>
+59_a3	How long have you been driving?	You mean today or for my lifetime? Today for about a 1/2 hour; for my life, about 12 years.	I meant your lifetime.	Well there you go.	<h>What cars have you driven since you've been driving?</h>
 60_b1	What are we having for breakfast?	<h>Pancakes and bacon.</h>
-61_b2	What are we having for breakfast?	Pancakes and bacon.	"Sorry, I'm allergic to bacon."	<h>Should I make sausage instead?</h>
-62_b3	What are we having for breakfast?	Pancakes and bacon.	"Sorry, I'm allergic to bacon."	Should I make sausage instead?	No idon't like it	<h>Well what do you want?</h>
+61_b2	What are we having for breakfast?	Pancakes and bacon.	Sorry, I'm allergic to bacon.	<h>Should I make sausage instead?</h>
+62_b3	What are we having for breakfast?	Pancakes and bacon.	Sorry, I'm allergic to bacon.	Should I make sausage instead?	No idon't like it	<h>Well what do you want?</h>
 63_a1	<h>How did your vacation in California go?</h>
-64_a2	How did your vacation in California go?	"My vacation was great, thanks!" 	<h>Where did you go in California?</h>
-65_a3	How did your vacation in California go?	"My vacation was great, thanks!"	Where did you go in California?	We went into San Fransisco to do the usual tour stops!	<h>You should have gone off the beaten path. There's more to California than San Francisco.</h>
+64_a2	How did your vacation in California go?	My vacation was great, thanks! 	<h>Where did you go in California?</h>
+65_a3	How did your vacation in California go?	My vacation was great, thanks!	Where did you go in California?	We went into San Fransisco to do the usual tour stops!	<h>You should have gone off the beaten path. There's more to California than San Francisco.</h>
 66_b1	Do cats like rain?	<h>No. Because cats hate to get wet.</h>
-67_b2	Do cats like rain?	No. Because cats hate to get wet.	"But tigers love to swim, so maybe some cats like rain, right?"	<h>You must be a lot of fun at parties.</h>
-68_b3	Do cats like rain?	No. Because cats hate to get wet.	"But tigers love to swim, so maybe some cats like rain, right?"	You must be a lot of fun at parties.	And you must not know many cats.	<h>"No, thankfully! I am a dog person."</h>
+67_b2	Do cats like rain?	No. Because cats hate to get wet.	But tigers love to swim, so maybe some cats like rain, right?	<h>You must be a lot of fun at parties.</h>
+68_b3	Do cats like rain?	No. Because cats hate to get wet.	But tigers love to swim, so maybe some cats like rain, right?	You must be a lot of fun at parties.	And you must not know many cats.	<h>No, thankfully! I am a dog person.</h>
 69_a1	<h>Can you get me a blanket please?</h>
-70_a2	Can you get me a blanket please?	"Sure, here you go" 	<h>"Thanks, can you wrap it around my feet?"</h>
-71_a3	Can you get me a blanket please?	"Sure, here you go"	"Thanks, can you wrap it around my feet?"	"Sure, is that comfortable?"	<h>"Oh yes, that's wonderful."</h>
-72_b1	Did you go out last night?	<h>"No, I stayed in and ordered pizza."</h>
-73_b2	Did you go out last night?	"No, I stayed in and ordered pizza."	"Me, too! We should split one next time!"	<h>"Sure, but we would have to split the distance between us as well."</h>
-74_b3	Did you go out last night?	"No, I stayed in and ordered pizza."	"Me, too! We should split one next time!"	"Sure, but we would have to split the distance between us as well."	"Yeah, you're right. That wouldn't work."	<h>"Well, it might!"</h>
+70_a2	Can you get me a blanket please?	Sure, here you go 	<h>Thanks, can you wrap it around my feet?</h>
+71_a3	Can you get me a blanket please?	Sure, here you go	Thanks, can you wrap it around my feet?	Sure, is that comfortable?	<h>Oh yes, that's wonderful.</h>
+72_b1	Did you go out last night?	<h>No, I stayed in and ordered pizza.</h>
+73_b2	Did you go out last night?	No, I stayed in and ordered pizza.	Me, too! We should split one next time!	<h>Sure, but we would have to split the distance between us as well.</h>
+74_b3	Did you go out last night?	No, I stayed in and ordered pizza.	Me, too! We should split one next time!	Sure, but we would have to split the distance between us as well.	Yeah, you're right. That wouldn't work.	<h>Well, it might!</h>
 75_a1	<h>can we discuss this once you are done reading?</h>
 76_a2	can we discuss this once you are done reading?	Ok. We can discuss it after I finish reading. 	<h>How long do you think you will take?</h>
-77_a3	can we discuss this once you are done reading?	Ok. We can discuss it after I finish reading.	How long do you think you will take?	I should be done in about 20 minutes.	<h>"Okay, I'll just sit here and stare at you"</h>
+77_a3	can we discuss this once you are done reading?	Ok. We can discuss it after I finish reading.	How long do you think you will take?	I should be done in about 20 minutes.	<h>Okay, I'll just sit here and stare at you</h>
 78_b1	Did you enjoy your meal here?	<h>It was okay.</h>
 79_b2	Did you enjoy your meal here?	It was okay.	Mine was delicious.	<h>Mine would have been better if it didn't have capers in it. I hate those things.</h>
 80_b3	Did you enjoy your meal here?	It was okay.	Mine was delicious.	Mine would have been better if it didn't have capers in it. I hate those things.	Don't forget to ask them to take them out next time. They'll accommodate you.	<h>Great idea my meal would then be perfect.</h>
 81_a1	<h>Did you bring some new books?</h>
-82_a2	Did you bring some new books?	"Yes, I brought some new books." 	<h>Did you bring anything really good?</h>
-83_a3	Did you bring some new books?	"Yes, I brought some new books."	Did you bring anything really good?	"Maybe, depends on what kind of books you like to read."	<h>I like to read the classics. Do you have any?</h>
+82_a2	Did you bring some new books?	Yes, I brought some new books. 	<h>Did you bring anything really good?</h>
+83_a3	Did you bring some new books?	Yes, I brought some new books.	Did you bring anything really good?	Maybe, depends on what kind of books you like to read.	<h>I like to read the classics. Do you have any?</h>

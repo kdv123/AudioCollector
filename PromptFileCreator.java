@@ -60,6 +60,13 @@ public class PromptFileCreator {
 			String a3 = scan.next();
 			String b3 = scan.next();
 			
+			a1 = a1.replaceAll("\"", "");
+			a2 = a2.replaceAll("\"", "");
+			a3 = a3.replaceAll("\"", "");
+			b1 = b1.replaceAll("\"", "");
+			b2 = b2.replaceAll("\"", "");
+			b3 = b3.replaceAll("\"", "");
+			
 			if (i % 2 == 0) {
 				practiceWriter.println(count++ + "_practice_a1\t<h>" + a1 + "</h>");
 				practiceWriter.println(count++ + "_practice_a2\t" + a1 + "\t" + b1 + "\t<h>" + a2 + "</h>");
@@ -148,6 +155,13 @@ public class PromptFileCreator {
 				String b2 = scan.next();
 				String a3 = scan.next();
 				String b3 = scan.next();
+				
+				a1 = a1.replaceAll("\"", "");
+				a2 = a2.replaceAll("\"", "");
+				a3 = a3.replaceAll("\"", "");
+				b1 = b1.replaceAll("\"", "");
+				b2 = b2.replaceAll("\"", "");
+				b3 = b3.replaceAll("\"", "");
 				
 				if (j % 2 == 0) {
 					outputOdd.println(countOdd++ + "_a1\t<h>" + a1 + "</h>");

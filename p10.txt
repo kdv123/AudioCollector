@@ -1,84 +1,84 @@
 336_b1	What time is it now?	<h>Time you got a watch.</h>
-337_b2	What time is it now?	Time you got a watch.	I wish I have one but I don't!	<h>"You really should get a watch, man!"</h>
-338_b3	What time is it now?	Time you got a watch.	I wish I have one but I don't!	"You really should get a watch, man!"	I'll go buy one tomorrow.	<h>"Well then you know it's the day before tomorrow, ha ha!"</h>
+337_b2	What time is it now?	Time you got a watch.	I wish I have one but I don't!	<h>You really should get a watch, man!</h>
+338_b3	What time is it now?	Time you got a watch.	I wish I have one but I don't!	You really should get a watch, man!	I'll go buy one tomorrow.	<h>Well then you know it's the day before tomorrow, ha ha!</h>
 339_a1	<h>Where do you live now?</h>
 340_a2	Where do you live now?	I live on Carlyle Ave. 	<h>Hey! I don't live far from there!</h>
 341_a3	Where do you live now?	I live on Carlyle Ave.	Hey! I don't live far from there!	You should come over sometime.	<h>How about tomorrow night?</h>
 342_b1	How was your day?	<h>It was very good</h>
-343_b2	How was your day?	It was very good	Did you spend any time outside?	<h>"Not much, it was rainy."</h>
-344_b3	How was your day?	It was very good	Did you spend any time outside?	"Not much, it was rainy."	"What did you do, then?"	<h>I stayed inside and watched movies.</h>
+343_b2	How was your day?	It was very good	Did you spend any time outside?	<h>Not much, it was rainy.</h>
+344_b3	How was your day?	It was very good	Did you spend any time outside?	Not much, it was rainy.	What did you do, then?	<h>I stayed inside and watched movies.</h>
 345_a1	<h>Could you fix this?</h>
 346_a2	Could you fix this?	If I have some help yes 	<h>Who should I call?</h>
 347_a3	Could you fix this?	If I have some help yes	Who should I call?	Nobody; I'm here to help any way I can.	<h>So you're saying you're going to help yourself?</h>
 348_b1	When did you call me?	<h>I called you this morning.</h>
-349_b2	When did you call me?	I called you this morning.	Don't ever wake me up at 5 am. again	<h>"I'm sorry, I forgot about the time difference."</h>
-350_b3	When did you call me?	I called you this morning.	Don't ever wake me up at 5 am. again	"I'm sorry, I forgot about the time difference."	"Well, always remember that I'm 2 hours behind you"	<h>"I will, I'll try not to wake you up again."</h>
+349_b2	When did you call me?	I called you this morning.	Don't ever wake me up at 5 am. again	<h>I'm sorry, I forgot about the time difference.</h>
+350_b3	When did you call me?	I called you this morning.	Don't ever wake me up at 5 am. again	I'm sorry, I forgot about the time difference.	Well, always remember that I'm 2 hours behind you	<h>I will, I'll try not to wake you up again.</h>
 351_a1	<h>Did you finish the list?</h>
-352_a2	Did you finish the list?	No but I will finish it shortly. 	<h>"Add eggs, please?"</h>
-353_a3	Did you finish the list?	No but I will finish it shortly.	"Add eggs, please?"	Sure! Would a dozen work?	<h>"Yes, and don't forget the cream while you're at it."</h>
+352_a2	Did you finish the list?	No but I will finish it shortly. 	<h>Add eggs, please?</h>
+353_a3	Did you finish the list?	No but I will finish it shortly.	Add eggs, please?	Sure! Would a dozen work?	<h>Yes, and don't forget the cream while you're at it.</h>
 354_b1	What time is the movie?	<h>The first showing is at 7:30.</h>
 355_b2	What time is the movie?	The first showing is at 7:30.	Do you think we can still make it in time?	<h>yes we just have to leave early.</h>
-356_b3	What time is the movie?	The first showing is at 7:30.	Do you think we can still make it in time?	yes we just have to leave early.	"Better hurry, then! I want to get some popcorn before the show, too."	<h>"Yum! Me, too!"</h>
+356_b3	What time is the movie?	The first showing is at 7:30.	Do you think we can still make it in time?	yes we just have to leave early.	Better hurry, then! I want to get some popcorn before the show, too.	<h>Yum! Me, too!</h>
 357_a1	<h>What are your certifications?</h>
 358_a2	What are your certifications?	I don't have any. 	<h>Are you going to try to get some?</h>
-359_a3	What are your certifications?	I don't have any.	Are you going to try to get some?	"Not yet. I want to see how I do without them, first."	<h>The job requirement specifically states that you need these certifications though.</h>
+359_a3	What are your certifications?	I don't have any.	Are you going to try to get some?	Not yet. I want to see how I do without them, first.	<h>The job requirement specifically states that you need these certifications though.</h>
 360_b1	Where is the money you stored from last year?	<h>I put it an a savings account.</h>
 361_b2	Where is the money you stored from last year?	I put it an a savings account.	That was smart of you.	<h>I sure hope so.</h>
-362_b3	Where is the money you stored from last year?	I put it an a savings account.	That was smart of you.	I sure hope so.	I wish I had put my money into a savings account instead of spending it all.	<h>"Don't ask me for a loan, please. I don't believe in lending money to friends."</h>
+362_b3	Where is the money you stored from last year?	I put it an a savings account.	That was smart of you.	I sure hope so.	I wish I had put my money into a savings account instead of spending it all.	<h>Don't ask me for a loan, please. I don't believe in lending money to friends.</h>
 363_a1	<h>Could you please help me find something to wear tomorrow?</h>
 364_a2	Could you please help me find something to wear tomorrow?	Sure! Let's go see what you have. 	<h>Have you seen my new closet redesign yet?</h>
-365_a3	Could you please help me find something to wear tomorrow?	Sure! Let's go see what you have.	Have you seen my new closet redesign yet?	"No, I don't think I have."	<h>"It's the best ever, I can find anything easily."</h>
-366_b1	Will you help me?	<h>"Yes, what can I help with?"</h>
-367_b2	Will you help me?	"Yes, what can I help with?"	I'm moving next Saturday. Do you have a truck?	<h>I've got a small pickup truck. Are you moving a lot of stuff?</h>
-368_b3	Will you help me?	"Yes, what can I help with?"	I'm moving next Saturday. Do you have a truck?	I've got a small pickup truck. Are you moving a lot of stuff?	"No, I just have few boxes of books and clothes."	<h>Okay well tell me a time and I'll be there.</h>
+365_a3	Could you please help me find something to wear tomorrow?	Sure! Let's go see what you have.	Have you seen my new closet redesign yet?	No, I don't think I have.	<h>It's the best ever, I can find anything easily.</h>
+366_b1	Will you help me?	<h>Yes, what can I help with?</h>
+367_b2	Will you help me?	Yes, what can I help with?	I'm moving next Saturday. Do you have a truck?	<h>I've got a small pickup truck. Are you moving a lot of stuff?</h>
+368_b3	Will you help me?	Yes, what can I help with?	I'm moving next Saturday. Do you have a truck?	I've got a small pickup truck. Are you moving a lot of stuff?	No, I just have few boxes of books and clothes.	<h>Okay well tell me a time and I'll be there.</h>
 369_a1	<h>Where should we eat?</h>
 370_a2	Where should we eat?	At Jack in the box 	<h>I don't really like Jack in the Box. Can we go somewhere else?</h>
-371_a3	Where should we eat?	At Jack in the box	I don't really like Jack in the Box. Can we go somewhere else?	Sure how about Taco Bell?	<h>"Oh yeah, I love their wraps."</h>
+371_a3	Where should we eat?	At Jack in the box	I don't really like Jack in the Box. Can we go somewhere else?	Sure how about Taco Bell?	<h>Oh yeah, I love their wraps.</h>
 372_b1	Where did you get that great purse?	<h>I found it online.</h>
 373_b2	Where did you get that great purse?	I found it online.	Did you get free shipping?	<h>I always do. I have Amazon Prime.</h>
 374_b3	Where did you get that great purse?	I found it online.	Did you get free shipping?	I always do. I have Amazon Prime.	It's not free if you pay $79 a year for it.	<h>But it does ensure the most I'll pay for shipping will be 79 dollars per year and I do order alot of things online with Amazon.</h>
 375_a1	<h>Can I get you a glass of water?</h>
 376_a2	Can I get you a glass of water?	That would be great. 	<h>Do you want ice in your water?</h>
-377_a3	Can I get you a glass of water?	That would be great.	Do you want ice in your water?	"No thanks, I like it warm."	<h>"Okay, coming right up."</h>
-378_b1	Do you have any pets?	<h>"I have a betta fish, he is named Arthur."</h>
-379_b2	Do you have any pets?	"I have a betta fish, he is named Arthur."	Cool! I have one too!	<h>I got him a couple weeks ago.</h>
-380_b3	Do you have any pets?	"I have a betta fish, he is named Arthur."	Cool! I have one too!	I got him a couple weeks ago.	I also have a dog!	<h>Cool I love dogs.</h>
+377_a3	Can I get you a glass of water?	That would be great.	Do you want ice in your water?	No thanks, I like it warm.	<h>Okay, coming right up.</h>
+378_b1	Do you have any pets?	<h>I have a betta fish, he is named Arthur.</h>
+379_b2	Do you have any pets?	I have a betta fish, he is named Arthur.	Cool! I have one too!	<h>I got him a couple weeks ago.</h>
+380_b3	Do you have any pets?	I have a betta fish, he is named Arthur.	Cool! I have one too!	I got him a couple weeks ago.	I also have a dog!	<h>Cool I love dogs.</h>
 381_a1	<h>That's a great shirt where did you get it?</h>
 382_a2	That's a great shirt where did you get it?	I got It at the mall. 	<h>How much was it?</h>
 383_a3	That's a great shirt where did you get it?	I got It at the mall.	How much was it?	It was $32 in the new store next to the theater.	<h>Sweet. Was that the regular price or was it on sale?</h>
-384_b1	Could I have some milk please?	<h>"Yes, I will pour you a glass."</h>
-385_b2	Could I have some milk please?	"Yes, I will pour you a glass."	Thank you so much! I love milk.	<h>"Well, we can't have cookies without milk!"</h>
-386_b3	Could I have some milk please?	"Yes, I will pour you a glass."	Thank you so much! I love milk.	"Well, we can't have cookies without milk!"	Do we have cookies here?	<h>"Yes, chocolate chip or Oreos?"</h>
+384_b1	Could I have some milk please?	<h>Yes, I will pour you a glass.</h>
+385_b2	Could I have some milk please?	Yes, I will pour you a glass.	Thank you so much! I love milk.	<h>Well, we can't have cookies without milk!</h>
+386_b3	Could I have some milk please?	Yes, I will pour you a glass.	Thank you so much! I love milk.	Well, we can't have cookies without milk!	Do we have cookies here?	<h>Yes, chocolate chip or Oreos?</h>
 387_a1	<h>Have you ever gone hunting?</h>
-388_a2	Have you ever gone hunting?	"No, I have not." 	<h>Do you like the idea of hunting?</h>
-389_a3	Have you ever gone hunting?	"No, I have not."	Do you like the idea of hunting?	"I like the idea of eating meat, but not of killing it."	<h>Do you go fishing?</h>
+388_a2	Have you ever gone hunting?	No, I have not. 	<h>Do you like the idea of hunting?</h>
+389_a3	Have you ever gone hunting?	No, I have not.	Do you like the idea of hunting?	I like the idea of eating meat, but not of killing it.	<h>Do you go fishing?</h>
 390_b1	Are these dishes clean?	<h>yeah just done them</h>
 391_b2	Are these dishes clean?	yeah just done them	Then why are there noodles hanging from that plate?	<h>Because I didn't scrub hard enough.</h>
 392_b3	Are these dishes clean?	yeah just done them	Then why are there noodles hanging from that plate?	Because I didn't scrub hard enough.	Can you please clean them again then?	<h>i guess so.</h>
 393_a1	<h>Are you feeling well?</h>
-394_a2	Are you feeling well?	"No, I've been feeling sick for a while now." 	<h>Maybe you should go to the doctor.</h>
-395_a3	Are you feeling well?	"No, I've been feeling sick for a while now."	Maybe you should go to the doctor.	Too hard to get an appointment. I might head to the urgent care clinic.	<h>I can take you if you want a ride.</h>
-396_b1	Can you bring that to me?	<h>"Of course, I'll be back soon."</h>
-397_b2	Can you bring that to me?	"Of course, I'll be back soon."	Thanks so much!	<h>You are very welcome.</h>
-398_b3	Can you bring that to me?	"Of course, I'll be back soon."	Thanks so much!	You are very welcome.	"Drive carefully, it's raining pretty hard out there."	<h>"I will take it nice and slow, thanks."</h>
+394_a2	Are you feeling well?	No, I've been feeling sick for a while now. 	<h>Maybe you should go to the doctor.</h>
+395_a3	Are you feeling well?	No, I've been feeling sick for a while now.	Maybe you should go to the doctor.	Too hard to get an appointment. I might head to the urgent care clinic.	<h>I can take you if you want a ride.</h>
+396_b1	Can you bring that to me?	<h>Of course, I'll be back soon.</h>
+397_b2	Can you bring that to me?	Of course, I'll be back soon.	Thanks so much!	<h>You are very welcome.</h>
+398_b3	Can you bring that to me?	Of course, I'll be back soon.	Thanks so much!	You are very welcome.	Drive carefully, it's raining pretty hard out there.	<h>I will take it nice and slow, thanks.</h>
 399_a1	<h>Where are my pants?</h>
-400_a2	Where are my pants?	"Sorry, I forgot to take them out of the Dryer." 	<h>"That's fine, I'll get them."</h>
-401_a3	Where are my pants?	"Sorry, I forgot to take them out of the Dryer."	"That's fine, I'll get them."	I hope they're done.	<h>"Me too, I hate going to parties with wet pants."</h>
-402_b1	I want some french fries?	<h>"Okay, here you go"</h>
-403_b2	I want some french fries?	"Okay, here you go"	"Thanks, do you have any ketchup?"	<h>"No, just ranch."</h>
-404_b3	I want some french fries?	"Okay, here you go"	"Thanks, do you have any ketchup?"	"No, just ranch."	"Ok, ranch will be fine."	<h>"Here you go, Enjoy!"</h>
+400_a2	Where are my pants?	Sorry, I forgot to take them out of the Dryer. 	<h>That's fine, I'll get them.</h>
+401_a3	Where are my pants?	Sorry, I forgot to take them out of the Dryer.	That's fine, I'll get them.	I hope they're done.	<h>Me too, I hate going to parties with wet pants.</h>
+402_b1	I want some french fries?	<h>Okay, here you go</h>
+403_b2	I want some french fries?	Okay, here you go	Thanks, do you have any ketchup?	<h>No, just ranch.</h>
+404_b3	I want some french fries?	Okay, here you go	Thanks, do you have any ketchup?	No, just ranch.	Ok, ranch will be fine.	<h>Here you go, Enjoy!</h>
 405_a1	<h>When will you be home?</h>
 406_a2	When will you be home?	sometime after six 	<h>That's later than usual.</h>
-407_a3	When will you be home?	sometime after six	That's later than usual.	"I know, I work to hard."	<h>Is this for the extra project?</h>
+407_a3	When will you be home?	sometime after six	That's later than usual.	I know, I work to hard.	<h>Is this for the extra project?</h>
 408_b1	What kind of life is this?	<h>a short one</h>
-409_b2	What kind of life is this?	a short one	"No time to enjoy it, that's for sure."	<h>"We work such long, tiring hours."</h>
-410_b3	What kind of life is this?	a short one	"No time to enjoy it, that's for sure."	"We work such long, tiring hours."	I know and unfortunately that's part of life	<h>I think we should make some time to do something fun.</h>
-411_a1	<h>"Hi! I am the store's manager, how can I help you?"</h>
-412_a2	"Hi! I am the store's manager, how can I help you?"	I'm looking for the salmon. 	<h>"Sir, this is a book store. Do you mean you want a book about salmon?"</h>
-413_a3	"Hi! I am the store's manager, how can I help you?"	I'm looking for the salmon.	"Sir, this is a book store. Do you mean you want a book about salmon?"	"No, I need the actual fish. Can you help?"	<h>"Then go next door to the grocery store, I am pretty sure they can help you with that."</h>
+409_b2	What kind of life is this?	a short one	No time to enjoy it, that's for sure.	<h>We work such long, tiring hours.</h>
+410_b3	What kind of life is this?	a short one	No time to enjoy it, that's for sure.	We work such long, tiring hours.	I know and unfortunately that's part of life	<h>I think we should make some time to do something fun.</h>
+411_a1	<h>Hi! I am the store's manager, how can I help you?</h>
+412_a2	Hi! I am the store's manager, how can I help you?	I'm looking for the salmon. 	<h>Sir, this is a book store. Do you mean you want a book about salmon?</h>
+413_a3	Hi! I am the store's manager, how can I help you?	I'm looking for the salmon.	Sir, this is a book store. Do you mean you want a book about salmon?	No, I need the actual fish. Can you help?	<h>Then go next door to the grocery store, I am pretty sure they can help you with that.</h>
 414_b1	Do we have any cereal?	<h>Yes in the back of the fridge</h>
 415_b2	Do we have any cereal?	Yes in the back of the fridge	Why on earth is the cereal in the fridge?	<h>I like it cool and it keeps it fresh longer.</h>
-416_b3	Do we have any cereal?	Yes in the back of the fridge	Why on earth is the cereal in the fridge?	I like it cool and it keeps it fresh longer.	"Alrighty, we all have our quirks."	<h>At least it's not as weird as yours where you like to drink sour milk.</h>
+416_b3	Do we have any cereal?	Yes in the back of the fridge	Why on earth is the cereal in the fridge?	I like it cool and it keeps it fresh longer.	Alrighty, we all have our quirks.	<h>At least it's not as weird as yours where you like to drink sour milk.</h>
 417_a1	<h>Could you please zip up my jacket?</h>
-418_a2	Could you please zip up my jacket?	Yes I can. 	<h>"Thank you, my arthritis makes it difficult for me to do."</h>
-419_a3	Could you please zip up my jacket?	Yes I can.	"Thank you, my arthritis makes it difficult for me to do."	Would you like me to get you two Motrin?	<h>"Yes, please. I need to take some more."</h>
+418_a2	Could you please zip up my jacket?	Yes I can. 	<h>Thank you, my arthritis makes it difficult for me to do.</h>
+419_a3	Could you please zip up my jacket?	Yes I can.	Thank you, my arthritis makes it difficult for me to do.	Would you like me to get you two Motrin?	<h>Yes, please. I need to take some more.</h>

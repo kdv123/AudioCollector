@@ -1,84 +1,84 @@
-420_b1	Do you know of any good places to eat?	<h>"Yes, I do. It's a steakhouse."</h>
-421_b2	Do you know of any good places to eat?	"Yes, I do. It's a steakhouse."	I'm not a big fan of steak. Do they do other things?	<h>"Yeah, but it's really a place for steak."</h>
-422_b3	Do you know of any good places to eat?	"Yes, I do. It's a steakhouse."	I'm not a big fan of steak. Do they do other things?	"Yeah, but it's really a place for steak."	Maybe we can go someplace else?	<h>Look at the menu first and see what they have.</h>
+420_b1	Do you know of any good places to eat?	<h>Yes, I do. It's a steakhouse.</h>
+421_b2	Do you know of any good places to eat?	Yes, I do. It's a steakhouse.	I'm not a big fan of steak. Do they do other things?	<h>Yeah, but it's really a place for steak.</h>
+422_b3	Do you know of any good places to eat?	Yes, I do. It's a steakhouse.	I'm not a big fan of steak. Do they do other things?	Yeah, but it's really a place for steak.	Maybe we can go someplace else?	<h>Look at the menu first and see what they have.</h>
 423_a1	<h>What is your email address?</h>
 424_a2	What is your email address?	I will text it to ya! 	<h>Why don't you just email it to me?</h>
 425_a3	What is your email address?	I will text it to ya!	Why don't you just email it to me?	I can do whichever is easier for you.	<h>Email is definitely way easier for me.</h>
 426_b1	What time Is the movie?	<h>Stop yelling at me!</h>
-427_b2	What time Is the movie?	Stop yelling at me!	"I can't help, It my volume Is stuck on max!"	<h>I'm not going to continue until you fix that!</h>
-428_b3	What time Is the movie?	Stop yelling at me!	"I can't help, It my volume Is stuck on max!"	I'm not going to continue until you fix that!	It's really annoying when people shout at me!	<h>Oh is it?</h>
+427_b2	What time Is the movie?	Stop yelling at me!	I can't help, It my volume Is stuck on max!	<h>I'm not going to continue until you fix that!</h>
+428_b3	What time Is the movie?	Stop yelling at me!	I can't help, It my volume Is stuck on max!	I'm not going to continue until you fix that!	It's really annoying when people shout at me!	<h>Oh is it?</h>
 429_a1	<h>What you mean by yes?</h>
-430_a2	What you mean by yes?	"To clarify, I mean the opposite of 'no'." 	<h>So you have always loved me?</h>
-431_a3	What you mean by yes?	"To clarify, I mean the opposite of 'no'."	So you have always loved me?	"Yes, I have always loved you."	<h>"Interesting, why didn't you tell me earlier?"</h>
+430_a2	What you mean by yes?	To clarify, I mean the opposite of 'no'. 	<h>So you have always loved me?</h>
+431_a3	What you mean by yes?	To clarify, I mean the opposite of 'no'.	So you have always loved me?	Yes, I have always loved you.	<h>Interesting, why didn't you tell me earlier?</h>
 432_b1	How do you like your teacher?	<h>She is a sweetheart. I love her.</h>
-433_b2	How do you like your teacher?	She is a sweetheart. I love her.	Do you like her style of teaching?	<h>"I do, she's very inventive."</h>
-434_b3	How do you like your teacher?	She is a sweetheart. I love her.	Do you like her style of teaching?	"I do, she's very inventive."	What kind of things does she do?	<h>She makes up funny songs about things so they're easier for us to remember and we play lots of games.</h>
+433_b2	How do you like your teacher?	She is a sweetheart. I love her.	Do you like her style of teaching?	<h>I do, she's very inventive.</h>
+434_b3	How do you like your teacher?	She is a sweetheart. I love her.	Do you like her style of teaching?	I do, she's very inventive.	What kind of things does she do?	<h>She makes up funny songs about things so they're easier for us to remember and we play lots of games.</h>
 435_a1	<h>How have you been?</h>
 436_a2	How have you been?	I've been good. Thanks. 	<h>Would you like to grab some coffee?</h>
-437_a3	How have you been?	I've been good. Thanks.	Would you like to grab some coffee?	I am on my way to work. How about tomorrow?	<h>"I can't do tomorrow, sorry. How about Friday evening?"</h>
-438_b1	Could I get sugar in my coffee?	<h>"Sure, how many teaspoons would you like?"</h>
-439_b2	Could I get sugar in my coffee?	"Sure, how many teaspoons would you like?"	2 teaspoons please.	<h>Don't you think that's sort of a lot of sugar?</h>
-440_b3	Could I get sugar in my coffee?	"Sure, how many teaspoons would you like?"	2 teaspoons please.	Don't you think that's sort of a lot of sugar?	"What are you, a dietician?"	<h>"No, but I really think that's too much sugar."</h>
-441_a1	<h>"This is delicious, did you cook it yourself?"</h>
-442_a2	"This is delicious, did you cook it yourself?"	No I ordered from the place on the corner. 	<h>What's it called?</h>
-443_a3	"This is delicious, did you cook it yourself?"	No I ordered from the place on the corner.	What's it called?	It's called Momma B's Cucina.	<h>"Oh, is that a new restaurant?"</h>
+437_a3	How have you been?	I've been good. Thanks.	Would you like to grab some coffee?	I am on my way to work. How about tomorrow?	<h>I can't do tomorrow, sorry. How about Friday evening?</h>
+438_b1	Could I get sugar in my coffee?	<h>Sure, how many teaspoons would you like?</h>
+439_b2	Could I get sugar in my coffee?	Sure, how many teaspoons would you like?	2 teaspoons please.	<h>Don't you think that's sort of a lot of sugar?</h>
+440_b3	Could I get sugar in my coffee?	Sure, how many teaspoons would you like?	2 teaspoons please.	Don't you think that's sort of a lot of sugar?	What are you, a dietician?	<h>No, but I really think that's too much sugar.</h>
+441_a1	<h>This is delicious, did you cook it yourself?</h>
+442_a2	This is delicious, did you cook it yourself?	No I ordered from the place on the corner. 	<h>What's it called?</h>
+443_a3	This is delicious, did you cook it yourself?	No I ordered from the place on the corner.	What's it called?	It's called Momma B's Cucina.	<h>Oh, is that a new restaurant?</h>
 444_b1	Do you feel pain?	<h>Yes! It really hurts!</h>
-445_b2	Do you feel pain?	Yes! It really hurts!	How bad is your pain?	<h>"On a scale of one to ten, it's a 4."</h>
-446_b3	Do you feel pain?	Yes! It really hurts!	How bad is your pain?	"On a scale of one to ten, it's a 4."	"You have a very low pain tolerance, don't you?"	<h>Considering I have had 10 broken bones in my lifetime I would have to disagree.</h>
+445_b2	Do you feel pain?	Yes! It really hurts!	How bad is your pain?	<h>On a scale of one to ten, it's a 4.</h>
+446_b3	Do you feel pain?	Yes! It really hurts!	How bad is your pain?	On a scale of one to ten, it's a 4.	You have a very low pain tolerance, don't you?	<h>Considering I have had 10 broken bones in my lifetime I would have to disagree.</h>
 447_a1	<h>Check whether they deliver to UK?</h>
-448_a2	Check whether they deliver to UK?	"Okay, sure, I'll find out and let you know." 	<h>I look forward to hearing back from you.</h>
-449_a3	Check whether they deliver to UK?	"Okay, sure, I'll find out and let you know."	I look forward to hearing back from you.	No problem shouldn't take me too long to find out.	<h>It's been a while. What did you find out?</h>
+448_a2	Check whether they deliver to UK?	Okay, sure, I'll find out and let you know. 	<h>I look forward to hearing back from you.</h>
+449_a3	Check whether they deliver to UK?	Okay, sure, I'll find out and let you know.	I look forward to hearing back from you.	No problem shouldn't take me too long to find out.	<h>It's been a while. What did you find out?</h>
 450_b1	How old are you now?	<h>Thirty-one and holding!</h>
 451_b2	How old are you now?	Thirty-one and holding!	You don't look like you're 31 at all!	<h>You're so kind.</h>
-452_b3	How old are you now?	Thirty-one and holding!	You don't look like you're 31 at all!	You're so kind.	No; I mean it! I figured you for 26 max.	<h>"26? Well, now you are just teasing me."</h>
+452_b3	How old are you now?	Thirty-one and holding!	You don't look like you're 31 at all!	You're so kind.	No; I mean it! I figured you for 26 max.	<h>26? Well, now you are just teasing me.</h>
 453_a1	<h>Can you come to the party?</h>
-454_a2	Can you come to the party?	"No, I am sorry I could not come to the party." 	<h>"No problem,we didn't want you there anyway"</h>
-455_a3	Can you come to the party?	"No, I am sorry I could not come to the party."	"No problem,we didn't want you there anyway"	"Wow, what a nice thing to say."	<h>i always say nice things</h>
+454_a2	Can you come to the party?	No, I am sorry I could not come to the party. 	<h>No problem,we didn't want you there anyway</h>
+455_a3	Can you come to the party?	No, I am sorry I could not come to the party.	No problem,we didn't want you there anyway	Wow, what a nice thing to say.	<h>i always say nice things</h>
 456_b1	Who else caught the game last night?	<h>I didn't get to see it because I don't have cable.</h>
 457_b2	Who else caught the game last night?	I didn't get to see it because I don't have cable.	I am sorry to hear that because it was awesome!	<h>Hopefully I get a chance to see the next game.</h>
 458_b3	Who else caught the game last night?	I didn't get to see it because I don't have cable.	I am sorry to hear that because it was awesome!	Hopefully I get a chance to see the next game.	The next game is on tonight.	<h>May be I can join you.</h>
 459_a1	<h>Where did Mona go?</h>
-460_a2	Where did Mona go?	I really don't know. 	<h>"Well, what would be your best guess as to where she might be?"</h>
-461_a3	Where did Mona go?	I really don't know.	"Well, what would be your best guess as to where she might be?"	I can guarantee that she is most definitely not here.	<h>I didn't ask you if she was there. I just wondered if you knew where she might be.</h>
-462_b1	"I am very cold, will you get me a blanket?"	<h>"Yes I will, just give me a minute."</h>
-463_b2	"I am very cold, will you get me a blanket?"	"Yes I will, just give me a minute."	I will die if you don't give it to me now!	<h>Then get it yourself if you can't wait!</h>
-464_b3	"I am very cold, will you get me a blanket?"	"Yes I will, just give me a minute."	I will die if you don't give it to me now!	Then get it yourself if you can't wait!	"You'd like that, wouldn't you?"	<h>Yes I would.</h>
+460_a2	Where did Mona go?	I really don't know. 	<h>Well, what would be your best guess as to where she might be?</h>
+461_a3	Where did Mona go?	I really don't know.	Well, what would be your best guess as to where she might be?	I can guarantee that she is most definitely not here.	<h>I didn't ask you if she was there. I just wondered if you knew where she might be.</h>
+462_b1	I am very cold, will you get me a blanket?	<h>Yes I will, just give me a minute.</h>
+463_b2	I am very cold, will you get me a blanket?	Yes I will, just give me a minute.	I will die if you don't give it to me now!	<h>Then get it yourself if you can't wait!</h>
+464_b3	I am very cold, will you get me a blanket?	Yes I will, just give me a minute.	I will die if you don't give it to me now!	Then get it yourself if you can't wait!	You'd like that, wouldn't you?	<h>Yes I would.</h>
 465_a1	<h>Fancy coming to the gym with me after work?</h>
-466_a2	Fancy coming to the gym with me after work?	"No, because I have to meet with my kid's teacher." 	<h>"Nothing bad, I hope?"</h>
-467_a3	Fancy coming to the gym with me after work?	"No, because I have to meet with my kid's teacher."	"Nothing bad, I hope?"	"The usual. Nevaeh kept teasing Katie and pulling her hair, so Katie yelled at her to stop, and now for some reason Katie is the one in trouble again."	<h>That's not surprising. She may be learning aggressive behaviors from her sister.</h>
-468_b1	Are you still enjoying your job?	<h>"Yes, they haven't completely stolen my soul yet."</h>
-469_b2	Are you still enjoying your job?	"Yes, they haven't completely stolen my soul yet."	How long do you think it will be until they do?	<h>"Weeks, I guess. Months if they improve the quality of the coffee."</h>
-470_b3	Are you still enjoying your job?	"Yes, they haven't completely stolen my soul yet."	How long do you think it will be until they do?	"Weeks, I guess. Months if they improve the quality of the coffee."	You could just bring your own coffee and save your soul.	<h>"You are right, but I prefer otherwise."</h>
+466_a2	Fancy coming to the gym with me after work?	No, because I have to meet with my kid's teacher. 	<h>Nothing bad, I hope?</h>
+467_a3	Fancy coming to the gym with me after work?	No, because I have to meet with my kid's teacher.	Nothing bad, I hope?	The usual. Nevaeh kept teasing Katie and pulling her hair, so Katie yelled at her to stop, and now for some reason Katie is the one in trouble again.	<h>That's not surprising. She may be learning aggressive behaviors from her sister.</h>
+468_b1	Are you still enjoying your job?	<h>Yes, they haven't completely stolen my soul yet.</h>
+469_b2	Are you still enjoying your job?	Yes, they haven't completely stolen my soul yet.	How long do you think it will be until they do?	<h>Weeks, I guess. Months if they improve the quality of the coffee.</h>
+470_b3	Are you still enjoying your job?	Yes, they haven't completely stolen my soul yet.	How long do you think it will be until they do?	Weeks, I guess. Months if they improve the quality of the coffee.	You could just bring your own coffee and save your soul.	<h>You are right, but I prefer otherwise.</h>
 471_a1	<h>Can you call the doctor?</h>
-472_a2	Can you call the doctor?	"Yes I will, let me look up his number." 	<h>"The number is 911, fool."</h>
-473_a3	Can you call the doctor?	"Yes I will, let me look up his number."	"The number is 911, fool."	"You said the doctor, not emergency."	<h>"Okay okay, sorry i'm just in a lot of pain!"</h>
+472_a2	Can you call the doctor?	Yes I will, let me look up his number. 	<h>The number is 911, fool.</h>
+473_a3	Can you call the doctor?	Yes I will, let me look up his number.	The number is 911, fool.	You said the doctor, not emergency.	<h>Okay okay, sorry i'm just in a lot of pain!</h>
 474_b1	Where did I park the car?	<h>You parked it in Lot A</h>
-475_b2	Where did I park the car?	You parked it in Lot A	Shouldn't I have a slip for it?	<h>"No, this lot no longer uses slips. They scan your eye remember?"</h>
-476_b3	Where did I park the car?	You parked it in Lot A	Shouldn't I have a slip for it?	"No, this lot no longer uses slips. They scan your eye remember?"	"Oh, I hate that. It always makes me nervous."	<h>It's the way of the future.</h>
-477_a1	<h>"It's very hot today, don't you think?"</h>
-478_a2	"It's very hot today, don't you think?"	"Yes, it is very hot today." 	<h>I blame global warming.</h>
-479_a3	"It's very hot today, don't you think?"	"Yes, it is very hot today."	I blame global warming.	"That seems unlikely, but possible I guess."	<h>Well it's a fact. They say so in the news.</h>
-480_b1	Do you want to bike ride together sometime?	<h>"Yes, tomorrow morning would be a great."</h>
-481_b2	Do you want to bike ride together sometime?	"Yes, tomorrow morning would be a great."	"I'm busy tomorrow morning, how about in the afternoon?"	<h>"Sure, the afternoon works too. Prepare to sweat though!"</h>
-482_b3	Do you want to bike ride together sometime?	"Yes, tomorrow morning would be a great."	"I'm busy tomorrow morning, how about in the afternoon?"	"Sure, the afternoon works too. Prepare to sweat though!"	"I know, it's going to be a scorcher!"	<h>"I know, supposed to be in the 100s tomorrow."</h>
+475_b2	Where did I park the car?	You parked it in Lot A	Shouldn't I have a slip for it?	<h>No, this lot no longer uses slips. They scan your eye remember?</h>
+476_b3	Where did I park the car?	You parked it in Lot A	Shouldn't I have a slip for it?	No, this lot no longer uses slips. They scan your eye remember?	Oh, I hate that. It always makes me nervous.	<h>It's the way of the future.</h>
+477_a1	<h>It's very hot today, don't you think?</h>
+478_a2	It's very hot today, don't you think?	Yes, it is very hot today. 	<h>I blame global warming.</h>
+479_a3	It's very hot today, don't you think?	Yes, it is very hot today.	I blame global warming.	That seems unlikely, but possible I guess.	<h>Well it's a fact. They say so in the news.</h>
+480_b1	Do you want to bike ride together sometime?	<h>Yes, tomorrow morning would be a great.</h>
+481_b2	Do you want to bike ride together sometime?	Yes, tomorrow morning would be a great.	I'm busy tomorrow morning, how about in the afternoon?	<h>Sure, the afternoon works too. Prepare to sweat though!</h>
+482_b3	Do you want to bike ride together sometime?	Yes, tomorrow morning would be a great.	I'm busy tomorrow morning, how about in the afternoon?	Sure, the afternoon works too. Prepare to sweat though!	I know, it's going to be a scorcher!	<h>I know, supposed to be in the 100s tomorrow.</h>
 483_a1	<h>Did you have lunch yet?</h>
-484_a2	Did you have lunch yet?	"Not yet, I normally go around 1pm." 	<h>"Okay, can I come with you?"</h>
-485_a3	Did you have lunch yet?	"Not yet, I normally go around 1pm."	"Okay, can I come with you?"	"No, I really don't want you to join me, sorry."	<h>"Why not? Did I offend you somehow, or do you just need some time to yourself?"</h>
+484_a2	Did you have lunch yet?	Not yet, I normally go around 1pm. 	<h>Okay, can I come with you?</h>
+485_a3	Did you have lunch yet?	Not yet, I normally go around 1pm.	Okay, can I come with you?	No, I really don't want you to join me, sorry.	<h>Why not? Did I offend you somehow, or do you just need some time to yourself?</h>
 486_b1	Which button do I press?	<h>Press the button on the left of the elevator.</h>
-487_b2	Which button do I press?	Press the button on the left of the elevator.	Thank you. This one?	<h>"Yes, that's the right one."</h>
-488_b3	Which button do I press?	Press the button on the left of the elevator.	Thank you. This one?	"Yes, that's the right one."	"So, it's kind of crowded today, huh?"	<h>No it's always crowded.</h>
+487_b2	Which button do I press?	Press the button on the left of the elevator.	Thank you. This one?	<h>Yes, that's the right one.</h>
+488_b3	Which button do I press?	Press the button on the left of the elevator.	Thank you. This one?	Yes, that's the right one.	So, it's kind of crowded today, huh?	<h>No it's always crowded.</h>
 489_a1	<h>Do you want to watch a movie?</h>
 490_a2	Do you want to watch a movie?	Sure. Which movie? 	<h>I want to watch a comedy. How about Rush Hour?</h>
-491_a3	Do you want to watch a movie?	Sure. Which movie?	I want to watch a comedy. How about Rush Hour?	"I suppose we could watch that, though I'd prefer something else."	<h>DO you have any SNL recorded?</h>
+491_a3	Do you want to watch a movie?	Sure. Which movie?	I want to watch a comedy. How about Rush Hour?	I suppose we could watch that, though I'd prefer something else.	<h>DO you have any SNL recorded?</h>
 492_b1	Would you like to got to the movies tonight?	<h>I would love to!</h>
-493_b2	Would you like to got to the movies tonight?	I would love to!	Do you know what movie you want to watch?	<h>"I don't care, you decide."</h>
-494_b3	Would you like to got to the movies tonight?	I would love to!	Do you know what movie you want to watch?	"I don't care, you decide."	It'll be a surprise then!	<h>"For me, not you!"</h>
+493_b2	Would you like to got to the movies tonight?	I would love to!	Do you know what movie you want to watch?	<h>I don't care, you decide.</h>
+494_b3	Would you like to got to the movies tonight?	I would love to!	Do you know what movie you want to watch?	I don't care, you decide.	It'll be a surprise then!	<h>For me, not you!</h>
 495_a1	<h>Have you seen my glasses?</h>
-496_a2	Have you seen my glasses?	I have not seen your glasses. 	<h>"Oh okay, I have misplaced them somewhere!"</h>
-497_a3	Have you seen my glasses?	I have not seen your glasses.	"Oh okay, I have misplaced them somewhere!"	Did you look on your desk?	<h>"of course I did, you think I left them at the office?"</h>
-498_b1	Can you please help me?	<h>"Yes, what do you need?"</h>
-499_b2	Can you please help me?	"Yes, what do you need?"	I need you to help me bring the groceries in please.	<h>"OK, where should I put them?"</h>
-500_b3	Can you please help me?	"Yes, what do you need?"	I need you to help me bring the groceries in please.	"OK, where should I put them?"	On the counter would be great.	<h>Ok here you go. Need help putting them away?</h>
+496_a2	Have you seen my glasses?	I have not seen your glasses. 	<h>Oh okay, I have misplaced them somewhere!</h>
+497_a3	Have you seen my glasses?	I have not seen your glasses.	Oh okay, I have misplaced them somewhere!	Did you look on your desk?	<h>of course I did, you think I left them at the office?</h>
+498_b1	Can you please help me?	<h>Yes, what do you need?</h>
+499_b2	Can you please help me?	Yes, what do you need?	I need you to help me bring the groceries in please.	<h>OK, where should I put them?</h>
+500_b3	Can you please help me?	Yes, what do you need?	I need you to help me bring the groceries in please.	OK, where should I put them?	On the counter would be great.	<h>Ok here you go. Need help putting them away?</h>
 501_a1	<h>What's your favorite dessert?</h>
-502_a2	What's your favorite dessert?	Molten Chocolate Lava cake with Raspberries 	<h>"Oh my God, that sounds grand!"</h>
-503_a3	What's your favorite dessert?	Molten Chocolate Lava cake with Raspberries	"Oh my God, that sounds grand!"	"Yes, let's go get some!"	<h>I've been dying to try that new cafe. Maybe it's on their menu?</h>
+502_a2	What's your favorite dessert?	Molten Chocolate Lava cake with Raspberries 	<h>Oh my God, that sounds grand!</h>
+503_a3	What's your favorite dessert?	Molten Chocolate Lava cake with Raspberries	Oh my God, that sounds grand!	Yes, let's go get some!	<h>I've been dying to try that new cafe. Maybe it's on their menu?</h>

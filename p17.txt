@@ -1,84 +1,84 @@
 672_a1	<h>What have you done lately?</h>
 673_a2	What have you done lately?	Just work and take care of the kids.	<h>How old are your kids now?</h>
 674_a3	What have you done lately?	Just work and take care of the kids.	How old are your kids now?	They're eleven and fourteen.	<h>What are their names?</h>
-675_b1	Can I use the computer?	<h>"Yes, come here and sit down."</h>
-676_b2	Can I use the computer?	"Yes, come here and sit down."	"Ok, thank you."	<h>You are welcome.</h>
-677_b3	Can I use the computer?	"Yes, come here and sit down."	"Ok, thank you."	You are welcome.	What is your password? I can't get logged in.	<h>"Wait, let me type that for you."</h>
+675_b1	Can I use the computer?	<h>Yes, come here and sit down.</h>
+676_b2	Can I use the computer?	Yes, come here and sit down.	Ok, thank you.	<h>You are welcome.</h>
+677_b3	Can I use the computer?	Yes, come here and sit down.	Ok, thank you.	You are welcome.	What is your password? I can't get logged in.	<h>Wait, let me type that for you.</h>
 678_a1	<h>Can we eat something else?</h>
-679_a2	Can we eat something else?	"Oh, you don't like it? Sure, I'm sorry, let me see what else I have."	<h>Cereal would be good. Do you have any?</h>
-680_a3	Can we eat something else?	"Oh, you don't like it? Sure, I'm sorry, let me see what else I have."	Cereal would be good. Do you have any?	"I do have cereal,what kind would you like?"	<h>Do you have Lucky Charms?</h>
-681_b1	Do you think we will be able to go to the play tonight?	<h>"Yes, if daddy gives us permission."</h>
-682_b2	Do you think we will be able to go to the play tonight?	"Yes, if daddy gives us permission."	I hope he does.	<h>I hope so to if not we can ask mommy</h>
-683_b3	Do you think we will be able to go to the play tonight?	"Yes, if daddy gives us permission."	I hope he does.	I hope so to if not we can ask mommy	Mommy always says yes.	<h>"Well, one of them will need to bring us, so I hope at least one says yes."</h>
+679_a2	Can we eat something else?	Oh, you don't like it? Sure, I'm sorry, let me see what else I have.	<h>Cereal would be good. Do you have any?</h>
+680_a3	Can we eat something else?	Oh, you don't like it? Sure, I'm sorry, let me see what else I have.	Cereal would be good. Do you have any?	I do have cereal,what kind would you like?	<h>Do you have Lucky Charms?</h>
+681_b1	Do you think we will be able to go to the play tonight?	<h>Yes, if daddy gives us permission.</h>
+682_b2	Do you think we will be able to go to the play tonight?	Yes, if daddy gives us permission.	I hope he does.	<h>I hope so to if not we can ask mommy</h>
+683_b3	Do you think we will be able to go to the play tonight?	Yes, if daddy gives us permission.	I hope he does.	I hope so to if not we can ask mommy	Mommy always says yes.	<h>Well, one of them will need to bring us, so I hope at least one says yes.</h>
 684_a1	<h>Have you read the news today?</h>
 685_a2	Have you read the news today?	No I missed today's paper.	<h>There was a big article about a new political scandal.</h>
 686_a3	Have you read the news today?	No I missed today's paper.	There was a big article about a new political scandal.	what did it say?	<h>Why don't you read it for yourself?</h>
-687_b1	"I'm heading to the fourth floor, want to catch the elevator together?"	<h>"Certainly, but I want to go to the second floor."</h>
-688_b2	"I'm heading to the fourth floor, want to catch the elevator together?"	"Certainly, but I want to go to the second floor."	That's not a problem.	<h>"Ok, there's the elevator"</h>
-689_b3	"I'm heading to the fourth floor, want to catch the elevator together?"	"Certainly, but I want to go to the second floor."	That's not a problem.	"Ok, there's the elevator"	Can you push the button for the 2nd floor please?	<h>"Yeah, no prob."</h>
-690_a1	<h>"I didn't see you for ages, how are you?"</h>
-691_a2	"I didn't see you for ages, how are you?"	"Great thanks, I was just on vacation backpacking through Afghanistan!"	<h>"Wow, did you take any pictures?"</h>
-692_a3	"I didn't see you for ages, how are you?"	"Great thanks, I was just on vacation backpacking through Afghanistan!"	"Wow, did you take any pictures?"	"Yes, I have about 500. Would you like to see them?"	<h>I can't right now. Can you come over this weekend and show them to me then?</h>
+687_b1	I'm heading to the fourth floor, want to catch the elevator together?	<h>Certainly, but I want to go to the second floor.</h>
+688_b2	I'm heading to the fourth floor, want to catch the elevator together?	Certainly, but I want to go to the second floor.	That's not a problem.	<h>Ok, there's the elevator</h>
+689_b3	I'm heading to the fourth floor, want to catch the elevator together?	Certainly, but I want to go to the second floor.	That's not a problem.	Ok, there's the elevator	Can you push the button for the 2nd floor please?	<h>Yeah, no prob.</h>
+690_a1	<h>I didn't see you for ages, how are you?</h>
+691_a2	I didn't see you for ages, how are you?	Great thanks, I was just on vacation backpacking through Afghanistan!	<h>Wow, did you take any pictures?</h>
+692_a3	I didn't see you for ages, how are you?	Great thanks, I was just on vacation backpacking through Afghanistan!	Wow, did you take any pictures?	Yes, I have about 500. Would you like to see them?	<h>I can't right now. Can you come over this weekend and show them to me then?</h>
 693_b1	What time do we need to arrive by?	<h>We need to arrive by 3 pm</h>
 694_b2	What time do we need to arrive by?	We need to arrive by 3 pm	Then that means we need to leave here by 2pm.	<h>Are you driving or am I?</h>
 695_b3	What time do we need to arrive by?	We need to arrive by 3 pm	Then that means we need to leave here by 2pm.	Are you driving or am I?	You should drive this time.	<h>ok I will drive</h>
 696_a1	<h>What date is it?</h>
 697_a2	What date is it?	Today is the 20th of July.	<h>Are you sure it's not the 21st?</h>
-698_a3	What date is it?	Today is the 20th of July.	Are you sure it's not the 21st?	I just looked at the date on my phone.	<h>"Oh, ok. My days are starting to run together; can't keep up with what day it actually is."</h>
+698_a3	What date is it?	Today is the 20th of July.	Are you sure it's not the 21st?	I just looked at the date on my phone.	<h>Oh, ok. My days are starting to run together; can't keep up with what day it actually is.</h>
 699_b1	What did he say?	<h>He said you never called him and he was wondering why not.</h>
 700_b2	What did he say?	He said you never called him and he was wondering why not.	I lost his number.	<h>Did you lose it on purpose?</h>
-701_b3	What did he say?	He said you never called him and he was wondering why not.	I lost his number.	Did you lose it on purpose?	"No, of course not!"	<h>I lost it when I was sorting through the mail.</h>
+701_b3	What did he say?	He said you never called him and he was wondering why not.	I lost his number.	Did you lose it on purpose?	No, of course not!	<h>I lost it when I was sorting through the mail.</h>
 702_a1	<h>Do you remember that time we saved that bird in the park?</h>
 703_a2	Do you remember that time we saved that bird in the park?	I do. It was great.	<h>Sometimes I wonder if the bird remembers us.</h>
-704_a3	Do you remember that time we saved that bird in the park?	I do. It was great.	Sometimes I wonder if the bird remembers us.	"Remember us? I doubt it, but I guess you never know."	<h>Maybe we could find an ornithologist and ask him how well birds remember people.</h>
+704_a3	Do you remember that time we saved that bird in the park?	I do. It was great.	Sometimes I wonder if the bird remembers us.	Remember us? I doubt it, but I guess you never know.	<h>Maybe we could find an ornithologist and ask him how well birds remember people.</h>
 705_b1	Did you watch the game last night?	<h>no had to work late</h>
 706_b2	Did you watch the game last night?	no had to work late	You really missed a great game.	<h>Don't spoil it! I have it on my DVR.</h>
 707_b3	Did you watch the game last night?	no had to work late	You really missed a great game.	Don't spoil it! I have it on my DVR.	So you really don't want to talk about the game?	<h>No. Not until I watch it first.</h>
 708_a1	<h>Do you like turtles?</h>
-709_a2	Do you like turtles?	"No, because one bit me once."	<h>What did you do to make a turtle bite you?</h>
-710_a3	Do you like turtles?	"No, because one bit me once."	What did you do to make a turtle bite you?	"Well I was putting my finger in front of it's mouth to check it wouldn't bite me. But then it did, so now I hate turtles and am still oblivious to my own stupidity."	<h>"Dude, you'd better stay away from all animals I think."</h>
+709_a2	Do you like turtles?	No, because one bit me once.	<h>What did you do to make a turtle bite you?</h>
+710_a3	Do you like turtles?	No, because one bit me once.	What did you do to make a turtle bite you?	Well I was putting my finger in front of it's mouth to check it wouldn't bite me. But then it did, so now I hate turtles and am still oblivious to my own stupidity.	<h>Dude, you'd better stay away from all animals I think.</h>
 711_b1	Does anybody know where I left my hat?	<h>You left it on the table.</h>
 712_b2	Does anybody know where I left my hat?	You left it on the table.	Thanks. I've been looking for it all day.	<h>Want me to go get it and hand it to you right now?</h>
-713_b3	Does anybody know where I left my hat?	You left it on the table.	Thanks. I've been looking for it all day.	Want me to go get it and hand it to you right now?	That would be great. Could you also place it on my head for me?	<h>"I guess so, here you go."</h>
+713_b3	Does anybody know where I left my hat?	You left it on the table.	Thanks. I've been looking for it all day.	Want me to go get it and hand it to you right now?	That would be great. Could you also place it on my head for me?	<h>I guess so, here you go.</h>
 714_a1	<h>Can you help me get ready?</h>
-715_a2	Can you help me get ready?	"Yes, you should wear this"	<h>I would rather wear something black</h>
-716_a3	Can you help me get ready?	"Yes, you should wear this"	I would rather wear something black	"Fine, then find something yourself."	<h>Could you help me decide between these two black items?</h>
+715_a2	Can you help me get ready?	Yes, you should wear this	<h>I would rather wear something black</h>
+716_a3	Can you help me get ready?	Yes, you should wear this	I would rather wear something black	Fine, then find something yourself.	<h>Could you help me decide between these two black items?</h>
 717_b1	What are your plans for the evening?	<h>I am going to catch up on my shows.</h>
-718_b2	What are your plans for the evening?	I am going to catch up on my shows.	Do that tomorrow.	<h>"No, I have plans."</h>
-719_b3	What are your plans for the evening?	I am going to catch up on my shows.	Do that tomorrow.	"No, I have plans."	What are you doing tomorrow?	<h>I have tickets to the ball game and Sam and I are meeting for early dinner then heading over.</h>
+718_b2	What are your plans for the evening?	I am going to catch up on my shows.	Do that tomorrow.	<h>No, I have plans.</h>
+719_b3	What are your plans for the evening?	I am going to catch up on my shows.	Do that tomorrow.	No, I have plans.	What are you doing tomorrow?	<h>I have tickets to the ball game and Sam and I are meeting for early dinner then heading over.</h>
 720_a1	<h>How was your weekend?</h>
 721_a2	How was your weekend?	It was great spending time with family.	<h>Where were you?</h>
-722_a3	How was your weekend?	It was great spending time with family.	Where were you?	We all piled into the truck and headed down to the lake for a barbecue.	<h>"Sounds like fun, I should do that with my family next time"</h>
-723_b1	What did she say?	<h>"Not all that much, honestly. She seemed pretty upset."</h>
-724_b2	What did she say?	"Not all that much, honestly. She seemed pretty upset."	"I bet, it's a pretty bad situation."	<h>I hope she can take some time off from work.</h>
-725_b3	What did she say?	"Not all that much, honestly. She seemed pretty upset."	"I bet, it's a pretty bad situation."	I hope she can take some time off from work.	They told her she can have all of the time she needs.	<h>"That's good of them, she really needs it."</h>
+722_a3	How was your weekend?	It was great spending time with family.	Where were you?	We all piled into the truck and headed down to the lake for a barbecue.	<h>Sounds like fun, I should do that with my family next time</h>
+723_b1	What did she say?	<h>Not all that much, honestly. She seemed pretty upset.</h>
+724_b2	What did she say?	Not all that much, honestly. She seemed pretty upset.	I bet, it's a pretty bad situation.	<h>I hope she can take some time off from work.</h>
+725_b3	What did she say?	Not all that much, honestly. She seemed pretty upset.	I bet, it's a pretty bad situation.	I hope she can take some time off from work.	They told her she can have all of the time she needs.	<h>That's good of them, she really needs it.</h>
 726_a1	<h>Why he is not here?</h>
 727_a2	Why he is not here?	Because he wasn't feeling well.	<h>I am sorry to hear that.</h>
 728_a3	Why he is not here?	Because he wasn't feeling well.	I am sorry to hear that.	He will probably be well soon.	<h>What's wrong with him?</h>
-729_b1	How was your week?	<h>"Long, I am glad it is Friday."</h>
-730_b2	How was your week?	"Long, I am glad it is Friday."	Aren't we all glad it's Friday.	<h>Friday is our reward for surviving Monday through Thursday.</h>
-731_b3	How was your week?	"Long, I am glad it is Friday."	Aren't we all glad it's Friday.	Friday is our reward for surviving Monday through Thursday.	I hear you. What are you doing tonight?	<h>"Out to eat, want to join?"</h>
+729_b1	How was your week?	<h>Long, I am glad it is Friday.</h>
+730_b2	How was your week?	Long, I am glad it is Friday.	Aren't we all glad it's Friday.	<h>Friday is our reward for surviving Monday through Thursday.</h>
+731_b3	How was your week?	Long, I am glad it is Friday.	Aren't we all glad it's Friday.	Friday is our reward for surviving Monday through Thursday.	I hear you. What are you doing tonight?	<h>Out to eat, want to join?</h>
 732_a1	<h>Can you give me a recipe?</h>
 733_a2	Can you give me a recipe?	Depends on what you want to cook.	<h>The special one you have for chicken and dumplings.</h>
-734_a3	Can you give me a recipe?	Depends on what you want to cook.	The special one you have for chicken and dumplings.	"Oh, I don't know. That's actually my mom's secret recipe."	<h>Please? It is my sweet-heart's favorite. I promise not to publish it on the 'net.</h>
-735_b1	Do you think I have what it takes to be a model?	<h>"No, because you're too short."</h>
-736_b2	Do you think I have what it takes to be a model?	"No, because you're too short."	There must a need to model for short people.	<h>I don't know. Do short people buy clothes?</h>
-737_b3	Do you think I have what it takes to be a model?	"No, because you're too short."	There must a need to model for short people.	I don't know. Do short people buy clothes?	"Yes short people buy clothes, but no one wants to see short people on the runway!"	<h>"That isn't true, celebrities make appearances on the runway all the time and they often much shorter than the average model."</h>
+734_a3	Can you give me a recipe?	Depends on what you want to cook.	The special one you have for chicken and dumplings.	Oh, I don't know. That's actually my mom's secret recipe.	<h>Please? It is my sweet-heart's favorite. I promise not to publish it on the 'net.</h>
+735_b1	Do you think I have what it takes to be a model?	<h>No, because you're too short.</h>
+736_b2	Do you think I have what it takes to be a model?	No, because you're too short.	There must a need to model for short people.	<h>I don't know. Do short people buy clothes?</h>
+737_b3	Do you think I have what it takes to be a model?	No, because you're too short.	There must a need to model for short people.	I don't know. Do short people buy clothes?	Yes short people buy clothes, but no one wants to see short people on the runway!	<h>That isn't true, celebrities make appearances on the runway all the time and they often much shorter than the average model.</h>
 738_a1	<h>When will the game start?</h>
 739_a2	When will the game start?	It starts in 30 minutes.	<h>Who are you rooting for?</h>
 740_a3	When will the game start?	It starts in 30 minutes.	Who are you rooting for?	The home team.	<h>That is who I am rooting for also.</h>
 741_b1	Are we done yet?	<h>it depends on what you consider to be done</h>
-742_b2	Are we done yet?	it depends on what you consider to be done	"Way to be snarky about it, jerk."	<h>"Well it's a team project, so we both decide when it's done."</h>
-743_b3	Are we done yet?	it depends on what you consider to be done	"Way to be snarky about it, jerk."	"Well it's a team project, so we both decide when it's done."	"Well, I think it's done. What do you think still needs to be done?"	<h>i think we need one finishing touches.</h>
-744_a1	<h>"Sorry to hear that, can you tell me what happened?"</h>
-745_a2	"Sorry to hear that, can you tell me what happened?"	Not right now.	<h>Why not? I thought we were close.</h>
-746_a3	"Sorry to hear that, can you tell me what happened?"	Not right now.	Why not? I thought we were close.	Not as close as you think.	<h>I'm sorry you feel that way.</h>
-747_b1	Is there any ice cream in the freezer?	<h>"No, but there are some ice lollies."</h>
-748_b2	Is there any ice cream in the freezer?	"No, but there are some ice lollies."	"OK, can you please grab me one?"	<h>"No, you get up and do it your self."</h>
-749_b3	Is there any ice cream in the freezer?	"No, but there are some ice lollies."	"OK, can you please grab me one?"	"No, you get up and do it your self."	"Well that's the last time I grab you something from the store, mate."	<h>"I won't pay the rent this month, bloke."</h>
+742_b2	Are we done yet?	it depends on what you consider to be done	Way to be snarky about it, jerk.	<h>Well it's a team project, so we both decide when it's done.</h>
+743_b3	Are we done yet?	it depends on what you consider to be done	Way to be snarky about it, jerk.	Well it's a team project, so we both decide when it's done.	Well, I think it's done. What do you think still needs to be done?	<h>i think we need one finishing touches.</h>
+744_a1	<h>Sorry to hear that, can you tell me what happened?</h>
+745_a2	Sorry to hear that, can you tell me what happened?	Not right now.	<h>Why not? I thought we were close.</h>
+746_a3	Sorry to hear that, can you tell me what happened?	Not right now.	Why not? I thought we were close.	Not as close as you think.	<h>I'm sorry you feel that way.</h>
+747_b1	Is there any ice cream in the freezer?	<h>No, but there are some ice lollies.</h>
+748_b2	Is there any ice cream in the freezer?	No, but there are some ice lollies.	OK, can you please grab me one?	<h>No, you get up and do it your self.</h>
+749_b3	Is there any ice cream in the freezer?	No, but there are some ice lollies.	OK, can you please grab me one?	No, you get up and do it your self.	Well that's the last time I grab you something from the store, mate.	<h>I won't pay the rent this month, bloke.</h>
 750_a1	<h>Would you like a drink?</h>
-751_a2	Would you like a drink?	"Yes, a glass of water please."	<h>Would you like ice with your water?</h>
-752_a3	Would you like a drink?	"Yes, a glass of water please."	Would you like ice with your water?	"No, I can't stand water with ice in it."	<h>Why do you dislike ice in your water?</h>
+751_a2	Would you like a drink?	Yes, a glass of water please.	<h>Would you like ice with your water?</h>
+752_a3	Would you like a drink?	Yes, a glass of water please.	Would you like ice with your water?	No, I can't stand water with ice in it.	<h>Why do you dislike ice in your water?</h>
 753_b1	Would you like to have lunch with me?	<h>I'd be delighted to have lunch with you.</h>
 754_b2	Would you like to have lunch with me?	I'd be delighted to have lunch with you.	Do you have any preferences?	<h>There's a new restaurant over in Oakdale that I've been wanting to try out.</h>
 755_b3	Would you like to have lunch with me?	I'd be delighted to have lunch with you.	Do you have any preferences?	There's a new restaurant over in Oakdale that I've been wanting to try out.	Fun! What kind of restaurant is it?	<h>It's Thai Food.</h>

@@ -1,84 +1,84 @@
 504_b1	Does anyone consider me their best friend?	<h>Me of course!</h>
-505_b2	Does anyone consider me their best friend?	Me of course!	"Mom, you totally don't count!"	<h>Why don't I count?</h>
-506_b3	Does anyone consider me their best friend?	Me of course!	"Mom, you totally don't count!"	Why don't I count?	Because you are supposed to be my mom and not my friend.	<h>is that so?</h>
+505_b2	Does anyone consider me their best friend?	Me of course!	Mom, you totally don't count!	<h>Why don't I count?</h>
+506_b3	Does anyone consider me their best friend?	Me of course!	Mom, you totally don't count!	Why don't I count?	Because you are supposed to be my mom and not my friend.	<h>is that so?</h>
 507_a1	<h>How is your fiancee?</h>
-508_a2	How is your fiancee?	"My fiancee is doing fine now, thanks for asking." 	<h>Did he reobtain his driver licence?</h>
-509_a3	How is your fiancee?	"My fiancee is doing fine now, thanks for asking."	Did he reobtain his driver licence?	What? He never got it taken away in the first place.	<h>My mistake! I must have gotten him confused with someone else.</h>
-510_b1	Is it close to time for dinner?	<h>"No, dinner will be in two hours."</h>
-511_b2	Is it close to time for dinner?	"No, dinner will be in two hours."	What are we having?	<h>We are having macaroni and cheese</h>
-512_b3	Is it close to time for dinner?	"No, dinner will be in two hours."	What are we having?	We are having macaroni and cheese	"Homemade, or the cheap box stuff?"	<h>"The cheap box stuff, it's the best to me."</h>
+508_a2	How is your fiancee?	My fiancee is doing fine now, thanks for asking. 	<h>Did he reobtain his driver licence?</h>
+509_a3	How is your fiancee?	My fiancee is doing fine now, thanks for asking.	Did he reobtain his driver licence?	What? He never got it taken away in the first place.	<h>My mistake! I must have gotten him confused with someone else.</h>
+510_b1	Is it close to time for dinner?	<h>No, dinner will be in two hours.</h>
+511_b2	Is it close to time for dinner?	No, dinner will be in two hours.	What are we having?	<h>We are having macaroni and cheese</h>
+512_b3	Is it close to time for dinner?	No, dinner will be in two hours.	What are we having?	We are having macaroni and cheese	Homemade, or the cheap box stuff?	<h>The cheap box stuff, it's the best to me.</h>
 513_a1	<h>What do you want to do today?</h>
 514_a2	What do you want to do today?	Take a nap. 	<h>Are you very tired?</h>
-515_a3	What do you want to do today?	Take a nap.	Are you very tired?	"Not yet, but I expect it to catch up with me in a couple of hours."	<h>So you don't want to meet me for coffee in ten minutes?</h>
-516_b1	What did you think of the last episode of Outlander?	<h>"I thought it sucked, much like all the other episodes of Outlander. Can we please talk about Game of Thrones instead?"</h>
-517_b2	What did you think of the last episode of Outlander?	"I thought it sucked, much like all the other episodes of Outlander. Can we please talk about Game of Thrones instead?"	"No, not yet. I haven't watched the newest episode."	<h>You need to catch up then.</h>
-518_b3	What did you think of the last episode of Outlander?	"I thought it sucked, much like all the other episodes of Outlander. Can we please talk about Game of Thrones instead?"	"No, not yet. I haven't watched the newest episode."	You need to catch up then.	You're right. I'm just puzzled by how you dislike Outlander but enjoy Game of Thrones.	<h>Game of Thrones is just a lot better and more entertaining.</h>
-519_a1	<h>"Can I have some chilled water, please?"</h>
-520_a2	"Can I have some chilled water, please?"	It will have to be room temperature since I don't have any ice. 	<h>Oh that's not problem then.</h>
-521_a3	"Can I have some chilled water, please?"	It will have to be room temperature since I don't have any ice.	Oh that's not problem then.	"OK, be right back."	<h>Thanks. Hope it's not too much trouble.</h>
+515_a3	What do you want to do today?	Take a nap.	Are you very tired?	Not yet, but I expect it to catch up with me in a couple of hours.	<h>So you don't want to meet me for coffee in ten minutes?</h>
+516_b1	What did you think of the last episode of Outlander?	<h>I thought it sucked, much like all the other episodes of Outlander. Can we please talk about Game of Thrones instead?</h>
+517_b2	What did you think of the last episode of Outlander?	I thought it sucked, much like all the other episodes of Outlander. Can we please talk about Game of Thrones instead?	No, not yet. I haven't watched the newest episode.	<h>You need to catch up then.</h>
+518_b3	What did you think of the last episode of Outlander?	I thought it sucked, much like all the other episodes of Outlander. Can we please talk about Game of Thrones instead?	No, not yet. I haven't watched the newest episode.	You need to catch up then.	You're right. I'm just puzzled by how you dislike Outlander but enjoy Game of Thrones.	<h>Game of Thrones is just a lot better and more entertaining.</h>
+519_a1	<h>Can I have some chilled water, please?</h>
+520_a2	Can I have some chilled water, please?	It will have to be room temperature since I don't have any ice. 	<h>Oh that's not problem then.</h>
+521_a3	Can I have some chilled water, please?	It will have to be room temperature since I don't have any ice.	Oh that's not problem then.	OK, be right back.	<h>Thanks. Hope it's not too much trouble.</h>
 522_b1	How has your dad been?	<h>He's doing well.</h>
-523_b2	How has your dad been?	He's doing well.	"I saw him yesterday, he looked like he had seen a ghost."	<h>He was meeting with his accountant yesterday. That explains it.</h>
-524_b3	How has your dad been?	He's doing well.	"I saw him yesterday, he looked like he had seen a ghost."	He was meeting with his accountant yesterday. That explains it.	Does he have the same accountant he used to? I thought that guy went to jail for tax fraud.	<h>Actually he's got a new accountant and they're going over all of his old taxes now. That's probably why he looked so bad.</h>
+523_b2	How has your dad been?	He's doing well.	I saw him yesterday, he looked like he had seen a ghost.	<h>He was meeting with his accountant yesterday. That explains it.</h>
+524_b3	How has your dad been?	He's doing well.	I saw him yesterday, he looked like he had seen a ghost.	He was meeting with his accountant yesterday. That explains it.	Does he have the same accountant he used to? I thought that guy went to jail for tax fraud.	<h>Actually he's got a new accountant and they're going over all of his old taxes now. That's probably why he looked so bad.</h>
 525_a1	<h>What time does the bus leave?</h>
-526_a2	What time does the bus leave?	"Around 11:30, I think." 	<h>Thanks very much.</h>
-527_a3	What time does the bus leave?	"Around 11:30, I think."	Thanks very much.	Your welcome.	<h>Does the bus stop at Tower Hill?</h>
+526_a2	What time does the bus leave?	Around 11:30, I think. 	<h>Thanks very much.</h>
+527_a3	What time does the bus leave?	Around 11:30, I think.	Thanks very much.	Your welcome.	<h>Does the bus stop at Tower Hill?</h>
 528_b1	What time will you be back?	<h>I'll be back around noon</h>
-529_b2	What time will you be back?	I'll be back around noon	Make sure you pick up the mail before you come in.	<h>"Fine, if you insist that that's what I must do."</h>
-530_b3	What time will you be back?	I'll be back around noon	Make sure you pick up the mail before you come in.	"Fine, if you insist that that's what I must do."	What's with the attitude?	<h>"I'm tired of the way you speak to me. Make sure to pick up the mail, it's just rude."</h>
+529_b2	What time will you be back?	I'll be back around noon	Make sure you pick up the mail before you come in.	<h>Fine, if you insist that that's what I must do.</h>
+530_b3	What time will you be back?	I'll be back around noon	Make sure you pick up the mail before you come in.	Fine, if you insist that that's what I must do.	What's with the attitude?	<h>I'm tired of the way you speak to me. Make sure to pick up the mail, it's just rude.</h>
 531_a1	<h>Where are you going?</h>
 532_a2	Where are you going?	I am going to sleep. 	<h>Of course you are. That's all you do.</h>
 533_a3	Where are you going?	I am going to sleep.	Of course you are. That's all you do.	That's because I have to stay up most nights cleaning because you won't lift a finger and I refuse to live in filth.	<h>You're always so dramatic!</h>
 534_b1	Can you please hurry?	<h>I will be as quick as I can</h>
-535_b2	Can you please hurry?	I will be as quick as I can	Okay. We will be running a little bit late.	<h>"Dude, it's good to be late, it's called fashionable."</h>
-536_b3	Can you please hurry?	I will be as quick as I can	Okay. We will be running a little bit late.	"Dude, it's good to be late, it's called fashionable."	"Late is still late, fashionable or no."	<h>You get star like attention if you be late.</h>
+535_b2	Can you please hurry?	I will be as quick as I can	Okay. We will be running a little bit late.	<h>Dude, it's good to be late, it's called fashionable.</h>
+536_b3	Can you please hurry?	I will be as quick as I can	Okay. We will be running a little bit late.	Dude, it's good to be late, it's called fashionable.	Late is still late, fashionable or no.	<h>You get star like attention if you be late.</h>
 537_a1	<h>When do we need to leave?</h>
 538_a2	When do we need to leave?	No later then 9 or we will be late. 	<h>DO you think it would be faster to take a cab?</h>
-539_a3	When do we need to leave?	No later then 9 or we will be late.	DO you think it would be faster to take a cab?	No way; but thanks for asking.	<h>"Then what the heck are we going to do, walk there?"</h>
-540_b1	Did you like the match?	<h>"Yeah, it was pretty good."</h>
-541_b2	Did you like the match?	"Yeah, it was pretty good."	What was your favorite part?	<h>The one where the captain celebrated after his goal.</h>
-542_b3	Did you like the match?	"Yeah, it was pretty good."	What was your favorite part?	The one where the captain celebrated after his goal.	My favorite part was the snacks!	<h>That sounds like you.</h>
+539_a3	When do we need to leave?	No later then 9 or we will be late.	DO you think it would be faster to take a cab?	No way; but thanks for asking.	<h>Then what the heck are we going to do, walk there?</h>
+540_b1	Did you like the match?	<h>Yeah, it was pretty good.</h>
+541_b2	Did you like the match?	Yeah, it was pretty good.	What was your favorite part?	<h>The one where the captain celebrated after his goal.</h>
+542_b3	Did you like the match?	Yeah, it was pretty good.	What was your favorite part?	The one where the captain celebrated after his goal.	My favorite part was the snacks!	<h>That sounds like you.</h>
 543_a1	<h>Can you make lunch now?</h>
 544_a2	Can you make lunch now?	not right now. 	<h>What are you doing?</h>
 545_a3	Can you make lunch now?	not right now.	What are you doing?	Answering silly questions on the computer.	<h>Can't you go out and find a real job?</h>
-546_b1	Do you know of any good doctors?	<h>"Yes, I have a good one."</h>
-547_b2	Do you know of any good doctors?	"Yes, I have a good one."	How much is her consultation fee?	<h>"Far more than you can afford, I'd bet."</h>
-548_b3	Do you know of any good doctors?	"Yes, I have a good one."	How much is her consultation fee?	"Far more than you can afford, I'd bet."	Say's the man who sleeps in a cardboard box every night.	<h>Says the man who doesn't have a doctor.</h>
+546_b1	Do you know of any good doctors?	<h>Yes, I have a good one.</h>
+547_b2	Do you know of any good doctors?	Yes, I have a good one.	How much is her consultation fee?	<h>Far more than you can afford, I'd bet.</h>
+548_b3	Do you know of any good doctors?	Yes, I have a good one.	How much is her consultation fee?	Far more than you can afford, I'd bet.	Say's the man who sleeps in a cardboard box every night.	<h>Says the man who doesn't have a doctor.</h>
 549_a1	<h>Where do you live?</h>
 550_a2	Where do you live?	I have a place in Narragansett. 	<h>That's nice. How do you like it?</h>
-551_a3	Where do you live?	I have a place in Narragansett.	That's nice. How do you like it?	"I love it, but it gets so crowded in the summer."	<h>"Is it on the coast, or is it inland?"</h>
-552_b1	What do you like to do for fun?	<h>"Just for fun, I like to tell corny jokes."</h>
-553_b2	What do you like to do for fun?	"Just for fun, I like to tell corny jokes."	"You're joking, right?"	<h>"No, why, does that seem weird?"</h>
-554_b3	What do you like to do for fun?	"Just for fun, I like to tell corny jokes."	"You're joking, right?"	"No, why, does that seem weird?"	"I guess not, but where do you get fresh material?"	<h>"Anywhere! Walking around town, or watching videos online."</h>
-555_a1	<h>"Doctor, will I ever move my hands?"</h>
-556_a2	"Doctor, will I ever move my hands?"	it is possible 	<h>How soon will I know if I'll get movement back?</h>
-557_a3	"Doctor, will I ever move my hands?"	it is possible	How soon will I know if I'll get movement back?	A year at best.	<h>But my typing test is tomorrow!</h>
+551_a3	Where do you live?	I have a place in Narragansett.	That's nice. How do you like it?	I love it, but it gets so crowded in the summer.	<h>Is it on the coast, or is it inland?</h>
+552_b1	What do you like to do for fun?	<h>Just for fun, I like to tell corny jokes.</h>
+553_b2	What do you like to do for fun?	Just for fun, I like to tell corny jokes.	You're joking, right?	<h>No, why, does that seem weird?</h>
+554_b3	What do you like to do for fun?	Just for fun, I like to tell corny jokes.	You're joking, right?	No, why, does that seem weird?	I guess not, but where do you get fresh material?	<h>Anywhere! Walking around town, or watching videos online.</h>
+555_a1	<h>Doctor, will I ever move my hands?</h>
+556_a2	Doctor, will I ever move my hands?	it is possible 	<h>How soon will I know if I'll get movement back?</h>
+557_a3	Doctor, will I ever move my hands?	it is possible	How soon will I know if I'll get movement back?	A year at best.	<h>But my typing test is tomorrow!</h>
 558_b1	Why did you choose that?	<h>Because it's my favorite color.</h>
-559_b2	Why did you choose that?	Because it's my favorite color.	"It doesn't really go well with the shoes, though."	<h>"Well, I have a bag to match with it."</h>
-560_b3	Why did you choose that?	Because it's my favorite color.	"It doesn't really go well with the shoes, though."	"Well, I have a bag to match with it."	"ok, if you're sure you can make it work, go for it."	<h>You know I can rock this look.</h>
+559_b2	Why did you choose that?	Because it's my favorite color.	It doesn't really go well with the shoes, though.	<h>Well, I have a bag to match with it.</h>
+560_b3	Why did you choose that?	Because it's my favorite color.	It doesn't really go well with the shoes, though.	Well, I have a bag to match with it.	ok, if you're sure you can make it work, go for it.	<h>You know I can rock this look.</h>
 561_a1	<h>what is it like up there?</h>
-562_a2	what is it like up there?	"It gets cold during the winters, but it's not too bad." 	<h>I couldn't deal with the cold.</h>
-563_a3	what is it like up there?	"It gets cold during the winters, but it's not too bad."	I couldn't deal with the cold.	You just get used to it.	<h>"I guess so, but don't they get a lot of snow up there, too? I hate snow."</h>
+562_a2	what is it like up there?	It gets cold during the winters, but it's not too bad. 	<h>I couldn't deal with the cold.</h>
+563_a3	what is it like up there?	It gets cold during the winters, but it's not too bad.	I couldn't deal with the cold.	You just get used to it.	<h>I guess so, but don't they get a lot of snow up there, too? I hate snow.</h>
 564_b1	Have you found a job yet?	<h>I sure have!</h>
 565_b2	Have you found a job yet?	I sure have!	Yes! Congratulations to you!	<h>Thanks! I can't wait to start.</h>
 566_b3	Have you found a job yet?	I sure have!	Yes! Congratulations to you!	Thanks! I can't wait to start.	So where will you be working?	<h>In McDonalds by the promenade.</h>
 567_a1	<h>Do you like eating at home or at a restaurant?</h>
 568_a2	Do you like eating at home or at a restaurant?	Home most days. 	<h>You must be a good cook then.</h>
-569_a3	Do you like eating at home or at a restaurant?	Home most days.	You must be a good cook then.	"Yes, I've been cooking all my life and I really enjoy it."	<h>What is your favorite dish to cook?</h>
-570_b1	Are you allergic to dogs?	<h>"No, I only have seasonal allergies."</h>
-571_b2	Are you allergic to dogs?	"No, I only have seasonal allergies."	Does that mean you'll be able to dogsit for us?	<h>Sure I can dogsit for you.</h>
-572_b3	Are you allergic to dogs?	"No, I only have seasonal allergies."	Does that mean you'll be able to dogsit for us?	Sure I can dogsit for you.	"Thanks a lot, I can never find a sitter."	<h>It can be tough to find one out here in Alaska.</h>
-573_a1	<h>"What happened, why you need my help?"</h>
-574_a2	"What happened, why you need my help?"	My house Is on fire! 	<h>I'll be right over.</h>
-575_a3	"What happened, why you need my help?"	My house Is on fire!	I'll be right over.	"Hurry, it's going to burn down!"	<h>I already called 911!</h>
-576_b1	Are you new here?	<h>"Relatively, yes. I've been here about three weeks."</h>
-577_b2	Are you new here?	"Relatively, yes. I've been here about three weeks."	So you're new then.	<h>I'm starting to feel more at home here though!</h>
-578_b3	Are you new here?	"Relatively, yes. I've been here about three weeks."	So you're new then.	I'm starting to feel more at home here though!	Do you need any recommendations?	<h>"Yes, any help would be appreciated!"</h>
+569_a3	Do you like eating at home or at a restaurant?	Home most days.	You must be a good cook then.	Yes, I've been cooking all my life and I really enjoy it.	<h>What is your favorite dish to cook?</h>
+570_b1	Are you allergic to dogs?	<h>No, I only have seasonal allergies.</h>
+571_b2	Are you allergic to dogs?	No, I only have seasonal allergies.	Does that mean you'll be able to dogsit for us?	<h>Sure I can dogsit for you.</h>
+572_b3	Are you allergic to dogs?	No, I only have seasonal allergies.	Does that mean you'll be able to dogsit for us?	Sure I can dogsit for you.	Thanks a lot, I can never find a sitter.	<h>It can be tough to find one out here in Alaska.</h>
+573_a1	<h>What happened, why you need my help?</h>
+574_a2	What happened, why you need my help?	My house Is on fire! 	<h>I'll be right over.</h>
+575_a3	What happened, why you need my help?	My house Is on fire!	I'll be right over.	Hurry, it's going to burn down!	<h>I already called 911!</h>
+576_b1	Are you new here?	<h>Relatively, yes. I've been here about three weeks.</h>
+577_b2	Are you new here?	Relatively, yes. I've been here about three weeks.	So you're new then.	<h>I'm starting to feel more at home here though!</h>
+578_b3	Are you new here?	Relatively, yes. I've been here about three weeks.	So you're new then.	I'm starting to feel more at home here though!	Do you need any recommendations?	<h>Yes, any help would be appreciated!</h>
 579_a1	<h>Could I have something to drink?</h>
-580_a2	Could I have something to drink?	"Yes, what do you want?" 	<h>Do you have any diet soda?</h>
-581_a3	Could I have something to drink?	"Yes, what do you want?"	Do you have any diet soda?	Yes I do have diet soda	<h>Oh that will be good.</h>
+580_a2	Could I have something to drink?	Yes, what do you want? 	<h>Do you have any diet soda?</h>
+581_a3	Could I have something to drink?	Yes, what do you want?	Do you have any diet soda?	Yes I do have diet soda	<h>Oh that will be good.</h>
 582_b1	Is there any change in my condition?	<h>I have know idea.</h>
-583_b2	Is there any change in my condition?	I have know idea.	That's not very reassuring.	<h>"I am sorry I cannot give you the reassurance that you seek. But if it's any reassuring, people with your condition usually stay functional for an average of 10 years after diagnoses."</h>
-584_b3	Is there any change in my condition?	I have know idea.	That's not very reassuring.	"I am sorry I cannot give you the reassurance that you seek. But if it's any reassuring, people with your condition usually stay functional for an average of 10 years after diagnoses."	"There's still hope something might change, though. Right? I read something about that when it's in the early stages."	<h>"There are some life changes that may help, but there is no conclusive evidence that these changes will make improvements in your condition."</h>
+583_b2	Is there any change in my condition?	I have know idea.	That's not very reassuring.	<h>I am sorry I cannot give you the reassurance that you seek. But if it's any reassuring, people with your condition usually stay functional for an average of 10 years after diagnoses.</h>
+584_b3	Is there any change in my condition?	I have know idea.	That's not very reassuring.	I am sorry I cannot give you the reassurance that you seek. But if it's any reassuring, people with your condition usually stay functional for an average of 10 years after diagnoses.	There's still hope something might change, though. Right? I read something about that when it's in the early stages.	<h>There are some life changes that may help, but there is no conclusive evidence that these changes will make improvements in your condition.</h>
 585_a1	<h>What is your name?</h>
 586_a2	What is your name?	My name is Clarice. 	<h>That is an unusual name.</h>
 587_a3	What is your name?	My name is Clarice.	That is an unusual name.	That's why my parents chose it.	<h>So what about my name? does that make me a usual person?</h>

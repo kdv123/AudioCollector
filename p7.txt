@@ -1,33 +1,33 @@
 252_a1	<h>Can you help me to the bathroom?</h>
-253_a2	Can you help me to the bathroom?	come on then	<h>"You could be nicer about it. I will just try to go, myself."</h>
-254_a3	Can you help me to the bathroom?	come on then	"You could be nicer about it. I will just try to go, myself."	"I'm sorry, I was trying to be encouraging."	<h>It's just that today hasn't been one of my better days.</h>
+253_a2	Can you help me to the bathroom?	come on then	<h>You could be nicer about it. I will just try to go, myself.</h>
+254_a3	Can you help me to the bathroom?	come on then	You could be nicer about it. I will just try to go, myself.	I'm sorry, I was trying to be encouraging.	<h>It's just that today hasn't been one of my better days.</h>
 255_b1	Where is the book store?	<h>It's at the mall.</h>
 256_b2	Where is the book store?	It's at the mall.	On which wing of the mall?	<h>Malls can't fly silly!</h>
 257_b3	Where is the book store?	It's at the mall.	On which wing of the mall?	Malls can't fly silly!	I guess I asked the wrong person; what an idiot!	<h>I was just kidding!</h>
 258_a1	<h>So whats the plan tomorrow?</h>
-259_a2	So whats the plan tomorrow?	The plan is not to die.	<h>"You sound prepared, man!"</h>
-260_a3	So whats the plan tomorrow?	The plan is not to die.	"You sound prepared, man!"	"Well, I'm doing the best I can."	<h>"Right, you can never be too sure these days."</h>
-261_b1	Did we go to school together?	<h>"Yes, you were a year ahead of me."</h>
-262_b2	Did we go to school together?	"Yes, you were a year ahead of me."	Maybe you were a year behind me.	<h>"I was, you were in the same class as my cousin"</h>
-263_b3	Did we go to school together?	"Yes, you were a year ahead of me."	Maybe you were a year behind me.	"I was, you were in the same class as my cousin"	Can you get the facts right?	<h>You are very clever aren't you?</h>
+259_a2	So whats the plan tomorrow?	The plan is not to die.	<h>You sound prepared, man!</h>
+260_a3	So whats the plan tomorrow?	The plan is not to die.	You sound prepared, man!	Well, I'm doing the best I can.	<h>Right, you can never be too sure these days.</h>
+261_b1	Did we go to school together?	<h>Yes, you were a year ahead of me.</h>
+262_b2	Did we go to school together?	Yes, you were a year ahead of me.	Maybe you were a year behind me.	<h>I was, you were in the same class as my cousin</h>
+263_b3	Did we go to school together?	Yes, you were a year ahead of me.	Maybe you were a year behind me.	I was, you were in the same class as my cousin	Can you get the facts right?	<h>You are very clever aren't you?</h>
 264_a1	<h>How was your day?</h>
 265_a2	How was your day?	It's was alright. We had a meeting at work about the new owners.	<h>Did your company get bought out?</h>
-266_a3	How was your day?	It's was alright. We had a meeting at work about the new owners.	Did your company get bought out?	"Yes, and the merger isn't going too well so far."	<h>Im very sorry.</h>
+266_a3	How was your day?	It's was alright. We had a meeting at work about the new owners.	Did your company get bought out?	Yes, and the merger isn't going too well so far.	<h>Im very sorry.</h>
 267_b1	When willl you be coming back?	<h>I'll be back in two weeks on the 8th.</h>
-268_b2	When willl you be coming back?	I'll be back in two weeks on the 8th.	Care to stop by before you leave?	<h>"Sure, will you be home on Sunday afternoon?"</h>
-269_b3	When willl you be coming back?	I'll be back in two weeks on the 8th.	Care to stop by before you leave?	"Sure, will you be home on Sunday afternoon?"	"Until 11, I have a brunch planned."	<h>"I see, how about Sunday evening?"</h>
+268_b2	When willl you be coming back?	I'll be back in two weeks on the 8th.	Care to stop by before you leave?	<h>Sure, will you be home on Sunday afternoon?</h>
+269_b3	When willl you be coming back?	I'll be back in two weeks on the 8th.	Care to stop by before you leave?	Sure, will you be home on Sunday afternoon?	Until 11, I have a brunch planned.	<h>I see, how about Sunday evening?</h>
 270_a1	<h>Can you work overtime?</h>
 271_a2	Can you work overtime?	Not today sorry	<h>Are you available to work the weekend then?</h>
-272_a3	Can you work overtime?	Not today sorry	Are you available to work the weekend then?	I can work on Sunday if that helps.	<h>"Great, I need someone on Sunday from 9 to 9."</h>
+272_a3	Can you work overtime?	Not today sorry	Are you available to work the weekend then?	I can work on Sunday if that helps.	<h>Great, I need someone on Sunday from 9 to 9.</h>
 273_b1	What kind of music do you like?	<h>I love classical music especially the piano.</h>
-274_b2	What kind of music do you like?	I love classical music especially the piano.	Who is your favorite composer?	<h>"Chopin, of course. And you?"</h>
-275_b3	What kind of music do you like?	I love classical music especially the piano.	Who is your favorite composer?	"Chopin, of course. And you?"	For me it is batobin	<h>"I've never heard of Batobin, tell me more about their work!"</h>
+274_b2	What kind of music do you like?	I love classical music especially the piano.	Who is your favorite composer?	<h>Chopin, of course. And you?</h>
+275_b3	What kind of music do you like?	I love classical music especially the piano.	Who is your favorite composer?	Chopin, of course. And you?	For me it is batobin	<h>I've never heard of Batobin, tell me more about their work!</h>
 276_a1	<h>Could you please put in the air conditioner?</h>
-277_a2	Could you please put in the air conditioner?	"Sure, I can install it tomorrow."	<h>"Did I stutter, I mean now"</h>
-278_a3	Could you please put in the air conditioner?	"Sure, I can install it tomorrow."	"Did I stutter, I mean now"	Maybe you should install it yourself or ask Fred to do it.	<h>Fred has pneumonia. He can't do it.</h>
+277_a2	Could you please put in the air conditioner?	Sure, I can install it tomorrow.	<h>Did I stutter, I mean now</h>
+278_a3	Could you please put in the air conditioner?	Sure, I can install it tomorrow.	Did I stutter, I mean now	Maybe you should install it yourself or ask Fred to do it.	<h>Fred has pneumonia. He can't do it.</h>
 279_b1	What's in the big box on the table?	<h>I got your sister a present and am going to wrap it up.</h>
-280_b2	What's in the big box on the table?	I got your sister a present and am going to wrap it up.	"It's already wrapped up. Are you forgetting things again, Mom?"	<h>"Oh, I'm sorry. There were just a few things running through my mind."</h>
-281_b3	What's in the big box on the table?	I got your sister a present and am going to wrap it up.	"It's already wrapped up. Are you forgetting things again, Mom?"	"Oh, I'm sorry. There were just a few things running through my mind."	So what is the present?	<h>Its one of the juice machines you see on tv all the time.</h>
+280_b2	What's in the big box on the table?	I got your sister a present and am going to wrap it up.	It's already wrapped up. Are you forgetting things again, Mom?	<h>Oh, I'm sorry. There were just a few things running through my mind.</h>
+281_b3	What's in the big box on the table?	I got your sister a present and am going to wrap it up.	It's already wrapped up. Are you forgetting things again, Mom?	Oh, I'm sorry. There were just a few things running through my mind.	So what is the present?	<h>Its one of the juice machines you see on tv all the time.</h>
 282_a1	<h>Do you think it went well?</h>
 283_a2	Do you think it went well?	I think it went as well as it could have.	<h>What could have been better?</h>
 284_a3	Do you think it went well?	I think it went as well as it could have.	What could have been better?	It could have been a little shorter.	<h>How long did it take?</h>
@@ -36,49 +36,49 @@
 287_b3	So when you turn sixteen are you going to go for your driver's license?	Yes I just can't wait!	Aren't you scared of driving?	Of course not!	I was terrified of driving when I was your age.	<h>You were my age?</h>
 288_a1	<h>Have you met my brother?</h>
 289_a2	Have you met my brother?	I don't believe I have.	<h>Let me introduce you to him.</h>
-290_a3	Have you met my brother?	I don't believe I have.	Let me introduce you to him.	"Before you do, I need to know, is he funny?"	<h>He's hilarious. You're going to love him.</h>
-291_b1	"Do we go for the tests, today?"	<h>"Yes, lets go for the test."</h>
-292_b2	"Do we go for the tests, today?"	"Yes, lets go for the test."	I think you're a little too eager to go.	<h>"The sooner we go for the tests, the sooner we can get started on making a baby."</h>
-293_b3	"Do we go for the tests, today?"	"Yes, lets go for the test."	I think you're a little too eager to go.	"The sooner we go for the tests, the sooner we can get started on making a baby."	I am a little nervous; aren't you?	<h>Of course I am!</h>
+290_a3	Have you met my brother?	I don't believe I have.	Let me introduce you to him.	Before you do, I need to know, is he funny?	<h>He's hilarious. You're going to love him.</h>
+291_b1	Do we go for the tests, today?	<h>Yes, lets go for the test.</h>
+292_b2	Do we go for the tests, today?	Yes, lets go for the test.	I think you're a little too eager to go.	<h>The sooner we go for the tests, the sooner we can get started on making a baby.</h>
+293_b3	Do we go for the tests, today?	Yes, lets go for the test.	I think you're a little too eager to go.	The sooner we go for the tests, the sooner we can get started on making a baby.	I am a little nervous; aren't you?	<h>Of course I am!</h>
 294_a1	<h>Can you bring me a mirror?</h>
-295_a2	Can you bring me a mirror?	"Yes, just a minute."	<h>"Okay, thank you!"</h>
-296_a3	Can you bring me a mirror?	"Yes, just a minute."	"Okay, thank you!"	Do you know where it is?	<h>It's on the dresser in your bedroom.</h>
+295_a2	Can you bring me a mirror?	Yes, just a minute.	<h>Okay, thank you!</h>
+296_a3	Can you bring me a mirror?	Yes, just a minute.	Okay, thank you!	Do you know where it is?	<h>It's on the dresser in your bedroom.</h>
 297_b1	What was your favorite surfing experience?	<h>Last summer in Hawaii is probably my favorite.</h>
-298_b2	What was your favorite surfing experience?	Last summer in Hawaii is probably my favorite.	"Oh man, that sounds awesome, what was the water like that day?"	<h>Huge waves bright sun it was awesome</h>
-299_b3	What was your favorite surfing experience?	Last summer in Hawaii is probably my favorite.	"Oh man, that sounds awesome, what was the water like that day?"	Huge waves bright sun it was awesome	"Wow, I would love to visit there!"	<h>we can go this summer.</h>
+298_b2	What was your favorite surfing experience?	Last summer in Hawaii is probably my favorite.	Oh man, that sounds awesome, what was the water like that day?	<h>Huge waves bright sun it was awesome</h>
+299_b3	What was your favorite surfing experience?	Last summer in Hawaii is probably my favorite.	Oh man, that sounds awesome, what was the water like that day?	Huge waves bright sun it was awesome	Wow, I would love to visit there!	<h>we can go this summer.</h>
 300_a1	<h>Can I have some wine?</h>
 301_a2	Can I have some wine?	Here is your glass.	<h>Thanks so much.</h>
 302_a3	Can I have some wine?	Here is your glass.	Thanks so much.	What do you think of the wine?	<h>it is so tasty</h>
-303_b1	Can you check my eBay account?	<h>"Sure, what do you want me to look at?"</h>
-304_b2	Can you check my eBay account?	"Sure, what do you want me to look at?"	I need to know if anyone bought anything.	<h>"Sure, what's your eBay name?"</h>
-305_b3	Can you check my eBay account?	"Sure, what do you want me to look at?"	I need to know if anyone bought anything.	"Sure, what's your eBay name?"	It's under Mittens510.	<h>I don't see any recent transactions.</h>
+303_b1	Can you check my eBay account?	<h>Sure, what do you want me to look at?</h>
+304_b2	Can you check my eBay account?	Sure, what do you want me to look at?	I need to know if anyone bought anything.	<h>Sure, what's your eBay name?</h>
+305_b3	Can you check my eBay account?	Sure, what do you want me to look at?	I need to know if anyone bought anything.	Sure, what's your eBay name?	It's under Mittens510.	<h>I don't see any recent transactions.</h>
 306_a1	<h>What will be the color?</h>
-307_a2	What will be the color?	The color will be red.	<h>"What kind of red, bright or deep?"</h>
-308_a3	What will be the color?	The color will be red.	"What kind of red, bright or deep?"	"A bright red, I guess. What do you mean by a deep red, though?"	<h>"You know, like a dark red."</h>
+307_a2	What will be the color?	The color will be red.	<h>What kind of red, bright or deep?</h>
+308_a3	What will be the color?	The color will be red.	What kind of red, bright or deep?	A bright red, I guess. What do you mean by a deep red, though?	<h>You know, like a dark red.</h>
 309_b1	Where did you find that shirt?	<h>The shirt Is good one and find In the shopping mall</h>
 310_b2	Where did you find that shirt?	The shirt Is good one and find In the shopping mall	Really? Which store did you find it in?	<h>I found this here shirt all the way in the back of Spencer's under a pile of 15 others.</h>
-311_b3	Where did you find that shirt?	The shirt Is good one and find In the shopping mall	Really? Which store did you find it in?	I found this here shirt all the way in the back of Spencer's under a pile of 15 others.	You are so brave and strong to lift 15 shirts up to find that one.	<h>"Why thank you, and you are very clever and beautiful to have noticed my manly strength."</h>
+311_b3	Where did you find that shirt?	The shirt Is good one and find In the shopping mall	Really? Which store did you find it in?	I found this here shirt all the way in the back of Spencer's under a pile of 15 others.	You are so brave and strong to lift 15 shirts up to find that one.	<h>Why thank you, and you are very clever and beautiful to have noticed my manly strength.</h>
 312_a1	<h>What color blanket is on your bed?</h>
 313_a2	What color blanket is on your bed?	Depends on how long the cats have been sleeping there.	<h>Before the cats have been laying on it.</h>
-314_a3	What color blanket is on your bed?	Depends on how long the cats have been sleeping there.	Before the cats have been laying on it.	"I can't even remember, possibly turquoise."	<h>Too bad you don't own Russian Blues.</h>
-315_b1	Have you ever been on a boat ride?	<h>"Yes, but I get sea sick."</h>
-316_b2	Have you ever been on a boat ride?	"Yes, but I get sea sick."	Have you tried getting some tablets to help that?	<h>"I have, but they didn't even work."</h>
-317_b3	Have you ever been on a boat ride?	"Yes, but I get sea sick."	Have you tried getting some tablets to help that?	"I have, but they didn't even work."	So even with the tablets you threw up all over the boat?	<h>Yeah even taking some motion sickness tablets. I mean it helped a little but I still felt sea sick.</h>
+314_a3	What color blanket is on your bed?	Depends on how long the cats have been sleeping there.	Before the cats have been laying on it.	I can't even remember, possibly turquoise.	<h>Too bad you don't own Russian Blues.</h>
+315_b1	Have you ever been on a boat ride?	<h>Yes, but I get sea sick.</h>
+316_b2	Have you ever been on a boat ride?	Yes, but I get sea sick.	Have you tried getting some tablets to help that?	<h>I have, but they didn't even work.</h>
+317_b3	Have you ever been on a boat ride?	Yes, but I get sea sick.	Have you tried getting some tablets to help that?	I have, but they didn't even work.	So even with the tablets you threw up all over the boat?	<h>Yeah even taking some motion sickness tablets. I mean it helped a little but I still felt sea sick.</h>
 318_a1	<h>Which country are you from?</h>
-319_a2	Which country are you from?	I'm from the United States of America.	<h>"You're very lucky, then."</h>
-320_a3	Which country are you from?	I'm from the United States of America.	"You're very lucky, then."	I guess so. I haven't really thought about it.	<h>You should certainly think about. There are so many benefits.</h>
+319_a2	Which country are you from?	I'm from the United States of America.	<h>You're very lucky, then.</h>
+320_a3	Which country are you from?	I'm from the United States of America.	You're very lucky, then.	I guess so. I haven't really thought about it.	<h>You should certainly think about. There are so many benefits.</h>
 321_b1	Can we go to bed?	<h>No. We have too much work to do.</h>
 322_b2	Can we go to bed?	No. We have too much work to do.	I just hope we can finish it before my favorite show comes on!	<h>We will never finish the work in time.</h>
-323_b3	Can we go to bed?	No. We have too much work to do.	I just hope we can finish it before my favorite show comes on!	We will never finish the work in time.	Not with that attitude we won't.	<h>"Well, we'll have to work more efficiently at lest."</h>
+323_b3	Can we go to bed?	No. We have too much work to do.	I just hope we can finish it before my favorite show comes on!	We will never finish the work in time.	Not with that attitude we won't.	<h>Well, we'll have to work more efficiently at lest.</h>
 324_a1	<h>Did you see that play?</h>
-325_a2	Did you see that play?	"Yes, it was terrible."	<h>That's good to know because I was thinking about going to see it sometime.</h>
-326_a3	Did you see that play?	"Yes, it was terrible."	That's good to know because I was thinking about going to see it sometime.	"Don't bother, it's not worth the ticket price."	<h>I'll probably just go to the casino instead. Do you want to come?</h>
+325_a2	Did you see that play?	Yes, it was terrible.	<h>That's good to know because I was thinking about going to see it sometime.</h>
+326_a3	Did you see that play?	Yes, it was terrible.	That's good to know because I was thinking about going to see it sometime.	Don't bother, it's not worth the ticket price.	<h>I'll probably just go to the casino instead. Do you want to come?</h>
 327_b1	Want to go to the store?	<h>Sure! Lets go.</h>
 328_b2	Want to go to the store?	Sure! Lets go.	Shall I drive or will you?	<h>You can drive.</h>
-329_b3	Want to go to the store?	Sure! Lets go.	Shall I drive or will you?	You can drive.	"OK, can we take your car?"	<h>"No, I just got it washed and it looks like it's gonna rain."</h>
+329_b3	Want to go to the store?	Sure! Lets go.	Shall I drive or will you?	You can drive.	OK, can we take your car?	<h>No, I just got it washed and it looks like it's gonna rain.</h>
 330_a1	<h>Where is my blue shirt?</h>
-331_a2	Where is my blue shirt?	"You're wearing it, Dan. Time to get your eyes checked, buddy."	<h>"Oh haha, maybe I should get them checked!"</h>
-332_a3	Where is my blue shirt?	"You're wearing it, Dan. Time to get your eyes checked, buddy."	"Oh haha, maybe I should get them checked!"	Are you colorblind?	<h>"No, I just can't see blue, green, red or yellow."</h>
+331_a2	Where is my blue shirt?	You're wearing it, Dan. Time to get your eyes checked, buddy.	<h>Oh haha, maybe I should get them checked!</h>
+332_a3	Where is my blue shirt?	You're wearing it, Dan. Time to get your eyes checked, buddy.	Oh haha, maybe I should get them checked!	Are you colorblind?	<h>No, I just can't see blue, green, red or yellow.</h>
 333_b1	Would you pick up the book for me when you go?	<h>Sure just text me in case I forget.</h>
 334_b2	Would you pick up the book for me when you go?	Sure just text me in case I forget.	You forget everything. I will text you.	<h>About what? I've already forgotten.</h>
-335_b3	Would you pick up the book for me when you go?	Sure just text me in case I forget.	You forget everything. I will text you.	About what? I've already forgotten.	"Ha ha very funny, anyway it is the book by Stephen King."	<h>What is the title? Stephen King has a lot of books.</h>
+335_b3	Would you pick up the book for me when you go?	Sure just text me in case I forget.	You forget everything. I will text you.	About what? I've already forgotten.	Ha ha very funny, anyway it is the book by Stephen King.	<h>What is the title? Stephen King has a lot of books.</h>

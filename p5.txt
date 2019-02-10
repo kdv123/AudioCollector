@@ -2,83 +2,83 @@
 169_a2	When did you come?	I came yesterday.	<h>So why are you now just telling me?</h>
 170_a3	When did you come?	I came yesterday.	So why are you now just telling me?	Well I thought I'd surprise you.	<h>I wish you had told me sooner.</h>
 171_b1	Are we there yet?	<h>We should be there shortly.</h>
-172_b2	Are we there yet?	We should be there shortly.	Are there yet now?	<h>"Johnny, stop. You know we aren't there yet. I'll tell you when we're getting close."</h>
-173_b3	Are we there yet?	We should be there shortly.	Are there yet now?	"Johnny, stop. You know we aren't there yet. I'll tell you when we're getting close."	Are we there yet?	<h>We're turning around next time you ask.</h>
+172_b2	Are we there yet?	We should be there shortly.	Are there yet now?	<h>Johnny, stop. You know we aren't there yet. I'll tell you when we're getting close.</h>
+173_b3	Are we there yet?	We should be there shortly.	Are there yet now?	Johnny, stop. You know we aren't there yet. I'll tell you when we're getting close.	Are we there yet?	<h>We're turning around next time you ask.</h>
 174_a1	<h>How much homework do you have tonight?</h>
 175_a2	How much homework do you have tonight?	Way more than I want. I've been letting it slide.	<h>This is what you get for procrastinating!</h>
-176_a3	How much homework do you have tonight?	Way more than I want. I've been letting it slide.	This is what you get for procrastinating!	Want to do them together?	<h>"No, I'm all caught up with mine. Sorry!"</h>
+176_a3	How much homework do you have tonight?	Way more than I want. I've been letting it slide.	This is what you get for procrastinating!	Want to do them together?	<h>No, I'm all caught up with mine. Sorry!</h>
 177_b1	Could you come over whenever you've got time?	<h>I'll be there at 8pm.</h>
-178_b2	Could you come over whenever you've got time?	I'll be there at 8pm.	"ok, I'll be home then."	<h>"Cool, I'll clear the driveway so there's room for you to park."</h>
-179_b3	Could you come over whenever you've got time?	I'll be there at 8pm.	"ok, I'll be home then."	"Cool, I'll clear the driveway so there's room for you to park."	"Don't worry, I'll be riding my bike!"	<h>Call when you arrive and I will open the garage for you to put your bike inside.</h>
+178_b2	Could you come over whenever you've got time?	I'll be there at 8pm.	ok, I'll be home then.	<h>Cool, I'll clear the driveway so there's room for you to park.</h>
+179_b3	Could you come over whenever you've got time?	I'll be there at 8pm.	ok, I'll be home then.	Cool, I'll clear the driveway so there's room for you to park.	Don't worry, I'll be riding my bike!	<h>Call when you arrive and I will open the garage for you to put your bike inside.</h>
 180_a1	<h>What did she say?</h>
 181_a2	What did she say?	She said she never even got a message from you. What's the deal?	<h>the deal is that I've been sick.</h>
-182_a3	What did she say?	She said she never even got a message from you. What's the deal?	the deal is that I've been sick.	"So, you lied to her about sending her a message?"	<h>"Not really, I intended to, but things got in the way."</h>
+182_a3	What did she say?	She said she never even got a message from you. What's the deal?	the deal is that I've been sick.	So, you lied to her about sending her a message?	<h>Not really, I intended to, but things got in the way.</h>
 183_b1	Does she have any friends?	<h>More than I could ever imagine.</h>
-184_b2	Does she have any friends?	More than I could ever imagine.	Are most of her friends females?	<h>"No, they're mostly men."</h>
-185_b3	Does she have any friends?	More than I could ever imagine.	Are most of her friends females?	"No, they're mostly men."	"Better keep a close watch on that one. Beauty, brains, and athletic abilities just draw the men to her."	<h>"I know, the struggle is real."</h>
+184_b2	Does she have any friends?	More than I could ever imagine.	Are most of her friends females?	<h>No, they're mostly men.</h>
+185_b3	Does she have any friends?	More than I could ever imagine.	Are most of her friends females?	No, they're mostly men.	Better keep a close watch on that one. Beauty, brains, and athletic abilities just draw the men to her.	<h>I know, the struggle is real.</h>
 186_a1	<h>Do I know you?</h>
 187_a2	Do I know you?	No. Not at all.	<h>I'm pretty certain we've met.</h>
-188_a3	Do I know you?	No. Not at all.	I'm pretty certain we've met.	Maybe we went to school together?	<h>"No, I think it is from somewhere else."</h>
+188_a3	Do I know you?	No. Not at all.	I'm pretty certain we've met.	Maybe we went to school together?	<h>No, I think it is from somewhere else.</h>
 189_b1	Where Is a good place to eat?	<h>In the restaurant near the lake.</h>
 190_b2	Where Is a good place to eat?	In the restaurant near the lake.	What type of cuisine is it?	<h>It is Mediterranean.</h>
-191_b3	Where Is a good place to eat?	In the restaurant near the lake.	What type of cuisine is it?	It is Mediterranean.	Do they have Happy Hour?	<h>"I am not sure, you may have to call them."</h>
+191_b3	Where Is a good place to eat?	In the restaurant near the lake.	What type of cuisine is it?	It is Mediterranean.	Do they have Happy Hour?	<h>I am not sure, you may have to call them.</h>
 192_a1	<h>What's the weather like tomorrow?</h>
 193_a2	What's the weather like tomorrow?	Sunny with a chance of rain.	<h>Means it for sure will rain.</h>
-194_a3	What's the weather like tomorrow?	Sunny with a chance of rain.	Means it for sure will rain.	"It probably won't rain, unless you forget your umbrella."	<h>I hope it does rain then I won't have to water my plants.</h>
-195_b1	Would you please warm up my food?	<h>"Sure, I'll put it in the microwave"</h>
-196_b2	Would you please warm up my food?	"Sure, I'll put it in the microwave"	"Thank you very much, that's kind of you."	<h>Anything else I can get you while I am up?</h>
-197_b3	Would you please warm up my food?	"Sure, I'll put it in the microwave"	"Thank you very much, that's kind of you."	Anything else I can get you while I am up?	"Can I get a glass of water, please?"	<h>"yes, let me get some."</h>
+194_a3	What's the weather like tomorrow?	Sunny with a chance of rain.	Means it for sure will rain.	It probably won't rain, unless you forget your umbrella.	<h>I hope it does rain then I won't have to water my plants.</h>
+195_b1	Would you please warm up my food?	<h>Sure, I'll put it in the microwave</h>
+196_b2	Would you please warm up my food?	Sure, I'll put it in the microwave	Thank you very much, that's kind of you.	<h>Anything else I can get you while I am up?</h>
+197_b3	Would you please warm up my food?	Sure, I'll put it in the microwave	Thank you very much, that's kind of you.	Anything else I can get you while I am up?	Can I get a glass of water, please?	<h>yes, let me get some.</h>
 198_a1	<h>Would you want to eat again?</h>
-199_a2	Would you want to eat again?	"Maybe later, my stomach's not feeling up to it."	<h>Are you ill?</h>
-200_a3	Would you want to eat again?	"Maybe later, my stomach's not feeling up to it."	Are you ill?	Just a little nauseous.	<h>"Okay, I hope you feel better soon."</h>
-201_b1	Could I please speak to a manager?	<h>"Yes, M'am. I'm the manager."</h>
-202_b2	Could I please speak to a manager?	"Yes, M'am. I'm the manager."	I want to file a complaint.	<h>I'm so sorry for your trouble! What happened?</h>
-203_b3	Could I please speak to a manager?	"Yes, M'am. I'm the manager."	I want to file a complaint.	I'm so sorry for your trouble! What happened?	I ordered a grilled cheese but was served a cheeseburger.	<h>I'm very sorry this happened. Let me correct that for you.</h>
+199_a2	Would you want to eat again?	Maybe later, my stomach's not feeling up to it.	<h>Are you ill?</h>
+200_a3	Would you want to eat again?	Maybe later, my stomach's not feeling up to it.	Are you ill?	Just a little nauseous.	<h>Okay, I hope you feel better soon.</h>
+201_b1	Could I please speak to a manager?	<h>Yes, M'am. I'm the manager.</h>
+202_b2	Could I please speak to a manager?	Yes, M'am. I'm the manager.	I want to file a complaint.	<h>I'm so sorry for your trouble! What happened?</h>
+203_b3	Could I please speak to a manager?	Yes, M'am. I'm the manager.	I want to file a complaint.	I'm so sorry for your trouble! What happened?	I ordered a grilled cheese but was served a cheeseburger.	<h>I'm very sorry this happened. Let me correct that for you.</h>
 204_a1	<h>Do you play any instruments?</h>
-205_a2	Do you play any instruments?	I do not play a instrument.	<h>"Too bad, latest study says people who play instruments live longer."</h>
-206_a3	Do you play any instruments?	I do not play a instrument.	"Too bad, latest study says people who play instruments live longer."	Maybe I'll take up the piano.	<h>Good idea. I'll take up the tuba and we can start up a band.</h>
-207_b1	What did you buy today?	<h>"I bought a new pair of shoes from Amazon, and a book by David Foster Wallace."</h>
-208_b2	What did you buy today?	"I bought a new pair of shoes from Amazon, and a book by David Foster Wallace."	How much did it cost?	<h>"About thirty dollars for the shoes and twenty dollars for the book. I started reading it and I don't much like it, though."</h>
-209_b3	What did you buy today?	"I bought a new pair of shoes from Amazon, and a book by David Foster Wallace."	How much did it cost?	"About thirty dollars for the shoes and twenty dollars for the book. I started reading it and I don't much like it, though."	That's unfortunate. What is the book about?	<h>It's 200 pages long and only pictures of Wallace's childhood.</h>
+205_a2	Do you play any instruments?	I do not play a instrument.	<h>Too bad, latest study says people who play instruments live longer.</h>
+206_a3	Do you play any instruments?	I do not play a instrument.	Too bad, latest study says people who play instruments live longer.	Maybe I'll take up the piano.	<h>Good idea. I'll take up the tuba and we can start up a band.</h>
+207_b1	What did you buy today?	<h>I bought a new pair of shoes from Amazon, and a book by David Foster Wallace.</h>
+208_b2	What did you buy today?	I bought a new pair of shoes from Amazon, and a book by David Foster Wallace.	How much did it cost?	<h>About thirty dollars for the shoes and twenty dollars for the book. I started reading it and I don't much like it, though.</h>
+209_b3	What did you buy today?	I bought a new pair of shoes from Amazon, and a book by David Foster Wallace.	How much did it cost?	About thirty dollars for the shoes and twenty dollars for the book. I started reading it and I don't much like it, though.	That's unfortunate. What is the book about?	<h>It's 200 pages long and only pictures of Wallace's childhood.</h>
 210_a1	<h>Where is my phone?</h>
 211_a2	Where is my phone?	I think I saw your phone on the kitchen counter.	<h>I already looked there.</h>
-212_a3	Where is my phone?	I think I saw your phone on the kitchen counter.	I already looked there.	"Oh, maybe it was the bathroom counter then."	<h>I wasn't in the bathroom.</h>
+212_a3	Where is my phone?	I think I saw your phone on the kitchen counter.	I already looked there.	Oh, maybe it was the bathroom counter then.	<h>I wasn't in the bathroom.</h>
 213_b1	What made you say that?	<h>It just slipped out.</h>
 214_b2	What made you say that?	It just slipped out.	Well now you're in trouble.	<h>What are you going to do about It?</h>
-215_b3	What made you say that?	It just slipped out.	Well now you're in trouble.	What are you going to do about It?	"Nothing, I think your wife already suspects and it won't be long till she calls you on it."	<h>"Oh no, you're probably right."</h>
+215_b3	What made you say that?	It just slipped out.	Well now you're in trouble.	What are you going to do about It?	Nothing, I think your wife already suspects and it won't be long till she calls you on it.	<h>Oh no, you're probably right.</h>
 216_a1	<h>Can I have a cup of coffee?</h>
-217_a2	Can I have a cup of coffee?	"Yes, do you want cream and sugar?"	<h>"Yes, please, plenty of both."</h>
-218_a3	Can I have a cup of coffee?	"Yes, do you want cream and sugar?"	"Yes, please, plenty of both."	I like lots of cream and sugar too!	<h>It's the only way I can drink it.</h>
+217_a2	Can I have a cup of coffee?	Yes, do you want cream and sugar?	<h>Yes, please, plenty of both.</h>
+218_a3	Can I have a cup of coffee?	Yes, do you want cream and sugar?	Yes, please, plenty of both.	I like lots of cream and sugar too!	<h>It's the only way I can drink it.</h>
 219_b1	who did you go with?	<h>I went with my husband and children.</h>
-220_b2	who did you go with?	I went with my husband and children.	Was the place children-friendly?	<h>"Yes, it was absolutely child-friendly."</h>
-221_b3	who did you go with?	I went with my husband and children.	Was the place children-friendly?	"Yes, it was absolutely child-friendly."	Did they have lots for the kids to due?	<h>"they had an array of exciting things like games, face painting, and even some kiddie rides."</h>
+220_b2	who did you go with?	I went with my husband and children.	Was the place children-friendly?	<h>Yes, it was absolutely child-friendly.</h>
+221_b3	who did you go with?	I went with my husband and children.	Was the place children-friendly?	Yes, it was absolutely child-friendly.	Did they have lots for the kids to due?	<h>they had an array of exciting things like games, face painting, and even some kiddie rides.</h>
 222_a1	<h>What time is it?</h>
-223_a2	What time is it?	It is 10:30 AM.	<h>"Oh gosh, it's still morning?"</h>
-224_a3	What time is it?	It is 10:30 AM.	"Oh gosh, it's still morning?"	That's what AM means.	<h>I feel like it has been 3 hours since I got here!</h>
-225_b1	What did you accomplish today?	<h>"Oh, I went to Mrs. Miller and got my money."</h>
-226_b2	What did you accomplish today?	"Oh, I went to Mrs. Miller and got my money."	Did you get it all?	<h>"Yes, finally. Now I can afford a new car!"</h>
-227_b3	What did you accomplish today?	"Oh, I went to Mrs. Miller and got my money."	Did you get it all?	"Yes, finally. Now I can afford a new car!"	That must have been a lot of money!	<h>It is enough for a down payment.</h>
+223_a2	What time is it?	It is 10:30 AM.	<h>Oh gosh, it's still morning?</h>
+224_a3	What time is it?	It is 10:30 AM.	Oh gosh, it's still morning?	That's what AM means.	<h>I feel like it has been 3 hours since I got here!</h>
+225_b1	What did you accomplish today?	<h>Oh, I went to Mrs. Miller and got my money.</h>
+226_b2	What did you accomplish today?	Oh, I went to Mrs. Miller and got my money.	Did you get it all?	<h>Yes, finally. Now I can afford a new car!</h>
+227_b3	What did you accomplish today?	Oh, I went to Mrs. Miller and got my money.	Did you get it all?	Yes, finally. Now I can afford a new car!	That must have been a lot of money!	<h>It is enough for a down payment.</h>
 228_a1	<h>Is someone moving in next door?</h>
 229_a2	Is someone moving in next door?	Next week somebody will move in.	<h>Do you know who it is?</h>
-230_a3	Is someone moving in next door?	Next week somebody will move in.	Do you know who it is?	I think a college student.	<h>"Oh great, hopefully they're not the partying type!"</h>
+230_a3	Is someone moving in next door?	Next week somebody will move in.	Do you know who it is?	I think a college student.	<h>Oh great, hopefully they're not the partying type!</h>
 231_b1	Why is George crying?	<h>He stubbed his toe</h>
-232_b2	Why is George crying?	He stubbed his toe	"Oh, I'm sure he'll be fine in a few minutes."	<h>"Yeah, he's a bit of a drama queen."</h>
-233_b3	Why is George crying?	He stubbed his toe	"Oh, I'm sure he'll be fine in a few minutes."	"Yeah, he's a bit of a drama queen."	"Yeah, he cries all of the time!"	<h>At least you aren't having to deal with him.</h>
+232_b2	Why is George crying?	He stubbed his toe	Oh, I'm sure he'll be fine in a few minutes.	<h>Yeah, he's a bit of a drama queen.</h>
+233_b3	Why is George crying?	He stubbed his toe	Oh, I'm sure he'll be fine in a few minutes.	Yeah, he's a bit of a drama queen.	Yeah, he cries all of the time!	<h>At least you aren't having to deal with him.</h>
 234_a1	<h>What is an avocado?</h>
-235_a2	What is an avocado?	It's a fruit.	<h>"No, it is an delicious, exotic meat from Nigeria."</h>
-236_a3	What is an avocado?	It's a fruit.	"No, it is an delicious, exotic meat from Nigeria."	"Wrong, steak is a delicious meat, avocado is a fruit."	<h>I know; I was just kidding.</h>
+235_a2	What is an avocado?	It's a fruit.	<h>No, it is an delicious, exotic meat from Nigeria.</h>
+236_a3	What is an avocado?	It's a fruit.	No, it is an delicious, exotic meat from Nigeria.	Wrong, steak is a delicious meat, avocado is a fruit.	<h>I know; I was just kidding.</h>
 237_b1	How was your day?	<h>Dull as dishwater. How about yours?</h>
-238_b2	How was your day?	Dull as dishwater. How about yours?	Better than your apparently.	<h>"Yes, I would say so."</h>
-239_b3	How was your day?	Dull as dishwater. How about yours?	Better than your apparently.	"Yes, I would say so."	I think we need to spice up your life.	<h>"Me too, but between work and the kids' activities, I barely have time for myself."</h>
+238_b2	How was your day?	Dull as dishwater. How about yours?	Better than your apparently.	<h>Yes, I would say so.</h>
+239_b3	How was your day?	Dull as dishwater. How about yours?	Better than your apparently.	Yes, I would say so.	I think we need to spice up your life.	<h>Me too, but between work and the kids' activities, I barely have time for myself.</h>
 240_a1	<h>What are your goals for your stay here?</h>
 241_a2	What are your goals for your stay here?	I want to learn a lot and do some networking!	<h>Great! Would you like to sign up for any panels?</h>
 242_a3	What are your goals for your stay here?	I want to learn a lot and do some networking!	Great! Would you like to sign up for any panels?	Absolutely I would!	<h>You are so enthusiastic! Is this your first time here?</h>
-243_b1	Where is it from?	<h>"I'm not sure, I just found it by the door."</h>
-244_b2	Where is it from?	"I'm not sure, I just found it by the door."	Well let's open it!	<h>But it's not addressed to us.</h>
-245_b3	Where is it from?	"I'm not sure, I just found it by the door."	Well let's open it!	But it's not addressed to us.	Who is it addressed to?	<h>what is the address?</h>
+243_b1	Where is it from?	<h>I'm not sure, I just found it by the door.</h>
+244_b2	Where is it from?	I'm not sure, I just found it by the door.	Well let's open it!	<h>But it's not addressed to us.</h>
+245_b3	Where is it from?	I'm not sure, I just found it by the door.	Well let's open it!	But it's not addressed to us.	Who is it addressed to?	<h>what is the address?</h>
 246_a1	<h>Where do you keep your class schedule?</h>
 247_a2	Where do you keep your class schedule?	In my class schedule carrying case. Duh.	<h>Where do you put your case?</h>
 248_a3	Where do you keep your class schedule?	In my class schedule carrying case. Duh.	Where do you put your case?	In its case.	<h>A case inside a case?</h>
-249_b1	Can you call my mother?	<h>"Sure, do you know her number?"</h>
-250_b2	Can you call my mother?	"Sure, do you know her number?"	I will have to look It up	<h>"Okay, let me know when you find it."</h>
-251_b3	Can you call my mother?	"Sure, do you know her number?"	I will have to look It up	"Okay, let me know when you find it."	Why don't you have your mother's phone number?	<h>She changed it recently.</h>
+249_b1	Can you call my mother?	<h>Sure, do you know her number?</h>
+250_b2	Can you call my mother?	Sure, do you know her number?	I will have to look It up	<h>Okay, let me know when you find it.</h>
+251_b3	Can you call my mother?	Sure, do you know her number?	I will have to look It up	Okay, let me know when you find it.	Why don't you have your mother's phone number?	<h>She changed it recently.</h>
