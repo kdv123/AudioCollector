@@ -1,0 +1,84 @@
+924_b1	Who let the dog out?	<h>Your nephew, of course.</h>
+925_b2	Who let the dog out?	Your nephew, of course.	Will you help me catch the dog before he eats the neighbor's trash again?	<h>I'll do my best.</h>
+926_b3	Who let the dog out?	Your nephew, of course.	Will you help me catch the dog before he eats the neighbor's trash again?	I'll do my best.	Good, that dog loves to eat trash and my neighbor gets really mad	<h>Maybe if you fed him well, he wouldn't be looking for food in other people's trash.</h>
+927_a1	<h>Have you seen the new film?</h>
+928_a2	Have you seen the new film?	Yeah, I saw it on opening weekend. It was so-so. 	<h>It had really good reviews though, I think I'll see it anyway.</h>
+929_a3	Have you seen the new film?	Yeah, I saw it on opening weekend. It was so-so.	It had really good reviews though, I think I'll see it anyway.	Go ahead if you want to.	<h>I guess I'll see it with Steven.</h>
+930_b1	What time did you go to bed?	<h>I usually try to get in bed around midnight. Often I don't fall asleep till after 2.</h>
+931_b2	What time did you go to bed?	I usually try to get in bed around midnight. Often I don't fall asleep till after 2.	What time do you have to get up?	<h>Luckily I am off tomorrow so I can stay up until the sun comes up!</h>
+932_b3	What time did you go to bed?	I usually try to get in bed around midnight. Often I don't fall asleep till after 2.	What time do you have to get up?	Luckily I am off tomorrow so I can stay up until the sun comes up!	So what do you do in the wee morning hours?	<h>I have my breakfeast</h>
+933_a1	<h>Could you please help me with the laundry?</h>
+934_a2	Could you please help me with the laundry?	Not if you're shouting at me. 	<h>I'm sorry, but I'm not feeling well.</h>
+935_a3	Could you please help me with the laundry?	Not if you're shouting at me.	I'm sorry, but I'm not feeling well.	Okay just calm down. I'll do the laundry.	<h>Thank you for helping!</h>
+936_b1	How does my hair look?	<h>It looks nice today.</h>
+937_b2	How does my hair look?	It looks nice today.	Thanks! You will never guess who did it for me.	<h>Who did it?</h>
+938_b3	How does my hair look?	It looks nice today.	Thanks! You will never guess who did it for me.	Who did it?	Remember that cheerleader from the basketball team with the red hair? She's working at the salon near my office now.	<h>Wow, she's done a pretty great job!</h>
+939_a1	<h>What are your plans after graduation?</h>
+940_a2	What are your plans after graduation?	I'm not sure what my plans are. 	<h>Have you thought about college?</h>
+941_a3	What are your plans after graduation?	I'm not sure what my plans are.	Have you thought about college?	I've considered a few schools.	<h>What school's have you considered?</h>
+942_b1	What time is it?	<h>It's 6 o'clock.</h>
+943_b2	What time is it?	It's 6 o'clock.	What time are you leaving for work?	<h>In an hour.</h>
+944_b3	What time is it?	It's 6 o'clock.	What time are you leaving for work?	In an hour.	What time will you be home?	<h>I'm not sure, I need to stop at the store on the way home from work.</h>
+945_a1	<h>Do you know how to sew?</h>
+946_a2	Do you know how to sew?	I've known how to sew since I was little 	<h>Can you teach me?</h>
+947_a3	Do you know how to sew?	I've known how to sew since I was little	Can you teach me?	I can sew your lips shut.	<h>Awesome! I've always wanted that.</h>
+948_b1	Did you start the dishwasher?	<h>Yes, I started the dishwasher.</h>
+949_b2	Did you start the dishwasher?	Yes, I started the dishwasher.	Thanks, can you help me clean the living room?	<h>Sure I'll help you clean the living room. But after that I would like us to go for a nice walk.</h>
+950_b3	Did you start the dishwasher?	Yes, I started the dishwasher.	Thanks, can you help me clean the living room?	Sure I'll help you clean the living room. But after that I would like us to go for a nice walk.	I am not feeling like going for a walk tonight, I am pretty tired.	<h>So how about we go for a walk before we clean the living room?</h>
+951_a1	<h>How did my boss take the news?</h>
+952_a2	How did my boss take the news?	Not very well 	<h>Yeah, he handles everything like that</h>
+953_a3	How did my boss take the news?	Not very well	Yeah, he handles everything like that	He said he was gonna fire you, dude.	<h>I better go talk to him. Wish me well!</h>
+954_b1	You came early, did you get off work early?	<h>Yeah, we were pretty slow so they sent me home</h>
+955_b2	You came early, did you get off work early?	Yeah, we were pretty slow so they sent me home	Is work usually this slow?	<h>No, this is unusual.</h>
+956_b3	You came early, did you get off work early?	Yeah, we were pretty slow so they sent me home	Is work usually this slow?	No, this is unusual.	Well, I hope you get to work a full day tomorrow.	<h>Not me. I'm salaried, so I'm hoping I get sent home again tomorrow.</h>
+957_a1	<h>Can I get up?</h>
+958_a2	Can I get up?	No, it's too early to get up. 	<h>How long until I can get up?</h>
+959_a3	Can I get up?	No, it's too early to get up.	How long until I can get up?	Two more hours.	<h>Two more hours? I'll be so bored!</h>
+960_b1	Did you watch the game last night?	<h>No I fell asleep early.</h>
+961_b2	Did you watch the game last night?	No I fell asleep early.	You missed a good game. Those last five minutes were intense.	<h>Oh? What happened?</h>
+962_b3	Did you watch the game last night?	No I fell asleep early.	You missed a good game. Those last five minutes were intense.	Oh? What happened?	Nothing. I don't want to ruin it for you.	<h>I appreciate that.</h>
+963_a1	<h>Can we buy a pony?</h>
+964_a2	Can we buy a pony?	What do you think? 	<h>I think you're the best parent ever!</h>
+965_a3	Can we buy a pony?	What do you think?	I think you're the best parent ever!	That is exactly the response I was looking for!	<h>What do I have to say to get TWO ponies?</h>
+966_b1	May I take your order?	<h>I'd like a Coke and a grilled chicken sandwich with fries.</h>
+967_b2	May I take your order?	I'd like a Coke and a grilled chicken sandwich with fries.	And I'll take a Dr Pepper and a hamburger	<h>Okay, I'll be right back with your drinks.</h>
+968_b3	May I take your order?	I'd like a Coke and a grilled chicken sandwich with fries.	And I'll take a Dr Pepper and a hamburger	Okay, I'll be right back with your drinks.	Thank you very much! I'd like extra ice in the coke, too.	<h>Would you also like me to drink the coke for you?</h>
+969_a1	<h>What is your favorite sport?</h>
+970_a2	What is your favorite sport?	Jumping rope while playing chess, is my favorite sport. 	<h>That sounds tough. Are you good at it?</h>
+971_a3	What is your favorite sport?	Jumping rope while playing chess, is my favorite sport.	That sounds tough. Are you good at it?	I am good at it, but I can't seem to find anyone to play it with.	<h>Why do I get the feeling you're pulling my leg?</h>
+972_b1	Have you met my kids?	<h>Not yet I haven't</h>
+973_b2	Have you met my kids?	Not yet I haven't	I'm sure you will love them!	<h>I can't wait to meet them!</h>
+974_b3	Have you met my kids?	Not yet I haven't	I'm sure you will love them!	I can't wait to meet them!	They're looking forward to meeting you, too.	<h>lets meet this Saturday for dinner.</h>
+975_a1	<h>When did you last eat?</h>
+976_a2	When did you last eat?	I last ate about 3 hours ago. 	<h>How are you hungry already?</h>
+977_a3	When did you last eat?	I last ate about 3 hours ago.	How are you hungry already?	Because, I'm a bottomless pit.	<h>I don't understand how you remain in such good shape! Share your secret!</h>
+978_b1	Where are you going?	<h>To the store</h>
+979_b2	Where are you going?	To the store	Pick up some milk please.	<h>I'll get a gallon, and I know we're out of eggs too.</h>
+980_b3	Where are you going?	To the store	Pick up some milk please.	I'll get a gallon, and I know we're out of eggs too.	Thanks, you're such a doll.	<h>I've asked you to stop calling me that, Barb.</h>
+981_a1	<h>Can you pick up some more?</h>
+982_a2	Can you pick up some more?	I can pick up as many as you would like. 	<h>How big is your truck?</h>
+983_a3	Can you pick up some more?	I can pick up as many as you would like.	How big is your truck?	I have a 20 foot flatbed.	<h>Good, when can you head over there again?</h>
+984_b1	Why are you taking so long?	<h>Because I want to.</h>
+985_b2	Why are you taking so long?	Because I want to.	Why do you want to take so long?	<h>Because I can do whatever I want to.</h>
+986_b3	Why are you taking so long?	Because I want to.	Why do you want to take so long?	Because I can do whatever I want to.	Yes your highness lord of everything.	<h>That's the spirit loyal subject.</h>
+987_a1	<h>Do you like to make art?</h>
+988_a2	Do you like to make art?	I do when I have time. 	<h>Your art is good, you should try and set aside time for it.</h>
+989_a3	Do you like to make art?	I do when I have time.	Your art is good, you should try and set aside time for it.	I should, but I've been really busy with work lately.	<h>Well, I really hope it lets up soon. I like your stuff a lot.</h>
+990_b1	Can you repeat that slower?	<h>Ok, here we go.</h>
+991_b2	Can you repeat that slower?	Ok, here we go.	Thank you, it's hard for me to hear.	<h>No worries! I have that problem when my allergies bother me. Where should I start?</h>
+992_b3	Can you repeat that slower?	Ok, here we go.	Thank you, it's hard for me to hear.	No worries! I have that problem when my allergies bother me. Where should I start?	At the beginning please?	<h>Alright, I'll talk slower this time.</h>
+993_a1	<h>What do you think of it here?</h>
+994_a2	What do you think of it here?	It's nice, a little too quiet though. 	<h>We can turn up the music, if you'd like.</h>
+995_a3	What do you think of it here?	It's nice, a little too quiet though.	We can turn up the music, if you'd like.	It isn't really the lack of noise, it's the lack of activity.	<h>If you have a deck of cards we can play a game.</h>
+996_b1	How is everything with you?	<h>Pretty good, you?</h>
+997_b2	How is everything with you?	Pretty good, you?	Very good, life is great!	<h>Really? Are you sure? If something's wrong, you can totally tell me.</h>
+998_b3	How is everything with you?	Pretty good, you?	Very good, life is great!	Really? Are you sure? If something's wrong, you can totally tell me.	Well, I'm having some problems at work.	<h>what kind of problems?</h>
+999_a1	<h>What is that noise?</h>
+1000_a2	What is that noise?	That noise is the the firetruck leaving to go to a fire. 	<h>Can I come?</h>
+1001_a3	What is that noise?	That noise is the the firetruck leaving to go to a fire.	Can I come?	No sweetie, only the firefighters can go.	<h>Maybe I should become a firefighter</h>
+1002_b1	Why don't my friends visit any more?	<h>It might have something to do with your personal hygiene, kiddo.</h>
+1003_b2	Why don't my friends visit any more?	It might have something to do with your personal hygiene, kiddo.	I can't help it if my shower is broken.	<h>Use the shower at the gym then. And deodarant.</h>
+1004_b3	Why don't my friends visit any more?	It might have something to do with your personal hygiene, kiddo.	I can't help it if my shower is broken.	Use the shower at the gym then. And deodarant.	I don't have a gym membership. How about you let me use yours?	<h>I'd be happy to!</h>
+1005_a1	<h>Want to grab dinner?</h>
+1006_a2	Want to grab dinner?	Sure, what time is good for you? 	<h>Around nowish would be good.</h>
+1007_a3	Want to grab dinner?	Sure, what time is good for you?	Around nowish would be good.	I didn't realize you were so hungry!	<h>Well it is past lunch time.</h>

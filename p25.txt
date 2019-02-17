@@ -1,0 +1,84 @@
+1008_a1	<h>What is your favorite type of fruit?</h>
+1009_a2	What is your favorite type of fruit?	I love good peaches when you can get them.	<h>What's your next favorite fruit? Good peaches can be hard to find.</h>
+1010_a3	What is your favorite type of fruit?	I love good peaches when you can get them.	What's your next favorite fruit? Good peaches can be hard to find.	well if I can't find peaches I love watermelon.	<h>Neither one of those is in season right now. Do you have a third choice?</h>
+1011_b1	How was your day?	<h>Bit boring really.</h>
+1012_b2	How was your day?	Bit boring really.	Shall we change that up then and go out on the town tonight?	<h>Sure. What did you have in mind?</h>
+1013_b3	How was your day?	Bit boring really.	Shall we change that up then and go out on the town tonight?	Sure. What did you have in mind?	Dinner and dancing at the club.	<h>Sounds wonderful, what time?</h>
+1014_a1	<h>Do you have any pets?</h>
+1015_a2	Do you have any pets?	Yeah, I have a few.	<h>What kind of pets do you have?</h>
+1016_a3	Do you have any pets?	Yeah, I have a few.	What kind of pets do you have?	I have some goldfish, a cat and a dog.	<h>What kind of dog?</h>
+1017_b1	What time are you going to be home this afternoon?	<h>I thik I will be home around midnight</h>
+1018_b2	What time are you going to be home this afternoon?	I thik I will be home around midnight	Why are you out so late on a school night?	<h>I have to go to the bookstore before I stop by Sarah's birthday party.</h>
+1019_b3	What time are you going to be home this afternoon?	I thik I will be home around midnight	Why are you out so late on a school night?	I have to go to the bookstore before I stop by Sarah's birthday party.	You need to study more than you need to party though.	<h>Yeah, said no one ever!</h>
+1020_a1	<h>What have you made for lunch today?</h>
+1021_a2	What have you made for lunch today?	I didn't, I need to step out for lunch today.	<h>Awesome! Can I go with you?</h>
+1022_a3	What have you made for lunch today?	I didn't, I need to step out for lunch today.	Awesome! Can I go with you?	Sure if you want to go to the grocery store down the street that has the salad bar.	<h>Ok, the grocery salad bar sounds like a good lunch.</h>
+1023_b1	Did you see the game last night?	<h>I did see it, it was amazing!</h>
+1024_b2	Did you see the game last night?	I did see it, it was amazing!	LeBron looked sluggish though.	<h>I agree. Must not have gotten enough sleep.</h>
+1025_b3	Did you see the game last night?	I did see it, it was amazing!	LeBron looked sluggish though.	I agree. Must not have gotten enough sleep.	They all have to pull their weight. It didn't help that Kevin Love had to leave the game.	<h>Hopefully he's not hurt too badly.</h>
+1026_a1	<h>How late did you stay at the party?</h>
+1027_a2	How late did you stay at the party?	Until just after midnight.	<h>What time did you get home?</h>
+1028_a3	How late did you stay at the party?	Until just after midnight.	What time did you get home?	I got home just before 1am	<h>Did you get lucky?</h>
+1029_b1	How come you didn't come to the party?	<h>I got really sick.</h>
+1030_b2	How come you didn't come to the party?	I got really sick.	I hope you feel better!	<h>Thank you it is just alittle bug though.</h>
+1031_b3	How come you didn't come to the party?	I got really sick.	I hope you feel better!	Thank you it is just alittle bug though.	Make sure you drink plenty of fluids.	<h>I did and I'm feeling much better.</h>
+1032_a1	<h>Are we almost to our destination?</h>
+1033_a2	Are we almost to our destination?	Not far away	<h>Will I need my passport?</h>
+1034_a3	Are we almost to our destination?	Not far away	Will I need my passport?	No you won't need your passport until we come back.	<h>Are they going to search our bags?</h>
+1035_b1	Do you think I should write back?	<h>Yes, I don't think it will hurt to try.</h>
+1036_b2	Do you think I should write back?	Yes, I don't think it will hurt to try.	What do you think I should write?	<h>I'm not sure , say whats on your mind!</h>
+1037_b3	Do you think I should write back?	Yes, I don't think it will hurt to try.	What do you think I should write?	I'm not sure , say whats on your mind!	I'm just going to text him that I'm not interested and he needs to move on.	<h>Be nice though!</h>
+1038_a1	<h>Are there places to eat near?</h>
+1039_a2	Are there places to eat near?	Yes. McDonalds and Applebees	<h>Let's go to Applebee's!</h>
+1040_a3	Are there places to eat near?	Yes. McDonalds and Applebees	Let's go to Applebee's!	I've never eaten there, do they have pizza?	<h>I don't think so, but they have good wings.</h>
+1041_b1	Do you know which search engine I should use for recipes?	<h>I usually use Google.</h>
+1042_b2	Do you know which search engine I should use for recipes?	I usually use Google.	I don't like Google. Is there a better one?	<h>Have you tried a specialized search engine? I like the one at allrecipes.</h>
+1043_b3	Do you know which search engine I should use for recipes?	I usually use Google.	I don't like Google. Is there a better one?	Have you tried a specialized search engine? I like the one at allrecipes.	I have never used that but I will give it a shot.	<h>If you do use that site search for the Tuna Souvlaki Pasta. Also they have a bunch of Ramadan recipes too!</h>
+1044_a1	<h>What did you get mom?</h>
+1045_a2	What did you get mom?	A new bathrobe.	<h>Did she say she wanted one? I bought her a gift certificate for the Spa because she was saying last week she wanted to go there.</h>
+1046_a3	What did you get mom?	A new bathrobe.	Did she say she wanted one? I bought her a gift certificate for the Spa because she was saying last week she wanted to go there.	That's nice too. But I'm quite sure mom will like my gift better. Because it's from her favourite child.	<h>I'm sure you mean my gift, because I'm her favorite child.</h>
+1047_b1	Hi, what's your name?	<h>My name is John.</h>
+1048_b2	Hi, what's your name?	My name is John.	It's so nice to meet you, John!	<h>Likewise. I'm sorry. I didn't catch your name.</h>
+1049_b3	Hi, what's your name?	My name is John.	It's so nice to meet you, John!	Likewise. I'm sorry. I didn't catch your name.	My name is Frank.	<h>How long have you been coming here, Frank?</h>
+1050_a1	<h>How old were you when you first started learning English?</h>
+1051_a2	How old were you when you first started learning English?	From the day I was born.	<h>Then where is your accent from?</h>
+1052_a3	How old were you when you first started learning English?	From the day I was born.	Then where is your accent from?	It's a French accent.	<h>Did you live in France?</h>
+1053_b1	Where did you go to college?	<h>I went to college in New York City.</h>
+1054_b2	Where did you go to college?	I went to college in New York City.	What was your favorite part of living in the city?	<h>Coffee on every corner.</h>
+1055_b3	Where did you go to college?	I went to college in New York City.	What was your favorite part of living in the city?	Coffee on every corner.	Wow, that's really sad	<h>No way! I had so many coffee dates you wouldn't believe it!</h>
+1056_a1	<h>Where is the bathroom?</h>
+1057_a2	Where is the bathroom?	Look out for the sign, it's just up ahead.	<h>Oh, I see it, thanks.</h>
+1058_a3	Where is the bathroom?	Look out for the sign, it's just up ahead.	Oh, I see it, thanks.	I'll meet you right here as soon as I get out of there.	<h>OK, what are we getting from here?</h>
+1059_b1	What's on sale at the bakery this week?	<h>Sir, this is a hotel, and I've told you several times already today that such a sentence is not a code for any special services at the hotel. Please stop.</h>
+1060_b2	What's on sale at the bakery this week?	Sir, this is a hotel, and I've told you several times already today that such a sentence is not a code for any special services at the hotel. Please stop.	Listen; my friend told me this was a place to get hash brownies so cough up the goods!	<h>Leave or I will call the police.</h>
+1061_b3	What's on sale at the bakery this week?	Sir, this is a hotel, and I've told you several times already today that such a sentence is not a code for any special services at the hotel. Please stop.	Listen; my friend told me this was a place to get hash brownies so cough up the goods!	Leave or I will call the police.	But I am the police!	<h>Good then you're already here!</h>
+1062_a1	<h>Are you free tonight?</h>
+1063_a2	Are you free tonight?	No, I have a date with my couch.	<h>Mind if I come over?</h>
+1064_a3	Are you free tonight?	No, I have a date with my couch.	Mind if I come over?	Only if you bring pizza!	<h>Okay, but what time do you have to get ready for your date?</h>
+1065_b1	How did Sam get such good grades?	<h>He studied constantly and worked with several tutors.</h>
+1066_b2	How did Sam get such good grades?	He studied constantly and worked with several tutors.	How much did the tutors cost?	<h>I think like $50 a session.</h>
+1067_b3	How did Sam get such good grades?	He studied constantly and worked with several tutors.	How much did the tutors cost?	I think like $50 a session.	Not a bad return on investment I'd say!	<h>Yes, I am quite satisfied with his results.</h>
+1068_a1	<h>Which shampoo do you use?</h>
+1069_a2	Which shampoo do you use?	I use this stuff I found at the dollar store. It is only a dollar and has color protection for my hair!	<h>Wow! I wouldn't think that coming from the Dollar Store!</h>
+1070_a3	Which shampoo do you use?	I use this stuff I found at the dollar store. It is only a dollar and has color protection for my hair!	Wow! I wouldn't think that coming from the Dollar Store!	I was surprised, too.	<h>You are braver than I am. I would be afraid it would fry my hair.</h>
+1071_b1	When is your next test?	<h>Sometime in July.</h>
+1072_b2	When is your next test?	Sometime in July.	Well, good luck.	<h>Thanks! You're so kind.</h>
+1073_b3	When is your next test?	Sometime in July.	Well, good luck.	Thanks! You're so kind.	Do you think you will pass?	<h>I've been studying up a storm so I hope I pass.</h>
+1074_a1	<h>Hello, how are you?</h>
+1075_a2	Hello, how are you?	I'm good. How are you?	<h>Awesome,thank you so much</h>
+1076_a3	Hello, how are you?	I'm good. How are you?	Awesome,thank you so much	Well, have a nice day.	<h>You, too. Nice to see you.</h>
+1077_b1	When will the nurse come to see me?	<h>She is on her way and will be here within the next 15 minutes.</h>
+1078_b2	When will the nurse come to see me?	She is on her way and will be here within the next 15 minutes.	Ok thank you.	<h>No problem. Are you comfortable?</h>
+1079_b3	When will the nurse come to see me?	She is on her way and will be here within the next 15 minutes.	Ok thank you.	No problem. Are you comfortable?	Yeah, I am pretty comfortable.	<h>Do you need a refill on your water?</h>
+1080_a1	<h>How did that happen?</h>
+1081_a2	How did that happen?	I'm not sure.	<h>What do you mean you're not sure?</h>
+1082_a3	How did that happen?	I'm not sure.	What do you mean you're not sure?	I mean that I could give an answer, but I'd have a pretty good chance of being wrong.	<h>You must have been super drunk.</h>
+1083_b1	Could you repeat that please?	<h>Sure, I said 'hello'</h>
+1084_b2	Could you repeat that please?	Sure, I said 'hello'	Oh, that's not at all what I thought you said.	<h>What did you think I said?</h>
+1085_b3	Could you repeat that please?	Sure, I said 'hello'	Oh, that's not at all what I thought you said.	What did you think I said?	For a second there, it sounded like Oh No.	<h>Oh, nope, I was just saying hi!</h>
+1086_a1	<h>Where do you think you are going?</h>
+1087_a2	Where do you think you are going?	I really want to go to the mall, can I?	<h>I guess you can. Ask first next time.</h>
+1088_a3	Where do you think you are going?	I really want to go to the mall, can I?	I guess you can. Ask first next time.	Okay, I'm sorry.	<h>While you're there can you buy me some socks?</h>
+1089_b1	Do you know if it is raining yet?	<h>I don't know, I haven't looked outside.</h>
+1090_b2	Do you know if it is raining yet?	I don't know, I haven't looked outside.	Does your phone not have the weather?	<h>I never feel 100% sure unless I can see it for myself.</h>
+1091_b3	Do you know if it is raining yet?	I don't know, I haven't looked outside.	Does your phone not have the weather?	I never feel 100% sure unless I can see it for myself.	I know what you mean; weather apps are so often inaccurate!	<h>We both have serious problems if we can't trust that it's raining until we actually feel it touching our bodies. Perhaps we should seek psychiatric assistance for our trust issues.</h>

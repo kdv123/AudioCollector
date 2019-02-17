@@ -1,0 +1,84 @@
+840_b1	Do you have any specials?	<h>Yes, they're listed on the wall.</h>
+841_b2	Do you have any specials?	Yes, they're listed on the wall.	I was thinking more extraordinary specials.	<h>Would you like me to see what the chef could whip up?</h>
+842_b3	Do you have any specials?	Yes, they're listed on the wall.	I was thinking more extraordinary specials.	Would you like me to see what the chef could whip up?	Maybe a Mediterranean seafood pasta?	<h>Are mussels, shrimp and calamari all right?</h>
+843_a1	<h>What should we drink today?</h>
+844_a2	What should we drink today?	It's really hot outside. Let's get some lemonade. 	<h>Where do you want to get it from?</h>
+845_a3	What should we drink today?	It's really hot outside. Let's get some lemonade.	Where do you want to get it from?	Let's get it from the house a street over, they have a stand out right now.	<h>Alright, I'll grab some change.</h>
+846_b1	what time is the dinner?	<h>Dinner is at 6.</h>
+847_b2	what time is the dinner?	Dinner is at 6.	What are we having?	<h>The menu is Italian today.</h>
+848_b3	what time is the dinner?	Dinner is at 6.	What are we having?	The menu is Italian today.	What kind of sauce did you get?	<h>The kind with mushrooms and eggplant.</h>
+849_a1	<h>Why don't we go out for a coffee?</h>
+850_a2	Why don't we go out for a coffee?	Sure. Let me go get my purse. 	<h>Where do you want to go for coffee?</h>
+851_a3	Why don't we go out for a coffee?	Sure. Let me go get my purse.	Where do you want to go for coffee?	well find something on the way.	<h>How about Big Foot Java? The people there are really nice.</h>
+852_b1	Can you check it?	<h>yes, there is a coat check up front</h>
+853_b2	Can you check it?	yes, there is a coat check up front	Is the coat check free?	<h>No, of course it's not. What kind of club do you think we are at?</h>
+854_b3	Can you check it?	yes, there is a coat check up front	Is the coat check free?	No, of course it's not. What kind of club do you think we are at?	One where the coat check isn't free, evidently.	<h>This is a business I'm running, not a charity.</h>
+855_a1	<h>Which is the closest date I can get for my next appointment?</h>
+856_a2	Which is the closest date I can get for my next appointment?	I'm sorry the soonest I can get you in would be 2 weeks from now. June 8th. 	<h>Oh that's fine, I can wait 2 more weeks.</h>
+857_a3	Which is the closest date I can get for my next appointment?	I'm sorry the soonest I can get you in would be 2 weeks from now. June 8th.	Oh that's fine, I can wait 2 more weeks.	So I'll put you down for June 8th.	<h>If that is the best appointment you can get me.</h>
+858_b1	Are you going to the school reunion?	<h>No, I'm busy that weekend.</h>
+859_b2	Are you going to the school reunion?	No, I'm busy that weekend.	It's only every ten years!	<h>Yes it is and I have the right to choose whether to go or not.</h>
+860_b3	Are you going to the school reunion?	No, I'm busy that weekend.	It's only every ten years!	Yes it is and I have the right to choose whether to go or not.	Well then I will go and have fun without you!	<h>I hope you enjoy yourself!</h>
+861_a1	<h>Excuse me, do you remember me?</h>
+862_a2	Excuse me, do you remember me?	I am so sorry I do not remember you. 	<h>We met at Jans party.</h>
+863_a3	Excuse me, do you remember me?	I am so sorry I do not remember you.	We met at Jans party.	There were so many people there though.	<h>I was the guy who put the lamp shade on his head.</h>
+864_b1	Did they get a divorce?	<h>I don't think so, I think they are just taking a break.</h>
+865_b2	Did they get a divorce?	I don't think so, I think they are just taking a break.	I guess that's better than getting divorced. They should try and work it out.	<h>I agree. They should try to work it out.</h>
+866_b3	Did they get a divorce?	I don't think so, I think they are just taking a break.	I guess that's better than getting divorced. They should try and work it out.	I agree. They should try to work it out.	Well I hope they do work it out.	<h>Me too. It would be too bad if they have to get a divorce.</h>
+867_a1	<h>Do you like going to art openings?</h>
+868_a2	Do you like going to art openings?	Yes, I really enjoy seeing the new paintings. 	<h>Did you know there's a new gallery downtown that's opening next week?</h>
+869_a3	Do you like going to art openings?	Yes, I really enjoy seeing the new paintings.	Did you know there's a new gallery downtown that's opening next week?	No, what's it called?	<h>It's called michael anchalo's gallery</h>
+870_b1	What is your favorite restaurant?	<h>My favorite restaurant is Good Food restaurant.</h>
+871_b2	What is your favorite restaurant?	My favorite restaurant is Good Food restaurant.	Is that the place on 1st street next to Doug's Dogs?	<h>Yep. That's the one.</h>
+872_b3	What is your favorite restaurant?	My favorite restaurant is Good Food restaurant.	Is that the place on 1st street next to Doug's Dogs?	Yep. That's the one.	Do you want to come with me this afternoon?	<h>Yes. Is noon a good time for you?</h>
+873_a1	<h>Where did the time go?</h>
+874_a2	Where did the time go?	I feel we wasted an entire day 	<h>What did we actually do all day?</h>
+875_a3	Where did the time go?	I feel we wasted an entire day	What did we actually do all day?	Sat around and watched Netflix.	<h>Well, Netflix and chill isn't a complete waste of time. Still we should put in at least a couple hours into that paper.</h>
+876_b1	Where is the remote control?	<h>It's on the table.</h>
+877_b2	Where is the remote control?	It's on the table.	Can you get it for me please?	<h>Sure, no problem! Here it is.</h>
+878_b3	Where is the remote control?	It's on the table.	Can you get it for me please?	Sure, no problem! Here it is.	Thanks, I can't wait to watch the new episode	<h>Have you seen this show from the beginning of the season?</h>
+879_a1	<h>Why are you acting like that?</h>
+880_a2	Why are you acting like that?	I don't know what you think is different. 	<h>You have been very short today.</h>
+881_a3	Why are you acting like that?	I don't know what you think is different.	You have been very short today.	Sorry we can't all be six feet tall.	<h>I'll come back when you're in a better mood, short fry.</h>
+882_b1	Want to grab lunch?	<h>Yes, I'd love to.</h>
+883_b2	Want to grab lunch?	Yes, I'd love to.	Where should we go?	<h>How about Chinese?</h>
+884_b3	Want to grab lunch?	Yes, I'd love to.	Where should we go?	How about Chinese?	Sure! The new place down the street?	<h>Yeah, I haven't tried them yet.</h>
+885_a1	<h>When did you guys come?</h>
+886_a2	When did you guys come?	About 10 o'clock 	<h>How did you come? Your car or public transport?</h>
+887_a3	When did you guys come?	About 10 o'clock	How did you come? Your car or public transport?	We took the bus to get over here.	<h>I didn't know the bus ran that late on Mondays.</h>
+888_b1	What is your name?	<h>My name is Alina.</h>
+889_b2	What is your name?	My name is Alina.	That's a beautiful name!	<h>I have a boyfriend.</h>
+890_b3	What is your name?	My name is Alina.	That's a beautiful name!	I have a boyfriend.	Does it mean are you engaged?	<h>It means it's not something I want to discuss right now.</h>
+891_a1	<h>Why did you move here?</h>
+892_a2	Why did you move here?	I moved because of my job. 	<h>What company do you work for?</h>
+893_a3	Why did you move here?	I moved because of my job.	What company do you work for?	A shooting range. can you tell I have loss of hearing?	<h>I was wondering why you were shouting. Will you take me shooting sometime?</h>
+894_b1	When are you free?	<h>Not until next week</h>
+895_b2	When are you free?	Not until next week	Let's get together next week then.	<h>Sounds like a date!</h>
+896_b3	When are you free?	Not until next week	Let's get together next week then.	Sounds like a date!	Where would you like to go?	<h>I would love to go to the park.</h>
+897_a1	<h>Can I get change for a dollar?</h>
+898_a2	Can I get change for a dollar?	Yes, do you need quarters, nickles, dimes, or pennies? 	<h>Four quarters please.</h>
+899_a3	Can I get change for a dollar?	Yes, do you need quarters, nickles, dimes, or pennies?	Four quarters please.	Too bad I only have pennies.	<h>In that case, I'll just keep my dollar.</h>
+900_b1	Will you help me look for my cell phone?	<h>No because it's in your hand</h>
+901_b2	Will you help me look for my cell phone?	No because it's in your hand	That's not my phone, that's my mothers cell phone.	<h>I'm sorry, I didn't know you had the same one.</h>
+902_b3	Will you help me look for my cell phone?	No because it's in your hand	That's not my phone, that's my mothers cell phone.	I'm sorry, I didn't know you had the same one.	Have you tried calling it yet?	<h>No, I'll try it now.</h>
+903_a1	<h>Can I have something to eat please?</h>
+904_a2	Can I have something to eat please?	No you may not. 	<h>How come I cannot have something to eat?</h>
+905_a3	Can I have something to eat please?	No you may not.	How come I cannot have something to eat?	Because I don't have anything prepared.	<h>Don't you have anything to snack on?</h>
+906_b1	I am doing well today, how about you?	<h>I've been better.</h>
+907_b2	I am doing well today, how about you?	I've been better.	What is wrong?	<h>My dog died.</h>
+908_b3	I am doing well today, how about you?	I've been better.	What is wrong?	My dog died.	I am sorry about that.	<h>Thanks. It was unexpected.</h>
+909_a1	<h>What time is it?</h>
+910_a2	What time is it?	It is 10:30 AM. 	<h>Cool, time for bed.</h>
+911_a3	What time is it?	It is 10:30 AM.	Cool, time for bed.	Still working the night shift at the newspaper?	<h>Yeah, it's a hard shift but it pays the bills.</h>
+912_b1	Can you fix my collar, please?	<h>Of course, I'll help you with that.</h>
+913_b2	Can you fix my collar, please?	Of course, I'll help you with that.	Thanks, I really can't get it myself.	<h>Why can't you reach It?</h>
+914_b3	Can you fix my collar, please?	Of course, I'll help you with that.	Thanks, I really can't get it myself.	Why can't you reach It?	Because I lost my arms in a car accident. Why are you yelling at me?	<h>Oh man I'm sorry about that.</h>
+915_a1	<h>When did you do that?</h>
+916_a2	When did you do that?	Late last night. 	<h>You shouldn't have done it.</h>
+917_a3	When did you do that?	Late last night.	You shouldn't have done it.	I know but it was fun.	<h>Not for the sheep.</h>
+918_b1	Where are you going?	<h>To the store.</h>
+919_b2	Where are you going?	To the store.	Pick up some waffles for me.	<h>I never offered to get you anything, did I?</h>
+920_b3	Where are you going?	To the store.	Pick up some waffles for me.	I never offered to get you anything, did I?	No, but it is the polite thing to do.	<h>okay will bring it.</h>
+921_a1	<h>What happened in today's match?</h>
+922_a2	What happened in today's match?	There was a big fight and like half the team got ejected. 	<h>Oh sad! Whose fault was it?</h>
+923_a3	What happened in today's match?	There was a big fight and like half the team got ejected.	Oh sad! Whose fault was it?	I blame the coach.	<h>Did the coach get thrown out too?</h>

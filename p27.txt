@@ -1,0 +1,84 @@
+1092_a1	<h>Did you take your pills?</h>
+1093_a2	Did you take your pills?	No, I forgot to take my pills	<h>Aren't they for forgetfullness?</h>
+1094_a3	Did you take your pills?	No, I forgot to take my pills	Aren't they for forgetfullness?	Very funny. No, of course they don't make pills for that.	<h>What a shame, you really could use some of those!</h>
+1095_b1	When will you come back?	<h>Right after I drop the kids off at hockey practice, why?</h>
+1096_b2	When will you come back?	Right after I drop the kids off at hockey practice, why?	Great, can you please pick up some milk at the store on your way back?	<h>Sure, do I need to pick up anything else while I'm there?</h>
+1097_b3	When will you come back?	Right after I drop the kids off at hockey practice, why?	Great, can you please pick up some milk at the store on your way back?	Sure, do I need to pick up anything else while I'm there?	Get me a box of donuts; I need to put on some weight.	<h>No donuts, Dear; We are starting our diet today.</h>
+1098_a1	<h>Where is my good coat?</h>
+1099_a2	Where is my good coat?	In the closet.	<h>Has it been dry cleaned?</h>
+1100_a3	Where is my good coat?	In the closet.	Has it been dry cleaned?	Yes, last week. The cleaner even sewed on the loose button.	<h>Thank you so much honey! I love that coat and have missed not wearing it. I am taking you out for dinner tonight as a thank you.</h>
+1101_b1	Is your mom coming to visit tomorrow?	<h>Yes, after lunch.</h>
+1102_b2	Is your mom coming to visit tomorrow?	Yes, after lunch.	Do you mind if I stop by? I would love to see her.	<h>Absolutely , she would love to see you also!</h>
+1103_b3	Is your mom coming to visit tomorrow?	Yes, after lunch.	Do you mind if I stop by? I would love to see her.	Absolutely , she would love to see you also!	How is she doing?	<h>She is doing well, she had surgery last week so she has been resting.</h>
+1104_a1	<h>Where is the meeting room?</h>
+1105_a2	Where is the meeting room?	Down the hall to your left.	<h>Has anyone else arrived?</h>
+1106_a3	Where is the meeting room?	Down the hall to your left.	Has anyone else arrived?	Yes a few people are already in the room.	<h>Good; I hate being the first to arrive.</h>
+1107_b1	What have you bought, today?	<h>Groceries and dog food</h>
+1108_b2	What have you bought, today?	Groceries and dog food	Good. We need more dog food.	<h>Did we need groceries too?</h>
+1109_b3	What have you bought, today?	Groceries and dog food	Good. We need more dog food.	Did we need groceries too?	Yes! It's not just the dog who needs to eat!	<h>Yes, we need to eat too!</h>
+1110_a1	<h>How's your wife doing?</h>
+1111_a2	How's your wife doing?	She's better now that she's had the procedure done.	<h>I'm so glad to hear that. Give her my best, would you?</h>
+1112_a3	How's your wife doing?	She's better now that she's had the procedure done.	I'm so glad to hear that. Give her my best, would you?	Of course, she'll be happy to hear I saw you today.	<h>I know! I have been thinking a lot about you guys lately.</h>
+1113_b1	What are your summer vacation plans?	<h>I don't have any plans yet.</h>
+1114_b2	What are your summer vacation plans?	I don't have any plans yet.	You should come to the beach with us!	<h>I am not sure. I think I may just get a part time job this summer. Tired of eating ramen noodles.</h>
+1115_b3	What are your summer vacation plans?	I don't have any plans yet.	You should come to the beach with us!	I am not sure. I think I may just get a part time job this summer. Tired of eating ramen noodles.	You could work for a couple of months and then take a week off.	<h>You should learn to love more and judge a little less.</h>
+1116_a1	<h>Why haven't you done anything?</h>
+1117_a2	Why haven't you done anything?	I'm not feeling well.	<h>Why, what's wrong with you?</h>
+1118_a3	Why haven't you done anything?	I'm not feeling well.	Why, what's wrong with you?	I have a really bad headache.	<h>Maybe you should step away from your computer and phone for a bit.</h>
+1119_b1	Are you getting married?	<h>Not any time soon!</h>
+1120_b2	Are you getting married?	Not any time soon!	Of course you are!	<h>No, I'm not.</h>
+1121_b3	Are you getting married?	Not any time soon!	Of course you are!	No, I'm not.	Good, then you can take off with me to Bermuda.	<h>Don't I wish?</h>
+1122_a1	<h>Where did you buy your wallet?</h>
+1123_a2	Where did you buy your wallet?	I found it in the street.	<h>Did you try to return it?</h>
+1124_a3	Where did you buy your wallet?	I found it in the street.	Did you try to return it?	It did not have anything in it so I don't know where I would return it.	<h>It was probably stolen and tossed after the money and credit cards were removed.</h>
+1125_b1	Can you pass me that object?	<h>I will give it to you.</h>
+1126_b2	Can you pass me that object?	I will give it to you.	Thank you very much	<h>You're quite welcome</h>
+1127_b3	Can you pass me that object?	I will give it to you.	Thank you very much	You're quite welcome	Can you pass me the thing next to it too? I can't remember what you call these things!	<h>Sure not a problem, would you also like the others next to it?</h>
+1128_a1	<h>Are you feeling ok?</h>
+1129_a2	Are you feeling ok?	I feel fine.	<h>I am asking because you look really pale and tired.</h>
+1130_a3	Are you feeling ok?	I feel fine.	I am asking because you look really pale and tired.	I had trouble sleeping last night but the coffee is starting to kick in.	<h>That reminds me, I need a cup myself.</h>
+1131_b1	Will you call my husband?	<h>If you need me to. What should I tell him?</h>
+1132_b2	Will you call my husband?	If you need me to. What should I tell him?	Tell him I will be late	<h>Fine, though you could really do that yourself.</h>
+1133_b3	Will you call my husband?	If you need me to. What should I tell him?	Tell him I will be late	Fine, though you could really do that yourself.	I'm making the pie filling and I don't want to get jam all over the phone.	<h>Oh, no problem. I'll call him.</h>
+1134_a1	<h>Did the car get dented up?</h>
+1135_a2	Did the car get dented up?	No, it didn't.	<h>Is the other car okay?</h>
+1136_a3	Did the car get dented up?	No, it didn't.	Is the other car okay?	No, more like a total loss.	<h>Did anyone get hurt?</h>
+1137_b1	Is there anything on TV tonight?	<h>I don't know. Look it up on your phone.</h>
+1138_b2	Is there anything on TV tonight?	I don't know. Look it up on your phone.	Alright, just give me one second.	<h>One. Time's up!</h>
+1139_b3	Is there anything on TV tonight?	I don't know. Look it up on your phone.	Alright, just give me one second.	One. Time's up!	You knew what I meant smartie pants!	<h>I know, I know you hate how literal I am.</h>
+1140_a1	<h>Can you even cook?</h>
+1141_a2	Can you even cook?	Yes, I can cook very delicious meals.	<h>Maybe one day I can taste your cooking.</h>
+1142_a3	Can you even cook?	Yes, I can cook very delicious meals.	Maybe one day I can taste your cooking.	This weekend? We could get a dinner party going.	<h>Sounds good. Who shall we invite?</h>
+1143_b1	Is it a bad thing that I don't receive my medication in time?	<h>Yes. Medication should be taken in a timely manner.</h>
+1144_b2	Is it a bad thing that I don't receive my medication in time?	Yes. Medication should be taken in a timely manner.	Who can I complain to?	<h>You should call the head nurse.</h>
+1145_b3	Is it a bad thing that I don't receive my medication in time?	Yes. Medication should be taken in a timely manner.	Who can I complain to?	You should call the head nurse.	What is the head nurse's name?	<h>I don't know but I bet if you press that red button someone will show up</h>
+1146_a1	<h>Can you pick me up?</h>
+1147_a2	Can you pick me up?	Yes, whenever you are ready.	<h>I'm ready right now, come right now!</h>
+1148_a3	Can you pick me up?	Yes, whenever you are ready.	I'm ready right now, come right now!	Ok I'm on my way	<h>Call me when you get here.</h>
+1149_b1	Is it raining outside?	<h>No, but it might rain later today.</h>
+1150_b2	Is it raining outside?	No, but it might rain later today.	Will it get colder, too?	<h>I'm not positive, but a taking a sweater with you might be smart.</h>
+1151_b3	Is it raining outside?	No, but it might rain later today.	Will it get colder, too?	I'm not positive, but a taking a sweater with you might be smart.	I will. Thanks for the warning!	<h>You're welcome, have a good time.</h>
+1152_a1	<h>What room is he in?</h>
+1153_a2	What room is he in?	He's down the hall in room 112.	<h>How long has he been there?</h>
+1154_a3	What room is he in?	He's down the hall in room 112.	How long has he been there?	For about 2 weeks.	<h>What has he been doing all this time?</h>
+1155_b1	What do you think it means?	<h>He is just not that into you!</h>
+1156_b2	What do you think it means?	He is just not that into you!	Well that's a little harsh, you don't know that!	<h>No but I'll bet my next paycheck on it.</h>
+1157_b3	What do you think it means?	He is just not that into you!	Well that's a little harsh, you don't know that!	No but I'll bet my next paycheck on it.	Well I will take that bet.	<h>Be prepared to lose.</h>
+1158_a1	<h>Do you know the time of her flight?</h>
+1159_a2	Do you know the time of her flight?	I have to look it up	<h>I was hoping to say goodbye before she left.</h>
+1160_a3	Do you know the time of her flight?	I have to look it up	I was hoping to say goodbye before she left.	She'll be back on Monday. It's only a short business trip this time.	<h>I don't know what I'll do with myself until she gets back.</h>
+1161_b1	Where are your dressing rooms?	<h>At the back on the left</h>
+1162_b2	Where are your dressing rooms?	At the back on the left	Can I bring all of these clothes in with me?	<h>Only if you promise not to steal anything.</h>
+1163_b3	Where are your dressing rooms?	At the back on the left	Can I bring all of these clothes in with me?	Only if you promise not to steal anything.	What is that supposed to mean? You know what; never mind!	<h>Sorry, just trying to be funny.</h>
+1164_a1	<h>What is the weather like?</h>
+1165_a2	What is the weather like?	It's sunny outside.	<h>I think I will do some gardening today.</h>
+1166_a3	What is the weather like?	It's sunny outside.	I think I will do some gardening today.	That sounds like fun!	<h>I love watching my flowers bloom.</h>
+1167_b1	Can you open the door for me?	<h>Yes, sure I can.</h>
+1168_b2	Can you open the door for me?	Yes, sure I can.	Thank you very much, son.	<h>You are very welcome father.</h>
+1169_b3	Can you open the door for me?	Yes, sure I can.	Thank you very much, son.	You are very welcome father.	Now go and clean that trash heap you call your room.	<h>But I don't even live here anymore</h>
+1170_a1	<h>Who is this and where do you want me to pick you up?</h>
+1171_a2	Who is this and where do you want me to pick you up?	It's Bill, and I need you to pick me up at the store.	<h>I will be right there, don't go anywhere.</h>
+1172_a3	Who is this and where do you want me to pick you up?	It's Bill, and I need you to pick me up at the store.	I will be right there, don't go anywhere.	Ok I'm out front by the kids electric train.	<h>Ok. I will be there in about 10 minutes.</h>
+1173_b1	Can you turn up the volume on the television?	<h>Sure, as soon as I find the remote.</h>
+1174_b2	Can you turn up the volume on the television?	Sure, as soon as I find the remote.	Can't we just go up to the television to turn it up?	<h>Yeah, if I wanted to.</h>
+1175_b3	Can you turn up the volume on the television?	Sure, as soon as I find the remote.	Can't we just go up to the television to turn it up?	Yeah, if I wanted to.	You may be the laziest person I know.	<h>Then again, it may be someone else.</h>
