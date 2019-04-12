@@ -428,7 +428,7 @@ public class TextDisplayTrial3 extends Application {
 		GridPane taskBar = new GridPane();
 		Label spacer = new Label();
 		spacer.setText("Directions: Read the yellow highlighted text aloud");
-		spacer.setFont(Font.font("times", FontWeight.BOLD, 20));
+		spacer.setFont(Font.font("times", FontWeight.BOLD, 24));
 		spacer.setPrefSize(600, 30);
 		count = new Label("Task " + (taskNum + 1) + " of " + totalTasks);
 		count.setTextFill(Color.CRIMSON);
@@ -513,7 +513,7 @@ public class TextDisplayTrial3 extends Application {
 			tempLabel.setText(tempString);
 			tempLabel.setWrapText(true);
 			tempLabel.setPrefWidth(800);
-			tempLabel.setFont(Font.font(24));
+			tempLabel.setFont(Font.font(28));
 			
 			taskLabels.add(tempLabel);
 			grid.addRow(i -1, tempLabel);
@@ -585,8 +585,8 @@ public class TextDisplayTrial3 extends Application {
 		
 		for (int i = 0; i < 4; i++) {
 			Label label = new Label("Mic " + (i + 1) + ": ");
-			label.setPrefSize(100,  MIC_H);
-			label.setFont(Font.font(20));
+			label.setPrefSize(110,  MIC_H);
+			label.setFont(Font.font(24));
 			micNameLabels.add(label);
 			ImageView wave = new ImageView();
 			waveImages.add(wave);
@@ -594,8 +594,8 @@ public class TextDisplayTrial3 extends Application {
 				wave.setImage(drawData(listOfRecorders[i].getFile()));
 			}
 			
-			Button playback = new Button("Playback Mic " + (i+1));
-			playback.setFont(Font.font(15));
+			Button playback = new Button("Playback");
+			playback.setFont(new Font(18));
 			playback.setMaxSize(100, MIC_H);
 			playback.setMaxWidth(800);
 			grid.add(label, 0, i, 1, 1);
@@ -629,14 +629,18 @@ public class TextDisplayTrial3 extends Application {
 	 */
 	public void makeBtnPanel() {
 		btnPanel = new GridPane();
-		prev = new Button("Previous Prompt");
-		prev.setPrefSize(100, 60);
-		start = new Button("Start Recording");
-		start.setPrefSize(100, 60);
-		stop = new Button("Stop Recording");
-		stop.setPrefSize(100, 60);
-		next = new Button("Next Prompt");
-		next.setPrefSize(100, 60);
+		prev = new Button("Previous");
+		prev.setFont(new Font(24));
+		prev.setPrefSize(150, 70);
+		start = new Button("Start");
+		start.setFont(new Font(24));
+		start.setPrefSize(150, 70);
+		stop = new Button("Stop");
+		stop.setFont(new Font(24));
+		stop.setPrefSize(150, 70);
+		next = new Button("Next");
+		next.setFont(new Font(24));
+		next.setPrefSize(150, 70);
 
 		prev.setBackground(new Background(new BackgroundFill(Color.YELLOW, new CornerRadii(2), new Insets(0))));
 		start.setBackground(new Background(new BackgroundFill(Color.GREEN, new CornerRadii(2), new Insets(0))));
