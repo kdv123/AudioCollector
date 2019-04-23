@@ -91,10 +91,11 @@ public class PromptFileCreator {
 		
 		//For each set of 28 lines
 		for (int i = 0; i < 14; i++) {
-			String fileNameOdd = "";
-			String fileNameEven = "";
-			
-			switch (i) {
+			String fileNameOdd = "p" + (i*2 + 1) + ".txt";
+			String fileNameEven = "p" + (i*2 + 2) + ".txt";
+
+			// It does not require to hard code the following lines
+			/*switch (i) {
 			case 0:
 				fileNameOdd = "p1.txt";
 				fileNameEven = "p2.txt";
@@ -151,7 +152,7 @@ public class PromptFileCreator {
 				fileNameOdd = "p27.txt";
 				fileNameEven = "p28.txt";
 				break;
-			}
+			}*/
 			
 			PrintWriter outputOdd = null;
 			PrintWriter outputEven = null;
