@@ -17,4 +17,4 @@ javac *.java
 java AudioCollector
 ```
 7. A screen will pop up and you have to provide a participant ID, a session number, a file name having the text dialogues, a condition, and check available microphones.
-8. The files with dialogues follow a certain format. The AudioCollector will highlight those dialogues turns that are surrounded by the tags: '<h>' and '</h>'   
+8. The files with dialogues follow a certain format. The AudioCollector will highlight those dialogue turns that are surrounded by the tags: '<h>' and '</h>'   
