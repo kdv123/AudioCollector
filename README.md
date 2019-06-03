@@ -2,7 +2,9 @@
 
 A Java application to record spoken dialogue turns. 
 
-This application was used to collect the data reported in the SLPAT'19 workshop paper "Investigating Speech Recognition for Improving Predictive AAC".
+This application was used to collect the data reported in the SLPAT'19 workshop paper "Investigating Speech Recognition for Improving Predictive AAC":
+https://keithv.com/pub/speechaac/
+
 If you use this software in your reserach, please cite:
 
 @inproceedings{adhikary_speech,
