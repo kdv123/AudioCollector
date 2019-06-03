@@ -7,7 +7,8 @@ https://keithv.com/pub/speechaac/
 
 If you use this software in your reserach, please cite:
 
-```@inproceedings{adhikary_speech,
+```
+@inproceedings{adhikary_speech,
   author       = {Jiban Adhikary and Robbie Watling and Crystal Fletcher and Alex Stanage and Keith Vertanen},
   title        = {Investigating Speech Recognition for Improving Predictive AAC},
   booktitle    = {SLPAT '19: Proceedings of the Workshop on Speech and Language Processing for Assistive Technologies},
@@ -15,7 +16,8 @@ If you use this software in your reserach, please cite:
   month        = {June},
   year         = {2019},
   pages        = {37--43},
-}```
+}
+```
 
 Development of this software was supported by the NSF under Grant No. IIS-1750193.
 The software is released under a Creative Commons license (CC BY 4.0).
