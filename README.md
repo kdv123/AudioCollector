@@ -1,6 +1,6 @@
 # AudioCollector
 
-A Java application to record spoken dialogue turns. 
+A Java application to record spoken dialogue turns in a two-person conversation. The application can recorded to up to four microphones simultaneously.
 
 This application was used to collect the data reported in the SLPAT'19 workshop paper "Investigating Speech Recognition for Improving Predictive AAC":
 https://keithv.com/pub/speechaac/
