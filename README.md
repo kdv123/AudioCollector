@@ -19,12 +19,12 @@ If you use this software in your reserach, please cite:
 }
 ```
 
-Creation of this software was supported by the NSF under Grant No. IIS-1750193.
+Development of this software was supported by the NSF under Grant No. IIS-1750193.
 The software is released under a Creative Commons license (CC BY 4.0).
 
 ## Installation and setup
 
-1. Download AudioCollector zip direcotry from https://github.com/kdv123/AudioCollector/archive/master.zip .
+1. Download AudioCollector zip direcotry from https://github.com/kdv123/AudioCollector/archive/master.zip
 2. Unzip the zipped directory in your local machine.
 3. Make sure you have Java installed in your machine and bin path configured in your environment variables.
 4. Open terminal and move to the unzipped application directory.
