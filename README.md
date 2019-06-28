@@ -18,7 +18,7 @@ This application was used to collect the data reported in the SLPAT'19 workshop 
 
 ## Installation and setup
 
-1. Download [AudioCollector.zip](master.zip).
+1. Download [AudioCollector.zip](../../zipball/master/).
 2. Unzip the zipped directory in your local machine.
 3. Make sure you have Java installed in your machine and bin path configured in your environment variables.
 4. Open terminal and move to the unzipped application directory.
