@@ -150,7 +150,7 @@ public class Recorder {
 		AudioInputStream audioStream;
 		
 		try {
-			audioStream = AudioSystem.getAudioInputStream(new File("buttonBeep.wav"));
+			audioStream = AudioSystem.getAudioInputStream(new File("resources/buttonBeep.wav"));
 			testClip = AudioSystem.getClip();
 			testClip.open(audioStream);
 		} catch (UnsupportedAudioFileException e) {

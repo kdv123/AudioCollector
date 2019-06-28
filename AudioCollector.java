@@ -223,7 +223,7 @@ public class AudioCollector extends Application {
 
 	int state = 0;
 	File promptFile;
-	File practiceFile = new File("practice.txt");
+	File practiceFile = new File("resources/practice.txt");
 	TextField sNum;
 	BorderPane screen;
 	Recorder[] listOfRecorders = new Recorder[4];
@@ -251,7 +251,7 @@ public class AudioCollector extends Application {
 
 		Label fileLabel = new Label("File");
 		Button choose = new Button("File");
-		promptFile = new File("test.txt");	//default to test.txt if no file is chosen
+		promptFile = new File("resources/test.txt");	//default to test.txt if no file is chosen
 		fileName = new Label("");
 		fileName.setBackground(background(Color.ALICEBLUE));
 		
@@ -873,7 +873,7 @@ public class AudioCollector extends Application {
 		AudioInputStream audioStream;
 		
 		try {
-			audioStream = AudioSystem.getAudioInputStream(new File("buttonBeep.wav"));
+			audioStream = AudioSystem.getAudioInputStream(new File("resources/buttonBeep.wav"));
 			clip = AudioSystem.getClip();
 			clip.open(audioStream);
 		} catch (UnsupportedAudioFileException e) {

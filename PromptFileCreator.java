@@ -12,7 +12,7 @@ public class PromptFileCreator {
 	public static void main(String[] args) {
 		scan = null;
 		try {
-			scan = new Scanner(new File("turk-dialogues-merged-cleaned-case.txt"));
+			scan = new Scanner(new File("resources/turk-dialogues-merged-cleaned-case.txt"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -43,7 +43,7 @@ public class PromptFileCreator {
 		PrintWriter practiceWriter = null;
 		
 		try {
-			practiceWriter = new PrintWriter("practice.txt");
+			practiceWriter = new PrintWriter("resources/practice.txt");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -91,68 +91,8 @@ public class PromptFileCreator {
 		
 		//For each set of 28 lines
 		for (int i = 0; i < 14; i++) {
-			String fileNameOdd = "p" + (i*2 + 1) + ".txt";
-			String fileNameEven = "p" + (i*2 + 2) + ".txt";
-
-			// It does not require to hard code the following lines
-			/*switch (i) {
-			case 0:
-				fileNameOdd = "p1.txt";
-				fileNameEven = "p2.txt";
-				break;
-			case 1:
-				fileNameOdd = "p3.txt";
-				fileNameEven = "p4.txt";
-				break;
-			case 2:
-				fileNameOdd = "p5.txt";
-				fileNameEven = "p6.txt";
-				break;
-			case 3:
-				fileNameOdd = "p7.txt";
-				fileNameEven = "p8.txt";
-				break;
-			case 4:
-				fileNameOdd = "p9.txt";
-				fileNameEven = "p10.txt";
-				break;
-			case 5:
-				fileNameOdd = "p11.txt";
-				fileNameEven = "p12.txt"; 
-				break;
-			case 6:
-				fileNameOdd = "p13.txt";
-				fileNameEven = "p14.txt";
-				break;
-			case 7:
-				fileNameOdd = "p15.txt";
-				fileNameEven = "p16.txt";
-				break;
-			case 8:
-				fileNameOdd = "p17.txt";
-				fileNameEven = "p18.txt";
-				break;
-			case 9:
-				fileNameOdd = "p19.txt";
-				fileNameEven = "p20.txt";
-				break;
-			case 10:
-				fileNameOdd = "p21.txt";
-				fileNameEven = "p22.txt";
-				break;
-			case 11:
-				fileNameOdd = "p23.txt";
-				fileNameEven = "p24.txt";
-				break;
-			case 12:
-				fileNameOdd = "p25.txt";
-				fileNameEven = "p26.txt";
-				break;
-			case 13:
-				fileNameOdd = "p27.txt";
-				fileNameEven = "p28.txt";
-				break;
-			}*/
+			String fileNameOdd = "resources/p" + (i*2 + 1) + ".txt";
+			String fileNameEven = "resources/p" + (i*2 + 2) + ".txt";	
 			
 			PrintWriter outputOdd = null;
 			PrintWriter outputEven = null;
