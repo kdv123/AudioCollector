@@ -26,12 +26,12 @@ This application was used to collect the data reported in the SLPAT'19 workshop 
 ```
 javac *.java
 ```
-6. The Java files should compile without any error. Then type the following to run the application:
+6. Run the application:
 ```
 java AudioCollector
 ```
 7. A screen will pop up and you have to provide a participant ID, a session number, a file name having the text dialogues, a condition, and check available microphones.
-8. The files with dialogues follow a certain format. The AudioCollector will highlight those dialogue turns that are surrounded by the tags: '<h>' and '</h>'   
+8. The files with dialogues follow a certain format. The AudioCollector will highlight those dialogue turns that are surrounded by the tags: \'\<h\>\' and \'\</h\>\'   
 
 ## Acknowledgements
 This material is based upon work supported by the National Science Foundation under Grant No. (1750193). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
