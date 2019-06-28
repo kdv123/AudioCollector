@@ -34,5 +34,5 @@ java AudioCollector
 8. The files with dialogues follow a certain format. The AudioCollector will highlight those dialogue turns that are surrounded by the tags: \'\<h\>\' and \'\</h\>\'   
 
 ## Acknowledgements
-This material is based upon work supported by the National Science Foundation under Grant No. (1750193). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+This material is based upon work supported by the National Science Foundation under Grant No. 1750193. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
