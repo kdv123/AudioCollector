@@ -5,7 +5,7 @@ A Java application to record spoken dialogue turns in a two-person conversation.
 This application was used to collect the data reported in the SLPAT'19 workshop paper "Investigating Speech Recognition for Improving Predictive AAC":
 https://keithv.com/pub/speechaac/
 
-If you use this software in your reserach, please cite:
+If you use this software in your reserach, please cite this [paper](https://www.aclweb.org/anthology/W19-1706):
 
 ```
 @inproceedings{adhikary_speech,
@@ -19,12 +19,9 @@ If you use this software in your reserach, please cite:
 }
 ```
 
-Development of this software was supported by the NSF under Grant No. IIS-1750193.
-The software is released under a Creative Commons license (CC BY 4.0).
-
 ## Installation and setup
 
-1. Download AudioCollector zip direcotry from https://github.com/kdv123/AudioCollector/archive/master.zip
+1. Download [AudioCollector.zip](master.zip).
 2. Unzip the zipped directory in your local machine.
 3. Make sure you have Java installed in your machine and bin path configured in your environment variables.
 4. Open terminal and move to the unzipped application directory.
@@ -38,3 +35,7 @@ java AudioCollector
 ```
 7. A screen will pop up and you have to provide a participant ID, a session number, a file name having the text dialogues, a condition, and check available microphones.
 8. The files with dialogues follow a certain format. The AudioCollector will highlight those dialogue turns that are surrounded by the tags: '<h>' and '</h>'   
+
+## Acknowledgements
+This material is based upon work supported by the National Science Foundation under Grant No. (1750193). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+
