@@ -2,10 +2,7 @@
 
 A Java application to record spoken dialogue turns in a two-person conversation. The application can recorded up to four microphones simultaneously.
 
-This application was used to collect the data reported in the SLPAT'19 workshop paper "Investigating Speech Recognition for Improving Predictive AAC":
-https://keithv.com/pub/speechaac/
-
-If you use this software in your reserach, please cite this [paper](https://www.aclweb.org/anthology/W19-1706):
+This application was used to collect the data reported in the SLPAT'19 workshop paper [Investigating Speech Recognition for Improving Predictive AAC](https://www.aclweb.org/anthology/W19-1706). If you use this software in your reserach, please cite:
 
 ```
 @inproceedings{adhikary_speech,
